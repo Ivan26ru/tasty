@@ -9,6 +9,7 @@ add_theme_support('title-tag');
 
 register_nav_menus(array(
 	'top' => 'Верхнее',
+	'top_up' => 'Самое верхнее',
 	'bottom' => 'Внизу'
 ));
 
@@ -84,7 +85,7 @@ if (!function_exists('pagination')) {
 		    echo '<ul class="pagination">';
 		    foreach ( $links as $link ) {
 		    	if ( strpos( $link, 'current' ) !== false ) echo "<li class='active'>$link</li>";
-		        else echo "<li>$link</li>"; 
+		        else echo "<li>$link</li>";
 		    }
 		   	echo '</ul>';
 		 }
@@ -149,9 +150,9 @@ if (!class_exists('bootstrap_menu')) {
 
 if (!function_exists('content_class_by_sidebar')) {
 	function content_class_by_sidebar() {
-		if (is_active_sidebar( 'sidebar' )) { 
+		if (is_active_sidebar( 'sidebar' )) {
 			echo 'col-sm-9';
-		} else { 
+		} else {
 			echo 'col-sm-12';
 		}
 	}
