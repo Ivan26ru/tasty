@@ -58,12 +58,25 @@ a {
 /*верхняя строка с меню и формой входа*/
 .menu-user{
     margin-left:186px;
-    height:39px;
 }
 
 
 /*верхнее меню 1*/
 .ul-top-1{
     padding:0;
+    margin: 0;
 }
 
+.ul-top-1 li{
+    display:inline-block;
+
+}
+
+/* стиль кнопок верхних */
+.ul-top-1 li a{
+    padding:15px 37px;
+    background-color:red;
+    text-transform:uppercase;
+    margin: 0;
+    line-height: 39px;
+}
