@@ -47,3 +47,16 @@ li {
     min-width: 1200px;
     height: 70px;
 }
+
+/*верхняя строка с меню и формой входа*/
+.menu-user{
+    margin-left:186px;
+    height:39px;
+}
+
+
+/*верхнее меню 1*/
+.ul-top-1{
+    padding:0;
+}
+

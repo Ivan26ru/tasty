@@ -28,18 +28,21 @@
 <!-- верхняя линия -->
 <div class="line-top-white">
 	<div class="w1200">
-	<!-- лого сайта -->
-	<div class="div-logo"></div>
-	<!-- верхнее меню 1 -->
+		<!-- лого сайта -->
+		<div class="div-logo"></div>
+		<!-- верхнее меню, форма входа -->
+		<div class="menu-user">
 
-			<?php $args = array( // опции для вывода верхнего меню, чтобы они работали, меню должно быть создано в админке
-			'theme_location' => 'topup', // идентификатор меню, определен в register_nav_menus() в function.php
-			'container'=> 'nav', // обертка списка
-			'menu_class' => 'bottom-menu', // класс для ul
-	  		'menu_id' => 'bottom-nav', // id для ul
-  			);
-			wp_nav_menu($args); // выводим верхнее меню
-		?>
+		<!-- верхнее меню 1 -->
+				<?php $args = array( // опции для вывода верхнего меню, чтобы они работали, меню должно быть создано в админке
+				'theme_location' => 'topup', // идентификатор меню, определен в register_nav_menus() в function.php
+				'container'=> 'div', // обертка списка
+				'container_class' => 'div-top-1', // (string) class контейнера (div тега)
+				'menu_class' => 'ul-top-1' // класс для ul
+	  			);
+				wp_nav_menu($args); // выводим верхнее меню
+			?>
+		</div>
 	</div>
 </div>
 
@@ -58,6 +61,6 @@
 			'menu_class' => 'bottom-menu', // класс для ul
 	  		'menu_id' => 'bottom-nav', // id для ul
   			);
-			wp_nav_menu($args); // выводим верхнее меню
+			//wp_nav_menu($args); // выводим верхнее меню
 		?>
 	</header>
