@@ -28,8 +28,13 @@
 <body <?php body_class(); // все классы для body ?>>
 	<header>
 	<div class="line-top-white">
-		<div class="w1200">
+		<div class="w1200 p-relative">
 			<div class="div-logo"></div>
+			<div class="menu-user">
+				<?php
+
+				?>
+			</div>
 		</div>
 	</div>
 	<div class="line-top-black">
