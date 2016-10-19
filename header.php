@@ -36,12 +36,15 @@
 		<!-- верхнее меню 1 -->
 				<?php $args = array( // опции для вывода верхнего меню, чтобы они работали, меню должно быть создано в админке
 				'theme_location' => 'topup', // идентификатор меню, определен в register_nav_menus() в function.php
-				'container'=> 'div', // обертка списка
-				'container_class' => 'div-top-1', // (string) class контейнера (div тега)
+				'container'=> '', // обертка списка
 				'menu_class' => 'ul-top-1' // класс для ul
 	  			);
 				wp_nav_menu($args); // выводим верхнее меню
 			?>
+			<div class="vhod btn-top-1">
+				<a href="#">ВОЙТИ</a>
+				<a href="#">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+			</div>
 		</div>
 	</div>
 </div>
