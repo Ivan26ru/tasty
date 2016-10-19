@@ -1,4 +1,14 @@
-/* Общие стили для сайта */
+/*================ Общие стили для сайта ========================*/
+
+
+/*пользовательские шрифты*/
+
+@font-face {
+    font-family: Roboto-Light;
+    /* Гарнитура шрифта */
+    src: url(fonts/Roboto-Light.ttf);
+    /* Путь к файлу со шрифтом */
+}
 
 
 /*Убрал маркеры всех списков*/
@@ -15,12 +25,17 @@ li {
     margin: 0 auto;
 }
 
+
 /*убрал подчеркивание всех ссылок*/
+
 a {
-    text-decoration:none;
+    text-decoration: none;
 }
 
 /*=========================*/
+
+
+/*---------------ШАПКА САЙТА-------------------*/
 
 
 /*верхняя черная линия*/
@@ -55,28 +70,43 @@ a {
     height: 70px;
 }
 
+
 /*верхняя строка с меню и формой входа*/
-.menu-user{
-    margin-left:186px;
+
+.menu-user {
+    margin-left: 186px;
 }
 
 
-/*верхнее меню 1*/
-.ul-top-1{
-    padding:0;
+/*=============верхнее меню 1====================*/
+
+.ul-top-1 {
     margin: 0;
+    padding: 0;
+    font-family: Roboto-Light, 'Arial';
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
-.ul-top-1 li{
-    display:inline-block;
-
+.ul-top-1 li {
+    display: inline-block;
 }
+
 
 /* стиль кнопок верхних */
-.ul-top-1 li a{
-    padding:15px 37px;
-    background-color:red;
-    text-transform:uppercase;
+.ul-top-1 li a {
     margin: 0;
+    padding: 13px 37px;
+    background-color: #fff;
+    color: #000;
     line-height: 39px;
 }
+
+/*при наведении верхнее меню 1*/
+.ul-top-1 li a:hover {
+    background-color: #000;
+    color: #fff;
+}
+/*==================================*/
+
+/*-----------------------------------*/
