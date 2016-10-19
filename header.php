@@ -24,6 +24,14 @@
 </head>
 <body <?php body_class(); // все классы для body ?>>
 	<header>
+
+<!-- верхняя линия -->
+<div class="line-top-white">
+	<div class="w1200">
+	<!-- лого сайта -->
+	<div class="div-logo"></div>
+	<!-- верхнее меню 1 -->
+
 			<?php $args = array( // опции для вывода верхнего меню, чтобы они работали, меню должно быть создано в админке
 			'theme_location' => 'topup', // идентификатор меню, определен в register_nav_menus() в function.php
 			'container'=> 'nav', // обертка списка
@@ -32,6 +40,17 @@
   			);
 			wp_nav_menu($args); // выводим верхнее меню
 		?>
+	</div>
+</div>
+
+<!-- линия пониже(черная) -->
+<div class="line-top-black">
+	<div class="w1200">
+
+	</div>
+</div>
+
+
 
 		<?php $args = array( // опции для вывода верхнего меню, чтобы они работали, меню должно быть создано в админке
 			'theme_location' => 'top', // идентификатор меню, определен в register_nav_menus() в function.php
