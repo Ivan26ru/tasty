@@ -17,14 +17,17 @@
     /* Путь к файлу со шрифтом */
 }
 
+
 /*хак для float*/
+
 .clearfix:before,
 .clearfix:after {
-content: " ";
-display: table;
+    content: " ";
+    display: table;
 }
+
 .clearfix:after {
-clear: both;
+    clear: both;
 }
 
 
@@ -225,12 +228,14 @@ a {
 
 /*============ОСНОВНАЯ ЧАСТЬ===================*/
 
+
 /*сайтбар*/
 
 sidebar {
     width: 240px;
     float: right;
 }
+
 
 /*Контейнер для основной части*/
 
@@ -249,10 +254,13 @@ section {
     width: 850px;
 }
 
+
 /*Когтейнер для левого и правого блока*/
-article{
+
+article {
     border-bottom: 1px solid rgb(221, 221, 221);
 }
+
 
 /*блоки левый и правый*/
 
@@ -268,9 +276,6 @@ article{
 .block-right {
     float: right;
 }
-
-
-
 
 
 /*Заголовок левого и правого контейнера*/
@@ -302,14 +307,14 @@ article{
     margin-top: 27px;
 }
 
-.mixologiya{
+.mixologiya {
     background: url(img/png/mixologiya.png)center no-repeat;
 }
 
-.vipe-news{
+.vipe-news {
     background: url(img/png/vipe-news.png)center no-repeat;
-
 }
+
 
 /*кратное описание новости*/
 
@@ -321,38 +326,48 @@ article{
     border-bottom: 1px solid rgb(221, 221, 221);
 }
 
-.news:last-child{
+.news:last-child {
     border-bottom: none;
 }
 
+
 /*общий стиль даты*/
+
 .data {
     font-size: 12px;
     font-family: Roboto-Light, 'Arial';
     color: rgb(66, 213, 173);
 }
 
+
 /*для левого и правого блоков*/
-.data-block{
+
+.data-block {
     position: absolute;
 }
 
+
 /*заголовок общий*/
+
 .title {
     font-size: 16px;
     font-family: Roboto-Light, 'Arial';
     color: rgb(0, 0, 0);
 }
 
+
 /*заголовок для блока*/
-.title-block{
+
+.title-block {
     height: 35px;
     width: 250px;
     margin: 0 0 0 145px;
     text-align: right;
 }
 
+
 /*кратное описание общее*/
+
 .text {
     font-size: 12px;
     font-family: Roboto-Light, 'Arial';
@@ -363,13 +378,15 @@ article{
     height: 40px;
 }
 
-/*кратное описание для блока*/
-.text-block {
 
-}
+/*кратное описание для блока*/
+
+.text-block {}
+
 
 /*кнопка читаль полностью общая*/
-.read-all{
+
+.read-all {
     font-size: 10px;
     font-family: Roboto-Light, 'Arial';
     color: #00cd98;
@@ -377,26 +394,55 @@ article{
     padding: 5px 20px;
 }
 
+
 /*кнопка читаль полностью для блока*/
-.read-all-block{
+
+.read-all-block {
     float: right;
 }
 
+
 /*============ПРОЧИЕ ПОСТЫ==============*/
-.div-post-other{
+
+.div-post-other {
     margin-top: 37px;
 }
 
-.post-other-img{
+.post-other-img {
+    width: 419px;
+    height: 167px;
+    position: relative;
+}
+
+.post-other-img img {
     width: 419px;
     height: 167px;
 }
 
-.post-other-img img{
-  width: 419px;
-  height: 167px;
+
+/*темная полоска внизу миниатюры поста*/
+
+.post-other-black-info {
+    position: absolute;
+    bottom: 31px;
+    width: 379px;
+    height: 31px;
+    margin-bottom: -31px;
+    padding: 0 20px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.502;
+    /*line-height: 28px;*/
 }
 
-.post-other-black-info{
-    height: 30px;
+/*дата на черной полоске*/
+.data-other{
+  line-height: 31px;
+  font-size: 14px;
+}
+
+/*читать полностью на черной полоске*/
+.read-all-other{
+  font-size: 12px;
+    float: right;
+    margin-top: 3px;
 }
