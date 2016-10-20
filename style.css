@@ -486,3 +486,21 @@ margin: auto;
   font-size: 14px;
   text-align: left;
 }
+/*=====================================*/
+
+/*=================ПАГИНАЦИЯ====================*/
+/*контейнер для пагинации*/
+.pagination-index{
+    margin-top: 70px;
+    text-align: center;
+}
+
+/*ul пагинации*/
+.page-numbers{
+
+}
+
+/*li пагинации*/
+.page-numbers li{
+
+}

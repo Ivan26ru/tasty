@@ -100,6 +100,23 @@ get_header(); // подключаем header.php ?>
 			<!-- конец поста -->
 		</div>
 		<!-- конец раздела других постов -->
+
+		<!-- пагинация(номера страниц) -->
+		<div class="pagination-index">
+			<ul class="page-numbers">
+				<li><a class="prev page-numbers" href="#">Назад</a></li>
+				<li><a class="page-numbers" href="#">1</a></li>
+				<li><a class="page-numbers" href="#">2</a></li>
+				<li><a class="page-numbers" href="#">3</a></li>
+				<li><span class="page-numbers current">4</span></li>
+				<li><a class="page-numbers" href="#">5</a></li>
+				<li><a class="page-numbers" href="#">6</a></li>
+				<li><a class="page-numbers" href="#">7</a></li>
+				<li><a class="page-numbers" href="#">8</a></li>
+				<li><a class="next page-numbers" href="#">Вперед</a></li>
+			</ul>
+		</div>
+		<!-- конец пагинаци -->
 	</section>
 
 <!-- правый сайдбар -->
