@@ -57,7 +57,7 @@ get_header(); // подключаем header.php ?>
 			<!-- пост -->
 			<div class="post-other">
 				<div class="post-other-img">
-					<img src="img/png/img-post.png">
+					<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/img-post.png">
 					<span class="data">09.08.2016</span>
 					<a href="" class="read-all">Читать полностью...</a>
 				</div>
