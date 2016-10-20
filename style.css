@@ -244,6 +244,7 @@ a {
 
 section {
     width: 850px;
+    display: inline-block;
 }
 
 
