@@ -325,25 +325,34 @@ article{
     border-bottom: none;
 }
 
+/*общий стиль даты*/
 .data {
     font-size: 12px;
     font-family: Roboto-Light, 'Arial';
     color: rgb(66, 213, 173);
+}
+
+/*для левого и правого блоков*/
+.data-block{
     position: absolute;
 }
 
-/*заголовок*/
+/*заголовок общий*/
 .title {
-    width: 250px;
-    height: 35px;
-    margin: 0 0 0 145px;
     font-size: 16px;
     font-family: Roboto-Light, 'Arial';
     color: rgb(0, 0, 0);
+}
+
+/*заголовок для блока*/
+.title-block{
+    height: 35px;
+    width: 250px;
+    margin: 0 0 0 145px;
     text-align: right;
 }
 
-/*кратное описание*/
+/*кратное описание общее*/
 .text {
     font-size: 12px;
     font-family: Roboto-Light, 'Arial';
@@ -354,11 +363,40 @@ article{
     height: 40px;
 }
 
+/*кратное описание для блока*/
+.text-block {
+
+}
+
+/*кнопка читаль полностью общая*/
 .read-all{
-  font-size: 10px;
+    font-size: 10px;
     font-family: Roboto-Light, 'Arial';
-  color: #00cd98;
-  float: right;
-  border: 1px solid #00cd98;
-  padding: 5px 20px;
+    color: #00cd98;
+    border: 1px solid #00cd98;
+    padding: 5px 20px;
+}
+
+/*кнопка читаль полностью для блока*/
+.read-all-block{
+    float: right;
+}
+
+/*============ПРОЧИЕ ПОСТЫ==============*/
+.div-post-other{
+    margin-top: 37px;
+}
+
+.post-other-img{
+    width: 419px;
+    height: 167px;
+}
+
+.post-other-img img{
+  width: 419px;
+  height: 167px;
+}
+
+.post-other-black-info{
+    height: 30px;
 }
