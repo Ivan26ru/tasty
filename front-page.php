@@ -43,6 +43,7 @@ get_header(); // подключаем header.php ?>
 		<div class="div-post-other">
 			<!-- пост -->
 			<div class="post-other">
+			<!-- миниатюра поста -->
 				<div class="post-other-img">
 					<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/img-post.png">
 					<div class="post-other-black-info">
@@ -50,6 +51,7 @@ get_header(); // подключаем header.php ?>
 						<a href="" class="read-all read-all-other">Читать полностью...</a>
 					</div>
 				</div>
+				<!-- анонс поста -->
 				<div class="post-other-info">
 					<div class="va-c">
 						<p class="title title-other">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</p>
@@ -57,6 +59,45 @@ get_header(); // подключаем header.php ?>
 					</div>
 				</div>
 			</div>
+			<!-- конец поста -->
+						<!-- пост -->
+			<div class="post-other">
+			<!-- миниатюра поста -->
+				<div class="post-other-img">
+					<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/img-post.png">
+					<div class="post-other-black-info">
+						<span class="data data-other">09.08.2016</span>
+						<a href="" class="read-all read-all-other">Читать полностью...</a>
+					</div>
+				</div>
+				<!-- анонс поста -->
+				<div class="post-other-info">
+					<div class="va-c">
+						<p class="title title-other">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</p>
+						<p class="text text-other">Баланс представления, качества и цены – залог успеха. Сегодня я хочу рассказать о линейке жидкости ZE-PAR, оригинальной в подаче, вкусной в содержании, доступной в цене.</p>
+					</div>
+				</div>
+			</div>
+			<!-- конец поста -->
+						<!-- пост -->
+			<div class="post-other">
+			<!-- миниатюра поста -->
+				<div class="post-other-img">
+					<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/img-post.png">
+					<div class="post-other-black-info">
+						<span class="data data-other">09.08.2016</span>
+						<a href="" class="read-all read-all-other">Читать полностью...</a>
+					</div>
+				</div>
+				<!-- анонс поста -->
+				<div class="post-other-info">
+					<div class="va-c">
+						<p class="title title-other">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</p>
+						<p class="text text-other">Баланс представления, качества и цены – залог успеха. Сегодня я хочу рассказать о линейке жидкости ZE-PAR, оригинальной в подаче, вкусной в содержании, доступной в цене.</p>
+					</div>
+				</div>
+			</div>
+			<!-- конец поста -->
 		</div>
 	</section>
 

@@ -407,12 +407,12 @@ article {
 /*============ПРОЧИЕ ПОСТЫ==============*/
 /*Блок для постов*/
 .div-post-other {
-    margin-top: 37px;
 }
 
 /*пост*/
 .post-other{
-        height: 167px;
+    margin-top: 37px;
+    height: 167px;
 }
 
 /*блок для картинки*/
