@@ -1,6 +1,6 @@
 /*================ Общие стили для сайта ========================*/
 
-
+/*основной зеленый цвет #00cd98*/
 /*пользовательские шрифты*/
 
 @font-face {
@@ -533,4 +533,21 @@ article {
 
 /*li пагинации*/
 
-.page-numbers li {}
+.page-numbers li {
+    display:inline-block;
+}
+
+/*активная страница*/
+.page-numbers li span{
+    color: #00cd98;
+}
+
+/*стрелка назад*/
+.prev{
+    margin-right: 30px;
+}
+
+/*стрелка вперед*/
+.next{
+    margin-left: 30px;
+}

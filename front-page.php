@@ -104,7 +104,7 @@ get_header(); // подключаем header.php ?>
 		<!-- пагинация(номера страниц) -->
 		<div class="pagination-index">
 			<ul class="page-numbers">
-				<li><a class="prev page-numbers" href="#">Назад</a></li>
+				<li><a class="prev page-numbers" href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/prev.png" alt=""></a></li>
 				<li><a class="page-numbers" href="#">1</a></li>
 				<li><a class="page-numbers" href="#">2</a></li>
 				<li><a class="page-numbers" href="#">3</a></li>
@@ -113,7 +113,7 @@ get_header(); // подключаем header.php ?>
 				<li><a class="page-numbers" href="#">6</a></li>
 				<li><a class="page-numbers" href="#">7</a></li>
 				<li><a class="page-numbers" href="#">8</a></li>
-				<li><a class="next page-numbers" href="#">Вперед</a></li>
+				<li><a class="next page-numbers" href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/next.png" alt=""></a></li>
 			</ul>
 		</div>
 		<!-- конец пагинаци -->
