@@ -403,17 +403,25 @@ article {
 
 
 /*============ПРОЧИЕ ПОСТЫ==============*/
-
+/*Блок для постов*/
 .div-post-other {
     margin-top: 37px;
 }
 
+/*пост*/
+.post-other{
+        height: 167px;
+}
+
+/*блок для картинки*/
 .post-other-img {
+    display: inline-block;
     width: 419px;
     height: 167px;
     position: relative;
 }
 
+/*миниатюра поста*/
 .post-other-img img {
     width: 419px;
     height: 167px;
@@ -445,4 +453,12 @@ article {
   font-size: 12px;
     float: right;
     margin-top: 3px;
+}
+
+/*блок заголовока и анонса поста*/
+.post-other-info{
+    display: inline-block;
+    width: 405px;
+    height: 167px;
+    float: right;
 }
