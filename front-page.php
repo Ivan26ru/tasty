@@ -12,7 +12,7 @@ get_header(); // подключаем header.php ?>
 	<!-- основное содержание -->
 	<!-- разделение на 2 колонки -->
 		<article class="clearfix">
-		<!-- левая колонка -->
+			<!-- левая колонка -->
 			<div class="block block-left">
 				<a href="#" class="zagolovok"><span class="line">МИКСОЛОГИЯ</span></a>
 				<div class="img-colomn mixologiya"></div>
@@ -99,13 +99,14 @@ get_header(); // подключаем header.php ?>
 			</div>
 			<!-- конец поста -->
 		</div>
+		<!-- конец раздела других постов -->
 	</section>
 
 <!-- правый сайдбар -->
 <sidebar>
 сайтбар
 </sidebar>
-
 </div>
+<!-- конец container -->
 
 <?php get_footer(); // подключаем footer.php ?>
