@@ -188,6 +188,36 @@ display: inline-block;
 }
 /*==================================*/
 
-.mt25{
-	margin-top:25px;
+/*============ОСНОВНАЯ ЧАСТЬ===================*/
+/*Контейнер для основной части*/
+.container{
+    width: 1150px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+/*контейнер для блоков левого и правого*/
+section{
+    width: 850px;
+}
+
+/*блоки левый и правый*/
+.block{
+    width: 405px;
+}
+
+.block-left{
+    float: left;
+}
+
+.block-right{
+    float: right;
+}
+
+/*сайтбар*/
+sidebar{
+    width: 240px;
+    float: right;
 }

@@ -5,14 +5,17 @@
  * @subpackage your-clean-template
  */
 get_header(); // подключаем header.php ?>
-
-<div class="w1200 mt25">
-<article>
+<!-- основа сайта-->
+<div class="container">
+<!-- контент -->
 	<section>
-
+		<article>
+			<div class="block block-left">left</div>
+			<div class="block block-right">right</div>
+		</article>
 	</section>
-</article>
 
+<!-- правый сайдбар -->
 <sidebar>
 сайтбар
 </sidebar>
