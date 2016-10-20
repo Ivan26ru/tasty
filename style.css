@@ -112,7 +112,8 @@ a {
 }
 
 /*при наведении верхнее меню 1*/
-.ul-top-1 li a:hover {
+.ul-top-1 li a:hover,
+.ul-top-1 li.active a{
     background-color: #000;
     color: #fff;
 }
@@ -134,6 +135,8 @@ a {
 	    padding-left: 46px;
 	    padding-right:46px
 }
+
+/*кнопка входа при наведении*/
 .btn-top-1 a:hover{
 	background-color: #00cd98;
 }
@@ -170,7 +173,8 @@ display: inline-block;
 }
 
 /*при наведении верхнее меню 2*/
-.ul-top-2 li a:hover {
+.ul-top-2 li a:hover,
+.ul-top-2 li.active a{
     color: #00cd98;
   }
 
@@ -183,7 +187,8 @@ display: inline-block;
 }
 
 /* подчеркивание элементов меню 2*/
-.ul-top-2 li a:hover .line{
+.ul-top-2 li a:active .line-menu,
+.ul-top-2 li.active .line-menu{
     border-bottom: 2px solid #00cd98;
     padding-bottom: 7px;
 }
@@ -239,4 +244,11 @@ sidebar{
 .line{
     border-bottom: 1px solid #00cd98;
     padding-bottom: 7px;
+}
+
+.mixologiya {
+  background: url(img/png/mixologiya.png)center no-repeat;
+  width: 405px;
+  height: 149px;
+  margin-top:27px;
 }

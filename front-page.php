@@ -12,6 +12,8 @@ get_header(); // подключаем header.php ?>
 		<article>
 			<div class="block block-left">
 				<a href="#" class="zagolovok"><span class="line">МИКСОЛОГИЯ</span></a>
+				<div class="mixologiya"></div>
+
 			</div>
 			<div class="block block-right">
 				<a href="#" class="zagolovok"><span class="line">vape новости</span></a>
