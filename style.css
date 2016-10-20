@@ -376,13 +376,14 @@ article {
     text-align: left;
     margin: 0;
     margin-top: 10px;
-    height: 40px;
 }
 
 
 /*кратное описание для блока*/
 
-.text-block {}
+.text-block {
+    height: 40px;
+}
 
 
 /*кнопка читаль полностью общая*/
@@ -458,8 +459,30 @@ article {
 
 /*блок заголовока и анонса поста*/
 .post-other-info{
-    display: inline-block;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
     width: 405px;
     height: 167px;
     float: right;
+}
+
+/*выравнивение по центру по вертикали текст*/
+.va-c{
+margin: auto;
+}
+
+/*заголовок поста*/
+.title-other{
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+
+/*анонс поста*/
+.text-other{
+  font-size: 14px;
+  text-align: left;
 }
