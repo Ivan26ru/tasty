@@ -405,17 +405,23 @@ article {
 
 
 /*============ПРОЧИЕ ПОСТЫ==============*/
+
+
 /*Блок для постов*/
-.div-post-other {
-}
+
+.div-post-other {}
+
 
 /*пост*/
-.post-other{
+
+.post-other {
     margin-top: 37px;
     height: 167px;
 }
 
+
 /*блок для картинки*/
+
 .post-other-img {
     display: inline-block;
     width: 419px;
@@ -423,7 +429,9 @@ article {
     position: relative;
 }
 
+
 /*миниатюра поста*/
+
 .post-other-img img {
     width: 419px;
     height: 167px;
@@ -444,21 +452,27 @@ article {
     /*line-height: 28px;*/
 }
 
+
 /*дата на черной полоске*/
-.data-other{
-  line-height: 31px;
-  font-size: 14px;
+
+.data-other {
+    line-height: 31px;
+    font-size: 14px;
 }
 
+
 /*читать полностью на черной полоске*/
-.read-all-other{
-  font-size: 12px;
+
+.read-all-other {
+    font-size: 12px;
     float: right;
     margin-top: 3px;
 }
 
+
 /*блок заголовока и анонса поста*/
-.post-other-info{
+
+.post-other-info {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -469,38 +483,54 @@ article {
     float: right;
 }
 
+
 /*выравнивение по центру по вертикали текст*/
-.va-c{
-margin: auto;
+
+.va-c {
+    margin: auto;
 }
+
 
 /*заголовок поста*/
-.title-other{
-  font-size: 20px;
-  color: rgb(0, 0, 0);
-  text-align: left;
+
+.title-other {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-align: left;
 }
+
 
 /*анонс поста*/
-.text-other{
-  font-size: 14px;
-  text-align: left;
+
+.text-other {
+    font-size: 14px;
+    text-align: left;
 }
+
+
 /*=====================================*/
 
+
 /*=================ПАГИНАЦИЯ====================*/
+
+
 /*контейнер для пагинации*/
-.pagination-index{
+
+.pagination-index {
     margin-top: 70px;
     text-align: center;
+    font-family: Roboto-Regular, 'Arial';
 }
+
 
 /*ul пагинации*/
-.page-numbers{
 
+.page-numbers {
+    font-size: 18px;
+    color: rgb(51, 51, 51);
 }
+
 
 /*li пагинации*/
-.page-numbers li{
 
-}
+.page-numbers li {}
