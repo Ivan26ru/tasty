@@ -56,7 +56,7 @@
 			'theme_location' => 'top', // идентификатор меню, определен в register_nav_menus() в function.php
 			'container'=> '', // обертка списка
 			'menu_class' => 'ul-top-2', // класс для ul
-'link_before'          => '<span class="line">',              // (string) Текст перед <a> каждой ссылки
+'link_before'          => '<span class="line-menu">',              // (string) Текст перед <a> каждой ссылки
 	'link_after'           => '</span>',              // (string) Текст после </a> каждой ссылки
   			);
 			wp_nav_menu($args); // выводим верхнее меню

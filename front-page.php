@@ -10,6 +10,7 @@ get_header(); // подключаем header.php ?>
 <!-- контент -->
 	<section>
 	<!-- основное содержание -->
+	<!-- разделение на 2 колонки -->
 		<article class="clearfix">
 		<!-- левая колонка -->
 			<div class="block block-left">
@@ -51,6 +52,21 @@ get_header(); // подключаем header.php ?>
 				</div>
 			</div>
 		</article>
+		<!-- другие посты с картинками -->
+		<div class="div-post-other">
+			<!-- пост -->
+			<div class="post-other">
+				<div class="post-other-img">
+					<img src="img/png/img-post.png">
+					<span class="data">09.08.2016</span>
+					<a href="" class="read-all">Читать полностью...</a>
+				</div>
+				<div class="post-other-info">
+					<p class="title">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</p>
+					<p class="text">Баланс представления, качества и цены – залог успеха. Сегодня я хочу рассказать о линейке жидкости ZE-PAR, оригинальной в подаче, вкусной в содержании, доступной в цене.</p>
+				</div>
+			</div>
+		</div>
 	</section>
 
 <!-- правый сайдбар -->
