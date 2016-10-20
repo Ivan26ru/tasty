@@ -551,3 +551,44 @@ sidebar {
     width: 240px;
     float: right;
 }
+
+/*top5*/
+.top5{
+    border: 3px solid #000;
+    width: 181px;
+    /*height: 262px;*/
+    height: 216px;
+    margin-top: 52px;
+    position: relative;
+    padding: 35px 27px 20px;
+}
+
+/*значек сайдбара*/
+.sidebar-img{
+    position: absolute;
+    right: 27px;
+    top: -47px;
+}
+
+/*ссылки TOP5*/
+.top5 a{
+    display: block;
+    font-size: 12px;
+    font-family: Roboto-Regular;
+    color: #666666;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #000;
+}
+
+/*первая ссылка*/
+.top5 a:first-child{
+
+}
+
+/*крайняя ссылка*/
+.top5 a:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+}

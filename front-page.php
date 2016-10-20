@@ -121,7 +121,15 @@ get_header(); // подключаем header.php ?>
 
 <!-- правый сайдбар -->
 <sidebar>
-сайтбар
+<!-- top5 -->
+<div class="top5">
+	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/top5.png" class="sidebar-img">
+	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
+	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
+	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
+	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
+	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
+</div>
 </sidebar>
 </div>
 <!-- конец container -->
