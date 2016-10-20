@@ -52,18 +52,13 @@
 <!-- линия пониже(черная) -->
 <div class="line-top-black">
 	<div class="w1200">
-
-	</div>
-</div>
-
-
-
 		<?php $args = array( // опции для вывода верхнего меню, чтобы они работали, меню должно быть создано в админке
 			'theme_location' => 'top', // идентификатор меню, определен в register_nav_menus() в function.php
-			'container'=> 'nav', // обертка списка
-			'menu_class' => 'bottom-menu', // класс для ul
-	  		'menu_id' => 'bottom-nav', // id для ul
+			'container'=> '', // обертка списка
+			'menu_class' => 'ul-top-2' // класс для ul
   			);
-			//wp_nav_menu($args); // выводим верхнее меню
+			wp_nav_menu($args); // выводим верхнее меню
 		?>
+	</div>
+</div>
 	</header>

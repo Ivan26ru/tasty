@@ -1,4 +1,4 @@
-================ Общие стили для сайта ========================*/
+/*================ Общие стили для сайта ========================*/
 
 
 /*пользовательские шрифты*/
@@ -7,6 +7,13 @@
     font-family: Roboto-Light;
     /* Гарнитура шрифта */
     src: url(fonts/Roboto-Light.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    /* Гарнитура шрифта */
+    src: url(fonts/Roboto-Regular.ttf);
     /* Путь к файлу со шрифтом */
 }
 
@@ -73,7 +80,7 @@ a {
 
 /*верхняя строка с меню и формой входа*/
 
-.menu-user {
+.menu-user{
     margin-left: 186px;
 }
 
@@ -105,7 +112,7 @@ a {
     background-color: #000;
     color: #fff;
 }
-/*==================================*/
+
 
 /* ===========стиль кнопок верхних вход регистрация===========*/
 .vhod{
@@ -128,5 +135,48 @@ a {
 .vhod img{
 	margin-right:10px;
 }
+/*==================================*/
+
+/*=============верхнее меню 2====================*/
+
+.ul-top-2 {
+	margin: 0;
+	padding: 0 42px;
+	margin-left: 186px;
+	display: inline-block;
+
+}
+
+.ul-top-2 li {
+    display: inline-block;
+}
+
+.ul-top-2 li a {
+	display: block;
+    margin: 0;
+    padding-left: 22px;
+    padding-right: 22px;
+    font-family: Roboto-Regular, 'Arial';
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 70px;
+}
+
+/*при наведении верхнее меню 1*/
+.ul-top-2 li a:hover {
+    color: rgb(0, 205, 152);
+    text-decoration: underline;
+}
+
+.ul-top-2 li:first-child a{
+	padding-left:0;
+}
+
+.ul-top-2 li:last-child a{
+	padding-right:0;
+
+}
+/*==================================*/
 
 /*-----------------------------------
