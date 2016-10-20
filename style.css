@@ -353,6 +353,7 @@ article {
     font-size: 16px;
     font-family: Roboto-Light, 'Arial';
     color: rgb(0, 0, 0);
+    margin: 0;
 }
 
 
@@ -361,7 +362,7 @@ article {
 .title-block {
     height: 35px;
     width: 250px;
-    margin: 0 0 0 145px;
+    margin-left: 145px;
     text-align: right;
 }
 
