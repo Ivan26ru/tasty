@@ -1,0 +1,355 @@
+/*================ Общие стили для сайта ========================*/
+
+
+/*пользовательские шрифты*/
+
+@font-face {
+    font-family: Roboto-Light;
+    /* Гарнитура шрифта */
+    src: url(fonts/Roboto-Light.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    /* Гарнитура шрифта */
+    src: url(fonts/Roboto-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+/*хак для float*/
+.clearfix:before,
+.clearfix:after {
+content: " ";
+display: table;
+}
+.clearfix:after {
+clear: both;
+}
+
+
+/*Убрал маркеры всех списков*/
+
+li {
+    list-style: none;
+}
+
+
+/*ширина 1200 по центру*/
+
+.w1200 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/*убрал подчеркивание всех ссылок, черный цвет всем ссылкам*/
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/*=========================*/
+
+
+/*---------------ШАПКА САЙТА-------------------*/
+
+
+/*верхняя черная линия*/
+
+.line-top-white {
+    height: 39px;
+    margin-bottom: 1px;
+    position: relative;
+}
+
+
+/*блок логотипа*/
+
+.div-logo {
+    background: url(img/png/logo.png) center no-repeat;
+    background-color: #00cd98;
+    position: absolute;
+    top: 0px;
+    width: 186px;
+    height: 110px;
+    z-index: 2;
+}
+
+
+/*верхняя черная линия*/
+
+.line-top-black {
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.35);
+    left: 0px;
+    width: 100%;
+    min-width: 1200px;
+    height: 70px;
+}
+
+
+/*верхняя строка с меню и формой входа*/
+
+.menu-user {
+    margin-left: 186px;
+}
+
+
+/*=============верхнее меню 1====================*/
+
+.ul-top-1 {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.ul-top-1 li {
+    display: inline-block;
+}
+
+.ul-top-1 li a {
+    margin: 0;
+    display: inline-block;
+    padding-left: 37px;
+    padding-right: 37px;
+    font-family: Roboto-Light, 'Arial';
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #fff;
+    color: #000;
+    line-height: 39px;
+}
+
+
+/*при наведении верхнее меню 1*/
+
+.ul-top-1 li a:hover,
+.ul-top-1 li.active a {
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* ===========стиль кнопок верхних вход регистрация===========*/
+
+.vhod {
+    float: right;
+}
+
+
+/* вход и регистрация */
+
+.btn-top-1 a {
+    display: inline-block;
+    font-family: Roboto-Light, 'Arial';
+    text-transform: uppercase;
+    font-size: 10px;
+    color: rgb(51, 51, 51);
+    line-height: 39px;
+    padding-left: 46px;
+    padding-right: 46px
+}
+
+
+/*кнопка входа при наведении*/
+
+.btn-top-1 a:hover {
+    background-color: #00cd98;
+}
+
+.vhod img {
+    margin-right: 10px;
+}
+
+
+/*==================================*/
+
+
+/*=============верхнее меню 2====================*/
+
+.ul-top-2 {
+    margin: 0;
+    padding: 0;
+    margin-left: 186px;
+    text-align: center;
+}
+
+.ul-top-2 li {
+    display: inline-block;
+}
+
+.ul-top-2 li a {
+    display: block;
+    margin: 0;
+    padding-left: 22px;
+    padding-right: 22px;
+    font-family: Roboto-Regular, 'Arial';
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 70px;
+    width: 100%;
+}
+
+
+/*при наведении верхнее меню 2*/
+
+.ul-top-2 li a:hover,
+.ul-top-2 li.active a {
+    color: #00cd98;
+}
+
+.ul-top-2 li:first-child a {
+    padding-left: 0;
+}
+
+.ul-top-2 li:last-child a {
+    padding-right: 0;
+}
+
+
+/* подчеркивание элементов меню 2*/
+
+.ul-top-2 li a:active .line-menu,
+.ul-top-2 li.active .line-menu {
+    border-bottom: 2px solid #00cd98;
+    padding-bottom: 7px;
+}
+
+
+/*==================================*/
+
+
+/*============ОСНОВНАЯ ЧАСТЬ===================*/
+
+
+/*Контейнер для основной части*/
+
+.container {
+    width: 1150px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+
+/*контейнер для блоков левого и правого*/
+
+section {
+    width: 850px;
+}
+
+
+/*блоки левый и правый*/
+
+.block {
+    width: 405px;
+    /*background-color: #ddd;*/
+}
+
+.block-left {
+    float: left;
+}
+
+.block-right {
+    float: right;
+}
+
+
+/*сайтбар*/
+
+sidebar {
+    width: 240px;
+    float: right;
+}
+
+
+/*Заголовок левого и правого контейнера*/
+
+.zagolovok {
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    font-size: 22px;
+    font-family: Roboto-Light, 'Arial';
+    color: rgb(51, 51, 51);
+    text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
+}
+
+
+/*подчеркивающаяся зеленая линия*/
+
+.line {
+    border-bottom: 1px solid #00cd98;
+    padding-bottom: 7px;
+}
+
+
+/*картинка левого блока*/
+
+.img-colomn {
+    width: 405px;
+    height: 149px;
+    margin-top: 27px;
+}
+
+.mixologiya{
+    background: url(img/png/mixologiya.png)center no-repeat;
+}
+
+.vipe-news{
+    background: url(img/png/vipe-news.png)center no-repeat;
+
+}
+
+/*кратное описание новости*/
+
+.news {
+    position: relative;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.data {
+    font-size: 12px;
+    font-family: Roboto-Light, 'Arial';
+    color: rgb(66, 213, 173);
+    position: absolute;
+}
+
+/*заголовок*/
+.title {
+    width: 250px;
+    height: 35px;
+    margin: 0 0 0 145px;
+    font-size: 16px;
+    font-family: Roboto-Light, 'Arial';
+    color: rgb(0, 0, 0);
+    text-align: right;
+}
+
+/*кратное описание*/
+.text {
+    font-size: 12px;
+    font-family: Roboto-Light, 'Arial';
+    color: rgb(102, 102, 102);
+    text-align: left;
+    margin: 0;
+    margin-top: 10px;
+    height: 40px;
+}
+
+.read-all{
+  font-size: 10px;
+    font-family: Roboto-Light, 'Arial';
+  color: #00cd98;
+  float: right;
+  border: 1px solid #00cd98;
+  padding: 5px 20px;
+}
