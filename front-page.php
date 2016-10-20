@@ -18,17 +18,10 @@ get_header(); // подключаем header.php ?>
 				<div class="img-colomn mixologiya"></div>
 				<!-- краткое описание новости -->
 				<div class="news clearfix">
-					<span class="data">09.08.2016</span>
-					<p class="title">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</p>
-					<p class="text">Баланс представления, качества и цены – залог успеха. Сегодня я хочу рассказать о линейке жидкости ZE-PAR, оригинальной в подаче, вкусной в содержании, доступной в цене.</p>
-					<a href="#" class="read-all">читать полностью...</a>
-				</div>
-				<!-- краткое описание новости -->
-				<div class="news clearfix">
-					<span class="data">09.08.2016</span>
-					<p class="title">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</p>
-					<p class="text">Баланс представления, качества и цены – залог успеха. Сегодня я хочу рассказать о линейке жидкости ZE-PAR, оригинальной в подаче, вкусной в содержании, доступной в цене.</p>
-					<a href="#" class="read-all">читать полностью...</a>
+					<span class="data data-block">09.08.2016</span>
+					<p class="title title-block">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</p>
+					<p class="text text-block">Баланс представления, качества и цены – залог успеха. Сегодня я хочу рассказать о линейке жидкости ZE-PAR, оригинальной в подаче, вкусной в содержании, доступной в цене.</p>
+					<a href="#" class="read-all read-all-block">читать полностью...</a>
 				</div>
 
 			</div>
@@ -36,20 +29,7 @@ get_header(); // подключаем header.php ?>
 			<div class="block block-right">
 				<a href="#" class="zagolovok"><span class="line">vape новости</span></a>
 				<div class="img-colomn vipe-news"></div>
-				<!-- краткое описание новости -->
-				<div class="news clearfix">
-					<span class="data">09.08.2016</span>
-					<p class="title">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</p>
-					<p class="text">Баланс представления, качества и цены – залог успеха. Сегодня я хочу рассказать о линейке жидкости ZE-PAR, оригинальной в подаче, вкусной в содержании, доступной в цене.</p>
-					<a href="#" class="read-all">читать полностью...</a>
-				</div>
-				<!-- краткое описание новости -->
-				<div class="news clearfix">
-					<span class="data">09.08.2016</span>
-					<p class="title">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</p>
-					<p class="text">Баланс представления, качества и цены – залог успеха. Сегодня я хочу рассказать о линейке жидкости ZE-PAR, оригинальной в подаче, вкусной в содержании, доступной в цене.</p>
-					<a href="#" class="read-all">читать полностью...</a>
-				</div>
+
 			</div>
 		</article>
 		<!-- другие посты с картинками -->
@@ -58,8 +38,10 @@ get_header(); // подключаем header.php ?>
 			<div class="post-other">
 				<div class="post-other-img">
 					<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/img-post.png">
-					<span class="data">09.08.2016</span>
-					<a href="" class="read-all">Читать полностью...</a>
+					<div class="post-other-black-info">
+						<span class="data">09.08.2016</span>
+						<a href="" class="read-all">Читать полностью...</a>
+					</div>
 				</div>
 				<div class="post-other-info">
 					<p class="title">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</p>
