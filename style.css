@@ -33,10 +33,11 @@ li {
 }
 
 
-/*убрал подчеркивание всех ссылок*/
+/*убрал подчеркивание всех ссылок, черный цвет всем ссылкам*/
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 /*=========================*/
@@ -206,6 +207,7 @@ section{
 /*блоки левый и правый*/
 .block{
     width: 405px;
+    background-color: #ddd;
 }
 
 .block-left{
@@ -220,4 +222,21 @@ section{
 sidebar{
     width: 240px;
     float: right;
+}
+
+/*Заголовок левого и правого контейнера*/
+.zagolovok{
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    font-size: 22px;
+    font-family: Roboto-Light, 'Arial';
+    color: rgb(51, 51, 51);
+    text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
+}
+
+/*подчеркивающаяся зеленая линия*/
+.line{
+    border-bottom: 1px solid #00cd98;
+    padding-bottom: 7px;
 }

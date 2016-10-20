@@ -10,8 +10,12 @@ get_header(); // подключаем header.php ?>
 <!-- контент -->
 	<section>
 		<article>
-			<div class="block block-left">left</div>
-			<div class="block block-right">right</div>
+			<div class="block block-left">
+				<a href="#" class="zagolovok"><span class="line">МИКСОЛОГИЯ</span></a>
+			</div>
+			<div class="block block-right">
+				<a href="#" class="zagolovok"><span class="line">vape новости</span></a>
+			</div>
 		</article>
 	</section>
 
