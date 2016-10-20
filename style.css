@@ -225,6 +225,12 @@ a {
 
 /*============ОСНОВНАЯ ЧАСТЬ===================*/
 
+/*сайтбар*/
+
+sidebar {
+    width: 240px;
+    float: right;
+}
 
 /*Контейнер для основной части*/
 
@@ -237,18 +243,22 @@ a {
 }
 
 
-/*контейнер для блоков левого и правого*/
+/*контейнер для основного содержимого*/
 
 section {
     width: 850px;
 }
 
+/*Когтейнер для левого и правого блока*/
+article{
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
 
 /*блоки левый и правый*/
 
 .block {
     width: 405px;
-    background-color: #ddd;
+    /*background-color: #ddd;*/
 }
 
 .block-left {
@@ -260,12 +270,7 @@ section {
 }
 
 
-/*сайтбар*/
 
-sidebar {
-    width: 240px;
-    float: right;
-}
 
 
 /*Заголовок левого и правого контейнера*/
@@ -291,13 +296,20 @@ sidebar {
 
 /*картинка левого блока*/
 
-.mixologiya {
-    background: url(img/png/mixologiya.png)center no-repeat;
+.img-colomn {
     width: 405px;
     height: 149px;
     margin-top: 27px;
 }
 
+.mixologiya{
+    background: url(img/png/mixologiya.png)center no-repeat;
+}
+
+.vipe-news{
+    background: url(img/png/vipe-news.png)center no-repeat;
+
+}
 
 /*кратное описание новости*/
 
@@ -305,6 +317,12 @@ sidebar {
     position: relative;
     margin-top: 20px;
     padding-left: 10px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.news:last-child{
+    border-bottom: none;
 }
 
 .data {

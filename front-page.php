@@ -10,7 +10,7 @@ get_header(); // подключаем header.php ?>
 <!-- контент -->
 	<section>
 	<!-- основное содержание -->
-		<article>
+		<article class="clearfix">
 		<!-- левая колонка -->
 			<div class="block block-left">
 				<a href="#" class="zagolovok"><span class="line">МИКСОЛОГИЯ</span></a>
