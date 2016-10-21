@@ -130,18 +130,28 @@ get_header(); // подключаем header.php ?>
 	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
 	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
 </div>
+<!-- лучшие девайсы -->
+<div class="best-device">
+	<p class="zagolovok"><span class="line">лучшие девайсы</span></p>
+	<a href="#" class="best-device-a d1">BOX MODS</a>
+	<a href="#" class="best-device-a d2">Mechanical  Mod</a>
+	<a href="#" class="best-device-a d3">RDas</a>
+	<a href="#" class="best-device-a d4">Sub ohm  tanks</a>
+	<a href="#" class="best-device-a d5">battery  chargers</a>
+	<a href="#" class="best-device-a d7">batteries</a>
+</div>
 <!-- the best -->
 <div class="sb-r best">
-	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/top5.png" class="sidebar-img">
+	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/email-sb.png" class="sidebar-img">
 	<p>Подборка крутых новостей недели</p>
 	<form action="">
 		<input class="input-email" type="text" name="email" id="" placeholder="Введите email">
-		<input type="submit" class="btn-green" value="Подписаться">	
+		<input type="submit" class="btn-green" value="Подписаться">
 	</form>
 </div>
 <!-- опрос -->
 <div class="sb-r what">
-	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/top5.png" class="sidebar-img">
+	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/what.png" class="sidebar-img">
 	<p>Какой вкус вам больше нравится</p>
 	<form action="#">
 	<label>
@@ -150,7 +160,7 @@ get_header(); // подключаем header.php ?>
 	<label>
 		<input type="radio" name="vkus" value="variant2">Вариант 2
 	</label>
-		<input type="submit" class="btn-green" value="Отправить">	
+		<input type="submit" class="btn-green" value="Отправить">
 	</form>
 </div>
 <!-- рекламный блок -->
