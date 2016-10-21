@@ -151,7 +151,7 @@ get_header(); // подключаем header.php ?>
 	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/email-sb.png" class="sidebar-img">
 	<p>Подборка крутых новостей недели</p>
 	<form action="">
-		<input class="input-email" type="text" name="email" id="" placeholder="Введите email">
+		<input class="input-email" type="email" name="email" id="" placeholder="Введите email">
 		<input type="submit" class="btn-green" value="Подписаться">
 	</form>
 </div>
@@ -161,7 +161,7 @@ get_header(); // подключаем header.php ?>
 	<p>Какой вкус вам больше нравится</p>
 	<form action="#">
 	<label>
-		<input type="radio" name="vkus" value="variant1">Вариант 1
+		<input type="radio" name="vkus" value="variant1" checked>Вариант 1
 	</label>
 	<label>
 		<input type="radio" name="vkus" value="variant2">Вариант 2
