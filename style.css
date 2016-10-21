@@ -744,15 +744,20 @@ input[type="radio"] {
 .best-device-a {
     -webkit-background-size: cover;
     background-size: cover;
-    width: 241px;
+    width: 131px;
     height: 84px;
     display: block;
+    display: table;
     font-size: 16px;
     font-family: Roboto-Regular;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
-    line-height: 84px;
     padding-left: 110px;
+}
+/*для выравнивания по центру*/
+.best-device-a span{
+    display: table-cell;
+    vertical-align: middle;
 }
 
 /*стиль ссылки девайса при наведении общее*/

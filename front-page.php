@@ -133,12 +133,12 @@ get_header(); // подключаем header.php ?>
 <!-- лучшие девайсы -->
 <div class="best-device">
 	<p class="zagolovok"><span class="line">лучшие девайсы</span></p>
-	<a href="#" class="best-device-a d1">BOX MODS</a>
-	<a href="#" class="best-device-a d2">Mechanical  Mod</a>
-	<a href="#" class="best-device-a d3">RDas</a>
-	<a href="#" class="best-device-a d4">Sub ohm  tanks</a>
-	<a href="#" class="best-device-a d5">battery  chargers</a>
-	<a href="#" class="best-device-a d7">batteries</a>
+	<a href="#" class="best-device-a d1"><span>BOX MODS</span></a>
+	<a href="#" class="best-device-a d2"><span>Mechanical  Mod</span></a>
+	<a href="#" class="best-device-a d3"><span>RDas</span></a>
+	<a href="#" class="best-device-a d4"><span>Sub ohm  tanks</span></a>
+	<a href="#" class="best-device-a d5"><span>battery  chargers</span></a>
+	<a href="#" class="best-device-a d6"><span>batteries</span></a>
 </div>
 <!-- the best -->
 <div class="sb-r best">
