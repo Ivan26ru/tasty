@@ -683,10 +683,13 @@ sidebar {
 
 /*зеленая кнопка при наведении*/
 
-.btn-green:focus {
+.btn-green:focus,
+.btn-green:hover {
     border: 0;
     outline: 0;
+    background-color: #02a379;
 }
+
 
 
 /*==========ОПРОСНИК==========*/
