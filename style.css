@@ -573,7 +573,7 @@ sidebar {
 /*sb-r блок с ярлыком общий*/
 
 .sb-r {
-    margin-top: 80px;
+    margin-top: 77px;
     border: 3px solid #000;
     width: 181px;
     /*height: 262px;*/
@@ -631,7 +631,9 @@ sidebar {
 
 /*the best*/
 
-.best {}
+.best {
+    margin-top: 105px;
+}
 
 
 /*=========ПОДПИСКА========*/
@@ -718,6 +720,20 @@ input[type="radio"] {
     overflow: hidden;
 }
 
+/* отступ 1 банера*/
+.sb-banner.sb-banner-1 {
+    margin-top: 58px;
+}
+
+/* отступ 2 банера*/
+.sb-banner.sb-banner-2 {
+    margin-top: 55px;
+}
+
+/* отступ 3 банера*/
+.sb-banner.sb-banner-3 {
+    margin-top: 25px;
+}
 
 /*картинка рекламного блока*/
 
@@ -726,9 +742,10 @@ input[type="radio"] {
 }
 
 
-/*==========best-device========*/
+/*==========BEST-DEVICE ЛУЧШИЕ ДЕВАЙСЫ========*/
 /*контейнер best-device*/
 .best-device {
+    margin-top: 44px;
     width: 241px;
 }
 

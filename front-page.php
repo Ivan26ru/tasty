@@ -140,6 +140,12 @@ get_header(); // подключаем header.php ?>
 	<a href="#" class="best-device-a d5"><span>battery  chargers</span></a>
 	<a href="#" class="best-device-a d6"><span>batteries</span></a>
 </div>
+
+<!-- рекламный блок -->
+<div class="sb-banner sb-banner-1">
+	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/banner/banner1.png" class="sb-banner-img">
+</div>
+
 <!-- the best -->
 <div class="sb-r best">
 	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/email-sb.png" class="sidebar-img">
@@ -164,19 +170,15 @@ get_header(); // подключаем header.php ?>
 	</form>
 </div>
 <!-- рекламный блок -->
-<div class="sb-banner">
-	<img src="http://placehold.it/151x200" class="sb-banner-img">
+<div class="sb-banner sb-banner-2">
+	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/banner/banner2.png" class="sb-banner-img">
 </div>
 
 <!-- рекламный блок -->
-<div class="sb-banner">
-	<img src="http://placehold.it/251x200" class="sb-banner-img">
+<div class="sb-banner sb-banner-3">
+	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/banner/banner3.png" class="sb-banner-img">
 </div>
 
-<!-- рекламный блок -->
-<div class="sb-banner">
-	<img src="http://placehold.it/351x200" class="sb-banner-img">
-</div>
 </sidebar>
 </div>
 <!-- конец container -->
