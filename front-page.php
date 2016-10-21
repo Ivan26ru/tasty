@@ -143,7 +143,7 @@ get_header(); // подключаем header.php ?>
 
 <!-- рекламный блок -->
 <div class="sb-banner sb-banner-1">
-	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/banner/banner1.png" class="sb-banner-img">
+	<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/banner/banner1.png" class="sb-banner-img"></a>
 </div>
 
 <!-- the best -->
@@ -171,12 +171,12 @@ get_header(); // подключаем header.php ?>
 </div>
 <!-- рекламный блок -->
 <div class="sb-banner sb-banner-2">
-	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/banner/banner2.png" class="sb-banner-img">
+	<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/banner/banner2.png" class="sb-banner-img"></a>
 </div>
 
 <!-- рекламный блок -->
 <div class="sb-banner sb-banner-3">
-	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/banner/banner3.png" class="sb-banner-img">
+	<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/banner/banner3.png" class="sb-banner-img"></a>
 </div>
 
 </sidebar>
