@@ -122,13 +122,50 @@ get_header(); // подключаем header.php ?>
 <!-- правый сайдбар -->
 <sidebar>
 <!-- top5 -->
-<div class="top5">
+<div class="sb-r top5">
 	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/top5.png" class="sidebar-img">
 	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
 	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
 	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
 	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
 	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
+</div>
+<!-- the best -->
+<div class="sb-r best">
+	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/top5.png" class="sidebar-img">
+	<p>Подборка крутых новостей недели</p>
+	<form action="">
+		<input class="input-email" type="text" name="email" id="" placeholder="Введите email">
+		<input type="submit" class="btn-green" value="Подписаться">	
+	</form>
+</div>
+<!-- опрос -->
+<div class="sb-r what">
+	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/top5.png" class="sidebar-img">
+	<p>Какой вкус вам больше нравится</p>
+	<form action="#">
+	<label>
+		<input type="radio" name="vkus" value="variant1">Вариант 1
+	</label>
+	<label>
+		<input type="radio" name="vkus" value="variant2">Вариант 2
+	</label>
+		<input type="submit" class="btn-green" value="Отправить">	
+	</form>
+</div>
+<!-- рекламный блок -->
+<div class="sb-banner">
+	<img src="http://placehold.it/151x200" class="sb-banner-img">
+</div>
+
+<!-- рекламный блок -->
+<div class="sb-banner">
+	<img src="http://placehold.it/251x200" class="sb-banner-img">
+</div>
+
+<!-- рекламный блок -->
+<div class="sb-banner">
+	<img src="http://placehold.it/351x200" class="sb-banner-img">
 </div>
 </sidebar>
 </div>
