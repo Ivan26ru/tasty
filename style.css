@@ -753,6 +753,7 @@ input[type="radio"] {
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     padding-left: 110px;
+    margin-bottom: 7px;
 }
 /*для выравнивания по центру*/
 .best-device-a span{
@@ -766,8 +767,13 @@ input[type="radio"] {
 }
 
 /*отступ первого блока от заголовка*/
-.best-device-a:first-child {
-    margin-top: 20px;
+.best-device-a:nth-child(2) {
+    margin-top: 30px;
+}
+
+/*отступ крайнего блока отменен*/
+.best-device-a:last-child {
+    margin-bottom: 0;
 }
 
 /*1 девайс*/
