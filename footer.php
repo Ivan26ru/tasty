@@ -16,14 +16,46 @@
 					'menu_class' => 'bottom-menu', // класс для ul
 			  		'menu_id' => 'bottom-nav', // id для ul
 			  		);
-					wp_nav_menu($args); // выводим нижние меню
+					//wp_nav_menu($args); // выводим нижние меню
 					?>
+					<!-- 1 меню футера -->
+					<div class="footer-menu-1-div">
+						<ul class="footer-menu-1-ul">
+							<li><a href="#">lorem</a></li>
+							<li><a href="#">lorem</a></li>
+							<li><a href="#">lorem</a></li>
+						</ul>
+					</div>
+
+					<!-- 2 меню футера -->
+					<div class="footer-menu-2-div">
+						<ul class="footer-menu-2-ul">
+							<li><a href="#">lorem</a></li>
+							<li><a href="#">lorem</a></li>
+							<li><a href="#">lorem</a></li>
+							<li><a href="#">lorem</a></li>
+							<li><a href="#">lorem</a></li>
+						</ul>
+					</div>
+
+					<!-- вход + соцсети -->
+					<div class="footer-soc">
+						<div class="footer-vhod">
+							<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/zamok.png">ВОЙТИ</a>
+							<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/key.png">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+						</div>
+						<div class="footer-socseti">
+							<a href="#" class="vk"></a>
+							<a href="#" class="inst"></a>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- футер 2(нижний) -->
 			<div class="footer footer-2">
 				<div class="w1200">
-					футер 2
+					<a href="#" class="politika">Политика конфиденциальности</a>
+					<a href="#" class="design">DESIGN AGENCY</a>
 				</div>
 			</div>
 
