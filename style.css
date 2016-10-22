@@ -567,6 +567,7 @@ article {
 sidebar {
     width: 240px;
     float: right;
+    position: relative;
 }
 
 
@@ -850,6 +851,18 @@ input[type="radio"] {
     background: url(img/png/best-device/6g.png) no-repeat;
 }
 
+/*стрелка вверх*/
+.up{
+    width: 37px;
+    height: 53px;
+    position: absolute;
+    left: -46px;
+    bottom: 0;
+    background: url(img/png/up.png) no-repeat;
+    background-size: cover;
+        -webkit-background-size: cover;
+    cursor: pointer;
+}
 
 /*--------------------footer-------------*/
 
@@ -857,7 +870,7 @@ input[type="radio"] {
 footer {
     background-color: #000;
     min-width: 1180px;
-    margin-top: 20px;
+    margin-top: 70px;
     /*display: inline-block;*/
 }
 
