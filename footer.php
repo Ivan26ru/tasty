@@ -38,7 +38,7 @@
 					<div class="footer-soc">
 						<div class="footer-vhod">
 							<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/zamok.png">ВОЙТИ</a>
-							<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/key.png">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+							<a href="#" class="footer-reg"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/key.png">ЗАРЕГИСТРИРОВАТЬСЯ</a>
 						</div>
 						<div class="footer-socseti">
 							<a href="#" class="vk"></a>
@@ -51,7 +51,7 @@
 			<div class="footer footer-2">
 				<div class="w1200">
 					<a href="#" class="politika">Политика конфиденциальности</a>
-					<a href="#" class="design">DESIGN AGENCY</a>
+					<a href="#" class="design"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/design.png" alt=""></a>
 				</div>
 			</div>
 
