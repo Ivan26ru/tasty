@@ -872,15 +872,37 @@ footer {
     background-color: #000;
     min-width: 1180px;
     margin-top: 70px;
-    /*display: inline-block;*/
+    font-family: ;
 }
 
 /*части футера*/
 .footer {
-    border-top: 1px solid #ddd;
 }
+
+/*footer-1*/
+.footer-1{
+    position: relative;
+    padding-bottom: 43px;
+    height: 200px;
+    border-bottom: 1px solid #ddd;
+}
+
+/*footer-2*/
+.footer-2{
+    height: 67px;
+}
+
 .footer,
 .footer a {
     color: #fff;
 }
 /*футер 1*/
+
+/*меню общее*/
+.footer-menu{
+    position: absolute;
+}
+
+.footer-menu-1-ul{
+    left: 112px;
+}
