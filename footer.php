@@ -19,24 +19,20 @@
 					//wp_nav_menu($args); // выводим нижние меню
 					?>
 					<!-- 1 меню футера -->
-					<div class="footer-menu-1-div">
-						<ul class="footer-menu-1-ul">
+						<ul class="footer-menu footer-menu-1-ul">
 							<li><a href="#">lorem</a></li>
 							<li><a href="#">lorem</a></li>
 							<li><a href="#">lorem</a></li>
 						</ul>
-					</div>
 
 					<!-- 2 меню футера -->
-					<div class="footer-menu-2-div">
-						<ul class="footer-menu-2-ul">
+						<ul class="footer-menu footer-menu-2-ul">
 							<li><a href="#">lorem</a></li>
 							<li><a href="#">lorem</a></li>
 							<li><a href="#">lorem</a></li>
 							<li><a href="#">lorem</a></li>
 							<li><a href="#">lorem</a></li>
 						</ul>
-					</div>
 
 					<!-- вход + соцсети -->
 					<div class="footer-soc">
