@@ -179,9 +179,10 @@ get_header(); // подключаем header.php ?>
 	<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/banner/banner3.png" class="sb-banner-img"></a>
 </div>
 
+</sidebar>
+
 <!-- стрелка вверх -->
 <div class="up"></div>
-</sidebar>
 </div>
 <!-- конец container -->
 

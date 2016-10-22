@@ -247,6 +247,7 @@ a {
     margin-top: 40px;
     padding-right: 25px;
     padding-left: 25px;
+    position: relative;
 }
 
 
@@ -851,12 +852,12 @@ input[type="radio"] {
     background: url(img/png/best-device/6g.png) no-repeat;
 }
 
-/*стрелка вверх*/
+/*==========стрелка вверх==============*/
 .up{
     width: 37px;
     height: 53px;
     position: absolute;
-    left: -46px;
+    right: 281px;
     bottom: 0;
     background: url(img/png/up.png) no-repeat;
     background-size: cover;
@@ -882,3 +883,4 @@ footer {
 .footer a {
     color: #fff;
 }
+/*футер 1*/
