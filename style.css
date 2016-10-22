@@ -292,6 +292,7 @@ article {
     font-family: Roboto-Light, 'Arial';
     color: rgb(51, 51, 51);
     text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
+    line-height: 1.2;
 }
 
 
@@ -358,6 +359,7 @@ article {
     font-family: Roboto-Light, 'Arial';
     color: rgb(0, 0, 0);
     margin: 0;
+    line-height: 1.2;
 }
 
 
@@ -368,6 +370,7 @@ article {
     width: 250px;
     margin-left: 145px;
     text-align: right;
+    line-height: 1.2;
 }
 
 
@@ -380,6 +383,7 @@ article {
     text-align: left;
     margin: 0;
     margin-top: 10px;
+    line-height: 1.2;
 }
 
 
@@ -387,6 +391,7 @@ article {
 
 .text-block {
     height: 40px;
+    line-height: 1.2;
 }
 
 
@@ -501,6 +506,7 @@ article {
     font-size: 20px;
     color: rgb(0, 0, 0);
     text-align: left;
+    line-height: 1.2;
 }
 
 
@@ -509,6 +515,7 @@ article {
 .text-other {
     font-size: 14px;
     text-align: left;
+    line-height: 1.2;
 }
 
 
@@ -612,6 +619,7 @@ sidebar {
     padding-top: 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid #000;
+    line-height: 1.2;
 }
 
 
@@ -872,17 +880,17 @@ footer {
     background-color: #000;
     min-width: 1180px;
     margin-top: 70px;
-    font-family: ;
+    font-family: Roboto-Light;
 }
 
 /*части футера*/
-.footer {
+.footer .w1200{
+    position: relative;
 }
 
 /*footer-1*/
 .footer-1{
-    position: relative;
-    padding-bottom: 43px;
+    padding-top: 43px;
     height: 200px;
     border-bottom: 1px solid #ddd;
 }
@@ -892,17 +900,36 @@ footer {
     height: 67px;
 }
 
+/*цвет текста ссылки в футере*/
 .footer,
 .footer a {
     color: #fff;
-}
-/*футер 1*/
+  font-size: 12px;
+  color: rgb(102, 102, 102);
+  text-transform: uppercase;
+  line-height: 2;
+  text-align: left;
+    }
 
-/*меню общее*/
+/*меню общее ul*/
 .footer-menu{
     position: absolute;
+    margin: 0;
+    padding: 0;
 }
 
+/*меню футер 1 */
 .footer-menu-1-ul{
     left: 112px;
+}
+
+/*меню футер 2 */
+.footer-menu-2-ul{
+    left: 112px;
+    display: none;
+}
+
+/*блок с соцсетями и входом*/
+.footer-soc{
+    display: none;
 }
