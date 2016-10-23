@@ -921,7 +921,7 @@ input[type="radio"] {
     width: 37px;
     height: 53px;
     position: absolute;
-    right: 281px;
+    right: 265px;
     bottom: 0;
     background: url(img/png/up.png) no-repeat;
     background-size: cover;
@@ -1124,6 +1124,11 @@ a.politika {
 
 .mt50 {
     margin-top: 50px;
+}
+
+/*отступ постов друг от друга, кроме первого*/
+.div-post-best_device:not(:nth-child(4)){
+    margin-top:197px;
 }
 
 .podzagolovok {
