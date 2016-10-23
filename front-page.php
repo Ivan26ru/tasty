@@ -5,10 +5,7 @@
  * @subpackage your-clean-template
  */
 get_header(); // подключаем header.php ?>
-<!-- основа сайта-->
-<div class="container clearfix">
-<!-- контент -->
-	<section>
+
 	<!-- основное содержание -->
 	<!-- разделение на 2 колонки -->
 		<article class="clearfix">
@@ -117,7 +114,6 @@ get_header(); // подключаем header.php ?>
 			</ul>
 		</div>
 		<!-- конец пагинаци -->
-	</section>
 
 
 <?php get_sidebar(); // подключаем footer.php ?>
