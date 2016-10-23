@@ -31,6 +31,8 @@
 	<div class="w1200">
 		<!-- лого сайта -->
 		<div class="div-logo"><a href="<?php echo site_url(); ?>"></a></div>
+		<!-- путь к странце -->
+		<p class="put">путь к станице</p>
 		<!-- верхнее меню, форма входа -->
 		<div class="menu-user">
 

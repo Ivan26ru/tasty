@@ -57,6 +57,7 @@ li {
 .w1200 {
     width: 1180px;
     margin: 0 auto;
+    position: relative;
 }
 
 
@@ -242,6 +243,17 @@ a {
 .ul-top-2 li.active .line-menu {
     border-bottom: 2px solid #00cd98;
     padding-bottom: 7px;
+}
+
+/*путь к странице*/
+.put {
+  font-size: 10px;
+  font-family: "Roboto";
+  color: rgb(51, 204, 153);
+  line-height: 1.2;
+  position: absolute;
+  left: 41px;
+  top: 120px;
 }
 
 
