@@ -1075,22 +1075,22 @@ a.politika {
     background-size: 9px;
 }
 
-
 /*соц сети*/
-
-.footer-socseti .fa {
-    margin-left: 8px;
+.footer-socseti a{
+    width:26px;
+    height:26px;
+    display:inline-block;
     color: #000;
+    margin-right: 8px;
     background-color: #999;
-    padding: 4px;
+    line-height:26px;
+    font-size:18px;
+    text-align:center;
 }
 
-.footer-socseti .fa:hover {
+.footer-socseti a:hover{
     background-color: #00cd98;
-}
-
-.vk {
-    margin-left: 0px;
+    color:#000;
 }
 
 /*загрузка изображений*/
