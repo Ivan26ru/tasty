@@ -1126,9 +1126,11 @@ a.politika {
     margin-top: 50px;
 }
 
+
 /*отступ постов друг от друга, кроме первого*/
-.div-post-best_device:not(:nth-child(4)){
-    margin-top:197px;
+
+.div-post-best_device:not(:nth-child(4)) {
+    margin-top: 197px;
 }
 
 .podzagolovok {
@@ -1249,14 +1251,20 @@ a.politika {
     text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
 }
 
+
 /*контейнеры ul*/
-.info-post{
-    width:390px;
-    float:left;
+
+.info-post {
+    width: 390px;
+    float: left;
 }
 
+
 /*изменяем маркеры*/
+
+
 /*общие параметры маркеров*/
+
 .plus-minus-har ul li:before {
     /* Прячем исходные маркеры */
     list-style-type: none;
@@ -1267,7 +1275,9 @@ a.politika {
     padding-right: 20px;
 }
 
+
 /*плюс*/
+
 .plus ul li:before {
     /* Сам маркер */
     /* Расстояние от маркера до текста */
@@ -1275,15 +1285,18 @@ a.politika {
     color: rgb(66, 213, 173);
 }
 
+
 /*минус*/
 
 .minus ul li:before {
     content: "-";
-  color: rgb(234, 88, 88);
+    color: rgb(234, 88, 88);
 }
 
+
 /*точка*/
+
 .harki ul li:before {
     content: "•";
-  color: rgb(66, 213, 173);
+    color: rgb(66, 213, 173);
 }
