@@ -1092,3 +1092,10 @@ a.politika {
 .vk {
     margin-left: 0px;
 }
+
+/*загрузка изображений*/
+.loader{
+    margin-left:-1000px;
+        background: url(img/png/logo.png) center no-repeat, url(img/png/mixologiya.png)center no-repeat, url(img/png/vipe-news.png)center no-repeat, url(img/png/best-device/1b.png) no-repeat, url(img/png/best-device/1g.png) no-repeat, url(img/png/best-device/2b.png) no-repeat, url(img/png/best-device/2g.png) no-repeat, url(img/png/best-device/3b.png) no-repeat, url(img/png/best-device/3g.png) no-repeat, url(img/png/best-device/4b.png) no-repeat, url(img/png/best-device/4g.png) no-repeat, url(img/png/best-device/5b.png) no-repeat, url(img/png/best-device/5g.png) no-repeat, url(img/png/best-device/6b.png) no-repeat, url(img/png/best-device/6g.png) no-repeat, url(img/png/up.png) no-repeat, url(img/png/zamok-silver.png) no-repeat, url(img/png/zamok-green.png) no-repeat, url(img/png/key-silver.png) no-repeat, url(img/png/key-green.png) no-repeat;
+
+}
