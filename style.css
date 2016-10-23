@@ -420,6 +420,12 @@ article {
     float: right;
 }
 
+.read-all-block:hover{
+    color:#000;
+    border-color:#000;
+
+}
+
 
 /*============ПРОЧИЕ ПОСТЫ==============*/
 
