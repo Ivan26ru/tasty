@@ -5,6 +5,10 @@
  * @subpackage your-clean-template
  */
 ?>
+<!-- стрелка вверх -->
+<div class="up"></div>
+</div>
+<!-- конец container -->
 	<footer>
 	<!-- по центру -->
 			<div class="footer footer-1">
@@ -36,10 +40,10 @@
 						</div>
 						<div class="footer-socseti">
 							<a href="#" class="vk">
-								<i class="fa fa-vk fa-2x" aria-hidden="true"></i>
+								<i class="fa fa-vk" aria-hidden="true"></i>
 							</a>
 							<a href="#" class="inst">
-								<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+								<i class="fa fa-instagram" aria-hidden="true"></i>
 							</a>
 						</div>
 					</div>
@@ -54,6 +58,7 @@
 			</div>
 
 	</footer>
+<div class="loader"></div>
 <?php wp_footer(); // необходимо для работы плагинов и функционала  ?>
 </body>
 </html>

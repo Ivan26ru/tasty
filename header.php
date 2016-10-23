@@ -65,3 +65,7 @@
 	</div>
 </div>
 	</header>
+	<!-- основа сайта-->
+<div class="container clearfix">
+<!-- контент -->
+	<section>
