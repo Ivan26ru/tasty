@@ -26,9 +26,54 @@ on those of some fellow vaping experts</p>
 <p class="podzagolovok">подзаголовок</p>
 
 <!-- содержание поста -->
-<div class="post-text">
-	<div class="post-div-img">
-		<img class="post-img" src="http://placehold.it/1212x492/2ecc71/ecf0f1">
+<div class="post-text clearfix">
+<div class="img-pukupka clearfix">
+		<div class="post-div-img">
+			<img class="post-img" src="http://placehold.it/1212x492/2ecc71/ecf0f1">
+		</div>
+		<p class="skidka">скидка 30%</p>
+		<div class="pokupka">
+			<a href="#" class="pokupka-china">купить в Китае</a>
+			<br>
+			<a href="#" class="pokupka-russia">купить в России</a>
+		</div>
+	</div>	<!-- плюсы минусы, характеристики -->
+	<div class="plus-minus-har">
+		<div class="info-post plus">
+			<p>плюсы</p>
+			<ul>
+				<li>Вариант1</li>
+				<li>Вариант2</li>
+				<li>Вариант3</li>
+				<li>Вариант4</li>
+				<li>Вариант5</li>
+			</ul>
+		</div>
+		<div class="info-post minus">
+			<p>минусы</p>
+			<ul>
+				<li>Вариант1</li>
+				<li>Вариант2</li>
+				<li>Вариант3</li>
+				<li>Вариант4</li>
+				<li>Вариант5</li>
+			</ul>
+		</div>
+		<div class="info-post harki">
+			<p>плюсы</p>
+			<ul>
+				<li>Вариант1</li>
+				<li>Вариант2</li>
+				<li>Вариант3</li>
+				<li>Вариант4</li>
+				<li>Вариант5</li>
+			</ul>
+		</div>
+	</div>
+	<div class="text-device">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta iusto optio est provident porro! Recusandae quos, quis molestias temporibus deleniti.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta iusto optio est provident porro! Recusandae quos, quis molestias temporibus deleniti.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta iusto optio est provident porro! Recusandae quos, quis molestias temporibus deleniti.</p>
 	</div>
 </div>
 
