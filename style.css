@@ -301,6 +301,7 @@ article {
     color: rgb(51, 51, 51);
     text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
     line-height: 1.2;
+    font-weight: normal;
 }
 
 
@@ -524,12 +525,15 @@ article {
 }
 
 
-/*анонс поста*/
+/*анонс поста, описание рубрики*/
 
 .text-other {
     font-size: 14px;
     text-align: left;
     line-height: 1.2;
+    font-family: Roboto-Light;
+    color: rgb(102, 102, 102);
+
 }
 
 
@@ -1104,4 +1108,45 @@ a.politika {
     margin-left:-1000px;
         background: url(img/png/logo.png) center no-repeat, url(img/png/mixologiya.png)center no-repeat, url(img/png/vipe-news.png)center no-repeat, url(img/png/best-device/1b.png) no-repeat, url(img/png/best-device/1g.png) no-repeat, url(img/png/best-device/2b.png) no-repeat, url(img/png/best-device/2g.png) no-repeat, url(img/png/best-device/3b.png) no-repeat, url(img/png/best-device/3g.png) no-repeat, url(img/png/best-device/4b.png) no-repeat, url(img/png/best-device/4g.png) no-repeat, url(img/png/best-device/5b.png) no-repeat, url(img/png/best-device/5g.png) no-repeat, url(img/png/best-device/6b.png) no-repeat, url(img/png/best-device/6g.png) no-repeat, url(img/png/up.png) no-repeat, url(img/png/zamok-silver.png) no-repeat, url(img/png/zamok-green.png) no-repeat, url(img/png/key-silver.png) no-repeat, url(img/png/key-green.png) no-repeat;
 
+}
+/*------------------------------ЛУЧШИЕ ДЕВАЙСЫ-------------------------------*/
+.mt35{
+    margin-top: 35px;
+}
+
+.mt50{
+    margin-top: 50px;
+}
+
+.podzagolovok{
+  font-size: 18px;
+  color: rgb(51, 51, 51);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
+  font-family: Roboto-Light;
+  margin-left: 12px;
+}
+
+
+
+/*содеражание поста, блок с черной рамкой*/
+.post-text{
+    border: 1px solid #000;
+    padding: 58px 30px 25px 30px;
+}
+
+/*блок для картинки поста*/
+.post-div-img{
+    height: 292px;
+    width: 292px;
+    background-image: url(http://placehold.it/292x292);
+    display:flex;
+}
+
+/*картинка поста*/
+.post-img{
+margin:auto;
+max-width:292px;
+max-height:292px;
 }
