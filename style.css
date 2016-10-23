@@ -92,6 +92,14 @@ a {
 }
 
 
+/*ссылка в лого*/
+
+.div-logo a {
+    display: block;
+    height: 100%;
+}
+
+
 /*верхняя черная линия*/
 
 .line-top-black {
@@ -952,9 +960,11 @@ footer {
 }
 
 
-/*цвет ссылок в футере при наведении*/
+/*цвет ссылок в футере при наведении или если на ней находится*/
 
-.footer a:hover {
+.footer a:hover,
+.footer li.active a,
+.footer li.current-menu-item a {
     color: #00cd98;
 }
 
@@ -1032,4 +1042,53 @@ a.politika {
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+
+/*=========Иконки в футере============*/
+
+
+/*вход регистрация*/
+
+.footer-zamok {
+    background: url(img/png/zamok-silver.png) no-repeat;
+    padding-left: 22px;
+    background-size: 9px;
+    height: 70px;
+}
+
+.footer-zamok:hover {
+    background: url(img/png/zamok-green.png) no-repeat;
+    background-size: 9px;
+}
+
+.footer-key {
+    margin-left: 65px;
+    background: url(img/png/key-silver.png) no-repeat;
+    padding-left: 22px;
+    background-size: 9px;
+    height: 70px;
+}
+
+.footer-key:hover {
+    background: url(img/png/key-green.png) no-repeat;
+    background-size: 9px;
+}
+
+
+/*соц сети*/
+
+.footer-socseti .fa {
+    margin-left: 8px;
+    color: #000;
+    background-color: #999;
+    padding: 4px;
+}
+
+.footer-socseti .fa:hover {
+    background-color: #00cd98;
+}
+
+.vk {
+    margin-left: 0px;
 }

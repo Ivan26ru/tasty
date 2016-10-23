@@ -1,6 +1,9 @@
 /*================ Общие стили для сайта ========================*/
 
 
+/*основной зеленый цвет #00cd98*/
+
+
 /*пользовательские шрифты*/
 
 @font-face {
@@ -17,14 +20,24 @@
     /* Путь к файлу со шрифтом */
 }
 
+
+/*убрал обводку со всех элементов в фокусе*/
+
+body *:focus {
+    outline: 0;
+}
+
+
 /*хак для float*/
+
 .clearfix:before,
 .clearfix:after {
-content: " ";
-display: table;
+    content: " ";
+    display: table;
 }
+
 .clearfix:after {
-clear: both;
+    clear: both;
 }
 
 
@@ -38,7 +51,7 @@ li {
 /*ширина 1200 по центру*/
 
 .w1200 {
-    width: 1200px;
+    width: 1180px;
     margin: 0 auto;
 }
 
@@ -79,6 +92,14 @@ a {
 }
 
 
+/*ссылка в лого*/
+
+.div-logo a {
+    display: block;
+    height: 100%;
+}
+
+
 /*верхняя черная линия*/
 
 .line-top-black {
@@ -86,7 +107,7 @@ a {
     box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.35);
     left: 0px;
     width: 100%;
-    min-width: 1200px;
+    min-width: 1180px;
     height: 70px;
 }
 
@@ -229,18 +250,27 @@ a {
 /*Контейнер для основной части*/
 
 .container {
-    width: 1150px;
+    width: 1130px;
     margin: 0 auto;
     margin-top: 40px;
     padding-right: 25px;
     padding-left: 25px;
+    position: relative;
 }
 
 
-/*контейнер для блоков левого и правого*/
+/*контейнер для основного содержимого*/
 
 section {
     width: 850px;
+    display: inline-block;
+}
+
+
+/*Когтейнер для левого и правого блока*/
+
+article {
+    border-bottom: 1px solid rgb(221, 221, 221);
 }
 
 
@@ -260,14 +290,6 @@ section {
 }
 
 
-/*сайтбар*/
-
-sidebar {
-    width: 240px;
-    float: right;
-}
-
-
 /*Заголовок левого и правого контейнера*/
 
 .zagolovok {
@@ -278,6 +300,7 @@ sidebar {
     font-family: Roboto-Light, 'Arial';
     color: rgb(51, 51, 51);
     text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
+    line-height: 1.2;
 }
 
 
@@ -297,14 +320,14 @@ sidebar {
     margin-top: 27px;
 }
 
-.mixologiya{
+.mixologiya {
     background: url(img/png/mixologiya.png)center no-repeat;
 }
 
-.vipe-news{
+.vipe-news {
     background: url(img/png/vipe-news.png)center no-repeat;
-
 }
+
 
 /*кратное описание новости*/
 
@@ -316,25 +339,51 @@ sidebar {
     border-bottom: 1px solid rgb(221, 221, 221);
 }
 
+.news:last-child {
+    border-bottom: none;
+}
+
+
+/*общий стиль даты*/
+
 .data {
     font-size: 12px;
     font-family: Roboto-Light, 'Arial';
     color: rgb(66, 213, 173);
+}
+
+
+/*для левого и правого блоков*/
+
+.data-block {
     position: absolute;
 }
 
-/*заголовок*/
+
+/*заголовок общий*/
+
 .title {
-    width: 250px;
-    height: 35px;
-    margin: 0 0 0 145px;
     font-size: 16px;
     font-family: Roboto-Light, 'Arial';
     color: rgb(0, 0, 0);
-    text-align: right;
+    margin: 0;
+    line-height: 1.2;
 }
 
-/*кратное описание*/
+
+/*заголовок для блока*/
+
+.title-block {
+    height: 35px;
+    width: 250px;
+    margin-left: 145px;
+    text-align: right;
+    line-height: 1.2;
+}
+
+
+/*кратное описание общее*/
+
 .text {
     font-size: 12px;
     font-family: Roboto-Light, 'Arial';
@@ -342,14 +391,704 @@ sidebar {
     text-align: left;
     margin: 0;
     margin-top: 10px;
-    height: 40px;
+    line-height: 1.2;
 }
 
-.read-all{
-  font-size: 10px;
+
+/*кратное описание для блока*/
+
+.text-block {
+    height: 40px;
+    line-height: 1.2;
+}
+
+
+/*кнопка читаль полностью общая*/
+
+.read-all {
+    font-size: 10px;
     font-family: Roboto-Light, 'Arial';
-  color: #00cd98;
-  float: right;
-  border: 1px solid #00cd98;
-  padding: 5px 20px;
+    color: #00cd98;
+    border: 1px solid #00cd98;
+    padding: 5px 20px;
+}
+
+
+/*кнопка читаль полностью для блока*/
+
+.read-all-block {
+    float: right;
+}
+
+
+/*============ПРОЧИЕ ПОСТЫ==============*/
+
+
+/*Блок для постов*/
+
+.div-post-other {}
+
+
+/*пост*/
+
+.post-other {
+    margin-top: 37px;
+    height: 167px;
+}
+
+
+/*блок для картинки*/
+
+.post-other-img {
+    display: inline-block;
+    width: 419px;
+    height: 167px;
+    position: relative;
+}
+
+
+/*миниатюра поста*/
+
+.post-other-img img {
+    width: 419px;
+    height: 167px;
+}
+
+
+/*темная полоска внизу миниатюры поста*/
+
+.post-other-black-info {
+    position: absolute;
+    bottom: 31px;
+    width: 379px;
+    height: 31px;
+    margin-bottom: -31px;
+    padding: 0 20px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.502;
+    /*line-height: 28px;*/
+}
+
+
+/*дата на черной полоске*/
+
+.data-other {
+    line-height: 31px;
+    font-size: 14px;
+}
+
+
+/*читать полностью на черной полоске*/
+
+.read-all-other {
+    font-size: 12px;
+    float: right;
+    margin-top: 3px;
+}
+
+
+/*блок заголовока и анонса поста*/
+
+.post-other-info {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    width: 405px;
+    height: 167px;
+    float: right;
+}
+
+
+/*выравнивение по центру по вертикали текст*/
+
+.va-c {
+    margin: auto;
+}
+
+
+/*заголовок поста*/
+
+.title-other {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    line-height: 1.2;
+}
+
+
+/*анонс поста*/
+
+.text-other {
+    font-size: 14px;
+    text-align: left;
+    line-height: 1.2;
+}
+
+
+/*=====================================*/
+
+
+/*=================ПАГИНАЦИЯ====================*/
+
+
+/*контейнер для пагинации*/
+
+.pagination-index {
+    margin-top: 70px;
+    text-align: center;
+    font-family: Roboto-Regular, 'Arial';
+}
+
+
+/*ul пагинации*/
+
+.page-numbers {
+    font-size: 18px;
+    color: rgb(51, 51, 51);
+}
+
+
+/*li пагинации*/
+
+.page-numbers li {
+    display: inline-block;
+}
+
+
+/*активная страница*/
+
+.page-numbers li span {
+    color: #00cd98;
+}
+
+
+/*стрелка назад*/
+
+.prev {
+    margin-right: 30px;
+}
+
+
+/*стрелка вперед*/
+
+.next {
+    margin-left: 30px;
+}
+
+
+/*---------------САЙДБАР------------------*/
+
+sidebar {
+    width: 240px;
+    float: right;
+    position: relative;
+}
+
+
+/*sb-r блок с ярлыком общий*/
+
+.sb-r {
+    margin-top: 77px;
+    border: 3px solid #000;
+    width: 181px;
+    /*height: 262px;*/
+    /*height: 216px;*/
+    position: relative;
+    padding: 35px 27px 20px;
+}
+
+
+/*=======top5=======*/
+
+.top5 {
+    margin-top: 52px;
+}
+
+
+/*значек сайдбара*/
+
+.sidebar-img {
+    position: absolute;
+    right: 27px;
+    top: -47px;
+}
+
+
+/*ссылки TOP5*/
+
+.top5 a {
+    display: block;
+    font-size: 12px;
+    font-family: Roboto-Regular;
+    color: #666;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #000;
+    line-height: 1.2;
+}
+
+
+/*первая ссылка*/
+
+.top5 a:first-child {}
+
+
+/*крайняя ссылка*/
+
+.top5 a:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+
+/*=======best======*/
+
+
+/*the best*/
+
+.best {
+    margin-top: 105px;
+}
+
+
+/*=========ПОДПИСКА========*/
+
+
+/*ввод email*/
+
+.input-email {
+    width: 161px;
+    padding: 5px;
+    padding-left: 15px;
+    font-family: Roboto-Regular;
+    color: #666;
+    font-size: 12px;
+    margin: 0;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #ddd;
+    height: 20px;
+}
+
+
+/*ввод email при фокусе*/
+
+.input-email:focus {
+    border: none;
+    outline: none;
+}
+
+
+/*зеленая кнопка в сайд баре*/
+
+.btn-green {
+    /*padding: 5px;*/
+    width: 181px;
+    height: 30px;
+    line-height: 30px;
+    font-family: Roboto-Regular;
+    text-transform: uppercase;
+    background-color: #00cd98;
+    font-size: 12px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/*зеленая кнопка при наведении*/
+
+.btn-green:focus,
+.btn-green:hover {
+    border: 0;
+    outline: 0;
+    background-color: #02a379;
+}
+
+
+/*==========ОПРОСНИК==========*/
+
+
+/*общий стиль label */
+
+.sb-r label {
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+
+/*радио кнопка*/
+
+input[type="radio"] {
+    cursor: pointer;
+}
+
+
+/*============РЕКЛАМНЫЙ БАННЕР САЙДБАР========*/
+
+
+/*контейнер для банера*/
+
+.sb-banner {
+    margin-top: 20px;
+    width: 241px;
+    overflow: hidden;
+}
+
+
+/* отступ 1 банера*/
+
+.sb-banner.sb-banner-1 {
+    margin-top: 58px;
+}
+
+
+/* отступ 2 банера*/
+
+.sb-banner.sb-banner-2 {
+    margin-top: 55px;
+}
+
+
+/* отступ 3 банера*/
+
+.sb-banner.sb-banner-3 {
+    margin-top: 25px;
+}
+
+
+/*картинка рекламного блока*/
+
+.sb-banner-img {
+    width: 241px;
+}
+
+
+/*==========BEST-DEVICE ЛУЧШИЕ ДЕВАЙСЫ========*/
+
+
+/*контейнер best-device*/
+
+.best-device {
+    margin-top: 44px;
+    width: 241px;
+}
+
+
+/*Заголовок*/
+
+.best-device p {
+    font-size: 18px;
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
+}
+
+
+/*стиль ссылки девайса общее*/
+
+.best-device-a {
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 131px;
+    height: 84px;
+    display: block;
+    display: table;
+    font-size: 16px;
+    font-family: Roboto-Regular;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    padding-left: 110px;
+    margin-bottom: 7px;
+}
+
+
+/*для выравнивания по центру*/
+
+.best-device-a span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/*стиль ссылки девайса при наведении общее*/
+
+.best-device-a:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+/*отступ первого блока от заголовка*/
+
+.best-device-a:nth-child(2) {
+    margin-top: 30px;
+}
+
+
+/*отступ крайнего блока отменен*/
+
+.best-device-a:last-child {
+    margin-bottom: 0;
+}
+
+
+/*1 девайс*/
+
+.best-device-a.d1 {
+    background: url(img/png/best-device/1b.png) no-repeat;
+}
+
+.best-device-a.d1:hover {
+    background: url(img/png/best-device/1g.png) no-repeat;
+}
+
+
+/*2 девайс*/
+
+.best-device-a.d2 {
+    background: url(img/png/best-device/2b.png) no-repeat;
+}
+
+.best-device-a.d2:hover {
+    background: url(img/png/best-device/2g.png) no-repeat;
+}
+
+
+/*3 девайс*/
+
+.best-device-a.d3 {
+    background: url(img/png/best-device/3b.png) no-repeat;
+}
+
+.best-device-a.d3:hover {
+    background: url(img/png/best-device/3g.png) no-repeat;
+}
+
+
+/*4 девайс*/
+
+.best-device-a.d4 {
+    background: url(img/png/best-device/4b.png) no-repeat;
+}
+
+.best-device-a.d4:hover {
+    background: url(img/png/best-device/4g.png) no-repeat;
+}
+
+
+/*5 девайс*/
+
+.best-device-a.d5 {
+    background: url(img/png/best-device/5b.png) no-repeat;
+}
+
+.best-device-a.d5:hover {
+    background: url(img/png/best-device/5g.png) no-repeat;
+}
+
+
+/*6 девайс*/
+
+.best-device-a.d6 {
+    background: url(img/png/best-device/6b.png) no-repeat;
+}
+
+.best-device-a.d6:hover {
+    background: url(img/png/best-device/6g.png) no-repeat;
+}
+
+
+/*==========стрелка вверх==============*/
+
+.up {
+    width: 37px;
+    height: 53px;
+    position: absolute;
+    right: 281px;
+    bottom: 0;
+    background: url(img/png/up.png) no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    cursor: pointer;
+}
+
+
+/*--------------------footer-------------*/
+
+
+/*блок футера*/
+
+footer {
+    background-color: #000;
+    min-width: 1180px;
+    margin-top: 70px;
+    font-family: Roboto-Light;
+}
+
+
+/*части футера*/
+
+.footer .w1200 {
+    position: relative;
+}
+
+
+/*footer-1*/
+
+.footer-1 {
+    padding-top: 43px;
+    height: 200px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/*цвет текста ссылки в футере*/
+
+.footer,
+.footer a {
+    color: #fff;
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    text-transform: uppercase;
+    line-height: 2;
+    text-align: left;
+}
+
+
+/*цвет ссылок в футере при наведении или если на ней находится*/
+
+.footer a:hover,
+.footer li.active a,
+.footer li.current-menu-item a {
+    color: #00cd98;
+}
+
+
+/*меню общее ul*/
+
+.footer-menu {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*======footer-1==========*/
+
+
+/*меню футер 1 */
+
+.footer-menu-1-ul {
+    left: 112px;
+    width: 172px;
+}
+
+
+/*меню футер 2 */
+
+.footer-menu-2-ul {
+    left: 330px;
+    width: 280px;
+}
+
+
+/*блок с соцсетями и входом*/
+
+.footer-soc {
+    position: absolute;
+    left: 751px;
+    width: 306px;
+}
+
+
+/*footer регистрация*/
+
+.footer-reg {
+    margin-left: 64px;
+}
+
+.footer-socseti {
+    margin-top: 54px;
+}
+
+
+/*===========footer-2===========*/
+
+.footer-2,
+.footer-2 .w1200 {
+    height: 67px;
+}
+
+
+/*надпись политики конфеденциальности*/
+
+a.politika {
+    line-height: 67px;
+    text-transform: none;
+    text-decoration: underline;
+}
+
+
+/*рекламное агенство в футере*/
+
+.design {
+    width: 136px;
+    height: 59px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+/*=========Иконки в футере============*/
+
+
+/*вход регистрация*/
+
+.footer-zamok {
+    background: url(img/png/zamok-silver.png) no-repeat;
+    padding-left: 22px;
+    background-size: 9px;
+    height: 70px;
+}
+
+.footer-zamok:hover {
+    background: url(img/png/zamok-green.png) no-repeat;
+    background-size: 9px;
+}
+
+.footer-key {
+    margin-left: 65px;
+    background: url(img/png/key-silver.png) no-repeat;
+    padding-left: 22px;
+    background-size: 9px;
+    height: 70px;
+}
+
+.footer-key:hover {
+    background: url(img/png/key-green.png) no-repeat;
+    background-size: 9px;
+}
+
+
+/*соц сети*/
+
+.footer-socseti .fa {
+    margin-left: 8px;
+    color: #000;
+    background-color: #999;
+    padding: 4px;
+}
+
+.footer-socseti .fa:hover {
+    background-color: #00cd98;
+}
+
+.vk {
+    margin-left: 0px;
 }

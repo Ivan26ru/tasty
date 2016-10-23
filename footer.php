@@ -10,39 +10,37 @@
 			<div class="footer footer-1">
 				<div class="w1200">
 				<!-- футер 1(верхний) -->
-					<?php $args = array( // опции для вывода нижнего меню,
-					'theme_location' => 'bottom', // идентификатор меню, определен в register_nav_menus() в function.php
-					'container'=> false, // обертка списка, false - это ничего
-					'menu_class' => 'bottom-menu', // класс для ul
-			  		'menu_id' => 'bottom-nav', // id для ul
-			  		);
-					//wp_nav_menu($args); // выводим нижние меню
-					?>
 					<!-- 1 меню футера -->
-						<ul class="footer-menu footer-menu-1-ul">
-							<li><a href="#">lorem</a></li>
-							<li><a href="#">lorem</a></li>
-							<li><a href="#">lorem</a></li>
-						</ul>
+					<?php $args = array( // опции для вывода нижнего меню,
+						'theme_location' => 'footer1', // идентификатор меню, определен в register_nav_menus() в function.php
+						'container'=> false, // обертка списка, false - это ничего
+						'menu_class' => 'footer-menu footer-menu-1-ul', // класс для ul
+			  		);
+					wp_nav_menu($args); // выводим нижние меню
+					?>
 
 					<!-- 2 меню футера -->
-						<ul class="footer-menu footer-menu-2-ul">
-							<li><a href="#">lorem</a></li>
-							<li><a href="#">lorem</a></li>
-							<li><a href="#">lorem</a></li>
-							<li><a href="#">lorem</a></li>
-							<li><a href="#">lorem</a></li>
-						</ul>
+					<?php $args = array( // опции для вывода нижнего меню,
+						'theme_location' => 'footer2', // идентификатор меню, определен в register_nav_menus() в function.php
+						'container'=> false, // обертка списка, false - это ничего
+						'menu_class' => 'footer-menu footer-menu-2-ul', // класс для ul
+			  		);
+					wp_nav_menu($args); // выводим нижние меню
+					?>
 
 					<!-- вход + соцсети -->
 					<div class="footer-soc">
 						<div class="footer-vhod">
-							<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/zamok.png">ВОЙТИ</a>
-							<a href="#" class="footer-reg"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/key.png">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+							<a href="#" class="footer-zamok">ВОЙТИ</a>
+							<a href="#" class="footer-key">ЗАРЕГИСТРИРОВАТЬСЯ</a>
 						</div>
 						<div class="footer-socseti">
-							<a href="#" class="vk"></a>
-							<a href="#" class="inst"></a>
+							<a href="#" class="vk">
+								<i class="fa fa-vk fa-2x" aria-hidden="true"></i>
+							</a>
+							<a href="#" class="inst">
+								<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+							</a>
 						</div>
 					</div>
 				</div>
