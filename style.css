@@ -27,9 +27,10 @@ body *:focus {
     outline: 0;
 }
 
-body *{
+body * {
     font-family: "Roboto";
 }
+
 
 /*хак для float*/
 
@@ -1206,6 +1207,7 @@ a.politika {
 .pokupka-china {
     background-color: #ea5858;
 }
+
 .pokupka-china:hover {
     background-color: #e83c3c;
 }
@@ -1217,12 +1219,66 @@ a.politika {
     margin-top: 10px;
     background-color: #00cd98;
 }
+
 .pokupka-russia:hover {
     background-color: #02a379;
 }
 
-/*плюсы минусы характеристика*/
-.plus-minus-har{
+
+/*контейнер плюсы минусы характеристика*/
+
+.plus-minus-har {
     margin-top: 25px;
     display: block;
+}
+
+
+/*название списка*/
+
+.pmh-title {
+    font-size: 18px;
+    font-family: "Roboto";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
+}
+
+/*контейнеры ul*/
+.info-post{
+    width:390px;
+    float:left;
+}
+
+/*изменяем маркеры*/
+/*общие параметры маркеров*/
+.plus-minus-har ul li:before {
+    /* Прячем исходные маркеры */
+    list-style-type: none;
+    font-family: "Roboto";
+    line-height: 1.2;
+    font-size: 18px;
+    text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
+    padding-right: 20px;
+}
+
+/*плюс*/
+.plus ul li:before {
+    /* Сам маркер */
+    /* Расстояние от маркера до текста */
+    content: "+";
+    color: rgb(66, 213, 173);
+}
+
+/*минус*/
+
+.minus ul li:before {
+    content: "-";
+  color: rgb(234, 88, 88);
+}
+
+/*точка*/
+.harki ul li:before {
+    content: "•";
+  color: rgb(66, 213, 173);
 }
