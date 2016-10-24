@@ -36,12 +36,12 @@
 	<?php if (comments_open()) { // если комментирование включено для данного поста
 		/* ФОРМА КОММЕНТИРОВАНИЯ */
 		$fields =  array( // разметка текстовых полей формы
-			'author' => '<label for="author"><input placeholder="Введите имя*" id="author" name="author" type="text" value="'.esc_attr($commenter['comment_author']).'" size="30" required></label>', // поле Имя
-			'email' => '<label for="email"><input placeholder="Введите email*" id="email" name="email" type="text" value="'.esc_attr($commenter['comment_author_email']).'" size="30" required></label>', // поле email
+			'author' => '<input class="comments-form-author comments-form-all" placeholder="Введите имя*" id="author" name="author" type="text" value="'.esc_attr($commenter['comment_author']).'" size="30" required>', // поле Имя
+			'email' => '<input class="comments-form-email comments-form-all" placeholder="Введите email*" id="email" name="email" type="email" value="'.esc_attr($commenter['comment_author_email']).'" size="30" required>', // поле email
 			);
 		$args = array( // опции формы комментирования
 			'fields' => apply_filters('comment_form_default_fields', $fields), // заменяем стандартные поля на поля из массива выше ($fields)
-			'comment_field' => '<label for="comment"><textarea placeholder="Что вы думаете о данной компании?" id="comment" name="comment" cols="45" rows="8"></textarea></label>', // разметка поля для комментирования
+			'comment_field' => '<textarea class="comments-form-comment comments-form-all" placeholder="Что вы думаете о данной компании?" id="comment" name="comment" cols="45" rows="8" required></textarea>', // разметка поля для комментирования
 			'must_log_in' => '<p class="must-log-in">Вы должны быть зарегистрированы! '.wp_login_url(apply_filters('the_permalink',get_permalink())).'</p>', // текст "Вы должны быть зарегистрированы!"
 			'logged_in_as' => '<p class="logged-in-as">'.sprintf(__( 'Вы вошли как <a href="%1$s">%2$s</a>. <a href="%3$s">Выйти?</a>'), admin_url('profile.php'), $user_identity, wp_logout_url(apply_filters('the_permalink',get_permalink()))).'</p>', // разметка "Вы вошли как"
 			'comment_notes_before' => '<p class="comment-notes">*Ваша почта не будет показана</p>', // Текст до формы
@@ -49,10 +49,12 @@
 			//'id_form' => 'commentform', // атрибут id формы
 			//'id_submit' => 'submit', // атрибут id кнопки отправить
 			//'title_reply' => 'Оставить комментарий', // заголовок формы
+			'nofollow' => '',
 			'title_reply_to' => 'Ответить %s', // "Ответить" текст
-			'cancel_reply_link' => 'Отменить ответ', // "Отменить ответ" текст
-			'title_reply' => '',//добавить комментарий был
+			'cancel_reply_link' => '', // "Отменить ответ" текст
+			'title_reply' => '',//добавить комментарий была надпись
 			'class_submit' => 'btn-green',//класс для кнопки отправить
+			'class_form' => 'comment-form clearfix',//класс для формы
 			'label_submit' => 'Отправить' // Текст на кнопке отправить
 		);
 		/* Следующий кусок кода будет менять разметку формы, которую мы не можем изменить стандартным функционалом wp */
@@ -95,12 +97,10 @@ function kama_reorder_comment_fields( $fields ){
 
 	<!-- форма комментирования -->
 	<div class="comments-div-form">
-	<form action="#" class="comments-form">
 	   <?php
 	   			echo $new_form; // выводим новую форму
 	   			// echo $new_fields; // выводим новую форму
 	   ?>
-	</form>
 </div>
 </div>
 </div>

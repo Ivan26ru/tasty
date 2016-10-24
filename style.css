@@ -1,4 +1,4 @@
-/*================ Общие стили для сайта ========================*/
+================ Общие стили для сайта ========================*/
 
 
 /*основной зеленый цвет #00cd98*/
@@ -1492,17 +1492,80 @@ a.politika {
 /*контейнер для формы комментариев*/
 
 .comments-div-form {
-    /*width: 619px;*/
-    /*height: 157px;*/
-    width: 559px;
-    height: 92px;
+    width: 619px;
+    height: 157px;
+    /*width: 559px;*/
+    /*height: 92px;*/
     border: 3px solid #000;
     margin: 0 auto;
     margin-top: 35px;
-    padding: 37px 32px 17px 28px;
-
+    /*padding: 37px 32px 17px 28px;*/
+    position: relative;
 }
 
-.comments-form{
-    background-color: #444;
+.comments-form {
+    /*background-color: #444;*/
+}
+
+/*общие настройки строк ввода*/
+.comments-form-all {
+    border: none;
+    border-bottom: 1px solid rgb(232, 232, 232);
+    width: 136px;
+    height: 17px;
+    font-size: 10px;
+    font-family: "Verdana";
+    color: rgb(204, 204, 204);
+    font-style: italic;
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+}
+
+.comments-form-all:focus{
+    border-color: #000;
+}
+
+/*автор*/
+.comments-form-author{
+top: 37px;
+left: 28px;
+}
+
+/*email*/
+.comments-form-email{
+    bottom: 65px;
+    left: 28px;
+}
+
+/*text area текст комментария*/
+.comments-form-comment{
+    width: 346px;
+    height: 55px;
+    resize: none;
+    bottom: 65px;
+    right: 34px;
+}
+
+
+/*строка email не будет опубликовано*/
+.comment-notes {
+    margin: 0;
+    left: 28px;
+    bottom: 29px;
+    font-size: 10px;
+    font-family: "Verdana";
+    color: #00cd98;
+    font-style: italic;
+    line-height: 1.8;
+    text-align: left;
+    position: absolute;
+}
+
+/*кнопка отправить*/
+.comment-respond .form-submit{
+    top: 109px;
+    right: 34px;
+    margin: 0;
+    position: absolute;
 }
