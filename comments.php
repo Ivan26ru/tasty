@@ -8,7 +8,13 @@
 ?>
 <!-- комментарии -->
 <div class="comments">
-	<p class="zagolovok"><span class="line">Оставьте комментарий, нам очень важно ваше мнение</span></p>
+	<p class="zagolovok">
+	<span class="line">Оставьте комментарий, нам очень важно ваше мнение</span></p>
+ 
+<div class="comments-div-form">
+	<form action="#" class="comments-form">
+		
+	</form>
 </div>
 
 <div id="comments"> <?php // див с этим id нужен для якорьных ссылок на комменты ?>
@@ -68,3 +74,5 @@
 	    echo $new_form; // выводим новую форму
 	} ?>
 </div>
+</div>
+<!-- конец комментария -->

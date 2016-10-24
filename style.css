@@ -31,20 +31,27 @@ body * {
     font-family: "Roboto";
 }
 
+
 /*текст по центру*/
-.text-center{
+
+.text-center {
     text-align: center;
 }
 
+
 /*зеленый цвет шрифта*/
-.green{
+
+.green {
     color: #00cd98;
 }
 
+
 /*жирный шрифт font-family: Roboto-Regular;*/
-.font-rr{
+
+.font-rr {
     font-family: Roboto-Regular;
 }
+
 
 /*хак для float*/
 
@@ -259,15 +266,17 @@ a {
     padding-bottom: 7px;
 }
 
+
 /*путь к странице*/
+
 .put {
-  font-size: 10px;
-  font-family: "Roboto";
-  color: rgb(51, 204, 153);
-  line-height: 1.2;
-  position: absolute;
-  left: 41px;
-  top: 120px;
+    font-size: 10px;
+    font-family: "Roboto";
+    color: rgb(51, 204, 153);
+    line-height: 1.2;
+    position: absolute;
+    left: 41px;
+    top: 120px;
 }
 
 
@@ -1327,117 +1336,173 @@ a.politika {
     content: "•";
     color: rgb(66, 213, 173);
 }
+
+
 /*======================АКЦИИ=====================*/
 
 .akciya-h1 {
-  font-size: 20px;
-  font-family: "Roboto";
-  color: rgb(51, 51, 51);
-  text-transform: uppercase;
-  line-height: 1.2;
-  text-align: left;
+    font-size: 20px;
+    font-family: "Roboto";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left;
 }
+
 
 /*контейнер для акции*/
-.akciya-container{
 
-}
+.akciya-container {}
+
 
 /*блок с основной картинкой*/
-.akciya-div-logo{
+
+.akciya-div-logo {
     width: 540px;
     height: 304px;
-    float:left;
+    float: left;
 }
 
+
 /*максимальные размеры картинки*/
-.akciya-div-logo img{
+
+.akciya-div-logo img {
     max-width: 540px;
     max-height: 304px;
 }
 
+
 /*блок с таблицей*/
-.akciya-kontakt{
-width: 280px;
-float:right;
+
+.akciya-kontakt {
+    width: 280px;
+    float: right;
 }
 
-.akciya-kontakt table{
+.akciya-kontakt table {
     /*margin-top: 15px;*/
-    border:none;
-    padding:0;
+    border: none;
+    padding: 0;
 }
+
 
 /*название критерия*/
+
 .akciya-kontakt td {
-  font-size: 16px;
-  font-family: "Roboto";
-  color: rgb(153, 153, 153);
-  line-height: 1.2;
+    font-size: 16px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    line-height: 1.2;
 }
+
 
 /*все четные ячейки, значение критерия*/
+
 .akciya-kontakt td:nth-child(even) {
-  color: rgb(51, 51, 51);
-  font-family: Roboto-Regular;
+    color: rgb(51, 51, 51);
+    font-family: Roboto-Regular;
 }
 
+
 /*Все нечетные ячейки*/
-.akciya-kontakt td:nth-child(odd){
-    width:90px;
+
+.akciya-kontakt td:nth-child(odd) {
+    width: 90px;
     vertical-align: top;
 }
 
+
 /*таблица с контактами акции*/
-.akciya-kontakt-table{
+
+.akciya-kontakt-table {
     border-collapse: collapse;
 }
 
+
 /*стрка таблицы с контактами акции*/
-.akciya-kontakt-table tr:not(:last-child){
+
+.akciya-kontakt-table tr:not(:last-child) {
     border-bottom: 1px solid rgb(153, 153, 153);
 }
 
+
 /*отступы в ячейках*/
-.akciya-kontakt-table tr td{
+
+.akciya-kontakt-table tr td {
     padding: 13px 0;
 }
 
+
 /*========О акции========*/
 
+
 /*контейнер о акции*/
-.o-akcii{
+
+.o-akcii {
     clear: both;
     margin-top: 33px;
 }
 
+
 /*отступы*/
-.akcii-p-foto{
+
+.akcii-p-foto {
     margin-top: 45px;
 }
 
+
 /*контейнер с картинками акции*/
-.akcii-div-img{
-    margin-top:-15px;
-    margin-right:-15px;
+
+.akcii-div-img {
+    margin-top: -15px;
+    margin-right: -15px;
 }
 
+
 /*первая картинка акций(большая)*/
-.akcii-div-img img:first-child{
-    height:250px;
-    float:left;
+
+.akcii-div-img img:first-child {
+    height: 250px;
+    float: left;
     margin-right: 12px;
 }
 
+
 /*картинки акции*/
-.akcii-div-img img{
+
+.akcii-div-img img {
     /*max-width:128px;*/
-    height:117px;
-    margin-right:12px;
-    margin-top:12px;
+    height: 117px;
+    margin-right: 12px;
+    margin-top: 12px;
 }
+
+
 /*==============комментарии==============*/
+
+
 /*Контейнер для комментариев*/
-.comments{
+
+.comments {
     clear: both;
+    margin-top: 82px;
+}
+
+
+/*контейнер для формы комментариев*/
+
+.comments-div-form {
+    /*width: 619px;*/
+    /*height: 157px;*/
+    width: 559px;
+    height: 92px;
+    border: 3px solid #000;
+    margin: 0 auto;
+    margin-top: 35px;
+    padding: 37px 32px 17px 28px;
+
+}
+
+.comments-form{
+    background-color: #444;
 }
