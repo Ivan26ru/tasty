@@ -52,7 +52,7 @@ get_header(); // подключаем header.php ?>
 	<div class="o-akcii mt33">
 		<p class="podzagolovok"><span class="line">О акции</span></p>
 		<p class="text-other">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos tempore debitis facilis quidem dicta facere, ipsam odio dolores, necessitatibus velit, laboriosam inventore. Animi, consequatur pariatur deserunt quod eveniet delectus, neque. Nesciunt doloribus delectus soluta, repellat consectetur non aperiam perferendis illo, fuga cum nulla porro nihil blanditiis unde expedita, est sapiente!</p>
-		
+
 		<p class="podzagolovok akcii-p-foto"><span class="line">Фотографии</span></p>
 		<!-- контейнер с фото -->
 		<div class="akcii-div-img">

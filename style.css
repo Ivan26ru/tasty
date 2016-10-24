@@ -38,7 +38,6 @@ body * {
     text-align: center;
 }
 
-
 /*зеленый цвет шрифта*/
 
 .green {
@@ -1626,4 +1625,9 @@ padding: 0;
 /*цвет имени автора коммента*/
 .comment-author{
   color: #000;
+}
+
+/*размер шрифта*/
+.fs18{
+    font-size: 18px;
 }

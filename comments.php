@@ -8,7 +8,7 @@
 ?>
 <!-- комментарии -->
 <div class="comments">
-	<p class="zagolovok">
+	<p class="podzagolovok text-center" style="margin-left:0">
 	<span class="line">Оставьте комментарий, нам очень важно ваше мнение</span></p>
 
 
@@ -94,7 +94,7 @@ function kama_reorder_comment_fields( $fields ){
 	<ul class="comment-list">
 		<?php
 			$args = array( // аргументы для списка комментариев, некоторые опции выставляются в админке, остальное в классе clean_comments_constructor
-				'walker' => new clean_comments_constructor, // класс, который собирает все структуру комментов, нах-ся в function.php
+				'walker' => new clean_comments_constructor, // класс, который собирает се структуру комментов, нах-ся в function.php
 			);
 			wp_list_comments($args); // выводим комменты
 		?>
