@@ -41,6 +41,11 @@ body * {
     color: #00cd98;
 }
 
+/*жирный шрифт font-family: Roboto-Regular;*/
+.font-rr{
+    font-family: Roboto-Regular;
+}
+
 /*хак для float*/
 
 .clearfix:before,
@@ -1358,6 +1363,7 @@ float:right;
 }
 
 .akciya-kontakt table{
+    /*margin-top: 15px;*/
     border:none;
     padding:0;
 }
@@ -1373,11 +1379,13 @@ float:right;
 /*все четные ячейки, значение критерия*/
 .akciya-kontakt td:nth-child(even) {
   color: rgb(51, 51, 51);
+  font-family: Roboto-Regular;
 }
 
 /*Все нечетные ячейки*/
 .akciya-kontakt td:nth-child(odd){
     width:90px;
+    vertical-align: top;
 }
 
 /*таблица с контактами акции*/
@@ -1392,7 +1400,7 @@ float:right;
 
 /*отступы в ячейках*/
 .akciya-kontakt-table tr td{
-    padding: 10px 0;
+    padding: 13px 0;
 }
 
 /*========О акции========*/

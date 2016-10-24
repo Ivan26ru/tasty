@@ -24,11 +24,15 @@ get_header(); // подключаем header.php ?>
 				</tr>
 				<tr>
 					<td>Рейтинг:</td>
-					<td><span class="green">+12</span></td>
+					<td>
+						<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+						<span class="green font-rr">+12</span>
+						<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+					</td>
 				</tr>
 				<tr>
 					<td>Отзывы:</td>
-					<td><span class="green">2</span></td>
+					<td><span class="green font-rr">2</span></td>
 				</tr>
 				<tr>
 					<td>Телефон:</td>
