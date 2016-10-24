@@ -86,12 +86,10 @@ function kama_reorder_comment_fields( $fields ){
 	<div class="comments-div-form">
 	   <?php
 	   			echo $new_form; // выводим новую форму
-	   			// echo $new_fields; // выводим новую форму
 	   ?>
 	</div>
 
-<div id="comments"> <?php // див с этим id нужен для якорьных ссылок на комменты ?>
-	<span>Всего комментариев: <?php echo get_comments_number(); // общие кол-во комментов ?></span>
+<div id="comments-user" class="comments-user"> <?php // див с этим id нужен для якорьных ссылок на комменты ?>
 	<?php if (have_comments()) : // если комменты есть ?>
 	<ul class="comment-list">
 		<?php

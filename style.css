@@ -1574,3 +1574,56 @@ left: 28px;
     margin: 0;
     position: absolute;
 }
+
+/*=============комментарии пользователей=============*/
+
+/*контейнер с комментами*/
+.comments-user{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 94px;
+    width: 619px;
+}
+
+/*ul комментов*/
+.comment-list{
+margin: 0;
+padding: 0;
+}
+
+/*li комментов*/
+.comment-list li{
+    margin-top: 65px;
+    border-bottom: 1px solid rgb(232, 232, 232);
+
+}
+
+/*убираем отступ первого коммента*/
+.comment-list li:first-child{
+    margin-top: 0;
+}
+
+/*сам комментарий пользователя*/
+.comment-list p{
+  font-size: 12px;
+  font-family: "Verdana";
+  color: rgb(102, 102, 102);
+  font-style: italic;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/*дата коммента*/
+.comment-list .comment-user-data {
+  font-size: 10px;
+  font-family: "Verdana";
+  color: rgb(153, 153, 153);
+  font-style: italic;
+  line-height: 1.2;
+  text-align: right;
+}
+
+/*цвет имени автора коммента*/
+.comment-author{
+  color: #000;
+}
