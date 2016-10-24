@@ -1424,20 +1424,20 @@ float:right;
 
 /*первая картинка акций(большая)*/
 .akcii-div-img img:first-child{
-    height:275px;
+    height:250px;
     float:left;
-    margin-right: 15px;
+    margin-right: 12px;
 }
 
 /*картинки акции*/
 .akcii-div-img img{
     /*max-width:128px;*/
-    height:128px;
-    margin-right:10px;
-    margin-top:15px;
+    height:117px;
+    margin-right:12px;
+    margin-top:12px;
 }
 /*==============комментарии==============*/
 /*Контейнер для комментариев*/
 .comments{
-clear: both;
+    clear: both;
 }

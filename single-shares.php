@@ -57,12 +57,12 @@ get_header(); // подключаем header.php ?>
 		<!-- контейнер с фото -->
 		<div class="akcii-div-img">
 						<img class="post-img" src="http://placehold.it/512x512/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/512x512/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/512x512/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/512x512/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/512x512/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/512x512/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/512x512/2ecc71/ecf0f1">
+						<img class="post-img" src="http://placehold.it/212x312/2ecc71/ecf0f1">
+						<img class="post-img" src="http://placehold.it/312x212/2ecc71/ecf0f1">
+						<img class="post-img" src="http://placehold.it/512x112/2ecc71/ecf0f1">
+						<img class="post-img" src="http://placehold.it/112x512/2ecc71/ecf0f1">
+						<img class="post-img" src="http://placehold.it/51x52/2ecc71/ecf0f1">
+						<img class="post-img" src="http://placehold.it/112x112/2ecc71/ecf0f1">
 		</div>
 	</div>
 </div>
