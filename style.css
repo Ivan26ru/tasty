@@ -1400,11 +1400,12 @@ float:right;
 /*контейнер о акции*/
 .o-akcii{
     clear: both;
+    margin-top: 33px;
 }
 
-/*контейнер о акции*/
-.o-akcii{
-    clear: both;
+/*отступы*/
+.akcii-p-foto{
+    margin-top: 45px;
 }
 
 /*контейнер с картинками акции*/
