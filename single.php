@@ -6,11 +6,14 @@
  */
 get_header(); // подключаем header.php ?>
 <?php
-  if ( in_category( 'news' )) {
-    include 'single-290.php';
-} elseif ( in_category('blog') {
-    include 'single-291.php';
-} else {
-    include 'single-all.php';
-}
+
+//раскадываем шаблоны страниц по рубрикам
+
+if (in_category('shares')) { //акции
+	include(TEMPLATEPATH.'/single-shares.php'); 
+	exit;
+} else {//общий шаблон
+    include (TEMPLATEPATH.'/single-all.php');
+    exit;
+}ж
 ?>
