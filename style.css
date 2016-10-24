@@ -1548,6 +1548,10 @@ left: 28px;
     right: 34px;
 }
 
+.ta{
+    width: 556px;
+}
+
 
 /*строка email не будет опубликовано*/
 .comment-notes {

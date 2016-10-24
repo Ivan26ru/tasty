@@ -13,27 +13,13 @@
 
 
 
-<div id="comments"> <?php // див с этим id нужен для якорьных ссылок на комменты ?>
-	<span>Всего комментариев: <?php echo get_comments_number(); // общие кол-во комментов ?></span>
-	<?php if (have_comments()) : // если комменты есть ?>
-	<ul class="comment-list">
-		<?php
-			$args = array( // аргументы для списка комментариев, некоторые опции выставляются в админке, остальное в классе clean_comments_constructor
-				'walker' => new clean_comments_constructor, // класс, который собирает все структуру комментов, нах-ся в function.php
-			);
-			wp_list_comments($args); // выводим комменты
-		?>
-	</ul>
-	<?php if (get_comment_pages_count() > 1 && get_option( 'page_comments')) : // если страниц с комментами > 1 и пагинация комментариев включена ?>
-	<?php $args = array( // аргументы для пагинации
-			'prev_text' => '«', // текст назад
-			'next_text' => '»' // текст вперед
-		);
-		paginate_comments_links($args); // выводим пагинацию
-	?>
-	<?php endif; // если страниц с комментами > 1 и пагинация комментариев включена - конец ?>
-	<?php endif; // // если комменты есть - конец ?>
 	<?php if (comments_open()) { // если комментирование включено для данного поста
+		// залогинен или нет, что б выводить правлильно форму ввода коммита
+		$class_textarea='';
+		if ( is_user_logged_in() ) {
+	$class_textarea=' ta';
+};
+
 		/* ФОРМА КОММЕНТИРОВАНИЯ */
 		$fields =  array( // разметка текстовых полей формы
 			'author' => '<input class="comments-form-author comments-form-all" placeholder="Введите имя*" id="author" name="author" type="text" value="'.esc_attr($commenter['comment_author']).'" size="30" required>', // поле Имя
@@ -41,9 +27,10 @@
 			);
 		$args = array( // опции формы комментирования
 			'fields' => apply_filters('comment_form_default_fields', $fields), // заменяем стандартные поля на поля из массива выше ($fields)
-			'comment_field' => '<textarea class="comments-form-comment comments-form-all" placeholder="Что вы думаете о данной компании?" id="comment" name="comment" cols="45" rows="8" required></textarea>', // разметка поля для комментирования
+			'comment_field' => '<textarea class="comments-form-comment comments-form-all'.$class_textarea.'" placeholder="Что вы думаете о данной компании?" id="comment" name="comment" cols="45" rows="8" required></textarea>', // разметка поля для комментирования
 			'must_log_in' => '<p class="must-log-in">Вы должны быть зарегистрированы! '.wp_login_url(apply_filters('the_permalink',get_permalink())).'</p>', // текст "Вы должны быть зарегистрированы!"
-			'logged_in_as' => '<p class="logged-in-as">'.sprintf(__( 'Вы вошли как <a href="%1$s">%2$s</a>. <a href="%3$s">Выйти?</a>'), admin_url('profile.php'), $user_identity, wp_logout_url(apply_filters('the_permalink',get_permalink()))).'</p>', // разметка "Вы вошли как"
+			//'logged_in_as' => '<p class="logged-in-as">'.sprintf(__( 'Вы вошли как <a href="%1$s">%2$s</a>. <a href="%3$s">Выйти?</a>'), admin_url('profile.php'), $user_identity, wp_logout_url(apply_filters('the_permalink',get_permalink()))).'</p>', // разметка "Вы вошли как"
+			'logged_in_as' => '', // разметка "Вы вошли как"
 			'comment_notes_before' => '<p class="comment-notes">*Ваша почта не будет показана</p>', // Текст до формы
 			//'comment_notes_after' => '<p class="form-allowed-tags">'.sprintf(__( 'Вы можете использовать следующие <abbr>HTML</abbr> тэги: %s'),'<code>'.allowed_tags().'</code>').'</p>', // текст после формы
 			//'id_form' => 'commentform', // атрибут id формы
@@ -101,7 +88,28 @@ function kama_reorder_comment_fields( $fields ){
 	   			echo $new_form; // выводим новую форму
 	   			// echo $new_fields; // выводим новую форму
 	   ?>
-</div>
+	</div>
+
+<div id="comments"> <?php // див с этим id нужен для якорьных ссылок на комменты ?>
+	<span>Всего комментариев: <?php echo get_comments_number(); // общие кол-во комментов ?></span>
+	<?php if (have_comments()) : // если комменты есть ?>
+	<ul class="comment-list">
+		<?php
+			$args = array( // аргументы для списка комментариев, некоторые опции выставляются в админке, остальное в классе clean_comments_constructor
+				'walker' => new clean_comments_constructor, // класс, который собирает все структуру комментов, нах-ся в function.php
+			);
+			wp_list_comments($args); // выводим комменты
+		?>
+	</ul>
+	<?php if (get_comment_pages_count() > 1 && get_option( 'page_comments')) : // если страниц с комментами > 1 и пагинация комментариев включена ?>
+	<?php $args = array( // аргументы для пагинации
+			'prev_text' => '«', // текст назад
+			'next_text' => '»' // текст вперед
+		);
+		paginate_comments_links($args); // выводим пагинацию
+	?>
+	<?php endif; // если страниц с комментами > 1 и пагинация комментариев включена - конец ?>
+	<?php endif; // // если комменты есть - конец ?>
 </div>
 </div>
 <!-- конец комментария -->
