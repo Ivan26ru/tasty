@@ -67,6 +67,7 @@ get_header(); // подключаем header.php ?>
 	</div>
 </div>
 <!-- конец поста -->
-<?php get_comments(); ?>
+<?php if (comments_open() || get_comments_number()) comments_template('', true); // если комментирование открыто - мы покажем список комментариев и форму, если закрыто, но кол-во комментов > 0 - покажем только список комментариев ?>
+
 <?php get_sidebar(); // подключаем footer.php ?>
 <?php get_footer(); // подключаем footer.php ?>
