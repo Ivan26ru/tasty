@@ -1512,7 +1512,7 @@ a.politika {
     border: none;
     border-bottom: 1px solid rgb(232, 232, 232);
     width: 136px;
-    height: 17px;
+    height: 7px;
     font-size: 10px;
     font-family: "Verdana";
     color: rgb(204, 204, 204);
@@ -1520,6 +1520,7 @@ a.politika {
     line-height: 1.2;
     text-align: left;
     position: absolute;
+    padding-bottom: 10px;
 }
 
 .comments-form-all:focus{
