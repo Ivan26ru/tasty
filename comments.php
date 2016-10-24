@@ -6,6 +6,11 @@
  * @subpackage your-clean-template
  */
 ?>
+<!-- комментарии -->
+<div class="comments">
+	<p class="zagolovok"><span class="line">Оставьте комментарий, нам очень важно ваше мнение</span></p>
+</div>
+
 <div id="comments"> <?php // див с этим id нужен для якорьных ссылок на комменты ?>
 	<span>Всего комментариев: <?php echo get_comments_number(); // общие кол-во комментов ?></span>
 	<?php if (have_comments()) : // если комменты есть ?>

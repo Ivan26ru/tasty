@@ -31,6 +31,15 @@ body * {
     font-family: "Roboto";
 }
 
+/*текст по центру*/
+.text-center{
+    text-align: center;
+}
+
+/*зеленый цвет шрифта*/
+.green{
+    color: #00cd98;
+}
 
 /*хак для float*/
 
@@ -720,6 +729,7 @@ sidebar {
     border: none;
     text-align: center;
     cursor: pointer;
+    display: inline-block;
 }
 
 
@@ -1368,4 +1378,57 @@ float:right;
 /*Все нечетные ячейки*/
 .akciya-kontakt td:nth-child(odd){
     width:90px;
+}
+
+/*таблица с контактами акции*/
+.akciya-kontakt-table{
+    border-collapse: collapse;
+}
+
+/*стрка таблицы с контактами акции*/
+.akciya-kontakt-table tr:not(:last-child){
+    border-bottom: 1px solid rgb(153, 153, 153);
+}
+
+/*отступы в ячейках*/
+.akciya-kontakt-table tr td{
+    padding: 10px 0;
+}
+
+/*========О акции========*/
+
+/*контейнер о акции*/
+.o-akcii{
+    clear: both;
+}
+
+/*контейнер о акции*/
+.o-akcii{
+    clear: both;
+}
+
+/*контейнер с картинками акции*/
+.akcii-div-img{
+    margin-top:-15px;
+    margin-right:-15px;
+}
+
+/*первая картинка акций(большая)*/
+.akcii-div-img img:first-child{
+    height:275px;
+    float:left;
+    margin-right: 15px;
+}
+
+/*картинки акции*/
+.akcii-div-img img{
+    /*max-width:128px;*/
+    height:128px;
+    margin-right:10px;
+    margin-top:15px;
+}
+/*==============комментарии==============*/
+/*Контейнер для комментариев*/
+.comments{
+clear: both;
 }
