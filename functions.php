@@ -80,4 +80,10 @@ function pagination() { // функция вывода пагинации
 		'after_page_number' => '' // строка после цифры
 	));
 }
+
+// вывод часть поста анонс
+function the_truncated_post($symbol_amount) {
+	$filtered = strip_tags( preg_replace('@<style[^>]*?>.*?</style>@si', '', preg_replace('@<script[^>]*?>.*?</script>@si', '', apply_filters('the_content', get_the_content()))) );
+	echo substr($filtered, 0, strrpos(substr($filtered, 0, $symbol_amount), ' ')) . '...';
+}
 ?>

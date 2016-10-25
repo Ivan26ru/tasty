@@ -1668,6 +1668,7 @@ right:65px
     border-top: 1px solid rgb(153, 153, 153);
     border-bottom: 1px solid rgb(153, 153, 153);
     margin-top: 15px;
+    position: relative;
 }
 
 /*первый пост*/
@@ -1721,3 +1722,12 @@ right:65px
   margin: 0;
 }
 
+/*дата поста*/
+.post-shares-data{
+  font-size: 10px;
+  font-family: "Roboto";
+  color: #00cd98;
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
