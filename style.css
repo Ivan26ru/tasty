@@ -1178,7 +1178,6 @@ a.politika {
     margin-left: 12px;
 }
 
-
 /*содеражание поста, блок с черной рамкой*/
 
 .post-text {
@@ -1630,4 +1629,78 @@ padding: 0;
 /*размер шрифта*/
 .fs18{
     font-size: 18px;
+}
+
+/*------------------рубрика акции-----------------*/
+.fs12{
+    font-size: 12px;
+}
+
+.fs16{
+    font-size: 16px;
+}
+
+/*контейнер для названия и компании*/
+.header-category{
+    position: relative;
+    height: 32px;
+}
+
+.nazvanie{
+position: absolute;
+left:235px;
+}
+
+.company{
+position: absolute;
+right:65px
+}
+
+.post-shares-all{
+    margin-top: 15px;
+}
+
+/*описание постов*/
+.post-shares{
+    /*margin-top: 15px;*/
+}
+
+/*контейнер картинки поста*/
+  .post-shares-div-img{
+    width: 220px;
+    height: 100%;
+  }
+
+/*картинка поста*/
+.post-shares-img{
+    width: 220px;
+    height: 120px;
+    float: left;
+}
+/*содежимое статьи*/
+.post-shares-content{
+    width: 476px;
+    margin: 6px 0 20px 235px;
+}
+
+/*название поста*/
+.post-shares-content .podzagolovok{
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+/*блок для названия компании*/
+.post-shares-name-company{
+    float: right;
+    width: 138px;
+}
+
+/*серое название компании*/
+.shares-name-company{
+  font-size: 12px;
+  font-family: "Roboto";
+  color: rgb(153, 153, 153);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
 }
