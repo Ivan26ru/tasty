@@ -6,21 +6,24 @@
  */
 get_header(); // подключаем header.php ?>
 
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); // старт цикла ?>
+
 <!-- начало поста -->
-<h1 class="akciya-h1">Акция от GearBest — Good Deals in Clearance Special</h1>
+<h1 class="akciya-h1"><?php the_title(); ?></h1>
 <div class="akciya-container clearfix">
 	<!-- контейнер с картинкой и контактами -->
 	<div class="container-akciya-kontakt clearfix">
 		<!-- блок с основной картинкой -->
 		<div class="akciya-div-logo">
-			<img src="http://placehold.it/540x304/2ecc71/ecf0f1">
+		<?php if ( has_post_thumbnail() ) the_post_thumbnail('504x304','class=post-shares-img'); // выводим миниатюру поста, если есть 
+else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/ecf0f1">';?>
 		</div>
 		<!-- Таблица с контактами -->
 		<div class="akciya-kontakt">
 			<table class="akciya-kontakt-table">
 				<tr>
 					<td>Компания:</td>
-					<td>геар бест</td>
+					<td><?php echo get_post_custom_values(shares_company)[0]; //вывод произвольного поля?></td>
 				</tr>
 				<tr>
 					<td>Рейтинг:</td>
@@ -32,15 +35,15 @@ get_header(); // подключаем header.php ?>
 				</tr>
 				<tr>
 					<td>Отзывы:</td>
-					<td><span class="green font-rr">2</span></td>
+					<td><span class="green font-rr"><?php comments_number('пока нет', '1', '%'); ?></span></td>
 				</tr>
 				<tr>
 					<td>Телефон:</td>
-					<td>8(955)323-12-12</td>
+					<td><?php echo get_post_custom_values(shares_telefon)[0]; //вывод произвольного поля?></td>
 				</tr>
 				<tr>
 					<td>Адрес:</td>
-					<td>Россия, г.Москва, ул.Смольная, дом 24а</td>
+					<td><?php echo get_post_custom_values(shares_adres)[0]; //вывод произвольного поля?></td>
 				</tr>
 				<tr>
 					<td class="text-center" colspan="2"><a href="#" class="btn-green">Перейти на сайт</a></td>
@@ -51,7 +54,10 @@ get_header(); // подключаем header.php ?>
 	<!-- коонец блок с картинкой и контактами -->
 	<div class="o-akcii mt33">
 		<p class="podzagolovok"><span class="line">О акции</span></p>
-		<p class="text-other">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos tempore debitis facilis quidem dicta facere, ipsam odio dolores, necessitatibus velit, laboriosam inventore. Animi, consequatur pariatur deserunt quod eveniet delectus, neque. Nesciunt doloribus delectus soluta, repellat consectetur non aperiam perferendis illo, fuga cum nulla porro nihil blanditiis unde expedita, est sapiente!</p>
+		<div class="text-other">
+			<?php add_filter('the_content','htm_image_content_filter',11); ?>
+<?php the_content(); // контент без картинок?>
+		</div>
 
 		<p class="podzagolovok akcii-p-foto"><span class="line">Фотографии</span></p>
 		<!-- контейнер с фото -->
@@ -63,9 +69,19 @@ get_header(); // подключаем header.php ?>
 						<img class="post-img" src="http://placehold.it/112x512/2ecc71/ecf0f1">
 						<img class="post-img" src="http://placehold.it/51x52/2ecc71/ecf0f1">
 						<img class="post-img" src="http://placehold.it/112x112/2ecc71/ecf0f1">
+					<?php 
+$imgs = get_attached_media( 'image', $post->ID  );
+foreach($imgs as $img){
+$image_url = $img->guid;
+echo '<img  class="post-img" src="'. $image_url .'" />';
+}
+					 ?>
 		</div>
 	</div>
 </div>
+
+<?php endwhile; // конец цикла ?>
+
 <!-- конец поста -->
 <?php if (comments_open() || get_comments_number()) comments_template('', true); // если комментирование открыто - мы покажем список комментариев и форму, если закрыто, но кол-во комментов > 0 - покажем только список комментариев ?>
 

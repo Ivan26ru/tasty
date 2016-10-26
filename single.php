@@ -15,5 +15,5 @@ if (in_category('shares')) { //акции
 } else {//общий шаблон
     include (TEMPLATEPATH.'/single-all.php');
     exit;
-}ж
+}
 ?>

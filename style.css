@@ -173,7 +173,7 @@ a {
 /*при наведении верхнее меню 1*/
 
 .ul-top-1 li a:hover,
-.ul-top-1 li.active a {
+.ul-top-1 li.current-menu-item a {
     background-color: #000;
     color: #fff;
 }

@@ -86,4 +86,10 @@ function the_truncated_post($symbol_amount) {
 	$filtered = strip_tags( preg_replace('@<style[^>]*?>.*?</style>@si', '', preg_replace('@<script[^>]*?>.*?</script>@si', '', apply_filters('the_content', get_the_content()))) );
 	echo substr($filtered, 0, strrpos(substr($filtered, 0, $symbol_amount), ' ')) . '...';
 }
+
+// вывод поста без изображений
+function htm_image_content_filter($content){
+  $content = preg_replace("/<img[^>]+\>/i", "", $content);
+  return $content;
+}
 ?>
