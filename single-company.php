@@ -17,6 +17,7 @@ get_header(); // подключаем header.php ?>
 <!-- 		<?php if ( has_post_thumbnail() ) the_post_thumbnail('504x304','class=post-shares-img'); // выводим миниатюру поста, если есть
 else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/ecf0f1">';?> -->
 <img class="post-shares-img" src="http://placehold.it/90x72/2ecc71/ecf0f1">
+
 		</div>
 		<!-- Таблица с контактами -->
 		<div class="company-kontakt">
@@ -32,7 +33,7 @@ else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/
 					<td class="null">&nbsp;</td>
 					<td class="null">&nbsp;</td>
 					<td class="brd w70">Телефон:</td>
-					<td class="brd w330"><?php echo get_post_custom_values(shares_telefon)[0]; //вывод произвольного поля?></td>
+					<td class="brd w330"><?php echo get_post_custom_values(company_telefon)[0]; //вывод произвольного поля?></td>
 
 				</tr>
 				<tr>
@@ -41,7 +42,7 @@ else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/
 					<td class="null">&nbsp;</td>
 					<td class="null">&nbsp;</td>
 					<td class="brd ">Адрес:</td>
-					<td class="brd"><?php echo get_post_custom_values(shares_adres)[0]; //вывод произвольного поля?></td>
+					<td class="brd"><?php echo get_post_custom_values(company_adres)[0]; //вывод произвольного поля?></td>
 				</tr>
 				<tr>
 					<td class="null">&nbsp;</td>
@@ -82,9 +83,8 @@ $img_urls = $matches[1]; ?>
 <img class="post-img" src="<?php echo $img_url; ?>" />
 <?php }}
 ?>
-
--->
-		</div>
+ -->
+ 		</div>
 	</div>
 </div>
 
