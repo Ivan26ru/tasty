@@ -69,13 +69,17 @@ else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/
 						<img class="post-img" src="http://placehold.it/112x512/2ecc71/ecf0f1">
 						<img class="post-img" src="http://placehold.it/51x52/2ecc71/ecf0f1">
 						<img class="post-img" src="http://placehold.it/112x112/2ecc71/ecf0f1">
-					<?php 
-$imgs = get_attached_media( 'image', $post->ID  );
-foreach($imgs as $img){
-$image_url = $img->guid;
-echo '<img  class="post-img" src="'. $image_url .'" />';
-}
-					 ?>
+<!--  
+<?php $str= get_the_content();
+preg_match_all('/src="([^"]+)"/i', $str, $matches);
+$img_urls = $matches[1]; ?>
+<?php if($img_urls) { ?>
+<? foreach ($img_urls as $img_url) {?>
+<img class="post-img" src="<?php echo $img_url; ?>" />
+<?php }} 
+?>
+
+-->
 		</div>
 	</div>
 </div>
