@@ -1,4 +1,4 @@
-================ Общие стили для сайта ========================*/
+/*================ Общие стили для сайта ========================*/
 
 
 /*основной зеленый цвет #00cd98*/
@@ -1732,3 +1732,92 @@ right:65px
   right: 10px;
   bottom: 15px;
 }
+/*--------------------------страница компании-----------------------*/
+.company-h1 {
+  font-size: 20px;
+  font-family: "Roboto";
+  color: rgb( 51, 51, 51 );
+  text-transform: uppercase;
+  margin-top: 7px;
+}
+
+
+/*блок с основной картинкой*/
+
+.company-div-logo {
+    width: 130px;
+    height: 200px;
+    float: left;
+}
+
+
+/*максимальные размеры картинки*/
+
+.company-div-logo img {
+    max-width: 130px;
+    max-height: 200px;
+}
+
+/*блок с таблицей*/
+
+.company-kontakt {
+    width: 715px;
+    float: right;
+    margin-top: -10px;
+}
+
+.company-kontakt table {
+    /*margin-top: 15px;*/
+    border: none;
+    padding: 0;
+}
+
+
+/*название критерия*/
+
+.company-kontakt td {
+    font-size: 16px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    line-height: 1.2;
+}
+
+
+/*все четные ячейки, значение критерия*/
+
+.company-kontakt td:nth-child(even) {
+    color: rgb(51, 51, 51);
+    font-family: Roboto-Regular;
+}
+
+
+/*Все нечетные ячейки*/
+
+.company-kontakt td:nth-child(odd) {
+    width: 90px;
+    vertical-align: top;
+}
+
+
+/*таблица с контактами акции*/
+
+.company-kontakt-table {
+    border-collapse: collapse;
+}
+
+
+/*стрка таблицы с контактами акции*/
+
+.company-kontakt-table tr:not(:last-child) {
+    border-bottom: 1px solid rgb(153, 153, 153);
+}
+
+
+/*отступы в ячейках*/
+
+.company-kontakt-table tr td {
+    padding: 13px 0;
+}
+
+
+/*========О акции========*/
