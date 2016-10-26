@@ -1375,6 +1375,7 @@ a.politika {
 .akciya-kontakt {
     width: 280px;
     float: right;
+    margin-top: -10px;
 }
 
 .akciya-kontakt table {
