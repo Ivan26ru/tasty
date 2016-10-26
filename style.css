@@ -1,6 +1,3 @@
-/*================ Общие стили для сайта ========================*/
-
-
 /*основной зеленый цвет #00cd98*/
 
 
@@ -1772,6 +1769,21 @@ right:65px
     padding: 0;
 }
 
+.w100{
+width: 100px;
+}
+
+.w180{
+	width: 180px;
+}
+
+.w70{
+	width: 70px;
+}
+
+.w330{
+	width: 330px;
+}
 
 /*название критерия*/
 
@@ -1794,7 +1806,6 @@ right:65px
 /*Все нечетные ячейки*/
 
 .company-kontakt td:nth-child(odd) {
-    width: 90px;
     vertical-align: top;
 }
 
@@ -1805,13 +1816,20 @@ right:65px
     border-collapse: collapse;
 }
 
-
+.text-right{
+	text-align: right;
+}
 /*стрка таблицы с контактами акции*/
 
-.company-kontakt-table tr:not(:last-child) {
+.brd{
     border-bottom: 1px solid rgb(153, 153, 153);
 }
 
+/*пустые ячейка для промежутка*/
+.company-kontakt .company-kontakt-table tr td.null{
+	border-bottom: none;
+	width: 15px;
+}
 
 /*отступы в ячейках*/
 
@@ -1820,4 +1838,4 @@ right:65px
 }
 
 
-/*========О акции========*/
+/*========О акции========
