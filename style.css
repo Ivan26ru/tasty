@@ -1849,6 +1849,7 @@ width: 100px;
 .list-company .podzagolovok{
     font-weight: normal;
     font-size: 12px;
+    display: inline-block;
 }
 
 /*столб миниатюры*/
@@ -1858,16 +1859,21 @@ width: 100px;
 
 /*название компании*/
 .th-name{
-    width: 460px;
+    width: 470px;
 }
 
 /*отзыв и рейтинг*/
 .th-otziv, .th-rejting{
-    width: 135px;
+    width: 130px;
+}
+
+/*стрелки*/
+.th-rejting img{
+    display: inline-block;
 }
 
 .list-company td{
-    outline: 1px solid black;
+    /*outline: 1px solid black;*/
 }
 
 /*ячейка миниатюры*/
@@ -1901,4 +1907,27 @@ vertical-align: top;
 .td-otziv, .td-rejting{
     text-align: center;
     vertical-align: middle;
+}
+
+/*ячейки разделения*/
+.tr-null td{
+    height: 16px
+}
+
+.tr-hr td{
+    height: 20px;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.tr-null-2 td{
+    height: 20px
+}
+
+/*скрыть элементы границы для последнего*/
+table tr:nth-last-child(1),
+table tr:nth-last-child(2)
+/*table tr:nth-last-child(3)*/
+{
+    display:none;
 }

@@ -15,8 +15,9 @@ get_header(); // подключаем header.php ?>
 	<div class="container-akciya-kontakt clearfix">
 		<!-- блок с основной картинкой -->
 		<div class="akciya-div-logo">
-		<?php if ( has_post_thumbnail() ) the_post_thumbnail('504x304','class=post-shares-img'); // выводим миниатюру поста, если есть 
+		<?php if ( has_post_thumbnail() ) the_post_thumbnail('504x304'); // выводим миниатюру поста, если есть 
 else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/ecf0f1">';?>
+<!-- <img class="" src="http://placehold.it/540x304/2ecc71/ecf0f1"> -->
 		</div>
 		<!-- Таблица с контактами -->
 		<div class="akciya-kontakt">

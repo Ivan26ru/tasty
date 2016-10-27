@@ -12,7 +12,10 @@ get_header(); // подключаем header.php ?>
 if (in_category('shares')) { //акции
 	include(TEMPLATEPATH.'/single-shares.php'); 
 	exit;
-} else {//общий шаблон
+} elseif (in_category('company')) { //акции
+	include(TEMPLATEPATH.'/single-company.php'); 
+	exit;
+} else{//общий шаблон
     include (TEMPLATEPATH.'/single-all.php');
     exit;
 }
