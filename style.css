@@ -1838,4 +1838,67 @@ width: 100px;
 }
 
 
-/*========О акции========
+/*========рубрика компаний========*/
+
+/*Таблица компаний*/
+.list-company{
+    width: 850px;
+}
+
+/*стиль заголовка таблицы*/
+.list-company .podzagolovok{
+    font-weight: normal;
+    font-size: 12px;
+}
+
+/*столб миниатюры*/
+.th-null{
+    width: 120px;
+}
+
+/*название компании*/
+.th-name{
+    width: 460px;
+}
+
+/*отзыв и рейтинг*/
+.th-otziv, .th-rejting{
+    width: 135px;
+}
+
+.list-company td{
+    outline: 1px solid black;
+}
+
+/*ячейка миниатюры*/
+.td-img{
+    text-align: center;
+}
+
+/*контейнер миниатюры*/
+.company-div-img{
+    display: inline-block;
+    max-width: 120px;
+    min-height: 110px;
+    overflow: hidden;
+}
+
+/*сама миниатюра*/
+.company-div-img img{
+    max-width: 120px;
+}
+
+/*ячейка имя и описания компании*/
+.td-name{
+vertical-align: top;
+}
+
+.td-name .podzagolovok{
+    margin: 0;
+}
+
+/*ячейка отзыва и рейтинга*/
+.td-otziv, .td-rejting{
+    text-align: center;
+    vertical-align: middle;
+}
