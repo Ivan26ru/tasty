@@ -10,10 +10,13 @@ get_header(); // подключаем header.php ?>
 //раскадываем шаблоны страниц по рубрикам
 
 if (in_category('shares')) { //акции
-	include(TEMPLATEPATH.'/single-shares.php'); 
+	include(TEMPLATEPATH.'/single-shares.php');
 	exit;
 } elseif (in_category('company')) { //акции
-	include(TEMPLATEPATH.'/single-company.php'); 
+	include(TEMPLATEPATH.'/single-company.php');
+	exit;
+} elseif (in_category('video')) { //акции
+	include(TEMPLATEPATH.'/single-video.php');
 	exit;
 } else{//общий шаблон
     include (TEMPLATEPATH.'/single-all.php');
