@@ -35,6 +35,7 @@ body * {
     text-align: center;
 }
 
+
 /*зеленый цвет шрифта*/
 
 .green {
@@ -1175,6 +1176,7 @@ a.politika {
     margin-left: 12px;
 }
 
+
 /*содеражание поста, блок с черной рамкой*/
 
 .post-text {
@@ -1503,7 +1505,9 @@ a.politika {
     /*background-color: #444;*/
 }
 
+
 /*общие настройки строк ввода*/
+
 .comments-form-all {
     border: none;
     border-bottom: 1px solid rgb(232, 232, 232);
@@ -1519,24 +1523,30 @@ a.politika {
     padding-bottom: 10px;
 }
 
-.comments-form-all:focus{
+.comments-form-all:focus {
     border-color: #000;
 }
 
+
 /*автор*/
-.comments-form-author{
-top: 37px;
-left: 28px;
+
+.comments-form-author {
+    top: 37px;
+    left: 28px;
 }
 
+
 /*email*/
-.comments-form-email{
+
+.comments-form-email {
     bottom: 65px;
     left: 28px;
 }
 
+
 /*text area текст комментария*/
-.comments-form-comment{
+
+.comments-form-comment {
     width: 346px;
     height: 55px;
     resize: none;
@@ -1544,12 +1554,13 @@ left: 28px;
     right: 34px;
 }
 
-.ta{
+.ta {
     width: 556px;
 }
 
 
 /*строка email не будет опубликовано*/
+
 .comment-notes {
     margin: 0;
     left: 28px;
@@ -1563,104 +1574,130 @@ left: 28px;
     position: absolute;
 }
 
+
 /*кнопка отправить*/
-.comment-respond .form-submit{
+
+.comment-respond .form-submit {
     top: 109px;
     right: 34px;
     margin: 0;
     position: absolute;
 }
 
+
 /*=============комментарии пользователей=============*/
 
+
 /*контейнер с комментами*/
-.comments-user{
+
+.comments-user {
     margin-left: auto;
     margin-right: auto;
     margin-top: 94px;
     width: 619px;
 }
 
+
 /*ul комментов*/
-.comment-list{
-margin: 0;
-padding: 0;
+
+.comment-list {
+    margin: 0;
+    padding: 0;
 }
+
 
 /*li комментов*/
-.comment-list li{
+
+.comment-list li {
     margin-top: 65px;
     border-bottom: 1px solid rgb(232, 232, 232);
-
 }
 
+
 /*убираем отступ первого коммента*/
-.comment-list li:first-child{
+
+.comment-list li:first-child {
     margin-top: 0;
 }
 
+
 /*сам комментарий пользователя*/
-.comment-list p{
-  font-size: 12px;
-  font-family: "Verdana";
-  color: rgb(102, 102, 102);
-  font-style: italic;
-  line-height: 1.2;
-  text-align: left;
+
+.comment-list p {
+    font-size: 12px;
+    font-family: "Verdana";
+    color: rgb(102, 102, 102);
+    font-style: italic;
+    line-height: 1.2;
+    text-align: left;
 }
+
 
 /*дата коммента*/
+
 .comment-list .comment-user-data {
-  font-size: 10px;
-  font-family: "Verdana";
-  color: rgb(153, 153, 153);
-  font-style: italic;
-  line-height: 1.2;
-  text-align: right;
+    font-size: 10px;
+    font-family: "Verdana";
+    color: rgb(153, 153, 153);
+    font-style: italic;
+    line-height: 1.2;
+    text-align: right;
 }
+
 
 /*цвет имени автора коммента*/
-.comment-author{
-  color: #000;
+
+.comment-author {
+    color: #000;
 }
 
+
 /*размер шрифта*/
-.fs18{
+
+.fs18 {
     font-size: 18px;
 }
 
+
 /*------------------рубрика акции-----------------*/
-.fs12{
+
+.fs12 {
     font-size: 12px;
 }
 
-.fs16{
+.fs16 {
     font-size: 16px;
 }
 
+
 /*контейнер для названия и компании*/
-.header-category{
+
+.header-category {
     position: relative;
     height: 32px;
 }
 
-.nazvanie{
-position: absolute;
-left:235px;
+.nazvanie {
+    position: absolute;
+    left: 235px;
 }
 
-.company{
-position: absolute;
-right:65px
+.company {
+    position: absolute;
+    right: 65px
 }
+
 
 /*контейнер для всех записей*/
-.post-shares-all{
+
+.post-shares-all {
     margin-top: 15px;
 }
 
+
 /*посты*/
-.post-shares{
+
+.post-shares {
     /*margin-top: 15px;*/
     padding: 15px 0;
     border-top: 1px solid rgb(153, 153, 153);
@@ -1669,73 +1706,92 @@ right:65px
     position: relative;
 }
 
+
 /*первый пост*/
-.post-shares-all .post-shares:first-child{
-	border-top: none;
-	padding-top: 0;
-	margin-top: 0;
+
+.post-shares-all .post-shares:first-child {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
 }
 
-/*контейнер картинки поста*/
-  .post-shares-div-img{
-  	float: left;
-    width: 220px;
-	height: 120px;
-  }
 
-/*картинка поста*/
-.post-shares-img{
+/*контейнер картинки поста*/
+
+.post-shares-div-img {
+    float: left;
     width: 220px;
     height: 120px;
 }
 
+
+/*картинка поста*/
+
+.post-shares-img {
+    width: 220px;
+    height: 120px;
+}
+
+
 /*содежимое статьи*/
-.post-shares-content{
-	display: inline-block;
+
+.post-shares-content {
+    display: inline-block;
     width: 476px;
     margin: 6px 0 0 15px;
 }
 
+
 /*название поста*/
-.post-shares-content .podzagolovok{
+
+.post-shares-content .podzagolovok {
     margin-top: 0;
     margin-bottom: 12px;
 }
 
+
 /*блок для названия компании*/
-.post-shares-name-company{
-	margin-top: 6px;
+
+.post-shares-name-company {
+    margin-top: 6px;
     float: right;
     width: 138px;
 }
 
+
 /*серое название компании*/
-.shares-name-company{
-  font-size: 12px;
-  font-family: "Roboto";
-  color: rgb(153, 153, 153);
-  text-transform: uppercase;
-  line-height: 1.2;
-  text-align: left;
-  margin: 0;
+
+.shares-name-company {
+    font-size: 12px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left;
+    margin: 0;
 }
 
+
 /*дата поста*/
-.post-shares-data{
-  font-size: 10px;
-  font-family: "Roboto";
-  color: #00cd98;
-  position: absolute;
-  right: 10px;
-  bottom: 15px;
+
+.post-shares-data {
+    font-size: 10px;
+    font-family: "Roboto";
+    color: #00cd98;
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
 }
+
+
 /*--------------------------страница компании-----------------------*/
+
 .company-h1 {
-  font-size: 20px;
-  font-family: "Roboto";
-  color: rgb( 51, 51, 51 );
-  text-transform: uppercase;
-  margin-top: 7px;
+    font-size: 20px;
+    font-family: "Roboto";
+    color: rgb( 51, 51, 51);
+    text-transform: uppercase;
+    margin-top: 7px;
 }
 
 
@@ -1755,6 +1811,7 @@ right:65px
     max-height: 200px;
 }
 
+
 /*блок с таблицей*/
 
 .company-kontakt {
@@ -1769,21 +1826,22 @@ right:65px
     padding: 0;
 }
 
-.w100{
-width: 100px;
+.w100 {
+    width: 100px;
 }
 
-.w180{
-	width: 180px;
+.w180 {
+    width: 180px;
 }
 
-.w70{
-	width: 70px;
+.w70 {
+    width: 70px;
 }
 
-.w330{
-	width: 330px;
+.w330 {
+    width: 330px;
 }
+
 
 /*название критерия*/
 
@@ -1816,20 +1874,25 @@ width: 100px;
     border-collapse: collapse;
 }
 
-.text-right{
-	text-align: right;
+.text-right {
+    text-align: right;
 }
+
+
 /*стрка таблицы с контактами акции*/
 
-.brd{
+.brd {
     border-bottom: 1px solid rgb(153, 153, 153);
 }
 
+
 /*пустые ячейка для промежутка*/
-.company-kontakt .company-kontakt-table tr td.null{
-	border-bottom: none;
-	width: 15px;
+
+.company-kontakt .company-kontakt-table tr td.null {
+    border-bottom: none;
+    width: 15px;
 }
+
 
 /*отступы в ячейках*/
 
@@ -1840,108 +1903,142 @@ width: 100px;
 
 /*========рубрика компаний========*/
 
+
 /*Таблица компаний*/
-.list-company{
+
+.list-company {
     width: 850px;
 }
 
+
 /*стиль заголовка таблицы*/
-.list-company .podzagolovok{
+
+.list-company .podzagolovok {
     font-weight: normal;
     font-size: 12px;
     display: inline-block;
 }
 
+
 /*столб миниатюры*/
-.th-null{
+
+.th-null {
     width: 120px;
 }
 
+
 /*название компании*/
-.th-name{
+
+.th-name {
     width: 470px;
 }
 
+
 /*отзыв и рейтинг*/
-.th-otziv, .th-rejting{
+
+.th-otziv,
+.th-rejting {
     width: 130px;
 }
 
+
 /*стрелки*/
-.th-rejting img{
+
+.th-rejting img {
     display: inline-block;
 }
 
-.list-company td{
+.list-company td {
     /*outline: 1px solid black;*/
 }
 
+
 /*ячейка миниатюры*/
-.td-img{
+
+.td-img {
     text-align: center;
 }
 
+
 /*контейнер миниатюры*/
-.company-div-img{
+
+.company-div-img {
     display: inline-block;
     max-width: 120px;
     min-height: 110px;
     overflow: hidden;
 }
 
+
 /*сама миниатюра*/
-.company-div-img img{
+
+.company-div-img img {
     max-width: 120px;
 }
 
+
 /*ячейка имя и описания компании*/
-.td-name{
-vertical-align: top;
+
+.td-name {
+    vertical-align: top;
 }
 
-.td-name .podzagolovok{
+.td-name .podzagolovok {
     margin: 0;
 }
 
+
 /*ячейка отзыва и рейтинга*/
-.td-otziv, .td-rejting{
+
+.td-otziv,
+.td-rejting {
     text-align: center;
     vertical-align: middle;
 }
 
+
 /*ячейки разделения*/
-.tr-null td{
+
+.tr-null td {
     height: 16px
 }
 
-.tr-hr td{
+.tr-hr td {
     height: 20px;
     border-top: 1px solid #e8e8e8;
     border-bottom: 1px solid #e8e8e8;
 }
 
-.tr-null-2 td{
+.tr-null-2 td {
     height: 20px
 }
 
+
 /*скрыть элементы границы для последнего*/
+
 table tr:nth-last-child(1),
 table tr:nth-last-child(2)
 /*table tr:nth-last-child(3)*/
+
 {
-    display:none;
+    display: none;
 }
+
 
 /*--------------рубрика Видео---------------*/
 
+
 /*все посты в видео рубрике*/
-.video-category{
-font-size: 0;
-margin-right: -29px;
+
+.video-category {
+    font-size: 0;
+    margin-right: -29px;
 }
 
+
 /*блок одного поста*/
-.video-div{
+
+.video-div {
     display: inline-block;
     width: 265px;
     height: 210px;
@@ -1950,97 +2047,194 @@ margin-right: -29px;
     margin-top: 35px;
 }
 
+
 /*первые три поста*/
+
 .video-div:nth-child(1),
 .video-div:nth-child(2),
-.video-div:nth-child(3)
-{
+.video-div:nth-child(3) {
     margin-top: 0;
 }
 
 
 /*контейнер картинки*/
-.video-div-img, .video-div-img img{
+
+.video-div-img,
+.video-div-img img {
     width: 265px;
     height: 145px;
 }
 
+
 /*заголовок поста*/
-.video-title{
-  font-size: 14px;
-  font-family: Roboto-Regular;
-  color: rgb(51, 51, 51);
-  /*text-transform: uppercase;*/
-  line-height: 1.2;
-  text-align: left;
-  margin: 15px 8px 0 8px;
+
+.video-title {
+    font-size: 14px;
+    font-family: Roboto-Regular;
+    color: rgb(51, 51, 51);
+    /*text-transform: uppercase;*/
+    line-height: 1.2;
+    text-align: left;
+    margin: 15px 8px 0 8px;
 }
+
 
 /*ссылка смотрет*/
-.video-read{
-  font-size: 10px;
-  font-family: "Verdana";
-  font-style: italic;
-  line-height: 1.2;
-  text-align: right;
-  margin-right: 8px;
-  margin-bottom: 8px;
-  display: block;
+
+.video-read {
+    font-size: 10px;
+    font-family: "Verdana";
+    font-style: italic;
+    line-height: 1.2;
+    text-align: right;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    display: block;
 }
+
 
 /*-----------страница Видео---------------*/
+
+
 /*заголовок*/
-.pv-h1{
-  font-size: 20px;
-  font-family: Roboto-Regular;
-  color: rgb(51, 51, 51);
-  line-height: 1.2;
-  text-align: left;
+
+.pv-h1 {
+    font-size: 20px;
+    font-family: Roboto-Regular;
+    color: rgb(51, 51, 51);
+    line-height: 1.2;
+    text-align: left;
 }
+
+
 /*контейнер видео и инфо*/
-.video-info{
-width: 650px;
-/*height: 360px;*/
+
+.video-info {
+    width: 650px;
+    /*height: 360px;*/
 }
+
 
 /*контейнер рейтинг и автор*/
-.rejting-avtor{
-  margin-top: 18px;
-  font-size: 16px;
-  font-family: "Roboto";
-  color: rgb(153, 153, 153);
-  line-height: 1.2;
+
+.rejting-avtor {
+    margin-top: 18px;
+    font-size: 16px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    line-height: 1.2;
 }
+
 
 /*контейнер рейтинг*/
-.video-rejting{
-  float: left;
-  margin-left: 18px;
 
+.video-rejting {
+    float: left;
+    margin-left: 18px;
 }
 
+
 /*контейнер автор*/
-.video-avtor{
+
+.video-avtor {
     float: right;
     margin-right: 18px;
 }
 
+
 /*имя автора*/
-.video-avtor-name{
-  color: #000;
+
+.video-avtor-name {
+    color: #000;
 }
 
+
 /*контейнер для описания*/
-.video-opisanie{
+
+.video-opisanie {
     margin-top: 50px;
 }
 
+
 /*-------------рубрика рецепты-----------*/
-.recipes-h1{
-  font-size: 20px;
-  font-family: "Roboto";
-  color: rgb(51, 51, 51);
-  text-transform: uppercase;
-  line-height: 1.2;
-  text-align: left;
+
+.recipes-h1 {
+    font-size: 20px;
+    font-family: "Roboto";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left;
+}
+
+
+/*------------страница реклама-----------------*/
+
+
+/*заголовок страницы*/
+
+.page-div h1 {
+    font-size: 20px;
+    font-family: Roboto-Regular;
+    color: rgb( 51, 51, 51);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/*стиль шрифта*/
+
+.page-div {
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb( 51, 51, 51);
+    text-align: left;
+}
+
+
+/*стиль шрифта*/
+
+.page-div {
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb( 51, 51, 51);
+    text-align: left;
+}
+
+
+/*стиль списка*/
+
+.page-div ul {
+    margin-top: 30px;
+}
+
+
+/*стиль элементов списка*/
+
+.page-div ul li {
+    margin-bottom: 9px;
+}
+
+.page-div ul li:last-child {
+    margin-bottom: 0;
+}
+
+
+/*стиль маркера*/
+
+.page-div ul li:before {
+    content: "●";
+    color: #00cd98;
+    margin-right: 11px;
+}
+
+.page-div h2 {
+    font-size: 18px;
+    font-family: "Roboto";
+    color: rgb( 51, 51, 51);
+    border-bottom: 1px solid #00cd98;
+    padding-bottom: 7px;
+    display: inline-block;
+    margin-bottom: 0;
+    text-transform: uppercase;
 }

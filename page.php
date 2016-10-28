@@ -7,8 +7,8 @@
 get_header(); // подключаем header.php ?>
 <section>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); // старт цикла ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> <?php // контэйнер с классами и id ?>
-		<h1><?php the_title(); // заголовок ?></h1>
+	<article id="post-<?php the_ID(); ?>" <?php post_class('page-div'); ?>> <?php // контэйнер с классами и id ?>
+		<h1><span class="line"><?php the_title(); // заголовок ?></span></h1>
 		<?php the_content(); // контент ?>
 	</article>
 <?php endwhile; // конец цикла ?>
