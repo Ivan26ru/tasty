@@ -2034,3 +2034,13 @@ width: 650px;
 .video-opisanie{
     margin-top: 50px;
 }
+
+/*-------------рубрика рецепты-----------*/
+.recipes-h1{
+  font-size: 20px;
+  font-family: "Roboto";
+  color: rgb(51, 51, 51);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+}

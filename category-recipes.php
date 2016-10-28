@@ -8,7 +8,7 @@ get_header(); // подключаем header.php ?>
 
 <!-- Начало рубрики-->
 
-
+<h1 class="recipes-h1">Рецепты</h1>
 
 
 <?php pagination(); // пагинация, функция нах-ся в function.php ?>
