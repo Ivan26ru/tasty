@@ -2156,18 +2156,6 @@ table tr:nth-last-child(2)
 }
 
 
-/*-------------рубрика рецепты-----------*/
-
-.recipes-h1 {
-    font-size: 20px;
-    font-family: "Roboto";
-    color: rgb(51, 51, 51);
-    text-transform: uppercase;
-    line-height: 1.2;
-    text-align: left;
-}
-
-
 /*------------страница реклама-----------------*/
 
 
@@ -2199,6 +2187,7 @@ table tr:nth-last-child(2)
     font-family: "Roboto";
     color: rgb( 51, 51, 51);
     text-align: left;
+    border-bottom: none;
 }
 
 
@@ -2237,4 +2226,70 @@ table tr:nth-last-child(2)
     display: inline-block;
     margin-bottom: 0;
     text-transform: uppercase;
+}
+
+
+/*-------------рубрика рецепты-----------*/
+
+.recipes-h1 {
+    font-size: 20px;
+    font-family: "Roboto";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left;
+}
+
+
+/*контейнер для поиска*/
+
+.search {
+    height: 31px;
+    width: 850px;
+}
+
+
+/*контейнер поиска*/
+
+.search-div {
+    border: 2px solid #000;
+    border-radius: 3px;
+    height: 27px;
+}
+
+
+/*строка поиска*/
+
+.search-text {
+    width: 210px;
+    height: 19px;
+    font-size: 10px;
+    font-family: "Verdana";
+    color: rgb( 204, 204, 204);
+    font-style: italic;
+    text-align: left;
+    padding-top: 7px;
+    padding-left: 13px;
+    border: none;
+}
+
+
+/*кнопка поиск*/
+
+.search-button {
+    width: 40px;
+    height: 28px;
+    background-color: #000;
+    color: #00cd98;
+    border: none;
+    cursor: pointer;
+    margin-top: -2px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
 }
