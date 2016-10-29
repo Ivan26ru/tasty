@@ -2019,6 +2019,7 @@ a.politika {
 .list-company table tr:nth-last-child(1),
 .list-company table tr:nth-last-child(2)
 /*table tr:nth-last-child(3)*/
+
 {
     display: none;
 }
@@ -2284,23 +2285,29 @@ a.politika {
     background-color: #000;
     color: #00cd98;
     cursor: pointer;
-    border:none;
-    line-height:28px
+    border: none;
+    line-height: 28px
 }
 
+
 /*выравнивание по левому краю*/
+
 .fl {
     float: left;
 }
 
+
 /*выравнивание по правому краю*/
+
 .fr {
     float: right;
 }
 
+
 /*Таблица компаний*/
 
 .list-recipes {
+	margin-top: 20px;
     width: 850px;
     border-collapse: collapse;
 }
@@ -2312,21 +2319,30 @@ a.politika {
     font-weight: normal;
     font-size: 12px;
     display: inline-block;
+    margin-left: 0;
 }
 
 
 /*название компании*/
 
-.th-name {
-    width: 460px;
+.rec-th-name {
+    text-align: left;
 }
 
+
 /*положение текста общее для описания постов*/
-.tr td{
-	vertical-align: middle;
-	height: 50px;
-	border-bottom: 1px solid rgb(153, 153, 153)
+
+.list-recipes .tr td {
+    vertical-align: middle;
+    height: 50px;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 12px;
+    font-family: "Roboto";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 1.2;
 }
+
 
 /*отзыв и рейтинг*/
 
@@ -2345,6 +2361,7 @@ a.politika {
     display: inline-block;
 }
 
+
 /*ячейка имя и описания компании*/
 
 .td-name .podzagolovok {
@@ -2361,7 +2378,9 @@ a.politika {
     vertical-align: middle;
 }
 
+
 /*название рецепта*/
-.rec-td-name:hover{
-	color: #00cd98;	
+
+.rec-td-name a:hover {
+    color: #00cd98;
 }
