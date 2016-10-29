@@ -12,11 +12,14 @@ get_header(); // подключаем header.php ?>
 if (in_category('shares')) { //акции
 	include(TEMPLATEPATH.'/single-shares.php');
 	exit;
-} elseif (in_category('company')) { //акции
+} elseif (in_category('company')) { //компании
 	include(TEMPLATEPATH.'/single-company.php');
 	exit;
-} elseif (in_category('video')) { //акции
+} elseif (in_category('video')) { //видео
 	include(TEMPLATEPATH.'/single-video.php');
+	exit;
+} elseif (in_category('recipes')) { //рецепты
+	include(TEMPLATEPATH.'/single-recipes.php');
 	exit;
 } else{//общий шаблон
     include (TEMPLATEPATH.'/single-all.php');
