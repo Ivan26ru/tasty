@@ -2016,10 +2016,9 @@ a.politika {
 
 /*скрыть элементы границы для последнего*/
 
-table tr:nth-last-child(1),
-table tr:nth-last-child(2)
+.list-company table tr:nth-last-child(1),
+.list-company table tr:nth-last-child(2)
 /*table tr:nth-last-child(3)*/
-
 {
     display: none;
 }
@@ -2261,16 +2260,19 @@ table tr:nth-last-child(2)
 /*строка поиска*/
 
 .search-text {
-    width: 210px;
-    height: 19px;
+    width: 340px;
+    height: 20px;
+    line-height: 20px;
     font-size: 10px;
     font-family: "Verdana";
     color: rgb( 204, 204, 204);
     font-style: italic;
     text-align: left;
-    padding-top: 7px;
     padding-left: 13px;
+    line-height: 27px;
     border: none;
+    display: block;
+    float: left;
 }
 
 
@@ -2281,15 +2283,85 @@ table tr:nth-last-child(2)
     height: 28px;
     background-color: #000;
     color: #00cd98;
-    border: none;
     cursor: pointer;
-    margin-top: -2px;
+    border:none;
+    line-height:28px
 }
 
+/*выравнивание по левому краю*/
 .fl {
     float: left;
 }
 
+/*выравнивание по правому краю*/
 .fr {
     float: right;
+}
+
+/*Таблица компаний*/
+
+.list-recipes {
+    width: 850px;
+    border-collapse: collapse;
+}
+
+
+/*стиль заголовка таблицы*/
+
+.list-recipes .podzagolovok {
+    font-weight: normal;
+    font-size: 12px;
+    display: inline-block;
+}
+
+
+/*название компании*/
+
+.th-name {
+    width: 460px;
+}
+
+/*положение текста общее для описания постов*/
+.tr td{
+	vertical-align: middle;
+	height: 50px;
+	border-bottom: 1px solid rgb(153, 153, 153)
+}
+
+/*отзыв и рейтинг*/
+
+.rec-th-avtor,
+.rec-th-data,
+.rec-th-rejting {
+    width: 130px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/*стрелки*/
+
+.th-rejting img {
+    display: inline-block;
+}
+
+/*ячейка имя и описания компании*/
+
+.td-name .podzagolovok {
+    margin: 0;
+}
+
+
+/*ячейка автора. даты и рейтинга*/
+
+.rec-td-avtor,
+.rec-td-data,
+.rec-td-rejting {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*название рецепта*/
+.rec-td-name:hover{
+	color: #00cd98;	
 }

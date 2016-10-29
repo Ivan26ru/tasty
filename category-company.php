@@ -16,8 +16,9 @@ get_header(); // подключаем header.php ?>
 		<p class="podzagolovok">
 		<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-up.png"></a>
 			<span class="line">Рейтинг</span>
-		<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-down.png"></th></a>
+		<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-down.png"></a>
 		</p>
+		</th>
 </tr>
 
 <!-- описание компании -->
