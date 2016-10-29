@@ -21,7 +21,7 @@ if (in_category('shares')) { //акции
 } elseif (in_category('recipes')) { //рецепты
 	include(TEMPLATEPATH.'/single-recipes.php');
 	exit;
-	} elseif (the_ID()=='98') { //рецепты админка
+	} elseif (in_category('recipes-admin')) { //рецепты админка
 	include(TEMPLATEPATH.'/single-recipes-admin.php');
 	exit;
 } else{//общий шаблон

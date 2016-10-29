@@ -10,7 +10,7 @@ get_header(); // подключаем header.php ?>
 
 <!-- начало поста -->
 <div class="post-recipes-container clearfix">
-<h1 class="recipes-h1">Рецепты</h1>
+<h1 class="recipes-h1">Рецепты админка1</h1>
 	<!-- контакты-->
 	<div class="p-recipes-div-kont">
 		<p>Автор:<span>Kimsmm</span></p>
