@@ -1,6 +1,6 @@
 <?php
 /**
- * Шаблон лучшие девайсы (category-best_device.php)
+ * Шаблон страницы компании (single-company.php)
  * @package WordPress
  * @subpackage your-clean-template
  */
