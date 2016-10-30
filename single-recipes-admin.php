@@ -10,11 +10,12 @@ get_header(); // подключаем header.php ?>
 
 <!-- начало поста -->
 <div class="recipes-admin-div">
+	<!-- форма элементов -->
 	<form action="#" class="text-center form-elements">
 		<input type="text" name="name-recipes" id="" class="input-name" placeholder="Введите имя">
+		<!-- контейнер элементов -->
 		<div class="w263 clearfix">
-
-<!-- элемент -->
+		<!-- элемент -->
 		<p class="elements-input">
 		<label class="clearfix" class="clearfix">
 			<span class="name-element">Amount to make</span>
@@ -23,7 +24,7 @@ get_header(); // подключаем header.php ?>
 			</span>
 		</label>
 		</p>
-<!-- элемент -->
+		<!-- элемент -->
 		<p class="elements-input">
 		<label class="clearfix" class="clearfix">
 			<span class="name-element">Amount to make</span>
@@ -32,7 +33,7 @@ get_header(); // подключаем header.php ?>
 			</span>
 		</label>
 		</p>
-<!-- элемент -->
+		<!-- элемент -->
 		<p class="elements-input">
 		<label class="clearfix" class="clearfix">
 			<span class="name-element">Amount to make</span>
@@ -41,15 +42,17 @@ get_header(); // подключаем header.php ?>
 			</span>
 		</label>
 		</p>
-
+		<!-- новый элемент -->
 		<p class="elements-input-new">
 			<input class="input-name-el" type="search" name="element-new" placeholder="Ингридиент 1">
 			<input class="input-ml" type="search" name="site_search"><span class="ml">ml</span>
 		</p>
 
 		<a href="#" class="btn-green">добавить ингридиент</a>
-<br>
+		<br>
+		<!-- описание -->
 		<textarea class="opisanie" name="opisanie" id="" cols="30" rows="10" placeholder="Добавить описание"></textarea>
+		<a href="#" class="btn-green">сохранить</a>
 		</div>
 	</form>
 </div>

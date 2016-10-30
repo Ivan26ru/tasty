@@ -2620,7 +2620,17 @@ margin-top: 40px;
 
 /*описание рецепта*/
 .opisanie{
-width: 100%;
+width: 246px;
 height: 113px;
+margin-top: 40px;
     border: 1px solid #d1d1d1;
+     padding-left: 14px;
+    font-size: 10px;
+    font-family: "Verdana";
+    color: rgb(204, 204, 204);
+    font-style: italic;
+    line-height: 1.2;
+    text-align: left;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
 }
