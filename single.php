@@ -24,6 +24,9 @@ if (in_category('shares')) { //акции
 	} elseif (in_category('recipes-admin')) { //рецепты админка
 	include(TEMPLATEPATH.'/single-recipes-admin.php');
 	exit;
+	} elseif (in_category('article')) { //рецепты админка
+	include(TEMPLATEPATH.'/single-article.php');
+	exit;
 } else{//общий шаблон
     include (TEMPLATEPATH.'/single-all.php');
     exit;

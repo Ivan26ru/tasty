@@ -11,7 +11,7 @@
 <!-- top5 -->
 <div class="sb-r top5">
 	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/top5.png" class="sidebar-img">
-	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
+	<a href="http://test1.v-svetlograde.ru/vipe-fest/">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
 	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
 	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
 	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>

@@ -2634,3 +2634,74 @@ margin-top: 40px;
     border: 1px solid #d1d1d1;
     border-radius: 3px;
 }
+
+/*---------страница статей----------*/
+
+/*описание*/
+.text-other-2{
+  font-size: 14px;
+  font-family: "Roboto";
+  color: rgb(51, 51, 51);
+  line-height: 1.2;
+  text-align: left;
+}
+
+/*Общие стили*/
+.soc-f-vk *{
+color: #fff;
+}
+
+.soc-f-vk span{
+	margin-left: 25px;
+  font-size: 11px;
+  font-family: "Roboto";
+  line-height: 1.2;
+  text-align: left;
+  -moz-transform: matrix( 0.92489803567102,0,0,0.92489803567102,0,0);
+  -webkit-transform: matrix( 0.92489803567102,0,0,0.92489803567102,0,0);
+  -ms-transform: matrix( 0.92489803567102,0,0,0.92489803567102,0,0);
+}
+
+.soc-f-vk .fa{
+	display: inline-block;
+	line-height: 30px;
+	float: left;
+}
+
+/*стиль F*/
+.f-book{
+	display: inline-block;
+	width: 155px;
+	margin-right: 30px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #4663a0;
+}
+
+/*стиль иконки F*/
+.f-book .fa{
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	color: #fff;
+	background-color: #3c5b9b;
+}
+
+/*стиль VK*/
+.vk-blue{
+	display: inline-block;
+	width: 155px;
+	margin-right: 30px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #567699;
+}
+
+/*стиль иконки VK*/
+.vk-blue .fa{
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	color: #fff;
+	background-color: #43678d;
+}
