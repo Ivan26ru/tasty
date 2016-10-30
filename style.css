@@ -2409,6 +2409,7 @@ a.politika {
 
 
 /*название*/
+
 .p-recipes-div-kont {
     width: 470px;
 }
@@ -2419,17 +2420,20 @@ a.politika {
 }
 
 
-
 /*====таблица====*/
+
+
 /*сама таблица*/
-.post-recipes-ingredient{
+
+.post-recipes-ingredient {
     border-collapse: collapse;
 }
+
 
 /*стиль строк*/
 
 .post-recipes-ingredient tr th,
-.post-recipes-ingredient tr td{
+.post-recipes-ingredient tr td {
     height: 33px;
     vertical-align: middle;
     border-bottom: 1px solid #e8e8e8;
@@ -2474,23 +2478,133 @@ a.politika {
     text-align: left;
 }
 
+
 /*===Описание===*/
+
+
 /*контейнер описания*/
-.o-post-recipes{
-	margin-top: 50px;
+
+.o-post-recipes {
+    margin-top: 50px;
 }
+
 
 /*строка описания*/
-.o-post-recipes .podzagolovok{
-	margin-left: 0;
+
+.o-post-recipes .podzagolovok {
+    margin-left: 0;
 }
 
+
 /*span описания*/
-.o-post-recipes .podzagolovok span{
+
+.o-post-recipes .podzagolovok span {
     font-family: Roboto-Regular;
 }
 
+
 /*контейнер комментов*/
-.o-post-recipes-comment{
-	margin-top: -14px;
+
+.o-post-recipes-comment {
+    margin-top: -14px;
+}
+
+
+/*----------рецепты админка-----------*/
+
+
+/*строка введите имя*/
+
+.input-name {
+    width: 490px;
+    height: 28px;
+    padding-left: 14px;
+    line-height: 28px;
+    font-size: 10px;
+    font-family: "Verdana";
+    color: rgb(204, 204, 204);
+    font-style: italic;
+    line-height: 1.2;
+    text-align: left;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+
+/*элементы*/
+
+.elements-input:first-child {
+margin-top: 40px;
+}
+
+.elements-input {
+    font-size: 16px;
+    font-family: "Verdana";
+    color: rgb(51, 51, 51);
+    line-height: 1.2;
+    margin-top: 15px;
+}
+
+/*название элемента*/
+.name-element {
+    width: 175px;
+    margin-right: 25px;
+    display: inline-block;
+    text-align: left;
+}
+
+/*строка ввода ml*/
+.input-ml {
+    width: 40px;
+    height: 28px;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px 0 0 3px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/*ml*/
+.ml {
+    border-radius: 0 3px 3px 0;
+    background-color: #dddddd;
+    width: 40px;
+    height: 28px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 28px
+}
+
+/*строка ввода нового элемента*/
+.elements-input-new{
+	margin-top: 45px;
+	margin-bottom: 0;
+}
+
+/*строка ввода элемента*/
+.input-name-el{
+    width: 173px;
+    height: 28px;
+    padding-left: 14px;
+    line-height: 28px;
+    font-size: 10px;
+    font-family: "Verdana";
+    color: rgb(204, 204, 204);
+    font-style: italic;
+    line-height: 1.2;
+    text-align: left;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    margin-right: 25px;
+}
+
+/*отступ для зеленой кнопки*/
+.form-elements .btn-green{
+	margin-top: 40px;
+}
+
+/*описание рецепта*/
+.opisanie{
+width: 260px;
+height: 113px;
+    border: 1px solid #d1d1d1;
 }
