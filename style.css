@@ -2530,7 +2530,10 @@ a.politika {
     border-radius: 3px;
 }
 
-
+.w263{
+	width: 263px;
+	margin: 0 auto;
+}
 /*элементы*/
 
 .elements-input:first-child {
@@ -2543,14 +2546,26 @@ margin-top: 40px;
     color: rgb(51, 51, 51);
     line-height: 1.2;
     margin-top: 15px;
+    clear: both;
+}
+
+/*label метка элемента*/
+.elements-input label{
+	line-height: 28px;
 }
 
 /*название элемента*/
 .name-element {
-    width: 175px;
+    /*width: 175px;*/
+    float: left;
     margin-right: 25px;
     display: inline-block;
     text-align: left;
+}
+
+/*контейнер для ввода ml*/
+.span-input-ml{
+	float: right;
 }
 
 /*строка ввода ml*/
@@ -2570,7 +2585,7 @@ margin-top: 40px;
     width: 40px;
     height: 28px;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: bottom;
     line-height: 28px
 }
 
@@ -2582,7 +2597,8 @@ margin-top: 40px;
 
 /*строка ввода элемента*/
 .input-name-el{
-    width: 173px;
+    /*width: 173px;*/
+    float: left;
     height: 28px;
     padding-left: 14px;
     line-height: 28px;
@@ -2604,7 +2620,7 @@ margin-top: 40px;
 
 /*описание рецепта*/
 .opisanie{
-width: 260px;
+width: 100%;
 height: 113px;
     border: 1px solid #d1d1d1;
 }

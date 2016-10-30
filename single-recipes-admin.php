@@ -12,11 +12,35 @@ get_header(); // подключаем header.php ?>
 <div class="recipes-admin-div">
 	<form action="#" class="text-center form-elements">
 		<input type="text" name="name-recipes" id="" class="input-name" placeholder="Введите имя">
-		<div class="w263">
+		<div class="w263 clearfix">
 
-		<p class="elements-input"><label><span class="name-element">Amount to make</span><input class="input-ml" type="search" name="site_search"><span class="ml">ml</span></label></p>
-		<p class="elements-input"><label><span class="name-element">Amount to make</span><input class="input-ml" type="search" name="site_search"><span class="ml">ml</span></label></p>
-		<p class="elements-input"><label><span class="name-element">Amount to make</span><input class="input-ml" type="search" name="site_search"><span class="ml">ml</span></label></p>
+<!-- элемент -->
+		<p class="elements-input">
+		<label class="clearfix" class="clearfix">
+			<span class="name-element">Amount to make</span>
+			<span class="span-input-ml">
+				<input class="input-ml" type="search" name="site_search"><span class="ml">ml</span>
+			</span>
+		</label>
+		</p>
+<!-- элемент -->
+		<p class="elements-input">
+		<label class="clearfix" class="clearfix">
+			<span class="name-element">Amount to make</span>
+			<span class="span-input-ml">
+				<input class="input-ml" type="search" name="site_search"><span class="ml">ml</span>
+			</span>
+		</label>
+		</p>
+<!-- элемент -->
+		<p class="elements-input">
+		<label class="clearfix" class="clearfix">
+			<span class="name-element">Amount to make</span>
+			<span class="span-input-ml">
+				<input class="input-ml" type="search" name="site_search"><span class="ml">ml</span>
+			</span>
+		</label>
+		</p>
 
 		<p class="elements-input-new">
 			<input class="input-name-el" type="search" name="element-new" placeholder="Ингридиент 1">
