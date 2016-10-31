@@ -6,7 +6,7 @@
  */
 ?>
 <!-- стрелка вверх -->
-<div class="up"></div>
+<div class="up" id="back-top"></div>
 </div>
 <!-- конец container -->
 	<footer>
@@ -59,6 +59,8 @@
 
 	</footer>
 <div class="loader"></div>
+
 <?php wp_footer(); // необходимо для работы плагинов и функционала  ?>
+<script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/main.js'></script>
 </body>
 </html>

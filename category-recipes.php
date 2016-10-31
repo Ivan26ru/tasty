@@ -43,9 +43,9 @@ get_header(); // подключаем header.php ?>
 		</tr>
 		<!-- пост -->
 		<tr class="tr">
-			<td class="rec-td-name"><a href="#" class="">Adapted by Alisa :Bust-a-CoffeeNut with Espresso</a></td>
-			<td class="rec-td-avtor">Flex</td>
-			<td class="rec-td-data">21 Июня 21:33</td>
+			<td class="rec-td-name"><a href="<?php the_permalink() ?>" class=""><?php the_title(); ?></a></td>
+			<td class="rec-td-avtor"><?php the_author(); ?></td>
+			<td class="rec-td-data"><?php the_time('j F H:i'); ?></td>
 			<td class="rec-td-rejting">
 				<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
 				<span class="green font-rr">+12</span>

@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); // вывод атрибутов языка ?>>
 <head>
+	<!-- РАЗРАБОТКА САЙТОВ https://vk.com/ivan26ru -->
 	<meta charset="<?php bloginfo( 'charset' ); // кодировка ?>">
 	<?php /* RSS и всякое */ ?>
 	<link rel="alternate" type="application/rdf+xml" title="RDF mapping" href="<?php bloginfo('rdf_url'); ?>">
@@ -49,7 +50,9 @@
 			</div>
 		</div>
 		<!-- путь к странце -->
-		<p class="put">путь к станице</p>
+		<p class="put"><?php the_category('/') ?> <?php // ссылки на категории в которых опубликован пост, через зпт ?>
+			
+		</p>
 	</div>
 </div>
 

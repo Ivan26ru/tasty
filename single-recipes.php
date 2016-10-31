@@ -13,8 +13,8 @@ get_header(); // подключаем header.php ?>
 <h1 class="recipes-h1">Рецепты</h1>
 	<!-- контакты-->
 	<div class="p-recipes-div-kont">
-		<p>Автор:<span>Kimsmm</span></p>
-		<p>Дата:<span>21 июля 12:40</span></p>
+		<p>Автор:<span><?php the_author(); ?></span></p>
+		<p>Дата:<span><?php the_time('j F H:i'); ?></span></p>
 		<p>Рейтинг:
 			<span>
 				<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
