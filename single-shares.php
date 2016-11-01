@@ -24,7 +24,10 @@ else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/
 			<table class="akciya-kontakt-table">
 				<tr>
 					<td>Компания:</td>
-					<td><?php echo get_post_custom_values(shares_company)[0]; //вывод произвольного поля?></td>
+					<!-- <td><?php echo get_post_custom_values(shares_company)[0]; //вывод произвольного поля?></td> -->
+					<td><?php $id_company=get_field( "shares_company" )[0]; //id компании ?>
+					<a href="<?php echo get_permalink($id_company);//ссылка по id ?>"><?php echo get_the_title( $id_company ); //заголовок по id?></a>
+					</td>
 				</tr>
 				<tr>
 					<td>Рейтинг:</td>

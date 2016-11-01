@@ -38,7 +38,7 @@ $image = get_field('img');
 
 if( !empty($image) ): ?>
 
-    <img class="post-img" src="<?php echo $image['url']; ?> />
+    <img class="post-img" src="<?php echo $image['url']; ?>" />
 
 <?php endif; ?>
 		</div>

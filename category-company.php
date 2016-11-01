@@ -20,18 +20,29 @@ get_header(); // подключаем header.php ?>
 		</p>
 		</th>
 </tr>
-
+<?php if (have_posts()) : while (have_posts()) : the_post(); // если посты есть - запускаем цикл wp ?>
+<!-- начало поста -->
 <!-- описание компании -->
 <tr class="company-content">
 	<td class="td-img">
-		<div class="company-div-img"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/logo_company_moimodru.png"></div>
+		<div class="company-div-img">
+			<?php 
+// вывод картинки из произвольного поля
+$image = get_field('img');
+
+if( !empty($image) ): ?>
+
+    <img class="post-shares-img" src="<?php echo $image['url']; ?>" />
+
+<?php endif; ?>
+		</div>
 	</td>
 	<td class="td-name">
 		<a href="<?php the_permalink() ?>"><p class="podzagolovok fs16"><?php the_title(); ?></p></a>
-		<p class="text-other fs12">MoiMod.ru — интернет магазин, в котором продаются моды электронных сигарет, В нашем магазине вы всегда найдете самые последние модели обслуживаемых испарителей, механических модов, а также все необходимые аксессуары для обслуживания.</p>
+		<p class="text-other fs12"><?php the_truncated_post( 400 ); ?></p>
 	</td>
 	<td class="td-otziv">
-		<span class="green font-rr"><?php comments_number('0', '1', '%'); ?></span>
+		<span class="green font-rr"><?php comments_number('пока нет', '1', '%'); ?></span>
 	</td>
 	<td class="td-rejting">
 		<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
@@ -39,11 +50,6 @@ get_header(); // подключаем header.php ?>
 		<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
 	</td>
 </tr>
-
-<!-- разделительные яцейки -->
-<!-- <tr class="tr-null">
-	<td colspan="4"></td>
-</tr> -->
 
 <tr class="tr-hr">
 	<td colspan="4"></td>
@@ -53,81 +59,10 @@ get_header(); // подключаем header.php ?>
 	<td colspan="4"></td>
 </tr>
 
-<!-- описание компании -->
-<tr class="company-content">
-	<td class="td-img">
-		<div class="company-div-img"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/logo_company_elsmokersru_100x100.png"></div>
-	</td>
-	<td class="td-name">
-		<a href="<?php the_permalink() ?>"><p class="podzagolovok fs16"><?php the_title(); ?></p></a>
-		<p class="text-other fs12">MoiMod.ru — интернет магазин, в котором продаются моды электронных сигарет, В нашем магазине вы всегда найдете самые последние модели обслуживаемых испарителей, механических модов, а также все необходимые аксессуары для обслуживания.</p>
-	</td>
-	<td class="td-otziv">
-		<span class="green font-rr"><?php comments_number('0', '1', '%'); ?></span>
-	</td>
-	<td class="td-rejting">
-		<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-		<span class="green font-rr">+12</span>
-		<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-	</td>
-</tr>
-
-<!-- разделительные яцейки -->
-<!-- <tr class="tr-null">
-	<td colspan="4"></td>
-</tr> -->
-
-<tr class="tr-hr">
-	<td colspan="4"></td>
-</tr>
-
-<tr class="tr-null-2">
-	<td colspan="4"></td>
-</tr>
-
-
-<!-- описание компании -->
-<tr class="company-content">
-	<td class="td-img">
-		<div class="company-div-img"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/logo_company_elsmokersru_100x100.png"></div>
-	</td>
-	<td class="td-name">
-		<a href="<?php the_permalink() ?>"><p class="podzagolovok fs16"><?php the_title(); ?></p></a>
-		<p class="text-other fs12">MoiMod.ru — интернет магазин, в котором продаются моды электронных сигарет, В нашем магазине вы всегда найдете самые последние модели обслуживаемых испарителей, механических модов, а также все необходимые аксессуары для обслуживания.</p>
-	</td>
-	<td class="td-otziv">
-		<span class="green font-rr"><?php comments_number('0', '1', '%'); ?></span>
-	</td>
-	<td class="td-rejting">
-		<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-		<span class="green font-rr">+12</span>
-		<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-	</td>
-</tr>
-
-<!-- разделительные яцейки -->
-<!-- <tr class="tr-null">
-	<td colspan="4"></td>
-</tr> -->
-
-<tr class="tr-hr">
-	<td colspan="4"></td>
-</tr>
-
-<tr class="tr-null-2">
-	<td colspan="4"></td>
-</tr>
-</table>
-
-<!-- все посты -->
-<div class="post-shares-all">
-
-
-
-
-
-</div>
-<!-- конец всех постов -->
+<!-- конец поста -->
+<?php endwhile; // конец цикла
+else: echo '<p>Нет записей.</p>'; endif; // если записей нет, напишим "простите" ?>
+	</table>
 
 <?php get_sidebar(); // подключаем footer.php ?>
 <?php get_footer(); // подключаем footer.php ?>
