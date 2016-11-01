@@ -14,7 +14,7 @@ get_header(); // подключаем header.php ?>
 
 <div class="video-info">
 <!-- видео -->
-<iframe width="650" height="360" src="https://www.youtube.com/embed/6wmNXM_fJn0" frameborder="0" allowfullscreen></iframe>
+<iframe width="650" height="360" src="<?php cus(video) ?>" frameborder="0" allowfullscreen></iframe>
 
 <!-- рейтинг и автор -->
 <div class="rejting-avtor clearfix">
@@ -29,7 +29,7 @@ get_header(); // подключаем header.php ?>
 	<!-- автор -->
 	<div class="video-avtor">
 		<p class="video-avtor">Автор:
-		<span class="video-avtor-name">Vapor Place</span>
+		<span class="video-avtor-name"><?php the_author(); ?></span>
 		</p>
 	</div>
 </div>

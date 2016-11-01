@@ -9,18 +9,7 @@ get_header(); // подключаем header.php ?>
 <!-- Начало рубрики-->
 
 <div class="video-category">
-	<!-- начало поста -->
-	<div class="video-div">
-		<!-- контейнер картинки -->
-		<div class="video-div-img">
-			<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/video.png">
-		</div>
-		<!-- Заголовок поста -->
-			<p class="video-title">Sigelei 213 VS Fuchai 213 сравнение изнутри - Vaporplace</p>
-		<!-- ссылка смотреть -->
-		<a href="" class="video-read green">Смотреть</a>
-	</div>
-	<!-- конец поста -->
+<?php if (have_posts()) : while (have_posts()) : the_post(); // если посты есть - запускаем цикл wp ?>
 
 	<!-- начало поста -->
 	<div class="video-div">
@@ -29,123 +18,14 @@ get_header(); // подключаем header.php ?>
 			<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/video.png">
 		</div>
 		<!-- Заголовок поста -->
-			<p class="video-title">Sigelei 213 VS Fuchai 213 сравнение изнутри - Vaporplace</p>
+			<p class="video-title"><?php the_title(); ?></p>
 		<!-- ссылка смотреть -->
-		<a href="" class="video-read green">Смотреть</a>
+		<a href="<?php the_permalink() ?>" class="video-read green">Смотреть</a>
 	</div>
 	<!-- конец поста -->
 
-
-	<!-- начало поста -->
-	<div class="video-div">
-		<!-- контейнер картинки -->
-		<div class="video-div-img">
-			<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/video.png">
-		</div>
-		<!-- Заголовок поста -->
-			<p class="video-title">Sigelei 213 VS Fuchai 213 сравнение изнутри - Vaporplace</p>
-		<!-- ссылка смотреть -->
-		<a href="" class="video-read green">Смотреть</a>
-	</div>
-	<!-- конец поста -->
-
-
-	<!-- начало поста -->
-	<div class="video-div">
-		<!-- контейнер картинки -->
-		<div class="video-div-img">
-			<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/video.png">
-		</div>
-		<!-- Заголовок поста -->
-			<p class="video-title">Sigelei 213 VS Fuchai 213 сравнение изнутри - Vaporplace</p>
-		<!-- ссылка смотреть -->
-		<a href="" class="video-read green">Смотреть</a>
-	</div>
-	<!-- конец поста -->
-
-
-	<!-- начало поста -->
-	<div class="video-div">
-		<!-- контейнер картинки -->
-		<div class="video-div-img">
-			<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/video.png">
-		</div>
-		<!-- Заголовок поста -->
-			<p class="video-title">Sigelei 213 VS Fuchai 213 сравнение изнутри - Vaporplace</p>
-		<!-- ссылка смотреть -->
-		<a href="" class="video-read green">Смотреть</a>
-	</div>
-	<!-- конец поста -->
-
-
-	<!-- начало поста -->
-	<div class="video-div">
-		<!-- контейнер картинки -->
-		<div class="video-div-img">
-			<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/video.png">
-		</div>
-		<!-- Заголовок поста -->
-			<p class="video-title">Sigelei 213 VS Fuchai 213 сравнение изнутри - Vaporplace</p>
-		<!-- ссылка смотреть -->
-		<a href="" class="video-read green">Смотреть</a>
-	</div>
-	<!-- конец поста -->
-
-
-	<!-- начало поста -->
-	<div class="video-div">
-		<!-- контейнер картинки -->
-		<div class="video-div-img">
-			<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/video.png">
-		</div>
-		<!-- Заголовок поста -->
-			<p class="video-title">Sigelei 213 VS Fuchai 213 сравнение изнутри - Vaporplace</p>
-		<!-- ссылка смотреть -->
-		<a href="" class="video-read green">Смотреть</a>
-	</div>
-	<!-- конец поста -->
-
-
-	<!-- начало поста -->
-	<div class="video-div">
-		<!-- контейнер картинки -->
-		<div class="video-div-img">
-			<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/video.png">
-		</div>
-		<!-- Заголовок поста -->
-			<p class="video-title">Sigelei 213 VS Fuchai 213 сравнение изнутри - Vaporplace</p>
-		<!-- ссылка смотреть -->
-		<a href="" class="video-read green">Смотреть</a>
-	</div>
-	<!-- конец поста -->
-
-
-	<!-- начало поста -->
-	<div class="video-div">
-		<!-- контейнер картинки -->
-		<div class="video-div-img">
-			<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/video.png">
-		</div>
-		<!-- Заголовок поста -->
-			<p class="video-title">Sigelei 213 VS Fuchai 213 сравнение изнутри - Vaporplace</p>
-		<!-- ссылка смотреть -->
-		<a href="" class="video-read green">Смотреть</a>
-	</div>
-	<!-- конец поста -->
-
-
-	<!-- начало поста -->
-	<div class="video-div">
-		<!-- контейнер картинки -->
-		<div class="video-div-img">
-			<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/video.png">
-		</div>
-		<!-- Заголовок поста -->
-			<p class="video-title">Sigelei 213 VS Fuchai 213 сравнение изнутри - Vaporplace</p>
-		<!-- ссылка смотреть -->
-		<a href="" class="video-read green">Смотреть</a>
-	</div>
-	<!-- конец поста -->
+		<?php endwhile; // конец цикла
+	else: echo '<h2>Нет записей.</h2>'; endif; // если записей нет, напишим "простите" ?>
 
 </div>
 
