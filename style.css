@@ -1764,7 +1764,8 @@ a.politika {
 
 /*серое название компании*/
 
-.shares-name-company {
+.shares-name-company,
+.shares-name-company a {
     font-size: 12px;
     font-family: "Roboto";
     color: rgb(153, 153, 153);
