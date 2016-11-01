@@ -1194,7 +1194,7 @@ a.politika {
 .post-div-img {
     height: 292px;
     width: 292px;
-    background-image: url(http://placehold.it/292x292);
+    /*background-image: url(http://placehold.it/292x292);*/
     display: flex;
     float: left;
 }
@@ -1329,6 +1329,10 @@ a.politika {
     color: rgb(234, 88, 88);
 }
 
+/*Характеристики*/
+.harki{
+    clear: both;
+}
 
 /*точка*/
 
