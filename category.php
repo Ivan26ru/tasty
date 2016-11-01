@@ -36,6 +36,11 @@ switch ($current_category) {
 		include('main-category-rdas.php');
 		break;
 
+	case "events"://мероприятия
+		include('category-shares.php');
+		break;
+
+
 	default://шаблон категории по умолчанию
 		include('category-all.php');
 		break;

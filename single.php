@@ -12,6 +12,9 @@ get_header(); // подключаем header.php ?>
 if (in_category('shares')) { //акции
 	include(TEMPLATEPATH.'/single-shares.php');
 	exit;
+} elseif (in_category('events')) { //мероприятия
+	include(TEMPLATEPATH.'/single-shares.php');
+	exit;
 } elseif (in_category('company')) { //компании
 	include(TEMPLATEPATH.'/single-company.php');
 	exit;
