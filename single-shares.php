@@ -50,7 +50,7 @@ else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/
 					<td><?php echo get_post_custom_values(shares_adres)[0]; //вывод произвольного поля?></td>
 				</tr>
 				<tr>
-					<td class="text-center" colspan="2"><a href="#" class="btn-green">Перейти на сайт</a></td>
+					<td class="text-center" colspan="2"><a href="http://<?php cus(site); ?>" class="btn-green">Перейти на сайт</a></td>
 				</tr>
 			</table>
 		</div>
@@ -66,14 +66,7 @@ else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/
 		<p class="podzagolovok akcii-p-foto"><span class="line">Фотографии</span></p>
 		<!-- контейнер с фото -->
 		<div class="akcii-div-img">
-						<img class="post-img" src="http://placehold.it/512x512/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/212x312/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/312x212/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/512x112/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/112x512/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/51x52/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/112x112/2ecc71/ecf0f1">
-<!--  
+
 <?php $str= get_the_content();
 preg_match_all('/src="([^"]+)"/i', $str, $matches);
 $img_urls = $matches[1]; ?>
@@ -82,8 +75,6 @@ $img_urls = $matches[1]; ?>
 <img class="post-img" src="<?php echo $img_url; ?>" />
 <?php }} 
 ?>
-
--->
 		</div>
 	</div>
 </div>
