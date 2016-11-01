@@ -32,7 +32,7 @@ on those of some fellow vaping experts</p>
 <!-- миниатюра и кнопки покупки -->
 <div class="img-pukupka clearfix">
 		<div class="post-div-img">
-			<?php 
+			<?php
 // вывод картинки из произвольного поля
 $image = get_field('img');
 
@@ -44,9 +44,9 @@ if( !empty($image) ): ?>
 		</div>
 		<p class="skidka">скидка 30%</p>
 		<div class="pokupka">
-			<a href="<?php echo get_post_custom_values('china')[0] ?>" class="pokupka-china">купить в Китае</a>
+			<a href="http://<?php echo get_post_custom_values('china')[0] ?>" class="pokupka-china">купить в Китае</a>
 			<br>
-			<a href="<?php echo get_post_custom_values('russia')[0] ?>" class="pokupka-russia">купить в России</a>
+			<a href="http://<?php echo get_post_custom_values('russia')[0] ?>" class="pokupka-russia">купить в России</a>
 		</div>
 	</div>
 	<!-- плюсы минусы, характеристики -->
