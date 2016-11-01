@@ -5,38 +5,38 @@
  * @subpackage your-clean-template
  */
 
-$current_category = single_cat_title('', 0);
-// if($current_category=="box_mods"){
-// 	include('category-rdas.php');
-// 	exit;
-// }
-
+$current_category = get_the_category()[0]->slug;;//slug ярлык текущей категории
 switch ($current_category) {
-	case "best_device":
-		include('category-rdas.php');
-		break;
-
+	//девайсы
 	case "box_mods":
-		include('category-rdas.php');
+		include('main-category-rdas.php');
 		break;
 
 	case "battary_chargers":
-		include('category-rdas.php');
+		include('main-category-rdas.php');
 		break;
 
 	case "batteries":
-		include('category-rdas.php');
+		include('main-category-rdas.php');
 		break;
 
 	case "mechanical_mod":
-		include('category-rdas.php');
+		include('main-category-rdas.php');
+		break;
+
+	case "rdas":
+		include('main-category-rdas.php');
 		break;
 
 	case "sub_ohm_tanks":
-		include('category-rdas.php');
+		include('main-category-rdas.php');
 		break;
 
-	default:
+	case "best_device":
+		include('main-category-rdas.php');
+		break;
+
+	default://шаблон категории по умолчанию
 		include('category-all.php');
 		break;
 }
