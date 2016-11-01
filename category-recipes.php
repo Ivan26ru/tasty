@@ -14,7 +14,7 @@ get_header(); // подключаем header.php ?>
 <div class="search clearfix">
 		<div class="fl search-div">
 			<!-- сама форма поиска -->
-			<form class="clearfix" id="search_string" method="get" role="search" action="<?php echo home_url( '/' ) ?>" >
+			<form class="clearfix" id="search_string" method="get" role="search" action="<?php echo home_url( '/' ) ?>/category/recipes/" >
 				<!-- строка поиска -->
 				<input class="search-text" type="text" placeholder="поиск" name="s" id="s">
 				<!-- кнопка поиска -->
@@ -41,6 +41,8 @@ get_header(); // подключаем header.php ?>
 				</p>
 			</th>
 		</tr>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); // если посты есть - запускаем цикл wp ?>
+
 		<!-- пост -->
 		<tr class="tr">
 			<td class="rec-td-name"><a href="<?php the_permalink() ?>" class=""><?php the_title(); ?></a></td>
@@ -52,50 +54,10 @@ get_header(); // подключаем header.php ?>
 				<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
 			</td>
 		</tr>
-		<!-- пост -->
-		<tr class="tr">
-			<td class="rec-td-name"><a href="#" class="">Adapted by Alisa :Bust-a-CoffeeNut with Espresso</a></td>
-			<td class="rec-td-avtor">Flex</td>
-			<td class="rec-td-data">21 Июня 21:33</td>
-			<td class="rec-td-rejting">
-				<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-				<span class="green font-rr">+12</span>
-				<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-			</td>
-		</tr>
-		<!-- пост -->
-		<tr class="tr">
-			<td class="rec-td-name"><a href="#" class="">Adapted by Alisa :Bust-a-CoffeeNut with Espresso</a></td>
-			<td class="rec-td-avtor">Flex</td>
-			<td class="rec-td-data">21 Июня 21:33</td>
-			<td class="rec-td-rejting">
-				<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-				<span class="green font-rr">+12</span>
-				<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-			</td>
-		</tr>
-		<!-- пост -->
-		<tr class="tr">
-			<td class="rec-td-name"><a href="#" class="">Adapted by Alisa :Bust-a-CoffeeNut with Espresso</a></td>
-			<td class="rec-td-avtor">Flex</td>
-			<td class="rec-td-data">21 Июня 21:33</td>
-			<td class="rec-td-rejting">
-				<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-				<span class="green font-rr">+12</span>
-				<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-			</td>
-		</tr>
-		<!-- пост -->
-		<tr class="tr">
-			<td class="rec-td-name"><a href="#" class="">Adapted by Alisa :Bust-a-CoffeeNut with Espresso</a></td>
-			<td class="rec-td-avtor">Flex</td>
-			<td class="rec-td-data">21 Июня 21:33</td>
-			<td class="rec-td-rejting">
-				<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-				<span class="green font-rr">+12</span>
-				<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-			</td>
-		</tr>
+
+		<?php endwhile; // конец цикла
+	else: echo '<h2>Нет записей.</h2>'; endif; // если записей нет, напишим "простите" ?>	 
+	<?php pagination(); // пагинация, функция нах-ся в function.php ?>
 
 	</table>
 </div>

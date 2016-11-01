@@ -2013,6 +2013,11 @@ a.politika {
     border-bottom: 1px solid #e8e8e8;
 }
 
+/*Убрал линию последнего элементы*/
+.tr-hr:last-child td{
+    border-bottom:none;
+}
+
 .tr-null-2 td {
     height: 20px
 }

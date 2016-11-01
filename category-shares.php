@@ -32,7 +32,8 @@ else echo '<img class="post-shares-img" src="http://placehold.it/220x120/2ecc71/
 	</div>
 	<!-- компания -->
 	<div class="post-shares-name-company">
-		<p class="shares-name-company"><?php echo get_post_custom_values(shares_company)[0]; //вывод произвольного поля?></p>
+		<p class="shares-name-company"><?php $id_company=get_field( "shares_company" )[0]; //id компании ?>
+					<a href="<?php echo get_permalink($id_company);//ссылка по id ?>"><?php echo get_the_title( $id_company ); //заголовок по id?></a></p>
 	</div>
 	<!-- дата поста -->
 	<span class="post-shares-data">
