@@ -102,4 +102,15 @@ function my_scripts_method() {
 }    
 
 add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
+
+// функция вывода произвольного поля в теге li
+function lic($stroka){
+	$stroka2= get_post_custom_values($stroka)[0];
+	if($stroka2) echo "<li>" . $stroka2 . "</li>";
+}
+
+// просто вывод произвольного поля
+function cus($stroka){
+	echo get_post_custom_values($stroka)[0];
+}
 ?>

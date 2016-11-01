@@ -14,9 +14,16 @@ get_header(); // подключаем header.php ?>
 	<div class="container-akciya-kontakt clearfix">
 		<!-- блок с основной картинкой -->
 		<div class="company-div-logo">
-<!-- 		<?php if ( has_post_thumbnail() ) the_post_thumbnail('504x304','class=post-shares-img'); // выводим миниатюру поста, если есть
-else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/ecf0f1">';?> -->
-<img class="post-shares-img" src="http://placehold.it/90x72/2ecc71/ecf0f1">
+			<?php 
+// вывод картинки из произвольного поля
+$image = get_field('img');
+
+if( !empty($image) ): ?>
+
+    <img class="post-shares-img" src="<?php echo $image['url']; ?>" />
+
+<?php endif; ?>
+<!-- <img class="post-shares-img" src="http://placehold.it/90x72/2ecc71/ecf0f1"> -->
 
 		</div>
 		<!-- Таблица с контактами -->
@@ -50,7 +57,7 @@ else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/
 					<td class="null">&nbsp;</td>
 					<td class="null">&nbsp;</td>
 					<td class="text-right" colspan="2">
-						<a href="#" class="btn-green">Перейти на сайт</a>
+						<a href="http://<?php cus(site) ?>/" class="btn-green">Перейти на сайт</a>
 					</td>
 				</tr>
 			</table>
@@ -67,16 +74,8 @@ else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/
 		<p class="podzagolovok akcii-p-foto"><span class="line">Фотографии</span></p>
 		<!-- контейнер с фото -->
 		<div class="akcii-div-img">
-						<img class="post-img" src="http://placehold.it/512x512/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/512x512/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/512x512/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/512x512/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/512x512/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/512x512/2ecc71/ecf0f1">
-						<img class="post-img" src="http://placehold.it/512x512/2ecc71/ecf0f1">
-
-<!--
-<?php $str= get_the_content();
+<?php //Вывод картинок поста
+$str= get_the_content();
 preg_match_all('/src="([^"]+)"/i', $str, $matches);
 $img_urls = $matches[1]; ?>
 <?php if($img_urls) { ?>
@@ -84,7 +83,6 @@ $img_urls = $matches[1]; ?>
 <img class="post-img" src="<?php echo $img_url; ?>" />
 <?php }}
 ?>
- -->
  		</div>
 	</div>
 </div>

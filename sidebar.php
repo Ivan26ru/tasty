@@ -20,12 +20,12 @@
 <!-- лучшие девайсы -->
 <div class="best-device">
 	<p class="zagolovok"><span class="line">лучшие девайсы</span></p>
-	<a href="#" class="best-device-a d1"><span>BOX MODS</span></a>
-	<a href="#" class="best-device-a d2"><span>Mechanical  Mod</span></a>
+	<a href="http://test1.v-svetlograde.ru/category/best_device/box_mods/" class="best-device-a d1"><span>BOX MODS</span></a>
+	<a href="http://test1.v-svetlograde.ru/category/best_device/mechanical_mod/" class="best-device-a d2"><span>Mechanical  Mod</span></a>
 	<a href="http://test1.v-svetlograde.ru/category/best_device/rdas/" class="best-device-a d3"><span>RDas</span></a>
-	<a href="#" class="best-device-a d4"><span>Sub ohm  tanks</span></a>
-	<a href="#" class="best-device-a d5"><span>battery  chargers</span></a>
-	<a href="#" class="best-device-a d6"><span>batteries</span></a>
+	<a href="http://test1.v-svetlograde.ru/category/best_device/sub_ohm_tanks/" class="best-device-a d4"><span>Sub ohm  tanks</span></a>
+	<a href="http://test1.v-svetlograde.ru/category/best_device/battary_chargers/" class="best-device-a d5"><span>battery  chargers</span></a>
+	<a href="http://test1.v-svetlograde.ru/category/best_device/batteries/" class="best-device-a d6"><span>batteries</span></a>
 </div>
 
 <!-- рекламный блок -->
