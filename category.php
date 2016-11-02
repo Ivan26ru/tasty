@@ -5,7 +5,7 @@
  * @subpackage your-clean-template
  */
 
-$current_category = get_the_category()[0]->slug;;//slug ярлык текущей категории
+$current_category = get_the_category()[0]->slug;//slug ярлык текущей категории
 switch ($current_category) {
 	//девайсы
 	case "box_mods":
