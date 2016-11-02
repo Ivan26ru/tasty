@@ -549,7 +549,7 @@ article {
 /*выравнивение по центру по вертикали текст*/
 
 .va-c {
-    margin: auto;
+    margin: auto 0;
 }
 
 

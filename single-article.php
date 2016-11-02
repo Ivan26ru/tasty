@@ -7,13 +7,14 @@
 get_header(); // подключаем header.php ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); // старт цикла ?>
-
+<h1 class="akciya-h1"><?php the_title(); ?></h1>
 <!-- Начало поста -->
 <img class="art-img" src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/statya.png">
-<p class="text-other-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos accusantium, modi porro quo voluptatum quod.</p>
+<p class="text-other-2"><?php add_filter('the_content','htm_image_content_filter',11); ?>
+<?php the_content(); // контент без картинок?></p>
 
 <div class="soc-f-vk">
-<a href="#">
+<a href="#" >
 	<p class="f-book">
 		<i class="fa fa-facebook" aria-hidden="true"></i>
 		<span>Поделиться</span>

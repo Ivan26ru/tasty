@@ -39,6 +39,10 @@ switch ($current_category) {
 	case "events"://мероприятия
 		include('category-shares.php');
 		break;
+	// новости
+	case "news"://мероприятия
+		include('main-category-news.php');
+		break;
 
 
 	default://шаблон категории по умолчанию
