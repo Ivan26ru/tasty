@@ -36,16 +36,19 @@
 <!-- the best -->
 <div class="sb-r best">
 	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/email-sb.png" class="sidebar-img">
-	<p>Подборка крутых новостей недели</p>
+<!-- 	<p>Подборка крутых новостей недели</p>
 	<form action="">
 		<input class="input-email" type="email" name="email" id="" placeholder="Введите email">
 		<input type="submit" class="btn-green" value="Подписаться">
-	</form>
+	</form> -->
+	<?php $widgetNL = new WYSIJA_NL_Widget(true);
+echo $widgetNL->widget(array('form' => 2, 'form_type' => 'php')); ?>
+	<!-- <?php echo do_shortcode('[subscribe2]'); ?></div> -->
 </div>
 <!-- опрос -->
 <div class="sb-r what">
 	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/what.png" class="sidebar-img">
-	<p>Какой вкус вам больше нравится</p>
+<!-- 	<p>Какой вкус вам больше нравится</p>
 	<form action="#">
 	<label>
 		<input type="radio" name="vkus" value="variant1" checked>Вариант 1
@@ -54,7 +57,9 @@
 		<input type="radio" name="vkus" value="variant2">Вариант 2
 	</label>
 		<input type="submit" class="btn-green" value="Отправить">
-	</form>
+	</form> -->
+	<?php dynamic_sidebar('left-sidebar'); // выводим сайдбар, имя определено в function.php ?>
+	<?php //echo do_shortcode('[democracy id="1"]'); //вывод шорткода ?>
 </div>
 <!-- рекламный блок -->
 <div class="sb-banner sb-banner-2">
@@ -65,5 +70,7 @@
 <div class="sb-banner sb-banner-3">
 	<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/banner/banner3.png" class="sb-banner-img"></a>
 </div>
+
+
 
 </sidebar>

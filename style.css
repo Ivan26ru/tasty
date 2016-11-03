@@ -720,6 +720,10 @@ sidebar {
     height: 20px;
 }
 
+/*ширина строки ввода*/
+.wysija-input{
+    width:178px;    
+}
 
 /*ввод email при фокусе*/
 
@@ -731,7 +735,8 @@ sidebar {
 
 /*зеленая кнопка в сайд баре*/
 
-.btn-green {
+.btn-green,
+.wysija-submit {
     /*padding: 5px;*/
     width: 181px;
     height: 30px;
@@ -750,7 +755,9 @@ sidebar {
 /*зеленая кнопка при наведении*/
 
 .btn-green:focus,
-.btn-green:hover {
+.btn-green:hover,
+.wysija-submit:focus,
+.wysija-submit:hover {
     border: 0;
     outline: 0;
     background-color: #02a379;
@@ -762,7 +769,7 @@ sidebar {
 
 /*общий стиль label */
 
-.sb-r label {
+.sb-r label:not(.best label) {
     display: block;
     margin-left: 20px;
     margin-bottom: 15px;
@@ -2721,4 +2728,12 @@ color: #fff;
 /*---------------ВХОД--------------------*/
 .div-form-vhod{
     position: absolute;
+}
+
+
+/*=-=-=-=-=-мелкие доработки=-=-=-=-=-*/
+
+/*картинка стандартной записи в новостях и т.д.*/
+.art-img{
+    max-width:850px
 }
