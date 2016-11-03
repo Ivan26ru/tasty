@@ -25,6 +25,9 @@
 	<?php wp_head(); // необходимо для работы плагинов и функционала ?>
 </head>
 <body <?php body_class(); // все классы для body ?>>
+<!-- 		<div class="div-form-vhod">
+			<?php wp_login_form(); ?>
+		</div> -->
 	<header>
 
 <!-- верхняя линия -->
@@ -51,7 +54,7 @@
 		</div>
 		<!-- путь к странце -->
 		<p class="put"><?php the_category('/') ?> <?php // ссылки на категории в которых опубликован пост, через зпт ?>
-			
+
 		</p>
 	</div>
 </div>

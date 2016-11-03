@@ -39,14 +39,10 @@ switch ($current_category) {
 	case "events"://мероприятия
 		include('category-shares.php');
 		break;
-	// новости
-	case "news"://мероприятия
-		include('main-category-news.php');
-		break;
-
-
+	// универсальный шаблон
 	default://шаблон категории по умолчанию
-		include('category-all.php');
+		include('main-category-news.php');
+		// include('category-all.php');
 		break;
 }
 ?>
