@@ -2231,7 +2231,7 @@ a.politika {
 
 /*стиль маркера*/
 
-.page-div ul li:before {
+.page-div:not(.forum) ul li:before {
     content: "●";
     color: #00cd98;
     margin-right: 11px;
