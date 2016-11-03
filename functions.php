@@ -113,4 +113,7 @@ function lic($stroka){
 function cus($stroka){
 	echo get_post_custom_values($stroka)[0];
 }
+
+// своя страница настроек темы
+include('myparameters.php');
 ?>
