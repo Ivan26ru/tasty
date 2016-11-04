@@ -11,28 +11,41 @@ get_header(); // подключаем header.php ?>
 		<article class="clearfix">
 			<!-- левая колонка -->
 			<div class="block block-left">
-				<a href="#" class="zagolovok"><span class="line">МИКСОЛОГИЯ</span></a>
+				<a href="<?php echo get_category_link(7); //вывод url категории,рубрики по id ?>" class="zagolovok"><span class="line"><?php echo get_cat_name(7); //название категории, рубрики по id ?></span></a>
 				<div class="img-colomn mixologiya"></div>
 				<!-- краткое описание новости -->
+
+
+				<!-- посты из цикла -->
+				<?php	query_posts('cat=7&posts_per_page=5'); // вместо "5" указываем идентификатор вашей рубрики.
+ while (have_posts()) : the_post();?>
+
 				<div class="news clearfix">
-					<span class="data data-block">09.08.2016</span>
-					<p class="title title-block">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</p>
-					<p class="text text-block">Баланс представления, качества и цены – залог успеха. Сегодня я хочу рассказать о линейке жидкости ZE-PAR, оригинальной в подаче, вкусной в содержании, доступной в цене.</p>
-					<a href="#" class="read-all read-all-block">читать полностью...</a>
+					<span class="data data-block"><?php the_time('d.m.Y'); ?></span>
+					<p class="title title-block"><?php the_title(); ?></p>
+					<p class="text text-block"><?php the_truncated_post( 400 ); ?></p>
+					<a href="<?php the_permalink() ?>" class="read-all read-all-block">читать полностью...</a>
 				</div>
+<?php 	endwhile; 	wp_reset_query(); ?>
+<!-- конец постав -->
 
 			</div>
 			<!-- правая колонка -->
 			<div class="block block-right">
-				<a href="#" class="zagolovok"><span class="line">vape новости</span></a>
+				<a href="<?php echo get_category_link(4); //вывод url категории,рубрики по id ?>" class="zagolovok"><span class="line">vape новости</span></a>
 				<div class="img-colomn vipe-news"></div>
-				<!-- краткое описание новости -->
+	<!-- посты из цикла -->
+				<?php	query_posts('cat=4&posts_per_page=5'); // вместо "5" указываем идентификатор вашей рубрики.
+ while (have_posts()) : the_post();?>
+
 				<div class="news clearfix">
-					<span class="data data-block">09.08.2016</span>
-					<p class="title title-block">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</p>
-					<p class="text text-block">Баланс представления, качества и цены – залог успеха. Сегодня я хочу рассказать о линейке жидкости ZE-PAR, оригинальной в подаче, вкусной в содержании, доступной в цене.</p>
-					<a href="#" class="read-all read-all-block">читать полностью...</a>
+					<span class="data data-block"><?php the_time('d.m.Y'); ?></span>
+					<p class="title title-block"><?php the_title(); ?></p>
+					<p class="text text-block"><?php the_truncated_post( 400 ); ?></p>
+					<a href="<?php the_permalink() ?>" class="read-all read-all-block">читать полностью...</a>
 				</div>
+<?php 	endwhile; 	wp_reset_query(); ?>
+<!-- конец постав -->
 
 			</div>
 		</article>
