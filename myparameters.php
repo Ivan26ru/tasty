@@ -88,8 +88,17 @@ function true_option_settings() {
 	);
 	add_settings_field( 'my_radio', 'Радио кнопки', 'true_option_display_settings', $true_page, 'true_section_2', $true_field_params );
 
+	// Создадим радио-кнопку
+	$true_field_params2 = array(
+		'type'      => 'radio',
+		'id'      => 'my_radio',
+		'vals'		=> array( 'val1' => 'Значение 1', 'val2' => 'Значение 2', 'val3' => 'Значение 3')
+	);
+	add_settings_field( 'my_radio2', 'Радио кнопки2', 'true_option_display_settings', $true_page, 'true_section_2', $true_field_params );
+
 }
 add_action( 'admin_init', 'true_option_settings' );
+
 
 /*
  * Функция отображения полей ввода
