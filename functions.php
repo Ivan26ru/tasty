@@ -68,8 +68,8 @@ function pagination() { // функция вывода пагинации
 		'format' => '?paged=%#%', // формат, %#% будет заменено
 		'current' => max(1, get_query_var('paged')), // текущая страница, 1, если $_GET['page'] не определено
 		'type' => 'list', // ссылки в ul
-		'prev_text'    => 'Назад', // текст назад
-    	'next_text'    => 'Вперед', // текст вперед
+		'prev_text'    => '<img src="'.get_template_directory_uri().'/img/png/prev.png">', // текст назад
+    	'next_text'    => '<img src="'.get_template_directory_uri().'/img/png/next.png">', // текст вперед
 		'total' => $wp_query->max_num_pages, // общие кол-во страниц в пагинации
 		'show_all'     => false, // не показывать ссылки на все страницы, иначе end_size и mid_size будут проигнорированны
 		'end_size'     => 15, //  сколько страниц показать в начале и конце списка (12 ... 4 ... 89)

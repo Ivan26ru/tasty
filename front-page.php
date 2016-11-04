@@ -51,69 +51,47 @@ get_header(); // подключаем header.php ?>
 		</article>
 		<!-- другие посты с картинками -->
 		<div class="div-post-other">
+
+
+
+	<!-- посты из цикла -->
+				<?php	query_posts('cat=-20'); // вместо "5" указываем идентификатор вашей рубрики.
+ while (have_posts()) : the_post();?>
+
+
 			<!-- пост -->
 			<div class="post-other">
 			<!-- миниатюра поста -->
 				<div class="post-other-img">
-					<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/img-post.png">
+
+<?php 	if ( has_post_thumbnail() ) the_post_thumbnail(thumbnail); // выводим миниатюру поста, если есть
+						else echo '<img src="http://placehold.it/420x167/2ecc71/ecf0f1">';?>
 					<div class="post-other-black-info">
-						<span class="data data-other">09.08.2016</span>
-						<a href="" class="read-all read-all-other">Читать полностью...</a>
+						<span class="data data-other"><?php the_time('d.m.Y'); ?></span>
+						<a href="<?php the_permalink() ?>" class="read-all read-all-other">Читать полностью...</a>
 					</div>
 				</div>
 				<!-- анонс поста -->
 				<div class="post-other-info">
 					<div class="va-c">
-						<p class="title title-other">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</p>
-						<p class="text text-other">Баланс представления, качества и цены – залог успеха. Сегодня я хочу рассказать о линейке жидкости ZE-PAR, оригинальной в подаче, вкусной в содержании, доступной в цене.</p>
+						<p class="title title-other"><?php the_title(); ?></p>
+						<p class="text text-other"><?php the_truncated_post( 400 ); ?></p>
 					</div>
 				</div>
 			</div>
 			<!-- конец поста -->
-						<!-- пост -->
-			<div class="post-other">
-			<!-- миниатюра поста -->
-				<div class="post-other-img">
-					<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/img-post.png">
-					<div class="post-other-black-info">
-						<span class="data data-other">09.08.2016</span>
-						<a href="" class="read-all read-all-other">Читать полностью...</a>
-					</div>
-				</div>
-				<!-- анонс поста -->
-				<div class="post-other-info">
-					<div class="va-c">
-						<p class="title title-other">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</p>
-						<p class="text text-other">Баланс представления, качества и цены – залог успеха. Сегодня я хочу рассказать о линейке жидкости ZE-PAR, оригинальной в подаче, вкусной в содержании, доступной в цене.</p>
-					</div>
-				</div>
-			</div>
-			<!-- конец поста -->
-						<!-- пост -->
-			<div class="post-other">
-			<!-- миниатюра поста -->
-				<div class="post-other-img">
-					<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/img-post.png">
-					<div class="post-other-black-info">
-						<span class="data data-other">09.08.2016</span>
-						<a href="" class="read-all read-all-other">Читать полностью...</a>
-					</div>
-				</div>
-				<!-- анонс поста -->
-				<div class="post-other-info">
-					<div class="va-c">
-						<p class="title title-other">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</p>
-						<p class="text text-other">Баланс представления, качества и цены – залог успеха. Сегодня я хочу рассказать о линейке жидкости ZE-PAR, оригинальной в подаче, вкусной в содержании, доступной в цене.</p>
-					</div>
-				</div>
-			</div>
-			<!-- конец поста -->
+<?php 	endwhile; 	wp_reset_query(); ?>
+<!-- конец постав -->
+
+
+
+
 		</div>
 		<!-- конец раздела других постов -->
 
 		<!-- пагинация(номера страниц) -->
 		<div class="pagination-index">
-			<ul class="page-numbers">
+<!-- 			<ul class="page-numbers">
 				<li><a class="prev page-numbers" href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/prev.png" alt=""></a></li>
 				<li><a class="page-numbers" href="#">1</a></li>
 				<li><a class="page-numbers" href="#">2</a></li>
@@ -124,7 +102,8 @@ get_header(); // подключаем header.php ?>
 				<li><a class="page-numbers" href="#">7</a></li>
 				<li><a class="page-numbers" href="#">8</a></li>
 				<li><a class="next page-numbers" href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/next.png" alt=""></a></li>
-			</ul>
+			</ul> -->
+			<?php pagination(); // пагинация, функция нах-ся в function.php ?>
 		</div>
 		<!-- конец пагинаци -->
 
