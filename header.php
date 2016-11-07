@@ -48,7 +48,7 @@
 				wp_nav_menu($args); // выводим верхнее меню
 			?>
 			<div class="vhod btn-top-1">
-				<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/zamok.png">ВОЙТИ</a>
+				<a href="<?php echo site_url(); ?>/wp-login.php"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/zamok.png">ВОЙТИ</a>
 				<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/key.png">ЗАРЕГИСТРИРОВАТЬСЯ</a>
 			</div>
 		</div>
