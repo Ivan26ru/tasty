@@ -52,7 +52,11 @@ $(document).ready(function() {
 
 
     //---------------добавление рецепта
-    var e_number = 1;
+    var e_number = 1;//счетчик
+    	e_arr=[];//массив данных
+    	e_name='';//имя элемента
+		e_value='0';//количество
+
     $('#add-element').click(function(e) { //нажатие на кнопку отправить
         e.preventDefault();//убрать стандартное поведение ссылки
 
@@ -60,6 +64,8 @@ $(document).ready(function() {
 
         e_name = $('#e_name').val(); //имя элемента
         e_value = $('#e_value').val(); //количество элемента
+
+        // e_arr[e_name]=e_number;
 
         // alert(e_name + e_value); //проверка вывода значений
         $('.elements-input').removeClass('this_element');
@@ -80,12 +86,13 @@ $(document).ready(function() {
         // $('#e_name').attr('placeholder','name'); //имя элемента
         // $('#e_value').attr('placeholder','kol-vo'); //количество элемента
 
-$("#e_name").val('').attr('placeholder','Ингридиент ' + e_number);
-// $("#e_value").placeholder="newAttr";
-        // e_n=e_n+1;
-        // alert(e_n);
+		$("#e_name").val('').attr('placeholder','Ингридиент ' + e_number);//выводит номер игртидиента и сбрасывает состояние
+		$("#e_value").val('');//сбрасывает состояние
+
 
     }); //.нажатие на кнопку отправить
+
+
     //---------------- .добавление рецепта
 
 
