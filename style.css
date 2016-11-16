@@ -2580,7 +2580,7 @@ margin-top: 40px;
 
 /*название элемента*/
 .name-element {
-    /*width: 175px;*/
+    max-width: 157px;
     float: left;
     margin-right: 25px;
     display: inline-block;
@@ -2781,7 +2781,7 @@ body{
 
 /*первая кнопка*/
 .tab-ul li:first-child{
-    margin-left:84px;    
+    margin-left:84px;
 }
 
 /*активная кнопка*/
