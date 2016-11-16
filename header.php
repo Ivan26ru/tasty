@@ -21,13 +21,11 @@
 	 <!--[if lt IE 9]>
 	 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	 <![endif]-->
-	<title><?php typical_title(); // выводи тайтл, функция лежит в function.php ?></title>
+	 <title><?php typical_title(); // выводи тайтл, функция лежит в function.php ?></title>
 	<?php wp_head(); // необходимо для работы плагинов и функционала ?>
 </head>
 <body <?php body_class(); // все классы для body ?>>
-<!-- 		<div class="div-form-vhod">
-			<?php wp_login_form(); ?>
-		</div> -->
+<?php include('vhod_wp.php') ?>
 	<header>
 
 <!-- верхняя линия -->
@@ -48,7 +46,7 @@
 				wp_nav_menu($args); // выводим верхнее меню
 			?>
 			<div class="vhod btn-top-1">
-				<a href="<?php echo site_url(); ?>/wp-login.php"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/zamok.png">ВОЙТИ</a>
+				<a href="#" id="a-form-vhod"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/zamok.png">ВОЙТИ</a>
 				<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/key.png">ЗАРЕГИСТРИРОВАТЬСЯ</a>
 			</div>
 		</div>

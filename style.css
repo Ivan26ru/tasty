@@ -28,6 +28,9 @@ body * {
     font-family: "Roboto";
 }
 
+body .dn{
+    display: none;
+}
 
 /*текст по центру*/
 
@@ -722,7 +725,7 @@ sidebar {
 
 /*ширина строки ввода*/
 .wysija-input{
-    width:178px;    
+    width:178px;
 }
 
 /*ввод email при фокусе*/
@@ -734,7 +737,7 @@ sidebar {
 
 
 /*зеленая кнопка в сайд баре*/
-
+#loginform input[type="submit"],
 .btn-green,
 .wysija-submit {
     /*padding: 5px;*/
@@ -753,7 +756,7 @@ sidebar {
 
 
 /*зеленая кнопка при наведении*/
-
+#loginform input[type="submit"]:hover,
 .btn-green:focus,
 .btn-green:hover,
 .wysija-submit:focus,
@@ -819,8 +822,9 @@ input[type="radio"] {
 
 /*картинка рекламного блока*/
 
-.sb-banner-img {
+.sb-banner img {
     width: 241px;
+    height: 100%;
 }
 
 
@@ -2551,8 +2555,8 @@ a.politika {
 }
 
 .w263{
-	width: 263px;
-	margin: 0 auto;
+    width: 263px;
+    margin: 0 auto;
 }
 /*элементы*/
 
@@ -2571,7 +2575,7 @@ margin-top: 40px;
 
 /*label метка элемента*/
 .elements-input label{
-	line-height: 28px;
+    line-height: 28px;
 }
 
 /*название элемента*/
@@ -2585,7 +2589,7 @@ margin-top: 40px;
 
 /*контейнер для ввода ml*/
 .span-input-ml{
-	float: right;
+    float: right;
 }
 
 /*строка ввода ml*/
@@ -2611,8 +2615,8 @@ margin-top: 40px;
 
 /*строка ввода нового элемента*/
 .elements-input-new{
-	margin-top: 45px;
-	margin-bottom: 0;
+    margin-top: 45px;
+    margin-bottom: 0;
 }
 
 /*строка ввода элемента*/
@@ -2635,7 +2639,7 @@ margin-top: 40px;
 
 /*отступ для зеленой кнопки*/
 .form-elements .btn-green{
-	margin-top: 40px;
+    margin-top: 40px;
 }
 
 /*описание рецепта*/
@@ -2672,7 +2676,7 @@ color: #fff;
 }
 
 .soc-f-vk span{
-	margin-left: 25px;
+    margin-left: 25px;
   font-size: 11px;
   font-family: "Roboto";
   line-height: 1.2;
@@ -2683,57 +2687,140 @@ color: #fff;
 }
 
 .soc-f-vk .fa{
-	display: inline-block;
-	line-height: 30px;
-	float: left;
+    display: inline-block;
+    line-height: 30px;
+    float: left;
 }
 
 /*стиль F*/
 .f-book{
-	display: inline-block;
-	width: 155px;
-	margin-right: 30px;
-	height: 30px;
-	line-height: 30px;
-	background-color: #4663a0;
+    display: inline-block;
+    width: 155px;
+    margin-right: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #4663a0;
 }
 
 /*стиль иконки F*/
 .f-book .fa{
-	height: 30px;
-	width: 30px;
-	text-align: center;
-	color: #fff;
-	background-color: #3c5b9b;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #3c5b9b;
 }
 
 /*стиль VK*/
 .vk-blue{
-	display: inline-block;
-	width: 155px;
-	margin-right: 30px;
-	height: 30px;
-	line-height: 30px;
-	background-color: #567699;
+    display: inline-block;
+    width: 155px;
+    margin-right: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #567699;
 }
 
 /*стиль иконки VK*/
 .vk-blue .fa{
-	height: 30px;
-	width: 30px;
-	text-align: center;
-	color: #fff;
-	background-color: #43678d;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #43678d;
 }
-/*---------------ВХОД--------------------*/
-.div-form-vhod{
-    position: absolute;
-}
-
 
 /*=-=-=-=-=-мелкие доработки=-=-=-=-=-*/
 
 /*картинка стандартной записи в новостях и т.д.*/
 .art-img{
     max-width:850px
+}
+
+
+/*---------------ВХОД--------------------*/
+body{
+ position:relative;
+}
+
+.div-form-vhod{
+    position: absolute;
+    position:relative;
+    background-color: rgba(0, 0, 0,0.702);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height:100%;
+    z-index:3;
+}
+
+/*контейнер табов*/
+.div-tabs{
+    background-color:#fff;
+    width:400px;
+    height:340px;
+    margin:150px auto 0;
+
+}
+
+/*кнопки таба*/
+.tab-ul{
+    border-bottom:1px solid #e8e8e8;
+    height:52px;
+    padding:0;
+}
+
+/*кнопка таба*/
+.tab-ul li{
+    display:inline-block;
+    line-height:52px;
+    margin-left:60px;
+    text-transform:uppercase;
+}
+
+/*первая кнопка*/
+.tab-ul li:first-child{
+    margin-left:84px;    
+}
+
+/*активная кнопка*/
+.tab-ul li.active{
+    border-bottom:1px solid #00cd98;
+}
+
+/*строки по центру*/
+#loginform p{
+    text-align:center;
+/*     outline:1px solid red; */
+}
+/*фон input строк кроме отправить*/
+#loginform input:not([type="submit"]){
+    background-color:#fff;
+    border: none;
+    border-bottom: 1px solid rgb(232, 232, 232);
+    width: 215px;
+    font-size: 10px;
+    font-family: "Verdana";
+    color: rgb(204, 204, 204);
+    font-style: italic;
+    line-height: 1.2;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+
+#loginform input[type="submit"]{
+    margin-top:30px;
+}
+
+.panel li a{
+    display:block;
+    margin: 0;
+    font-size: 10px;
+    font-family: "Verdana";
+    color: #00cd98;
+    font-style: italic;
+    line-height: 1.8;
+    text-align: center;
 }

@@ -6,8 +6,6 @@
  */
 get_header(); // подключаем header.php ?>
 
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); // старт цикла ?>
-
 <!-- начало поста -->
 <div class="recipes-admin-div">
 	<!-- форма элементов -->
@@ -57,8 +55,22 @@ get_header(); // подключаем header.php ?>
 	</form>
 </div>
 
-<?php endwhile; // конец цикла ?>
+<?php 
+// ДОБАВЛЕНИЕ ЗАПИСИ ЧЕРЕЗ PHP
+// Создаем массив
+  $post_data = array(
+	 'post_title'    => 'Заголовок записи 3',
+	 'post_content'  => 'Здесь должен быть контент (текст) записи. 2',
+	 'post_status'   => 'pending',
+	 'post_type'     => 'post',
+	 'post_author'   => 1,
+	 'post_category' => array(20)
+  );
 
+// Вставляем данные в БД
+//$post_id = wp_insert_post( wp_slash($post_data) );//создаем запись
+//add_post_meta($post_id, 'YOUTUBE3', 'code3');//добавляем значение произвольным полям
+  ?>
 
 <?php get_sidebar(); // подключаем footer.php ?>
 <?php get_footer(); // подключаем footer.php ?>
