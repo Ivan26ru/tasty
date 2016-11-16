@@ -81,22 +81,28 @@ $(document).ready(function() {
 
         ++e_number;//счетчик элементов
 
+        e_number_2=e_number-1;
+
         e_name = $('#e_name').val(); //имя элемента
         e_value = $('#e_value').val(); //количество элемента
 
         // e_arr[e_name]=e_number;
 
         // alert(e_name + e_value); //проверка вывода значений
-        $('.elements-input').removeClass('this_element');
 
+        $('.elements-input').removeClass('this_element');//убираем класс по которому выбираем только что добавленный элемнет
 
         $('#element-id').clone() // сделаем копию элемента
-        	.removeClass("dn") // добавим этой копии класс newElement
-        	.addClass('this_element') //добавим класс, для добавления данных
-        	.appendTo("#div-elements"); // вставим измененный элемент в конец элемента container
+            .removeClass("dn") // добавим этой копии класс newElement
+            .addClass('this_element') //добавим класс, для добавления данных
+            .appendTo("#div-elements"); // вставим измененный элемент в конец элемента container
 
-        $('.this_element .name-element').text(e_name);//присвоим новой строке имя элемента
-        $('.this_element .input-ml').val(e_value);//присвоим новой строке значение
+        $('.this_element #e_i_name').val(e_name);//добавляем содержимое элемента
+        $('.this_element .name-element').text(e_name);//добавляем содержимое элемента
+        // .attr('name','name_element_' + e_number_2);//присвоим новой строке имя элемента
+
+        $('.this_element .input-ml').val(e_value);//добавляем содержимое элемента
+        // .attr('name','value_element_' + e_number_2);//присвоим новой строке значение
         // .function(){
         //   	$(this, '.name-element').text('test');
         //   }
@@ -110,6 +116,7 @@ $(document).ready(function() {
 
 
     }); //.нажатие на кнопку отправить
+
 
 
     //---------------- .добавление рецепта

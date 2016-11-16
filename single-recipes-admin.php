@@ -8,25 +8,30 @@ get_header(); // подключаем header.php ?>
 
 <!-- начало поста -->
 <div class="recipes-admin-div">
-	<!-- форма элементов -->
-	<form action="#" class="text-center form-elements">
-		<input type="text" name="name-recipes" id="" class="input-name" placeholder="Введите имя">
-		<!-- контейнер элементов -->
 
-		<div class="w263 clearfix">
-		<div id="div-elements">
-			
 		<!-- элемент -->
 		<p id="element-id" class="elements-input dn">
 		<label class="clearfix" class="clearfix">
 			<span class="name-element">Amount to make</span>
 			<span class="span-input-ml">
-				<input class="input-ml" type="search" name="site_search"><span class="ml">ml</span>
+				<input type="text" name="e_i_name" id="e_i_name" class="dn">
+				<input class="input-ml" type="search" name="e_i_value"><span class="ml">ml</span>
 			</span>
 		</label>
 		</p>
 		<!-- .элемент -->
-		
+
+	<!-- форма элементов -->
+	<form action="#" method="post" class="text-center form-elements">
+		<!-- Название рецепта -->
+		<input type="text" name="title-recipes" class="input-name" placeholder="Введите имя">
+		<!-- контейнер элементов -->
+
+		<div class="w263 clearfix">
+		<div id="div-elements">
+
+
+
 		</div>
 		<!-- новый элемент -->
 		<p class="elements-input-new">
@@ -37,13 +42,14 @@ get_header(); // подключаем header.php ?>
 		<a href="#" id="add-element" class="btn-green">добавить ингридиент</a>
 		<br>
 		<!-- описание -->
-		<textarea class="opisanie" name="opisanie" id="" cols="30" rows="10" placeholder="Добавить описание"></textarea>
-		<a href="#" class="btn-green">сохранить</a>
+		<textarea name="opisanie" class="opisanie" name="opisanie" id="" cols="30" rows="10" placeholder="Добавить описание"></textarea>
+		<!-- <a href="#" class="btn-green">сохранить</a> -->
+		<input class="btn-green" type="submit" value="сохранить">
 		</div>
 	</form>
 </div>
 
-<?php 
+<?php
 // ДОБАВЛЕНИЕ ЗАПИСИ ЧЕРЕЗ PHP
 // Создаем массив
   $post_data = array(
