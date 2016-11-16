@@ -53,7 +53,7 @@
 			<div class="footer footer-2">
 				<div class="w1200">
 					<a href="#" class="politika">Политика конфиденциальности</a>
-					<a href="#" class="design"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/design.png" alt=""></a>
+					<a href="#" class="design"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/design.png"></a>
 				</div>
 			</div>
 
@@ -61,6 +61,7 @@
 <div class="loader"></div>
 
 <?php wp_footer(); // необходимо для работы плагинов и функционала  ?>
+<script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/jquery.placeholder.min.js'></script>
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/main.js'></script>
 </body>
 </html>

@@ -12,9 +12,12 @@ get_header(); // подключаем header.php ?>
 	<form action="#" class="text-center form-elements">
 		<input type="text" name="name-recipes" id="" class="input-name" placeholder="Введите имя">
 		<!-- контейнер элементов -->
+
 		<div class="w263 clearfix">
+		<div id="div-elements">
+			
 		<!-- элемент -->
-		<p class="elements-input">
+		<p id="element-id" class="elements-input dn">
 		<label class="clearfix" class="clearfix">
 			<span class="name-element">Amount to make</span>
 			<span class="span-input-ml">
@@ -22,31 +25,16 @@ get_header(); // подключаем header.php ?>
 			</span>
 		</label>
 		</p>
-		<!-- элемент -->
-		<p class="elements-input">
-		<label class="clearfix" class="clearfix">
-			<span class="name-element">Amount to make</span>
-			<span class="span-input-ml">
-				<input class="input-ml" type="search" name="site_search"><span class="ml">ml</span>
-			</span>
-		</label>
-		</p>
-		<!-- элемент -->
-		<p class="elements-input">
-		<label class="clearfix" class="clearfix">
-			<span class="name-element">Amount to make</span>
-			<span class="span-input-ml">
-				<input class="input-ml" type="search" name="site_search"><span class="ml">ml</span>
-			</span>
-		</label>
-		</p>
+		<!-- .элемент -->
+		
+		</div>
 		<!-- новый элемент -->
 		<p class="elements-input-new">
-			<input class="input-name-el" type="search" name="element-new" placeholder="Ингридиент 1">
-			<input class="input-ml" type="search" name="site_search"><span class="ml">ml</span>
+			<input id="e_name" class="input-name-el" type="search" name="element-new" placeholder="Ингридиент 1">
+			<input id="e_value" class="input-ml" type="search" name="site_search"><span class="ml">ml</span>
 		</p>
 
-		<a href="#" class="btn-green">добавить ингридиент</a>
+		<a href="#" id="add-element" class="btn-green">добавить ингридиент</a>
 		<br>
 		<!-- описание -->
 		<textarea class="opisanie" name="opisanie" id="" cols="30" rows="10" placeholder="Добавить описание"></textarea>
