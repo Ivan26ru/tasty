@@ -15,14 +15,14 @@ get_header(); // подключаем header.php ?>
 			<span class="name-element">Amount to make</span>
 			<span class="span-input-ml">
 				<input type="text" name="e_i_name" id="e_i_name" class="dn">
-				<input class="input-ml" type="search" name="e_i_value"><span class="ml">ml</span>
+				<input class="input-ml" type="search" name="русское слово"><span class="ml">ml</span>
 			</span>
 		</label>
 		</p>
 		<!-- .элемент -->
 
 	<!-- форма элементов -->
-	<form action="#" method="post" class="text-center form-elements">
+	<form action="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/form-recipes.php" method="post" class="text-center form-elements">
 		<!-- Название рецепта -->
 		<input type="text" name="title-recipes" class="input-name" placeholder="Введите имя">
 		<!-- контейнер элементов -->
@@ -35,8 +35,8 @@ get_header(); // подключаем header.php ?>
 		</div>
 		<!-- новый элемент -->
 		<p class="elements-input-new">
-			<input id="e_name" class="input-name-el" type="search" name="element-new" placeholder="Ингридиент 1">
-			<input id="e_value" class="input-ml" type="search" name="site_search"><span class="ml">ml</span>
+			<input id="e_name" class="input-name-el" type="search" placeholder="Ингридиент 1">
+			<input id="e_value" class="input-ml" type="search"><span class="ml">ml</span>
 		</p>
 
 		<a href="#" id="add-element" class="btn-green">добавить ингридиент</a>

@@ -97,12 +97,12 @@ $(document).ready(function() {
             .addClass('this_element') //добавим класс, для добавления данных
             .appendTo("#div-elements"); // вставим измененный элемент в конец элемента container
 
-        $('.this_element #e_i_name').val(e_name);//добавляем содержимое элемента
+        $('.this_element #e_i_name').val(e_name)//добавляем содержимое элемента
+        .attr('name','name_element_' + e_number_2);//присвоим новой строке имя элемента
         $('.this_element .name-element').text(e_name);//добавляем содержимое элемента
-        // .attr('name','name_element_' + e_number_2);//присвоим новой строке имя элемента
 
-        $('.this_element .input-ml').val(e_value);//добавляем содержимое элемента
-        // .attr('name','value_element_' + e_number_2);//присвоим новой строке значение
+        $('.this_element .input-ml').val(e_value)//добавляем содержимое элемента
+        .attr('name','value_element_' + e_number_2);//присвоим новой строке значение
         // .function(){
         //   	$(this, '.name-element').text('test');
         //   }
