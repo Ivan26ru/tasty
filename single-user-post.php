@@ -13,20 +13,16 @@ $opisanie = $_POST['opisanie'];
 // ДОБАВЛЕНИЕ ЗАПИСИ ЧЕРЕЗ PHP
 // Создаем массив
   $post_data = array(
-	 'post_title'    => $title_post,
-	 'post_content'  => $opisanie,
-	 'post_status'   => 'pending',
-	 'post_type'     => 'post',
-	 'post_author'   => 1,
-	 'post_category' => array(20)
+	 'post_title'    => $title_post,//заголовок
+	 'post_content'  => $opisanie,//содержимое поста
+	 'post_status'   => 'pending',//на утверждении
+	 'post_type'     => 'post',//тип поста (запись)
+	 'post_author'   => 1,//id от чьего имени публикуется пост
+	 'post_category' => array(20)//в какие рубриках состоит
   );
 
 // Вставляем данные в БД
 $post_id = wp_insert_post( wp_slash($post_data) );//создаем запись
-
-// echo "название поста " . $title_post;
-// echo "описание поста " . $opisanie;
-
 
 
 $key_name='name_element_';//шаблон ключа имени элемента
@@ -37,45 +33,28 @@ $key_n_n = $key_value . (string)$num;
 
 // echo "<hr>" . $key_n_n;
 
-while ($_POST[$key_n_n]){
+while ($_POST[$key_n_n]){//цикл перебора ингридиентов
 
 	$num++;//счетчик для нормального прогона массива
 	$schet++;//количество элеменов, счетчик
-	// echo "<br>" . $num;
-	// echo "<br>" . $schet;
 
-// echo $key_n_n;
-    // echo $_POST[$key_n_n];
-
-
-// if ($_POST[$key_n_n]) {
-//     echo "Массив содержит элемент 'first'.";
-//     // echo $_POST['$key_n_n'];
-
-// }
 
 $key_n_n = $key_name . (string)$schet;//Имя элемента
 $key_v_n = $key_value . (string)$schet;//значение элемента
 
-// echo "<hr><hr>";
 
-// echo $_POST[$key_n_n];
-// echo "<br>";
-// echo $_POST[$key_v_n];
-
-	// echo "<br> сколько полей" . $key_n;
-	// $key_n=$key_n+1;
-if ($_POST[$key_v_n]) {
+if ($_POST[$key_v_n]) {//если строка наименования пустая, то не считать
 	add_post_meta($post_id,'n:'.$_POST[$key_n_n], $_POST[$key_v_n]);//добавляем значение произвольным полям
-}
+}//конец условия
 
 
-};
+};//конец цикла
 
-update_post_meta(246, 'views', '0');//убираем популярность ссылки
+update_post_meta(246, 'views', '0');//обнуляем популярность ссылки
 
 ?>
 
+<!-- дляскрытия хлебных крошек в шапке -->
 <style>
 	.put{
 		display: none;
