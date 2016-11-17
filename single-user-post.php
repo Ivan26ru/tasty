@@ -3,8 +3,8 @@
 <h1>Ваш рецепт отобразиться на сайте, после проверки его администратором сайта</h1>
 
 <?php
-echo('Отправил на утверждение');
-print_r($_POST);
+// echo('Отправил на утверждение');
+// print_r($_POST);
 // echo $_POST["title-recipes"];
 
 $title_post = $_POST['title-recipes'];
@@ -44,8 +44,8 @@ while ($_POST[$key_n_n]){
 	// echo "<br>" . $num;
 	// echo "<br>" . $schet;
 
-echo $key_n_n;
-    echo $_POST[$key_n_n];
+// echo $key_n_n;
+    // echo $_POST[$key_n_n];
 
 
 // if ($_POST[$key_n_n]) {
@@ -70,8 +70,15 @@ add_post_meta($post_id, $_POST[$key_n_n], $_POST[$key_v_n]);//добавляем
 
 };
 
-
+update_post_meta(246, 'views', '0');//убираем популярность ссылки
 
 ?>
+
+<style>
+	.put{
+		display: none;
+	}
+</style>
+
 <?php get_sidebar(); // подключаем footer.php ?>
 <?php get_footer(); // подключаем footer.php ?>

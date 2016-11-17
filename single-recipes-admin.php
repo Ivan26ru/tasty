@@ -24,7 +24,7 @@ get_header(); // подключаем header.php ?>
 	<!-- форма элементов -->
 	<form action="http://tastyvape.ru/user-post" method="post" class="text-center form-elements">
 		<!-- Название рецепта -->
-		<input type="text" name="title-recipes" class="input-name" placeholder="Введите имя">
+		<input type="text" name="title-recipes" class="input-name" placeholder="Введите имя" required>
 		<!-- контейнер элементов -->
 
 		<div class="w263 clearfix">
@@ -65,6 +65,12 @@ get_header(); // подключаем header.php ?>
 //$post_id = wp_insert_post( wp_slash($post_data) );//создаем запись
 //add_post_meta($post_id, 'YOUTUBE3', 'code3');//добавляем значение произвольным полям
   ?>
+<style>
+	.put{
+		display: none;
+	}
+</style>
+<?php update_post_meta(98, 'views', '0');//убираем популярность ссылки ?>
 
 <?php get_sidebar(); // подключаем footer.php ?>
 <?php get_footer(); // подключаем footer.php ?>
