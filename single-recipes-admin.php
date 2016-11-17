@@ -22,7 +22,7 @@ get_header(); // подключаем header.php ?>
 		<!-- .элемент -->
 
 	<!-- форма элементов -->
-	<form action="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/form-recipes.php" method="post" class="text-center form-elements">
+	<form action="http://tastyvape.ru/user-post" method="post" class="text-center form-elements">
 		<!-- Название рецепта -->
 		<input type="text" name="title-recipes" class="input-name" placeholder="Введите имя">
 		<!-- контейнер элементов -->
