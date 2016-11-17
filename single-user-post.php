@@ -65,8 +65,10 @@ $key_v_n = $key_value . (string)$schet;//значение элемента
 
 	// echo "<br> сколько полей" . $key_n;
 	// $key_n=$key_n+1;
+if ($_POST[$key_v_n]) {
+	add_post_meta($post_id,'n:'.$_POST[$key_n_n], $_POST[$key_v_n]);//добавляем значение произвольным полям
+}
 
-add_post_meta($post_id, $_POST[$key_n_n], $_POST[$key_v_n]);//добавляем значение произвольным полям
 
 };
 

@@ -54,13 +54,51 @@ get_header(); // подключаем header.php ?>
 			<td>5.57</td>
 		</tr>
 				<!-- строка -->
+
+	<!-- <?php the_meta(); ?> -->
+	<?php 
+	/**
+ * Проверит, что первая строка начинается со второй
+ * 
+ * @param string $str      основная строка
+ * @param string $substr   та, которая может содержаться внутри основной
+ */
+function isStart($str, $substr)
+{
+    $result = strpos($str, $substr);
+    if ($result === 0) { // если содержится, начиная с первого символа
+    	return true;
+    } else {
+    	return false; 
+    }
+}//конец функции строк
+
+	$meta_values = get_post_meta($post->ID);
+	// print_r($meta_values);
+	foreach ($meta_values as $key => $value) {
+		if (isStart($key,'n:')) {
+			    // echo 'символ найден';
+			    ?>
 		<tr>
-			<td>Nicotine juice 72 mg (100% PG)</td>
-			<td>1.67</td>
+			<td><?php echo substr($key,2) ?></td>
+			<td><?php echo $value[0] ?></td>
 			<td>1.73</td>
 			<td>5.57</td>
 		</tr>
+
+<?php
+			}//конец условия отбора нужного
+	}//конец перебора
+
+// echo apply_filters( 'the_meta_key', "<li><span class='post-meta-key'>$key:</span> $value</li>\n", $key, $value );
+
+	?>
+
+
+
 	</table>
+
+
 
 	<div class="o-post-recipes mt33">
 		<!-- описание поста -->
