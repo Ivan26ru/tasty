@@ -32,28 +32,6 @@ get_header(); // подключаем header.php ?>
 			<th><span>%</span></th>
 		</tr>
 		<!-- содержимое таблицы -->
-		<!-- строка -->
-		<tr>
-			<td>Nicotine juice 72 mg (100% PG)</td>
-			<td>1.67</td>
-			<td>1.73</td>
-			<td>5.57</td>
-		</tr>
-				<!-- строка -->
-		<tr>
-			<td>Nicotine juice 72 mg (100% PG)</td>
-			<td>1.67</td>
-			<td>1.73</td>
-			<td>5.57</td>
-		</tr>
-				<!-- строка -->
-		<tr>
-			<td>Nicotine juice 72 mg (100% PG)</td>
-			<td>1.67</td>
-			<td>1.73</td>
-			<td>5.57</td>
-		</tr>
-				<!-- строка -->
 
 	<!-- <?php the_meta(); ?> -->
 	<?php 
@@ -79,22 +57,20 @@ function isStart($str, $substr)
 		if (isStart($key,'n:')) {
 			    // echo 'символ найден';
 			    ?>
+	  	<!-- строка -->
 		<tr>
 			<td><?php echo substr($key,2) ?></td>
 			<td><?php echo $value[0] ?></td>
 			<td>1.73</td>
 			<td>5.57</td>
 		</tr>
+		<!-- .строка -->
 
 <?php
 			}//конец условия отбора нужного
 	}//конец перебора
 
-// echo apply_filters( 'the_meta_key', "<li><span class='post-meta-key'>$key:</span> $value</li>\n", $key, $value );
-
 	?>
-
-
 
 	</table>
 

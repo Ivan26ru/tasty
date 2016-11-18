@@ -2747,7 +2747,7 @@ body{
     position: absolute;
     position:relative;
     background-color: rgba(0, 0, 0,0.702);
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0px;
     width: 100%;
