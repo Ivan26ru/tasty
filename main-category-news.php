@@ -16,7 +16,7 @@ get_header(); // подключаем header.php ?>
 			<div class="post-other">
 			<!-- миниатюра поста -->
 				<div class="post-other-img">
-				<?php 	if ( has_post_thumbnail() ) the_post_thumbnail(thumbnail,'class=post-shares-img'); // выводим миниатюру поста, если есть
+				<?php 	if ( has_post_thumbnail() ) the_post_thumbnail(full,'class=post-shares-img'); // выводим миниатюру поста, если есть
 						else echo '<img class="post-shares-img" src="http://placehold.it/420x167/2ecc71/ecf0f1">';?>
 
 					<div class="post-other-black-info">

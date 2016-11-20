@@ -62,16 +62,6 @@ echo $widgetNL->widget(array('form' => 2, 'form_type' => 'php')); ?>
 <!-- опрос -->
 <div class="sb-r what">
 	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/what.png" class="sidebar-img">
-<!-- 	<p>Какой вкус вам больше нравится</p>
-	<form action="#">
-	<label>
-		<input type="radio" name="vkus" value="variant1" checked>Вариант 1
-	</label>
-	<label>
-		<input type="radio" name="vkus" value="variant2">Вариант 2
-	</label>
-		<input type="submit" class="btn-green" value="Отправить">
-	</form> -->
 	<?php dynamic_sidebar('left-sidebar'); // выводим сайдбар, имя определено в function.php ?>
 	<?php //echo do_shortcode('[democracy id="1"]'); //вывод шорткода ?>
 </div>
@@ -94,14 +84,22 @@ wp_reset_postdata();?>
 
 <!-- рекламный блок -->
 <?php
-	$args = array( 'posts_per_page' => 100, 'post__not_in' => array($baner1,$baner2),'orderby'=> 'date', 'post_type' => 'baners', 'category' => $category2,'order' => 'DESC' );//выбираем посты соответствующие категории
+	//выбираем посты соответствующие категории
+	$args = array( 'posts_per_page' => 100, 'post__not_in' => array($baner1,$baner2),'orderby'=> 'date', 'post_type' => 'baners', 'category' => $category2,'order' => 'DESC' );
+	// отбираем посты, по массиву выше
 	$myposts = get_posts( $args );
-foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+	// перебор массива постов
+foreach ( $myposts as $post ) : setup_postdata( $post );
+
+if (cus(link)): ?>
 <div class="sb-banner sb-banner-3">
 <a href="<?php cus(link); ?>">
 	<?php the_post_thumbnail('full'); ?>
 </a>
 </div>
+<?php endif ?>
+
+
 	<?php endforeach;
 wp_reset_postdata();?>
 
