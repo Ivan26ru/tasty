@@ -14,12 +14,17 @@ $(document).ready(function() {
     //отображение входа
     $('#a-form-vhod').click(function(e) {
         e.preventDefault();
-        $('#div-form-vhod').removeClass('dn');
+        // $('#div-form-vhod').removeClass('dn');
+        // $('.tabs-dark').removeClass('dn');
+        $('#div-form-vhod').slideDown('1000');
+        $('.tabs-dark').removeClass('dn');
     });
     // .отображение входа
 
     // скрытие формы входа
-    $('#div-form-vhod').click(function() {
+    $('.tabs-dark').click(function() {
+        $(this).addClass('dn');
+        $('#div-form-vhod').slideUp('1000');
         //$('#div-form-vhod').addClass('dn');
     });
     // .скрытие формы входа

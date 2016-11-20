@@ -2757,12 +2757,26 @@ body{
 
 /*контейнер табов*/
 .div-tabs{
+    position:absolute;
+    z-index:4;
+    left:-50%;
+    right:-50%;
     background-color:#fff;
     width:400px;
     height:340px;
     margin:150px auto 0;
 
 }
+
+.tabs-dark{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.7);
+    z-index:3;
+
+}
+
 
 /*кнопки таба*/
 .tab-ul{
