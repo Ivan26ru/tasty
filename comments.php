@@ -27,7 +27,7 @@
 			);
 		$args = array( // опции формы комментирования
 			'fields' => apply_filters('comment_form_default_fields', $fields), // заменяем стандартные поля на поля из массива выше ($fields)
-			'comment_field' => '<textarea class="comments-form-comment comments-form-all'.$class_textarea.'" placeholder="Что вы думаете о данной компании?" id="comment" name="comment" cols="45" rows="8" required></textarea>', // разметка поля для комментирования
+			'comment_field' => '<textarea class="comments-form-comment comments-form-all'.$class_textarea.'" placeholder="Введите Ваш комментарий" id="comment" name="comment" cols="45" rows="8" required></textarea>', // разметка поля для комментирования
 			'must_log_in' => '<p class="must-log-in">Вы должны быть зарегистрированы! '.wp_login_url(apply_filters('the_permalink',get_permalink())).'</p>', // текст "Вы должны быть зарегистрированы!"
 			//'logged_in_as' => '<p class="logged-in-as">'.sprintf(__( 'Вы вошли как <a href="%1$s">%2$s</a>. <a href="%3$s">Выйти?</a>'), admin_url('profile.php'), $user_identity, wp_logout_url(apply_filters('the_permalink',get_permalink()))).'</p>', // разметка "Вы вошли как"
 			'logged_in_as' => '', // разметка "Вы вошли как"
