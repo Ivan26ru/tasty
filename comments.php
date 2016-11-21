@@ -9,7 +9,7 @@
 <!-- комментарии -->
 <div class="comments">
 	<p class="podzagolovok text-center" style="margin-left:0">
-	<span class="line">Оставьте комментарий, нам очень важно ваше мнение</span></p>
+	<span class="line">ОСТАВЬТЕ КОММЕНТАРИЙ, МЫ ЦЕНИМ ВАШЕ МНЕНИЕ</span></p>
 
 
 
