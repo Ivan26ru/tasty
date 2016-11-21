@@ -1,10 +1,11 @@
 // custom scripts
 // alert('hello world!');
-$(document).ready(function() {
+jQuery(document).ready(function( $ ) {
+
     // alert(jQuery.fn.jquery);
 
     // при клике на ссылку плавно поднимаемся вверх
-    $("#back-top").click(function() {
+    $("#back-top").click(function() {//нажатие на стрелку вверх
         $("body,html").animate({
             scrollTop: 0
         }, 800);
@@ -12,49 +13,46 @@ $(document).ready(function() {
     }); // .при клике на ссылку плавно поднимаемся вверх
 
     //отображение входа
-    $('#a-form-vhod').click(function(e) {
-        e.preventDefault();
-        // $('#div-form-vhod').removeClass('dn');
-        // $('.tabs-dark').removeClass('dn');
-        $('#div-form-vhod').slideDown('1000');
-        $('.tabs-dark').removeClass('dn');
+    $('#a-form-vhod').click(function(e) {//клин на кнопку войти
+        e.preventDefault();//отмена обычного поведения
+        $('#div-form-vhod').slideDown('1000');//отобразить форму входа
+        $('.tabs-dark').fadeIn('1000');//отобразить маску затемнения
     });
     // .отображение входа
 
     // скрытие формы входа
-    $('.tabs-dark').click(function() {
-        $(this).addClass('dn');
-        $('#div-form-vhod').slideUp('1000');
-        //$('#div-form-vhod').addClass('dn');
-    });
+    $('.tabs-dark').click(function() {//клик по маске
+        $(this).fadeOut('1000');//скрыть маску
+        $('#div-form-vhod').slideUp('1000');//скрыть форму входа
+    });//.клик по маске
     // .скрытие формы входа
 
 
     // табы
     //отмена перехода по ссылке
-    $('.tab-ul li a').click(function(e) {
-            e.preventDefault();
-        })
+    $('.tab-ul li a').click(function(e) {//клик по кнопке таба
+            e.preventDefault();//отмена обычного поведения
+        });//.клик по кнопке таба
         // переключение табов
-    $('#tab-1').click(function(e) {
-        $('.tab-ul li').removeClass('active');
-        $(this).parent().addClass('active');
-        $('#tab-1').addClass('active');
-        $('.panel').addClass('dn');
-        $('#tab-div-1').removeClass('dn');
+    $('#tab-1').click(function(e) {//клик по кнопке таба вход
+        $('.tab-ul li').removeClass('active');//убрать класс все кнопкам таба
+        $(this).parent().addClass('active');//добавить класс текущему элементу
+        $('#tab-1').addClass('active');//добавить класс
+        $('.panel').addClass('dn');//скрыть все содержимое табов
+        $('#tab-div-1').removeClass('dn');//показать нужное содержимое
     })
 
-    $('#tab-2').click(function(e) {
-            $('.tab-ul li').removeClass('active');
-            $(this).parent().addClass('active');
-            $('.panel').addClass('dn');
-            $('#tab-div-2').removeClass('dn');
-        })
+    $('#tab-2').click(function(e) {//клик по кнопке таба вход
+            $('.tab-ul li').removeClass('active');//Убрать у всех кнопок класс
+            $(this).parent().addClass('active');//добавить текущей кнопке активный класс
+            $('.panel').addClass('dn');//скрыть все содержимое табов
+            $('#tab-div-2').removeClass('dn');//показать нужное содержимое
+        })//клик по кнопке таба вход
         // конец табов
 
 // разрешен ввод только цифр
 
-    $(".input-ml").keydown(function(event) {
+    $(".input-ml").keydown(function(event) {//отслеживание нажатие на строку ввода
         // Разрешаем нажатие клавиш backspace, Del, Tab и Esc
         if ( event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 ||
              // Разрешаем выделение: Ctrl+A
@@ -66,7 +64,7 @@ $(document).ready(function() {
         else {
             // Запрещаем всё, кроме клавиш цифр на основной клавиатуре, а также Num-клавиатуре
             if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
-                event.preventDefault();
+                event.preventDefault();//отмена обычного поведения
             }
         }
     });
@@ -76,6 +74,7 @@ $(document).ready(function() {
 
 
     //---------------добавление рецепта
+
     var e_number = 1;//счетчик
     	e_arr=[];//массив данных
     	e_name='';//имя элемента
@@ -91,10 +90,6 @@ $(document).ready(function() {
         e_name = $('#e_name').val(); //имя элемента
         e_value = $('#e_value').val(); //количество элемента
 
-        // e_arr[e_name]=e_number;
-
-        // alert(e_name + e_value); //проверка вывода значений
-
         $('.elements-input').removeClass('this_element');//убираем класс по которому выбираем только что добавленный элемнет
 
         $('#element-id').clone() // сделаем копию элемента
@@ -108,21 +103,11 @@ $(document).ready(function() {
 
         $('.this_element .input-ml').val(e_value)//добавляем содержимое элемента
         .attr('name','value_element_' + e_number_2);//присвоим новой строке значение
-        // .function(){
-        //   	$(this, '.name-element').text('test');
-        //   }
-        //.text("И снова здравствуйте!")  // изменим текст внутри нее
-
-        // $('#e_name').attr('placeholder','name'); //имя элемента
-        // $('#e_value').attr('placeholder','kol-vo'); //количество элемента
 
 		$("#e_name").val('').attr('placeholder','Ингридиент ' + e_number);//выводит номер игртидиента и сбрасывает состояние
 		$("#e_value").val('');//сбрасывает состояние
 
-
     }); //.нажатие на кнопку отправить
-
-
 
     //---------------- .добавление рецепта
 
