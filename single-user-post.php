@@ -1,11 +1,18 @@
 <?php get_header(); // подключаем header.php ?>
 
+<?php 
+
+if ( is_user_logged_in() ) {//условие если залогинен
+	?>
+
+
 <h1>Ваш рецепт отобразиться на сайте, после проверки его администратором сайта</h1>
 
 <?php
 // echo('Отправил на утверждение');
 // print_r($_POST);
 // echo $_POST["title-recipes"];
+$cur_user_id = get_current_user_id();//ID текущего пользователя
 
 $title_post = $_POST['title-recipes'];
 $opisanie = $_POST['opisanie'];
@@ -17,7 +24,7 @@ $opisanie = $_POST['opisanie'];
 	 'post_content'  => $opisanie,//содержимое поста
 	 'post_status'   => 'pending',//на утверждении
 	 'post_type'     => 'post',//тип поста (запись)
-	 'post_author'   => 1,//id от чьего имени публикуется пост
+	 'post_author'   => $cur_user_id,//id от чьего имени публикуется пост
 	 'post_category' => array(20)//в какие рубриках состоит
   );
 
@@ -60,6 +67,14 @@ update_post_meta(246, 'views', '0');//обнуляем популярность 
 		display: none;
 	}
 </style>
+
+<?php
+
+}
+else {//Если не залогинен
+	echo '<h1>Необходимо зарегистрироваться</h1>';
+}//конец проверки залогинен или нет
+ ?>
 
 <?php get_sidebar(); // подключаем footer.php ?>
 <?php get_footer(); // подключаем footer.php ?>

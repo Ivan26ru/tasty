@@ -1611,12 +1611,15 @@ a.politika {
 .comments-user {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 94px;
     width: 619px;
 }
 
 
 /*ul комментов*/
+
+.comment-list:first-child{
+    margin-top: 94px;
+}
 
 .comment-list {
     margin: 0;

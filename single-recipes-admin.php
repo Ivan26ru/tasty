@@ -6,6 +6,11 @@
  */
 get_header(); // подключаем header.php ?>
 
+<?php 
+
+if ( is_user_logged_in() ) {//условие если залогинен
+	?>
+
 <!-- начало поста -->
 <div class="recipes-admin-div">
 
@@ -70,6 +75,15 @@ get_header(); // подключаем header.php ?>
 		display: none;
 	}
 </style>
+
+<?php
+
+}
+else {//Если не залогинен
+	echo '<h1>Необходимо зарегистрироваться</h1>';
+}//конец проверки залогинен или нет
+ ?>
+
 <?php update_post_meta(98, 'views', '0');//убираем популярность ссылки ?>
 
 <?php get_sidebar(); // подключаем footer.php ?>

@@ -21,7 +21,14 @@ get_header(); // подключаем header.php ?>
 				<button class="search-button" type="submit" id="searchsubmit" ><i class="fa fa-search" aria-hidden="true"></i></button>
 			</form>
 		</div>
-	<a href="#" class="fr btn-green">добавить рецепт</a>
+		<?php 
+		// если залогинен
+		if ( is_user_logged_in() ) {
+		 ?>
+			<a href="/recept-admin" class="fr btn-green">добавить рецепт</a>
+		<?php
+			}
+		 ?>
 </div>
 
 <!-- контейнер таблицы-->
