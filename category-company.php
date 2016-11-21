@@ -5,7 +5,7 @@
  * @subpackage your-clean-template
  */
 get_header(); // подключаем header.php ?>
-
+<h1 class="recipes-h1"><?php single_cat_title();//вывод имени текущей категории ?></h1>
 <!-- Начало рубрики-->
 <table class="list-company">
 <tr>
@@ -26,7 +26,7 @@ get_header(); // подключаем header.php ?>
 <tr class="company-content">
 	<td class="td-img">
 		<div class="company-div-img">
-			<?php 
+			<?php
 // вывод картинки из произвольного поля
 $image = get_field('img');
 

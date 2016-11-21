@@ -7,7 +7,7 @@
 get_header(); // подключаем header.php ?>
 
 <!-- Начало рубрики-->
-
+<h1 class="recipes-h1"><?php single_cat_title();//вывод имени текущей категории ?></h1>
 <div class="video-category">
 <?php if (have_posts()) : while (have_posts()) : the_post(); // если посты есть - запускаем цикл wp ?>
 

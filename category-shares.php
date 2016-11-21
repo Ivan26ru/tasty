@@ -1,11 +1,11 @@
 <?php
 /**
- * Шаблон лучшие девайсы (category-best_device.php)
+ * акции (category-shares.php)
  * @package WordPress
  * @subpackage your-clean-template
  */
 get_header(); // подключаем header.php ?>
-
+<h1 class="recipes-h1"><?php single_cat_title();//вывод имени текущей категории ?></h1>
 <!-- Начало рубрики-->
 <div class="header-category clearfix">
 	<p class="podzagolovok fs12 nazvanie"><span class="line">название</span></p>
@@ -21,9 +21,9 @@ get_header(); // подключаем header.php ?>
 <div class="post-shares clearfix">
 	<!-- миниатюра -->
 	<div class="post-shares-div-img">
-<?php if ( has_post_thumbnail() ) the_post_thumbnail(thumbnail,'class=post-shares-img'); // выводим миниатюру поста, если есть 
+<?php if ( has_post_thumbnail() ) the_post_thumbnail(thumbnail,'class=post-shares-img'); // выводим миниатюру поста, если есть
 else echo '<img class="post-shares-img" src="http://placehold.it/220x120/2ecc71/ecf0f1">';?>
-		
+
 	</div>
 	<!-- содежрание поста -->
 	<div class="post-shares-content">
@@ -44,7 +44,7 @@ else echo '<img class="post-shares-img" src="http://placehold.it/220x120/2ecc71/
 
 
 	<?php endwhile; // конец цикла
-	else: echo '<h2>Нет записей.</h2>'; endif; // если записей нет, напишим "простите" ?>	 
+	else: echo '<h2>Нет записей.</h2>'; endif; // если записей нет, напишим "простите" ?>
 	<?php pagination(); // пагинация, функция нах-ся в function.php ?>
 
 

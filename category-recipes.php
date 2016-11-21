@@ -8,7 +8,7 @@ get_header(); // подключаем header.php ?>
 
 <!-- Начало рубрики-->
 
-<h1 class="recipes-h1">Рецепты</h1>
+<h1 class="recipes-h1"><?php single_cat_title();//вывод имени текущей категории ?></h1>
 
 <!-- строка поиска и добавить рецепт -->
 <div class="search clearfix">
@@ -21,7 +21,7 @@ get_header(); // подключаем header.php ?>
 				<button class="search-button" type="submit" id="searchsubmit" ><i class="fa fa-search" aria-hidden="true"></i></button>
 			</form>
 		</div>
-		<?php 
+		<?php
 		// если залогинен
 		if ( is_user_logged_in() ) {
 		 ?>
@@ -63,7 +63,7 @@ get_header(); // подключаем header.php ?>
 		</tr>
 
 		<?php endwhile; // конец цикла
-	else: echo '<h2>Нет записей.</h2>'; endif; // если записей нет, напишим "простите" ?>	 
+	else: echo '<h2>Нет записей.</h2>'; endif; // если записей нет, напишим "простите" ?>
 	<?php pagination(); // пагинация, функция нах-ся в function.php ?>
 
 	</table>

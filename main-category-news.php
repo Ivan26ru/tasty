@@ -5,7 +5,7 @@
  * @subpackage your-clean-template
  */
 get_header(); // подключаем header.php ?>
-
+<h1 class="recipes-h1"><?php single_cat_title();//вывод имени текущей категории ?></h1>
 	<!-- основное содержание -->
 			<!-- другие посты с картинками -->
 		<div class="div-post-other">
