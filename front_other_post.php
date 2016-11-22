@@ -21,7 +21,7 @@ while ( $query->have_posts() ) {
 			<!-- миниатюра поста -->
 				<div class="post-other-img">
 
-<?php 	if ( has_post_thumbnail() ) the_post_thumbnail('full'); // выводим миниатюру поста, если есть
+<?php 	if ( has_post_thumbnail() ) the_post_thumbnail(array(420,167)); // выводим миниатюру поста, если есть
 						else echo '<img src="http://placehold.it/420x167/2ecc71/ecf0f1">';?>
 					<div class="post-other-black-info">
 						<span class="data data-other"><?php the_time('d.m.Y'); ?></span>
