@@ -1676,18 +1676,18 @@ a.politika {
 /*размер шрифта*/
 
 .fs18 {
-    font-size: 18px;
+    font-size: 18px!important;
 }
 
 
 /*------------------рубрика акции-----------------*/
 
 .fs12 {
-    font-size: 12px;
+    font-size: 12px!important;
 }
 
 .fs16 {
-    font-size: 16px;
+    font-size: 16px!important;
 }
 
 
@@ -1954,8 +1954,12 @@ a.politika {
 
 .th-name {
     width: 470px;
+    text-align: left;
 }
 
+.th-name  .podzagolovok {
+    margin-left: 0;
+}
 
 /*отзыв и рейтинг*/
 
