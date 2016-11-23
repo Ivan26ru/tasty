@@ -13,10 +13,15 @@ get_header(); // подключаем header.php ?>
 
 	<!-- начало поста -->
 	<div class="video-div">
+	<a href="<?php the_permalink() ?>" class="video-read green">
 		<!-- контейнер картинки -->
 		<div class="video-div-img">
-			<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/video.png">
+
+		<?php 	the_post_thumbnail(array(265,145)); // выводим миниатюру поста, если есть ?>
+
+			
 		</div>
+	</a>
 		<!-- Заголовок поста -->
 			<p class="video-title"><?php the_title(); ?></p>
 		<!-- ссылка смотреть -->

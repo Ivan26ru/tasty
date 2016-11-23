@@ -415,11 +415,10 @@ article {
 
 
 /*заголовок для блока*/
-
 .title-block {
     height: 35px;
-    width: 250px;
-    margin-left: 145px;
+    width: 300px;
+    margin-left: 95px;
     text-align: right;
     line-height: 1.2;
 }
@@ -1533,7 +1532,7 @@ a.politika {
     height: 7px;
     font-size: 10px;
     font-family: "Verdana";
-    color: rgb(204, 204, 204);
+    color: #555;
     font-style: italic;
     line-height: 1.2;
     text-align: left;
@@ -1983,7 +1982,7 @@ a.politika {
 /*ячейка миниатюры*/
 
 .td-img {
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -1991,7 +1990,7 @@ a.politika {
 
 .company-div-img {
     display: inline-block;
-    max-width: 120px;
+    max-width: 105px;
     min-height: 110px;
     overflow: hidden;
 }
