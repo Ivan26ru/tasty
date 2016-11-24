@@ -303,5 +303,9 @@ function kama_get_most_viewed($args=''){
 		return $out;
 }
 
+/* Отключаем админ панель для всех, кроме администраторов. */
+if (current_user_can('subscriber')):
+  show_admin_bar(false);
+endif;
 
 ?>
