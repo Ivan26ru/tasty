@@ -21,9 +21,11 @@ get_header(); // подключаем header.php ?>
 	<!-- рейтинг -->
 	<div class="video-rejting">
 		<p class="video-rejitng">Рейтинг:
-		<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
+<!--		<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
 		<span class="green font-rr">+12</span>
 		<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+-->
 		</p>
 	</div>
 	<!-- автор -->
