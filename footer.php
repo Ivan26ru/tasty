@@ -35,14 +35,21 @@
 					<!-- вход + соцсети -->
 					<div class="footer-soc">
 						<div class="footer-vhod">
-							<a href="#" class="footer-zamok">ВОЙТИ</a>
-							<a href="#" class="footer-key">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+						<?php if ( is_user_logged_in() ) {//условие залогиненности |-> Если пользователь залогинен
+							?>
+							<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Выход">Выход</a>
+							<?php 
+						}else{
+						?>
+							<a href="<?php echo site_url(); ?>\wp-login.php" class="footer-zamok">ВОЙТИ</a>
+							<a href="<?php echo site_url(); ?>\wp-login.php?action=register" class="footer-key">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+							<?php } ?>
 						</div>
 						<div class="footer-socseti">
-							<a href="#" class="vk">
+							<a href="<?php $link_vk = get_post_meta( '2', 'link_vk', true ); echo $link_vk; ?>" class="vk">
 								<i class="fa fa-vk" aria-hidden="true"></i>
 							</a>
-							<a href="#" class="inst">
+							<a href="<?php $link_ok = get_post_meta( '2', 'link_ok', true ); echo $link_ok; ?>" class="inst">
 								<i class="fa fa-instagram" aria-hidden="true"></i>
 							</a>
 						</div>
