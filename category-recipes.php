@@ -56,9 +56,14 @@ get_header(); // подключаем header.php ?>
 			<td class="rec-td-avtor"><?php the_author(); ?></td>
 			<td class="rec-td-data"><?php the_time('j F H:i'); ?></td>
 			<td class="rec-td-rejting">
-				<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+<!-- 				<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
 				<span class="green font-rr">+12</span>
-				<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+				<i class="fa fa-thumbs-o-up" aria-hidden="true"></i> -->
+						<div class="rejt-div">
+			<div class="rejt-vol">
+			<?php if(function_exists('the_ratings')) { the_ratings(); } ?>	
+ 			</div>
+		</div>
 			</td>
 		</tr>
 
