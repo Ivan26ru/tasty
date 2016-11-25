@@ -42,7 +42,7 @@ if( !empty($image) ): ?>
 
 <?php endif; ?>
 		</div>
-		<p class="skidka"><?php cus('skidka');// функция вывода произвольного поля?></p>
+		<p class="skidka"><?php cus('skidka');// функция вывода произвольного?></p>
 		<div class="pokupka">
 			<a href="http://<?php echo get_post_custom_values('china')[0] ?>" class="pokupka-china">купить в Китае</a>
 			<br>
