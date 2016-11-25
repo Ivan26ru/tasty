@@ -8,9 +8,9 @@
 
 <?php $args = array( 	'cat' => array('7','4'),
 						'post_type'=>'post',
-  'posts_per_page'         => '3',
-  'posts_per_archive_page' => '3',
-						//'post__not_in'=> $post_front_top //исключить посты, указанные выше(РАБОТАЕТ)
+  'posts_per_page'         => '5',
+  'posts_per_archive_page' => '5',
+						'post__not_in'=> $post_front_top //исключить посты, указанные выше(РАБОТАЕТ)
  );
 $query = new WP_Query( $args );
 while ( $query->have_posts() ) {
