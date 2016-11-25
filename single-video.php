@@ -20,13 +20,10 @@ get_header(); // подключаем header.php ?>
 <div class="rejting-avtor clearfix">
 	<!-- рейтинг -->
 	<div class="video-rejting">
-		<p class="video-rejitng">Рейтинг:
-<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
-<!--		<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-		<span class="green font-rr">+12</span>
-		<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
--->
-		</p>
+<div class="rejt-name">Рейтинг:</div>
+			<div class="rejt-vol">
+			<?php if(function_exists('the_ratings')) { the_ratings(); } ?>	
+ 			</div>
 	</div>
 	<!-- автор -->
 	<div class="video-avtor">

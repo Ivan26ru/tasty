@@ -2165,6 +2165,11 @@ a.politika {
 }
 
 
+.video-rejting .rejt-name{
+    border-bottom:none;
+}
+
+
 /*контейнер автор*/
 
 .video-avtor {
@@ -2418,7 +2423,16 @@ a.politika {
 
 
 /*-----------------страница рецепты------------------------*/
+/*контейнер рейтинга*/
+.rejt-name{
+    border-bottom: 1px solid #e8e8e8;
+    padding: 10px 0;
+}
 
+/*блок слова рейтинг и самого рейтинга*/
+.rejt-name, .rejt-vol{
+    display: inline-block;
+}
 
 /*блок с контактами*/
 

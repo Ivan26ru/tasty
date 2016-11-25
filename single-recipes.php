@@ -15,13 +15,11 @@ get_header(); // подключаем header.php ?>
 	<div class="p-recipes-div-kont">
 		<p>Автор:<span><?php the_author(); ?></span></p>
 		<p>Дата:<span><?php the_time('j F H:i'); ?></span></p>
-		<p>Рейтинг:
-			<span>
-				<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-				<span class="green font-rr">+12</span>
-				<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-			</span>
-		</p>
+		<div class="rejt-div"><div class="rejt-name">Рейтинг:</div>
+			<div class="rejt-vol">
+			<?php if(function_exists('the_ratings')) { the_ratings(); } ?>	
+ 			</div>
+		</div>
 	</div>
 	<!-- таблица ингридиенты -->
 	<table class="post-recipes-ingredient">
