@@ -2424,8 +2424,13 @@ a.politika {
 
 /*-----------------страница рецепты------------------------*/
 /*контейнер рейтинга*/
+.rejt-div{
+	    border-bottom: 1px solid #e8e8e8;
+	    margin-bottom: 16px;
+}
+
 .rejt-name{
-    border-bottom: 1px solid #e8e8e8;
+
     padding: 10px 0;
 }
 
