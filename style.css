@@ -1176,7 +1176,7 @@ a.politika {
 /*отступ постов друг от друга, кроме первого*/
 
 .div-post-best_device:not(:nth-child(4)) {
-    margin-top: 197px;
+    margin-top: 100px;
 }
 
 .podzagolovok {
