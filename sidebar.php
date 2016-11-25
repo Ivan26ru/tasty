@@ -30,7 +30,7 @@ $baner3 = 200;
 </div>
 <!-- лучшие девайсы -->
 <div class="best-device">
-	<p class="zagolovok"><a href="<?php get_category_link( 'best_device' ); ?>"><span class="line">лучшие девайсы</span></a></p>
+	<p class="zagolovok"><a href="<?php echo get_category_link( '10' ); ?>"><span class="line">лучшие девайсы</span></a></p>
 	<a href="http://tastyvape.ru/category/best_device/box_mods/" class="best-device-a d1"><span>BOX MODS</span></a>
 	<a href="http://tastyvape.ru/category/best_device/mechanical_mod/" class="best-device-a d2"><span>Mechanical  Mod</span></a>
 	<a href="http://tastyvape.ru/category/best_device/rdas/" class="best-device-a d3"><span>RDas</span></a>
