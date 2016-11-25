@@ -115,7 +115,7 @@ function cus($stroka){
 }
 
 // своя страница настроек темы
-include('myparameters.php');
+// include('myparameters.php');
 
 // вставка картинки на странице настроек(js файл вставляем)
 function true_include_myuploadscript() {
@@ -303,7 +303,7 @@ function kama_get_most_viewed($args=''){
 		return $out;
 }
 
-/* Отключаем админ панель для всех, кроме администраторов. */
+/* Отключаем админ панель для подписчиков */
 if (current_user_can('subscriber')):
   show_admin_bar(false);
 endif;
