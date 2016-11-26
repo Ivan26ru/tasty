@@ -23,7 +23,7 @@ if( !empty($image) ): ?>
 
 
 
-<p class="text-other-2"><?php add_filter('the_content','htm_image_content_filter',11); ?>
+<p class="text-other-2"><?php //add_filter('the_content','htm_image_content_filter',11); ?>
 <?php the_content(); // контент без картинок?></p>
 
 <div class="soc-f-vk">
