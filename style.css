@@ -2424,7 +2424,7 @@ a.politika {
 
 /*-----------------страница рецепты------------------------*/
 /*контейнер рейтинга*/
-.rejt-div{
+.p-recipes-div-kont .rejt-div{
 	    border-bottom: 1px solid #e8e8e8;
 	    margin-bottom: 16px;
 }
