@@ -32,9 +32,9 @@ else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/
 				<tr>
 					<td>Рейтинг:</td>
 					<td>
-						<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-						<span class="green font-rr">+12</span>
-						<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+						<div class="rejt-vol">
+						<?php if(function_exists('the_ratings')) { the_ratings(); } ?>	
+			 			</div>
 					</td>
 				</tr>
 				<tr>
