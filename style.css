@@ -2896,6 +2896,7 @@ body {
 }
 
 /*кнопка меньше 18 при наведении*/
-.window-18-no:hover{
+.window-18-no:hover,
+.window-18-no:focus{
     background-color:#777
 }
