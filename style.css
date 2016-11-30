@@ -2887,12 +2887,14 @@ body {
   font-family: "Roboto";
   color: rgb(0, 0, 0);
   padding: 0 30px;
+  font-family: "Roboto";
 }
 
 /*кнопка меньше 18*/
 .window-18-no{
     background-color: #a2a2a2;
     margin-left: 15px;
+
 }
 
 /*кнопка меньше 18 при наведении*/
