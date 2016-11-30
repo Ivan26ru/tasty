@@ -87,7 +87,10 @@ while ( $query->have_posts() ) {
 			</div>
 		</article>
 		
+		<!-- подключение слайдера -->
+<?php include('slider.php'); ?>
 
+<!-- подключение остальных постов нижние -->
 <?php include('front_other_post.php'); ?>
 
 

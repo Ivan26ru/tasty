@@ -2902,3 +2902,13 @@ body {
 .window-18-no:focus{
     background-color:#777
 }
+
+
+/*---------СЛАЙДЕР---------*/
+.slider-block{
+    margin-top: 38px;
+}
+
+.slider-block img{
+    width: 850px;
+}
