@@ -28,9 +28,10 @@ body * {
     font-family: "Roboto";
 }
 
-body .dn{
+body .dn {
     display: none;
 }
+
 
 /*текст по центру*/
 
@@ -269,7 +270,7 @@ a {
 
 /*путь к странице*/
 
-.put{
+.put {
     font-size: 10px;
     font-family: "Roboto";
     color: rgb(51, 204, 153);
@@ -282,6 +283,7 @@ a {
 .put a {
     color: rgb(51, 204, 153);
 }
+
 
 /*==================================*/
 
@@ -373,8 +375,11 @@ article {
 
 
 /*кратное описание новости*/
+
+
 /*максимальная ширина картинки, что б не выходила за блок*/
-section img{
+
+section img {
     max-width: 100%;
 }
 
@@ -419,6 +424,7 @@ section img{
 
 
 /*заголовок для блока*/
+
 .title-block {
     height: 35px;
     width: 300px;
@@ -726,10 +732,13 @@ sidebar {
     height: 20px;
 }
 
+
 /*ширина строки ввода*/
-.wysija-input{
-    width:178px;
+
+.wysija-input {
+    width: 178px;
 }
+
 
 /*ввод email при фокусе*/
 
@@ -740,6 +749,7 @@ sidebar {
 
 
 /*зеленая кнопка в сайд баре*/
+
 #loginform input[type="submit"],
 .btn-green,
 .wysija-submit {
@@ -759,6 +769,7 @@ sidebar {
 
 
 /*зеленая кнопка при наведении*/
+
 #loginform input[type="submit"]:hover,
 .btn-green:focus,
 .btn-green:hover,
@@ -1343,10 +1354,13 @@ a.politika {
     color: rgb(234, 88, 88);
 }
 
+
 /*Характеристики*/
-.harki{
+
+.harki {
     clear: both;
 }
+
 
 /*точка*/
 
@@ -1620,7 +1634,7 @@ a.politika {
 
 /*ul комментов*/
 
-.comment-list:first-child{
+.comment-list:first-child {
     margin-top: 94px;
 }
 
@@ -1960,9 +1974,10 @@ a.politika {
     text-align: left;
 }
 
-.th-name  .podzagolovok {
+.th-name .podzagolovok {
     margin-left: 0;
 }
+
 
 /*отзыв и рейтинг*/
 
@@ -2039,9 +2054,11 @@ a.politika {
     border-bottom: 1px solid #e8e8e8;
 }
 
+
 /*Убрал линию последнего элементы*/
-.tr-hr:last-child td{
-    border-bottom:none;
+
+.tr-hr:last-child td {
+    border-bottom: none;
 }
 
 .tr-null-2 td {
@@ -2168,9 +2185,8 @@ a.politika {
     margin-left: 18px;
 }
 
-
-.video-rejting .rejt-name{
-    border-bottom:none;
+.video-rejting .rejt-name {
+    border-bottom: none;
 }
 
 
@@ -2427,21 +2443,27 @@ a.politika {
 
 
 /*-----------------страница рецепты------------------------*/
+
+
 /*контейнер рейтинга*/
-.p-recipes-div-kont .rejt-div{
-	    border-bottom: 1px solid #e8e8e8;
-	    margin-bottom: 16px;
+
+.p-recipes-div-kont .rejt-div {
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 16px;
 }
 
-.rejt-name{
-
+.rejt-name {
     padding: 10px 0;
 }
 
+
 /*блок слова рейтинг и самого рейтинга*/
-.rejt-name, .rejt-vol{
+
+.rejt-name,
+.rejt-vol {
     display: inline-block;
 }
+
 
 /*блок с контактами*/
 
@@ -2584,14 +2606,16 @@ a.politika {
     border-radius: 3px;
 }
 
-.w263{
+.w263 {
     width: 263px;
     margin: 0 auto;
 }
+
+
 /*элементы*/
 
 .elements-input:first-child {
-margin-top: 40px;
+    margin-top: 40px;
 }
 
 .elements-input {
@@ -2603,12 +2627,16 @@ margin-top: 40px;
     clear: both;
 }
 
+
 /*label метка элемента*/
-.elements-input label{
+
+.elements-input label {
     line-height: 28px;
 }
 
+
 /*название элемента*/
+
 .name-element {
     max-width: 157px;
     float: left;
@@ -2617,12 +2645,16 @@ margin-top: 40px;
     text-align: left;
 }
 
+
 /*контейнер для ввода ml*/
-.span-input-ml{
+
+.span-input-ml {
     float: right;
 }
 
+
 /*строка ввода ml*/
+
 .input-ml {
     width: 40px;
     height: 28px;
@@ -2632,7 +2664,9 @@ margin-top: 40px;
     text-align: center;
 }
 
+
 /*ml*/
+
 .ml {
     border-radius: 0 3px 3px 0;
     background-color: #dddddd;
@@ -2643,14 +2677,18 @@ margin-top: 40px;
     line-height: 28px
 }
 
+
 /*строка ввода нового элемента*/
-.elements-input-new{
+
+.elements-input-new {
     margin-top: 45px;
     margin-bottom: 0;
 }
 
+
 /*строка ввода элемента*/
-.input-name-el{
+
+.input-name-el {
     /*width: 173px;*/
     float: left;
     height: 28px;
@@ -2667,18 +2705,22 @@ margin-top: 40px;
     margin-right: 25px;
 }
 
+
 /*отступ для зеленой кнопки*/
-.form-elements .btn-green{
+
+.form-elements .btn-green {
     margin-top: 40px;
 }
 
+
 /*описание рецепта*/
-.opisanie{
-width: 246px;
-height: 113px;
-margin-top: 40px;
+
+.opisanie {
+    width: 246px;
+    height: 113px;
+    margin-top: 40px;
     border: 1px solid #d1d1d1;
-     padding-left: 14px;
+    padding-left: 14px;
     font-size: 10px;
     font-family: "Verdana";
     color: rgb(204, 204, 204);
@@ -2689,41 +2731,48 @@ margin-top: 40px;
     border-radius: 3px;
 }
 
+
 /*---------страница статей----------*/
 
+
 /*описание*/
-.text-other-2{
-  font-size: 14px;
-  font-family: "Roboto";
-  color: rgb(51, 51, 51);
-  line-height: 1.2;
-  text-align: left;
+
+.text-other-2 {
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(51, 51, 51);
+    line-height: 1.2;
+    text-align: left;
 }
+
 
 /*Общие стили*/
-.soc-f-vk *{
-color: #fff;
+
+.soc-f-vk * {
+    color: #fff;
 }
 
-.soc-f-vk span{
+.soc-f-vk span {
     margin-left: 25px;
-  font-size: 11px;
-  font-family: "Roboto";
-  line-height: 1.2;
-  text-align: left;
-  -moz-transform: matrix( 0.92489803567102,0,0,0.92489803567102,0,0);
-  -webkit-transform: matrix( 0.92489803567102,0,0,0.92489803567102,0,0);
-  -ms-transform: matrix( 0.92489803567102,0,0,0.92489803567102,0,0);
+    font-size: 11px;
+    font-family: "Roboto";
+    line-height: 1.2;
+    text-align: left;
+    -moz-transform: matrix( 0.92489803567102, 0, 0, 0.92489803567102, 0, 0);
+    -webkit-transform: matrix( 0.92489803567102, 0, 0, 0.92489803567102, 0, 0);
+    -ms-transform: matrix( 0.92489803567102, 0, 0, 0.92489803567102, 0, 0);
 }
 
-.soc-f-vk .fa{
+.soc-f-vk .fa {
     display: inline-block;
     line-height: 30px;
     float: left;
 }
 
+
 /*стиль F*/
-.f-book{
+
+.f-book {
     display: inline-block;
     width: 155px;
     margin-right: 30px;
@@ -2732,8 +2781,10 @@ color: #fff;
     background-color: #4663a0;
 }
 
+
 /*стиль иконки F*/
-.f-book .fa{
+
+.f-book .fa {
     height: 30px;
     width: 30px;
     text-align: center;
@@ -2741,8 +2792,10 @@ color: #fff;
     background-color: #3c5b9b;
 }
 
+
 /*стиль VK*/
-.vk-blue{
+
+.vk-blue {
     display: inline-block;
     width: 155px;
     margin-right: 30px;
@@ -2751,8 +2804,10 @@ color: #fff;
     background-color: #567699;
 }
 
+
 /*стиль иконки VK*/
-.vk-blue .fa{
+
+.vk-blue .fa {
     height: 30px;
     width: 30px;
     text-align: center;
@@ -2760,111 +2815,87 @@ color: #fff;
     background-color: #43678d;
 }
 
+
 /*=-=-=-=-=-мелкие доработки=-=-=-=-=-*/
 
+
 /*картинка стандартной записи в новостях и т.д.*/
-.art-img{
-    max-width:850px
+
+.art-img {
+    max-width: 850px
 }
 
 
 /*---------------ВХОД--------------------*/
-body{
- position:relative;
+
+body {
+    position: relative;
 }
 
-.div-form-vhod{
-    position: absolute;
-    position:relative;
-    background-color: rgba(0, 0, 0,0.702);
-    position: fixed;
-    left: 0px;
-    top: 0px;
+
+/*ВАМ ЕСТЬ 18 ЛЕТ*/
+
+
+/*затемняющий фон*/
+
+.tabs-dark {
     width: 100%;
-    height:100%;
-    z-index:3;
-}
-
-/*контейнер табов*/
-.div-tabs{
-    position:absolute;
-    z-index:4;
-    left:-50%;
-    right:-50%;
-    background-color:#fff;
-    width:400px;
-    height:340px;
-    margin:150px auto 0;
-
-}
-
-.tabs-dark{
-    position:fixed;
-    width:100%;
-    height:100%;
-    background-color:rgba(0,0,0,0.7);
-    z-index:3;
-
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.702;
+    position: fixed;
+    z-index: 6;
 }
 
 
-/*кнопки таба*/
-.tab-ul{
-    border-bottom:1px solid #e8e8e8;
-    height:52px;
-    padding:0;
-}
+/* блок окна  */
 
-/*кнопка таба*/
-.tab-ul li{
-    display:inline-block;
-    line-height:52px;
-    margin-left:60px;
-    text-transform:uppercase;
-}
-
-/*первая кнопка*/
-.tab-ul li:first-child{
-    margin-left:84px;
-}
-
-/*активная кнопка*/
-.tab-ul li.active{
-    border-bottom:1px solid #00cd98;
-}
-
-/*строки по центру*/
-#loginform p{
-    text-align:center;
-/*     outline:1px solid red; */
-}
-/*фон input строк кроме отправить*/
-#loginform input:not([type="submit"]){
-    background-color:#fff;
-    border: none;
-    border-bottom: 1px solid rgb(232, 232, 232);
-    width: 215px;
-    font-size: 10px;
-    font-family: "Verdana";
-    color: rgb(204, 204, 204);
-    font-style: italic;
-    line-height: 1.2;
-    text-align: left;
-    padding-bottom: 10px;
-}
-
-
-#loginform input[type="submit"]{
-    margin-top:30px;
-}
-
-.panel li a{
-    display:block;
-    margin: 0;
-    font-size: 10px;
-    font-family: "Verdana";
-    color: #00cd98;
-    font-style: italic;
-    line-height: 1.8;
+.window-18 {
+    position: absolute;
+    padding: 35px 40px 40px 40px;
+    z-index: 7;
+    background-color: #fff;
+    width: 508px;
+    height: 161px;
+    /*  выравнивание по центру    */
+    margin: 297px auto 0;
+    right: 0;
+    left: 0;
     text-align: center;
+}
+
+/*заголовок*/
+.window-18-title {
+    display: inline-block;
+    margin: 0;
+}
+
+/*информационный текст*/
+.window-18-info {
+    margin-top: 20px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    line-height: 1.429;
+}
+
+/*кнопки есть 18 и нет*/
+.window-18-yes,
+.window-18-no{
+    height:30px;
+    line-height:30px;
+  font-size: 14px;
+  font-family: "Roboto";
+  color: rgb(0, 0, 0);
+  padding: 0 30px;
+}
+
+/*кнопка меньше 18*/
+.window-18-no{
+    background-color: #a2a2a2;
+    margin-left: 15px;
+}
+
+/*кнопка меньше 18 при наведении*/
+.window-18-no:hover{
+    background-color:#777
 }
