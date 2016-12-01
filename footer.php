@@ -10,8 +10,8 @@
 </div>
 <!-- конец container -->
 	<footer>
-<!-- Yandex.Metrika counter --> 
-<script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter41269184 = new Ya.Metrika({ id:41269184, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> 
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter41269184 = new Ya.Metrika({ id:41269184, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script>
 <!-- /Yandex.Metrika counter -->
 	<!-- по центру -->
 			<div class="footer footer-1">
@@ -41,7 +41,7 @@
 						<?php if ( is_user_logged_in() ) {//условие залогиненности |-> Если пользователь залогинен
 							?>
 							<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Выход">Выход</a>
-							<?php 
+							<?php
 						}else{
 						?>
 							<a href="<?php echo site_url(); ?>\wp-login.php" class="footer-zamok">ВОЙТИ</a>
@@ -72,6 +72,23 @@
 
 <?php wp_footer(); // необходимо для работы плагинов и функционала  ?>
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/jquery.placeholder.min.js'></script>
+<!-- слайдеры -->
+<script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/owl-carousel/owl.carousel.min.js?<?php $date_css=date('YmdHis'); echo $date_css; // мои стили шаблона ВСЕГДА ОБНОВЛЯЮТСЯ?>'></script>
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/main.js?<?php $date_css=date('YmdHis'); echo $date_css; // мои стили шаблона ВСЕГДА ОБНОВЛЯЮТСЯ?>'></script>
+<script>
+jQuery(document).ready(function() {
+	alert(jQuery.fn.jquery);
+	jQuery("#owl-example").owlCarousel({
+	    autoPlay : 3000,
+	    stopOnHover : true,
+	    navigation:true,
+	    paginationSpeed : 1000,
+	    goToFirstSpeed : 2000,
+	    singleItem : true,
+	    autoHeight : true,
+	    transitionStyle:"fade"
+	});
+});
+</script>
 </body>
 </html>
