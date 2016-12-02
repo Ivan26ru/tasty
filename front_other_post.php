@@ -41,9 +41,9 @@ while ( $query->have_posts() ) {
 
 	<?php } ?>
 
-		<div class="pagination-index">
-			<?php pagination(); // пагинация, функция нах-ся в function.php ?>
-		</div>
+<!-- 		<div class="pagination-index">
+			<?php //pagination(); // пагинация, функция нах-ся в function.php ?>
+		</div> -->
 
 	<?php wp_reset_postdata(); ?>
 
