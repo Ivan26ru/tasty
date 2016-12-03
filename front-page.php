@@ -32,7 +32,7 @@ while ( $query->have_posts() ) {
 				<div class="news clearfix">
 					<span class="data data-block"><?php the_time('d.m.Y'); ?></span>
 					<p class="title title-block"><?php the_title(); ?></p>
-					<p class="text text-block"><?php the_truncated_post( 400 ); ?></p>
+					<p class="text text-block"><?php the_truncated_post( 350 ); ?></p>
 					<a href="<?php the_permalink() ?>" class="read-all read-all-block">читать полностью...</a>
 				</div>
 
@@ -73,7 +73,7 @@ while ( $query->have_posts() ) {
 				<div class="news clearfix">
 					<span class="data data-block"><?php the_time('d.m.Y'); ?></span>
 					<p class="title title-block"><?php the_title(); ?></p>
-					<p class="text text-block"><?php the_truncated_post( 400 ); ?></p>
+					<p class="text text-block"><?php the_truncated_post( 350 ); ?></p>
 					<a href="<?php the_permalink() ?>" class="read-all read-all-block">читать полностью...</a>
 				</div>
 
@@ -86,7 +86,7 @@ while ( $query->have_posts() ) {
 
 			</div>
 		</article>
-		
+
 		<!-- подключение слайдера -->
 <?php include('slider.php'); ?>
 
