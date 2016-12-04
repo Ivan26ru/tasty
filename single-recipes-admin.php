@@ -6,7 +6,7 @@
  */
 get_header(); // подключаем header.php ?>
 
-<?php 
+<?php
 
 if ( is_user_logged_in() ) {//условие если залогинен
 	?>
@@ -34,6 +34,98 @@ if ( is_user_logged_in() ) {//условие если залогинен
 
 		<div class="w263 clearfix">
 		<div id="div-elements">
+		<!-- элементы по умолчанию -->
+
+		<!-- Amount to make -->
+		<p id="element-id" class="elements-input">
+		<label class="clearfix" class="clearfix">
+			<span class="name-element">Amount to make</span>
+			<span class="span-input-ml">
+				<input type="text" name="e_i_name" id="e_i_name" class="dn">
+				<input class="input-ml" type="search" name="русское слово"><span class="ml">ml</span>
+			</span>
+		</label>
+		</p>
+		<!-- .Amount to make -->
+
+		<!-- Desired strength -->
+		<p id="element-id" class="elements-input">
+		<label class="clearfix" class="clearfix">
+			<span class="name-element">Desired strength</span>
+			<span class="span-input-ml">
+				<input type="text" name="e_i_name" id="e_i_name" class="dn">
+				<input class="input-ml" type="search" name="русское слово"><span class="ml">ml</span>
+			</span>
+		</label>
+		</p>
+		<!-- .Desired strength -->
+
+		<!-- Desired PG -->
+		<p id="element-id" class="elements-input">
+		<label class="clearfix" class="clearfix">
+			<span class="name-element">Desired PG</span>
+			<span class="span-input-ml">
+				<input type="text" name="e_i_name" id="e_i_name" class="dn">
+				<input class="input-ml" type="search" name="русское слово"><span class="ml">ml</span>
+			</span>
+		</label>
+		</p>
+		<!-- .Desired PG -->
+		<!-- Desired VG -->
+		<p id="element-id" class="elements-input">
+		<label class="clearfix" class="clearfix">
+			<span class="name-element">Desired VG</span>
+			<span class="span-input-ml">
+				<input type="text" name="e_i_name" id="e_i_name" class="dn">
+				<input class="input-ml" type="search" name="русское слово"><span class="ml">ml</span>
+			</span>
+		</label>
+		</p>
+		<!-- .Desired VG -->
+		<!-- Nicotine strength -->
+		<p id="element-id" class="elements-input">
+		<label class="clearfix" class="clearfix">
+			<span class="name-element">Nicotine strength</span>
+			<span class="span-input-ml">
+				<input type="text" name="e_i_name" id="e_i_name" class="dn">
+				<input class="input-ml" type="search" name="русское слово"><span class="ml">ml</span>
+			</span>
+		</label>
+		</p>
+		<!-- .Nicotine strength -->
+		<!-- элемент -->
+		<p id="element-id" class="elements-input">
+		<label class="clearfix" class="clearfix">
+			<span class="name-element">PG-content of nicotine</span>
+			<span class="span-input-ml">
+				<input type="text" name="e_i_name" id="e_i_name" class="dn">
+				<input class="input-ml" type="search" name="русское слово"><span class="ml">ml</span>
+			</span>
+		</label>
+		</p>
+		<!-- .элемент -->
+		<!-- элемент -->
+		<p id="element-id" class="elements-input">
+		<label class="clearfix" class="clearfix">
+			<span class="name-element">VG-content of nicotine</span>
+			<span class="span-input-ml">
+				<input type="text" name="e_i_name" id="e_i_name" class="dn">
+				<input class="input-ml" type="search" name="русское слово"><span class="ml">ml</span>
+			</span>
+		</label>
+		</p>
+		<!-- .элемент -->
+		<p id="element-id" class="elements-input">
+		<label class="clearfix" class="clearfix">
+			<span class="name-element">Desired PG</span>
+			<span class="span-input-ml">
+				<input type="text" name="e_i_name" id="e_i_name" class="dn">
+				<input class="input-ml" type="search" name="русское слово"><span class="ml">ml</span>
+			</span>
+		</label>
+		</p>
+		<!-- .элемент -->
+		<!-- .элементы по умолчанию -->
 
 
 
