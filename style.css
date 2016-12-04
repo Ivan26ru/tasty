@@ -2644,7 +2644,7 @@ a.politika {
 /*название элемента*/
 
 .name-element {
-    max-width: 157px;
+    max-width: 156px;
     float: left;
     margin-right: 25px;
     display: inline-block;
@@ -2663,11 +2663,12 @@ a.politika {
 
 .input-ml {
     width: 40px;
-    height: 28px;
+    height: 26px;
     border: 1px solid #d1d1d1;
     border-radius: 3px 0 0 3px;
     font-size: 12px;
     text-align: center;
+    padding: 0;
 }
 
 
@@ -2766,7 +2767,41 @@ a.politika {
     border-radius:4px;
 }
 
+/*данные рецепта*/
+.recipes-table{
+    width: 100%;
+}
+.table-info-r{
+border-collapse: collapse;
+margin: auto;
+margin-top: 75px;
+}
 
+.table-info-r th{
+    font-size:12px;
+    text-align:left;
+    height: 34px;
+    text-align: center;
+    vertical-align: top;
+    width: 63px;
+}
+
+.table-info-r th:first-child{
+    text-align: left;
+    width: 280px;
+}
+
+.table-info-r td{
+    font-size:16px;
+    height: 31px;
+    border-bottom: 1px solid #e8e8e8;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table-info-r td:first-child{
+    text-align: left;
+}
 
 /*---------страница статей----------*/
 
