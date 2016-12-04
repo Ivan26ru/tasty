@@ -43,21 +43,21 @@ jQuery(document).ready(function($) {
 
     // разрешен ввод только цифр
 
-    $(".input-ml").keydown(function(event) { //отслеживание нажатие на строку ввода
-        // Разрешаем нажатие клавиш backspace, Del, Tab и Esc
-        if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 ||
-            // Разрешаем выделение: Ctrl+A
-            (event.keyCode == 65 && event.ctrlKey === true) ||
-            // Разрешаем клавиши навигации: Home, End, Left, Right
-            (event.keyCode >= 35 && event.keyCode <= 39)) {
-            return;
-        } else {
-            // Запрещаем всё, кроме клавиш цифр на основной клавиатуре, а также Num-клавиатуре
-            if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
-                event.preventDefault(); //отмена обычного поведения
-            }
-        }
-    });
+    // $(".input-ml").keydown(function(event) { //отслеживание нажатие на строку ввода
+    //     // Разрешаем нажатие клавиш backspace, Del, Tab и Esc
+    //     if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 ||
+    //         // Разрешаем выделение: Ctrl+A
+    //         (event.keyCode == 65 && event.ctrlKey === true) ||
+    //         // Разрешаем клавиши навигации: Home, End, Left, Right
+    //         (event.keyCode >= 35 && event.keyCode <= 39)) {
+    //         return;
+    //     } else {
+    //         // Запрещаем всё, кроме клавиш цифр на основной клавиатуре, а также Num-клавиатуре
+    //         if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+    //             event.preventDefault(); //отмена обычного поведения
+    //         }
+    //     }
+    // });
 
     // .разрешен ввод только цифр
 
@@ -83,7 +83,7 @@ jQuery(document).ready(function($) {
         $('.elements-input').removeClass('this_element'); //убираем класс по которому выбираем только что добавленный элемнет
 
         $('#element-id').clone() // сделаем копию элемента
-            .removeClass("dn") // добавим этой копии класс newElement
+            .removeClass("dn") // убираем класс этой копии newElement
             .addClass('this_element') //добавим класс, для добавления данных
             .appendTo("#div-elements"); // вставим измененный элемент в конец элемента container
 
@@ -100,7 +100,6 @@ jQuery(document).ready(function($) {
     }); //.нажатие на кнопку отправить
 
     //---------------- .добавление рецепта
-
 
 
 }); //конец ready
