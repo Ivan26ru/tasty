@@ -72,16 +72,18 @@
 
 <?php wp_footer(); // необходимо для работы плагинов и функционала  ?>
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/jquery.placeholder.min.js'></script>
-<!-- слайдеры -->
-<script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/owl-carousel/owl.carousel.min.js?<?php $date_css=date('YmdHis'); echo $date_css; // мои стили шаблона ВСЕГДА ОБНОВЛЯЮТСЯ?>'></script>
+<!-- автонаполнение jq ui -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/main.js?<?php $date_css=date('YmdHis'); echo $date_css; // мои стили шаблона ВСЕГДА ОБНОВЛЯЮТСЯ?>'></script>
+
+<!-- настройки слайдера на главной -->
 <script>
 jQuery(document).ready(function() {
-	alert(jQuery.fn.jquery);
+	// alert(jQuery.fn.jquery);
 	jQuery("#owl-example").owlCarousel({
 	    autoPlay : 3000,
 	    stopOnHover : true,
-	    navigation:true,
+	    // navigation:true,
 	    paginationSpeed : 1000,
 	    goToFirstSpeed : 2000,
 	    singleItem : true,
@@ -90,5 +92,40 @@ jQuery(document).ready(function() {
 	});
 });
 </script>
+
+<?php if (get_the_ID()=='98')://срипт для автозаполнения рецептов ?>
+<script>
+  jQuery( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    jQuery( "#e_name" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+<?php endif ?>
+
 </body>
 </html>
