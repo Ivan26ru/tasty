@@ -39,30 +39,6 @@ jQuery(document).ready(function($) {
     };
 
 
-
-
-    // разрешен ввод только цифр
-
-    // $(".input-ml").keydown(function(event) { //отслеживание нажатие на строку ввода
-    //     // Разрешаем нажатие клавиш backspace, Del, Tab и Esc
-    //     if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 ||
-    //         // Разрешаем выделение: Ctrl+A
-    //         (event.keyCode == 65 && event.ctrlKey === true) ||
-    //         // Разрешаем клавиши навигации: Home, End, Left, Right
-    //         (event.keyCode >= 35 && event.keyCode <= 39)) {
-    //         return;
-    //     } else {
-    //         // Запрещаем всё, кроме клавиш цифр на основной клавиатуре, а также Num-клавиатуре
-    //         if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
-    //             event.preventDefault(); //отмена обычного поведения
-    //         }
-    //     }
-    // });
-
-    // .разрешен ввод только цифр
-
-
-
     //---------------добавление рецепта
 
     var e_number = 1; //счетчик
@@ -147,14 +123,14 @@ jQuery(document).ready(function($) {
     summ100('#pgc', '#vgc');
 
 
-// ограничение в 100%
-        $('.max-val').change(function() { //отслеживания изменений
-            maxValue = $(this).val(); //текущее значение поля
-            if (maxValue > 100) { //если больше 100
-                alert('Значение не может быть больше 100%'); //сообщение об ошибке
-                $(this).val(100);
-            }; //конец условия
-        }); //конец отслеживания
+    // ограничение в 100%
+    $('.max-val').change(function() { //отслеживания изменений
+        maxValue = $(this).val(); //текущее значение поля
+        if (maxValue > 100) { //если больше 100
+            alert('Значение не может быть больше 100%'); //сообщение об ошибке
+            $(this).val(100);
+        }; //конец условия
+    }); //конец отслеживания
 
     $('.input-ml').change(function() { //отслеживания изменений
         minValue = $(this).val(); //текущее значение поля
@@ -165,33 +141,33 @@ jQuery(document).ready(function($) {
     }); //конец отслеживания изменений
 
     // --------------------- .пропррции рецептов
-// ---------------------- информация о рецепты на странице добавления
-mass_nj=1.038;
-mass_pg=1.038;
-mass_vg=1.038;
+    // ---------------------- информация о рецепты на странице добавления
+    mass_nj = 1.038;
+    mass_pg = 1.038;
+    mass_vg = 1.038;
 
-// ячейка 1-3
-c1_3_start = $('#ds').val();
-$('#c1-3').text(c1_3_start);
+    // ячейка 1-3
+    c1_3_start = $('#ds').val();
+    $('#c1-3').text(c1_3_start);
 
-$('#ds').change(function(){
-    c1_3 = $(this).val();
-    $('#c1-3').text(c1_3);
-    return c1_3;
-});
-// .ячейка 1-3
+    $('#ds').change(function() {
+        c1_3 = $(this).val();
+        $('#c1-3').text(c1_3);
+        return c1_3;
+    });
+    // .ячейка 1-3
 
-// total
-total_2_start =$('#atm').val();
-$('#total-2').text(total_2_start);
+    // total
+    total_2_start = $('#atm').val();
+    $('#total-2').text(total_2_start);
 
-$('#atm').change(function(){
-    total_2 = $(this).val();
-    $('#total-2').text(total_2);
-    return total_2;
-});
-// .total
+    $('#atm').change(function() {
+        total_2 = $(this).val();
+        $('#total-2').text(total_2);
+        return total_2;
+    });
+    // .total
 
-// ---------------------- .информация о рецепты на странице добавления
+    // ---------------------- .информация о рецепты на странице добавления
 
 }); //конец ready
