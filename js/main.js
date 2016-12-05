@@ -165,6 +165,33 @@ jQuery(document).ready(function($) {
     }); //конец отслеживания изменений
 
     // --------------------- .пропррции рецептов
+// ---------------------- информация о рецепты на странице добавления
+mass_nj=1.038;
+mass_pg=1.038;
+mass_vg=1.038;
 
+// ячейка 1-3
+c1_3_start = $('#ds').val();
+$('#c1-3').text(c1_3_start);
+
+$('#ds').change(function(){
+    c1_3 = $(this).val();
+    $('#c1-3').text(c1_3);
+    return c1_3;
+});
+// .ячейка 1-3
+
+// total
+total_2_start =$('#atm').val();
+$('#total-2').text(total_2_start);
+
+$('#atm').change(function(){
+    total_2 = $(this).val();
+    $('#total-2').text(total_2);
+    return total_2;
+});
+// .total
+
+// ---------------------- .информация о рецепты на странице добавления
 
 }); //конец ready

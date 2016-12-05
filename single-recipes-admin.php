@@ -42,7 +42,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 				<span class="name-element">Amount to make</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" type="number" name="atm" value="30"><span class="ml">ml</span>
+					<input class="input-ml" id="atm" type="number" name="atm" value="30"><span class="ml">ml</span>
 				</span>
 			</label>
 			</p>
@@ -54,7 +54,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 				<span class="name-element">Desired strength</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" type="number" name="ds" value="5"><span class="ml">ml</span>
+					<input class="input-ml" id="ds" type="number" name="ds" value="5"><span class="ml">ml</span>
 				</span>
 			</label>
 			</p>
@@ -66,7 +66,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 				<span class="name-element">Desired PG</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" type="number" name="dpg" value="30" id="dpg"><span class="ml">%</span>
+					<input class="input-ml" id="dpg" type="number" name="dpg" value="30"><span class="ml">%</span>
 				</span>
 			</label>
 			</p>
@@ -77,7 +77,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 				<span class="name-element">Desired VG</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" type="number" name="dvg" value="70" id="dvg"><span class="ml">%</span>
+					<input class="input-ml" id="dvg" type="number" name="dvg" value="70"><span class="ml">%</span>
 				</span>
 			</label>
 			</p>
@@ -88,7 +88,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 				<span class="name-element">Nicotine strength</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" type="number" name="ns" value="100" id="ns"><span class="ml">ml</span>
+					<input class="input-ml" id="ns" type="number" name="ns" value="100"><span class="ml">ml</span>
 				</span>
 			</label>
 			</p>
@@ -99,7 +99,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 				<span class="name-element">PG-content of nicotine</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" type="number" name="pgc" value="100" id="pgc"><span class="ml">%</span>
+					<input class="input-ml" id="pgc" type="number" name="pgc" value="100"><span class="ml">%</span>
 				</span>
 			</label>
 			</p>
@@ -110,7 +110,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 				<span class="name-element">VG-content of nicotine</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" type="number" name="vgc" value="0" id="vgc"><span class="ml">%</span>
+					<input class="input-ml" id="vgc" type="number" name="vgc" value="0"><span class="ml">%</span>
 				</span>
 			</label>
 			</p>
@@ -148,46 +148,46 @@ if ( is_user_logged_in() ) {//условие если залогинен
 			<th class="table-info-proc"><span class="line">%</span></th>
 		</tr>
 		<tr>
-			<td>nicotine</td>
+			<td>Nicotine juice 100 mg (100% PG)</td>
+			<td id="c1-1">0</td>
+			<td id="c1-2">0</td>
+			<td id="c1-3">0</td>
+		</tr>
+		<tr>
+			<td>PG dilutant</td>
 			<td>1.67</td>
 			<td>1.73</td>
 			<td>5.57</td>
 		</tr>
+		<tr>
+			<td>VG dilutant</td>
+			<td>1.67</td>
+			<td>1.73</td>
+			<td>5.57</td>
+		</tr>
+		<tr class="tatal-base">
+			<td>Total base</td>
+			<td>1.67</td>
+			<td>1.73</td>
+			<td>5.57</td>
+		</tr>
+
+		<!-- ингридиенты -->
+
 		<tr>
 			<td>nicotine</td>
 			<td>1.67</td>
 			<td>1.73</td>
 			<td>5.57</td>
 		</tr>
-		<tr>
-			<td>nicotine</td>
-			<td>1.67</td>
-			<td>1.73</td>
-			<td>5.57</td>
-		</tr>
-		<tr>
-			<td>nicotine</td>
-			<td>1.67</td>
-			<td>1.73</td>
-			<td>5.57</td>
-		</tr>
-		<tr>
-			<td>nicotine</td>
-			<td>1.67</td>
-			<td>1.73</td>
-			<td>5.57</td>
-		</tr>
-		<tr>
-			<td>nicotine</td>
-			<td>1.67</td>
-			<td>1.73</td>
-			<td>5.57</td>
-		</tr>
-		<tr>
-			<td>nicotine</td>
-			<td>1.67</td>
-			<td>1.73</td>
-			<td>5.57</td>
+
+		<!-- .ингридиенты -->
+
+		<tr class="tatal-base">
+			<td id="total-1">Totals</td>
+			<td id="total-2">1.67</td>
+			<td id="total-3">1.73</td>
+			<td id="total-4">5.57</td>
 		</tr>
 	</table>
 </div>
