@@ -82,7 +82,7 @@ jQuery(document).ready(function($) {
 
         $('.elements-input').removeClass('this_element'); //убираем класс по которому выбираем только что добавленный элемнет
 
-        $('#element-id').clone() // сделаем копию элемента
+        $('#element-id').clone(true) // сделаем копию элемента
             .removeClass('dn') // убираем класс этой копии newElement
             .addClass('this_element') //добавим класс, для добавления данных
             .appendTo("#div-elements"); // вставим измененный элемент в конец элемента container
@@ -149,10 +149,10 @@ jQuery(document).ready(function($) {
 
 // ограничение в 100%
         $('.max-val').change(function() { //отслеживания изменений
-            maxValue = $('.max-val').val(); //текущее значение поля
+            maxValue = $(this).val(); //текущее значение поля
             if (maxValue > 100) { //если больше 100
                 alert('Значение не может быть больше 100%'); //сообщение об ошибке
-                $('.max-val').val(100);
+                $(this).val(100);
             }; //конец условия
         }); //конец отслеживания
 
