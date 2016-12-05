@@ -76,7 +76,9 @@ wp_reset_postdata();//сброс значенйи поста
 		'after_page_number' => '' // строка после цифры
 	));
 
+unset($thisID)
 ?>
+
 </div>
 		<!-- конец раздела -->
 
