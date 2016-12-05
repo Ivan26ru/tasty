@@ -45,9 +45,10 @@ if( !empty($image) ): ?>
 		<span class="green font-rr"><?php comments_number('пока нет', '1', '%'); ?></span>
 	</td>
 	<td class="td-rejting">
-		<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+<!-- 		<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
 		<span class="green font-rr">+12</span>
-		<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+		<i class="fa fa-thumbs-o-up" aria-hidden="true"></i> -->
+		<?php if(function_exists('the_ratings')) { the_ratings(); } ?>	
 	</td>
 </tr>
 
