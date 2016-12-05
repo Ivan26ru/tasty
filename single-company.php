@@ -33,9 +33,10 @@ if( !empty($image) ): ?>
 				<tr>
 					<td class="brd w100">Рейтинг:</td>
 					<td class="brd w180">
-						<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+<!-- 						<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
 						<span class="green font-rr">+12</span>
-						<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+						<i class="fa fa-thumbs-o-up" aria-hidden="true"></i> -->
+						<?php if(function_exists('the_ratings')) { the_ratings(); } ?>	
 					</td>
 					<td class="null">&nbsp;</td>
 					<td class="null">&nbsp;</td>
