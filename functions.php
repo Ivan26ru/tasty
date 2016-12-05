@@ -71,6 +71,7 @@ function pagination() { // функция вывода пагинации
 		'prev_text'    => '<img src="'.get_template_directory_uri().'/img/png/prev.png">', // текст назад
     	'next_text'    => '<img src="'.get_template_directory_uri().'/img/png/next.png">', // текст вперед
 		'total' => $wp_query->max_num_pages, // общие кол-во страниц в пагинации
+		// 'total' => $the_query->max_num_pages, // общие кол-во страниц в пагинации
 		'show_all'     => false, // не показывать ссылки на все страницы, иначе end_size и mid_size будут проигнорированны
 		'end_size'     => 15, //  сколько страниц показать в начале и конце списка (12 ... 4 ... 89)
 		'mid_size'     => 15, // сколько страниц показать вокруг текущей страницы (... 123 5 678 ...).
@@ -79,6 +80,18 @@ function pagination() { // функция вывода пагинации
 		'before_page_number' => '', // строка перед цифрой
 		'after_page_number' => '' // строка после цифры
 	));
+}
+
+function paginationmy(){
+	// пагинация для произвольного запроса
+$big = 999999999; // уникальное число
+
+echo paginate_links( array(
+	'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+	'format'  => '?paged=%#%',
+	'current' => max( 1, get_query_var('paged') ),
+	'total'   => $the_query->max_num_pages
+) );
 }
 
 // вывод часть поста анонс
