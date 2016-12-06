@@ -42,9 +42,10 @@ jQuery(document).ready(function($) {
     //---------------добавление рецепта
 
     var e_number = 1; //счетчик
+    n_click = 0; //количество кликов от нуля счет
     e_arr = []; //массив данных
-    e_name = ''; //имя элемента
-    e_value = '0'; //количество
+    e_name[0] = ''; //имя элемента
+    e_value[0] = '0'; //количество
 
     $('#add-element').click(function(e) { //нажатие на кнопку отправить
         e.preventDefault(); //убрать стандартное поведение ссылки
@@ -53,8 +54,8 @@ jQuery(document).ready(function($) {
 
         e_number_2 = e_number - 1;
 
-        e_name = $('#e_name').val(); //имя элемента
-        e_value = $('#e_value').val(); //количество элемента
+        e_name[n_click] = $('#e_name').val(); //имя элемента в массив
+        e_value[n_click] = $('#e_value').val(); //количество элемента в массив
 
         $('.elements-input').removeClass('this_element'); //убираем класс по которому выбираем только что добавленный элемнет
 
@@ -63,16 +64,42 @@ jQuery(document).ready(function($) {
             .addClass('this_element') //добавим класс, для добавления данных
             .appendTo("#div-elements"); // вставим измененный элемент в конец элемента container
 
-        $('.this_element #e_i_name').val(e_name) //добавляем содержимое элемента
-            .attr('name', 'name_element_' + e_number_2); //присвоим новой строке имя элемента
-        $('.this_element .name-element').text(e_name); //добавляем содержимое элемента
+        $('.this_element #e_i_name').val(e_name[n_click]) //добавляем содержимое элемента
+            .attr('name', 'name_element_' + n_click); //присвоим новой строке имя элемента
+        $('.this_element .name-element').text(e_name[n_click]); //добавляем содержимое элемента
 
-        $('.this_element .input-ml').val(e_value) //добавляем содержимое элемента
-            .attr('name', 'value_element_' + e_number_2); //присвоим новой строке значение
+        $('.this_element .input-ml').val(e_value[n_click]) //добавляем содержимое элемента
+            .attr('name', 'value_element_' + n_click); //присвоим новой строке значение
 
         $("#e_name").val('').attr('placeholder', 'Ингридиент ' + e_number); //выводит номер игртидиента и сбрасывает состояние
         $("#e_value").val(''); //сбрасывает состояние
+        // --------------------
 
+        //добавление строк в таблицу
+        $('#td-etalon').clone() //клонировать элемент
+            .removeAttr('id') //убираем id
+            .removeClass('dn') //элемент видимый
+            .attr('id', 'tr' + n_click) //присваиваем порядковый id
+            .insertBefore('#total'); // добавление перед total
+
+
+        // расчет 2 ячейки
+        cell_2_dlinnoe = total_2_start / 100 * e_value[n_click];//значение 2 ячейки с десячитными знаками
+        cell_2 = cell_2_dlinnoe.toFixed(2);//округление до двух знаков после запятой ячейка 2
+
+        // удельный вес
+        udVes = 1;
+
+        //расчет 3 ячейки
+        cell_3_dlinnoe = cell_2 * udVes; //счет
+        cell_3 = cell_3_dlinnoe.toFixed(2);//установка 2 чисел после запятой
+
+        $('#tr' + n_click).children('.cell-1').text(e_name[n_click]); //присвоить имя ячейке
+        $('#tr' + n_click).children('.cell-2').text(cell_2); //присвоить значение ячейке
+        $('#tr' + n_click).children('.cell-3').text(cell_3);//присвоить значение ячейке
+        $('#tr' + n_click).children('.cell-4').text(e_value[n_click]); //присвоить значение ячейке
+
+        n_click = n_click + 1; //счетчик нажатий от  начало 0
     }); //.нажатие на кнопку отправить
 
     //---------------- .добавление рецепта
@@ -158,16 +185,28 @@ jQuery(document).ready(function($) {
     // .ячейка 1-3
 
     // total
-    total_2_start = $('#atm').val();
-    $('#total-2').text(total_2_start);
+    total_2_start = $('#atm').val(); //значение поля atm
+    $('#total-2').text(total_2_start); //присваиваем значение 2 ячейке тотал
 
-    $('#atm').change(function() {
-        total_2 = $(this).val();
-        $('#total-2').text(total_2);
-        return total_2;
+
+    $('#atm').change(function() { //отслеживаем изменение atm
+        total_2 = $(this).val(); //новые значения
+        $('#total-2').text(total_2); //присваиваем новые значения 2 ячейке тотал
+        return total_2; //возвратим тотал
     });
     // .total
 
     // ---------------------- .информация о рецепты на странице добавления
+
+
+    // добавление элемента в таблицу
+    $('#add-element').click(function(e) { //нажатие на кнопку отправить
+        e.preventDefault(); //убрать стандартное поведение ссылки
+
+    }); // .нажатие на кнопку отправить
+
+    // .добавление элемента в таблицу
+
+
 
 }); //конец ready

@@ -165,7 +165,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 			<td>1.73</td>
 			<td>5.57</td>
 		</tr>
-		<tr class="tatal-base">
+		<tr class="tatal-base" id="total-base">
 			<td>Total base</td>
 			<td>1.67</td>
 			<td>1.73</td>
@@ -174,20 +174,20 @@ if ( is_user_logged_in() ) {//условие если залогинен
 
 		<!-- ингридиенты -->
 
-		<tr>
-			<td>nicotine</td>
-			<td>1.67</td>
-			<td>1.73</td>
-			<td>5.57</td>
-		</tr>
 
-		<!-- .ингридиенты -->
 
-		<tr class="tatal-base">
+
+		<tr class="tatal-base" id="total">
 			<td id="total-1">Totals</td>
 			<td id="total-2">1.67</td>
 			<td id="total-3">1.73</td>
 			<td id="total-4">5.57</td>
+		</tr>
+		<tr class="dn" id="td-etalon">
+			<td class="cell-1">0</td>
+			<td class="cell-2">0</td>
+			<td class="cell-3">0</td>
+			<td class="cell-4">0</td>
 		</tr>
 	</table>
 </div>
