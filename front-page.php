@@ -81,7 +81,7 @@ while ( $query->have_posts() ) {
 	<?php } ?>
 
 		<!-- конец пагинаци -->
-	<?php	wp_reset_postdata(); ?>
+	<?php wp_reset_postdata(); ?>
 <!-- конец постав -->
 
 			</div>
