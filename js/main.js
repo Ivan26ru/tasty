@@ -44,8 +44,8 @@ jQuery(document).ready(function($) {
     var e_number = 1; //счетчик
     n_click = 0; //количество кликов от нуля счет
     e_arr = []; //массив данных
-    e_name[0] = ''; //имя элемента
-    e_value[0] = '0'; //количество
+    e_name= []; //имя элемента
+    e_value = []; //количество
 
     $('#add-element').click(function(e) { //нажатие на кнопку отправить
         e.preventDefault(); //убрать стандартное поведение ссылки
@@ -100,6 +100,8 @@ jQuery(document).ready(function($) {
         $('#tr' + n_click).children('.cell-4').text(e_value[n_click]); //присвоить значение ячейке
 
         n_click = n_click + 1; //счетчик нажатий от  начало 0
+
+        return(e_name)
     }); //.нажатие на кнопку отправить
 
     //---------------- .добавление рецепта
