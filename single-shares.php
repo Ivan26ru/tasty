@@ -67,15 +67,17 @@ else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/
 		<!-- контейнер с фото -->
 		<div class="akcii-div-img">
 
-<?php $str= get_the_content();
-preg_match_all('/src="([^"]+)"/i', $str, $matches);
-$img_urls = $matches[1]; ?>
-<?php if($img_urls) { ?>
-<? foreach ($img_urls as $img_url) {?>
-<img class="post-img" src="<?php echo $img_url; ?>" />
-<?php }} 
-?>
+<?php 
+// вывод картинок из произвольного поля
+$images = get_field('foto');//массив картинок
+
+if( $images ): //если картинка есть?>
+        <?php foreach( $images as $image ): //перебор массива?>
+       	<img class="post-img" src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
+        <?php endforeach; //конец перебора?>
+<?php endif; //конец условия?>
 		</div>
+		<!-- конец блока фотографий -->
 	</div>
 </div>
 
