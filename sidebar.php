@@ -11,6 +11,7 @@ $category2 = $category[0]->cat_ID; //узнаем ID категории
 $baner1 =  191;
 $baner2 = 196;
 $baner3 = 200;
+$slider_post = 955;
 
 ?>
 	</section>
@@ -41,7 +42,7 @@ $baner3 = 200;
 
 <!-- рекламный блок -->
 <?php
-	$args = array( 'posts_per_page' => 1, 'post__not_in' => array($baner3,$baner2), 'orderby'=> 'date', 'post_type' => 'baners', 'category' => $category2,'order' => 'DESC' );//выбираем посты соответствующие категории
+	$args = array( 'posts_per_page' => 1, 'post__not_in' => array($baner3,$baner2,$slider_post), 'orderby'=> 'date', 'post_type' => 'baners', 'category' => $category2,'order' => 'DESC' );//выбираем посты соответствующие категории
 	$myposts = get_posts( $args );
 foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 <div class="sb-banner sb-banner-1">
@@ -70,7 +71,7 @@ echo $widgetNL->widget(array('form' => 2, 'form_type' => 'php')); ?>
 
 <!-- рекламный блок -->
 <?php
-	$args = array( 'posts_per_page' => 100, 'post__not_in' => array($baner1,$baner3), 'orderby'=> 'date', 'post_type' => 'baners', 'category' => $category2,'order' => 'DESC' );//выбираем посты соответствующие категории
+	$args = array( 'posts_per_page' => 100, 'post__not_in' => array($baner1,$baner3,$slider_post), 'orderby'=> 'date', 'post_type' => 'baners', 'category' => $category2,'order' => 'DESC' );//выбираем посты соответствующие категории
 	$myposts = get_posts( $args );
 foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 <div class="sb-banner sb-banner-2">
@@ -85,7 +86,7 @@ wp_reset_postdata();?>
 <!-- рекламный блок -->
 <?php
 	//выбираем посты соответствующие категории
-	$args = array( 'posts_per_page' => 100, 'post__not_in' => array($baner1,$baner2),'orderby'=> 'date', 'post_type' => 'baners', 'category' => $category2,'order' => 'DESC' );
+	$args = array( 'posts_per_page' => 100, 'post__not_in' => array($baner1,$baner2,$slider_post),'orderby'=> 'date', 'post_type' => 'baners', 'category' => $category2,'order' => 'DESC' );
 	// отбираем посты, по массиву выше
 	$myposts = get_posts( $args );
 	// перебор массива постов
