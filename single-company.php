@@ -14,7 +14,7 @@ get_header(); // подключаем header.php ?>
 	<div class="container-akciya-kontakt clearfix">
 		<!-- блок с основной картинкой -->
 		<div class="company-div-logo">
-			<?php 
+			<?php
 // вывод картинки из произвольного поля
 $image = get_field('img');
 
@@ -36,11 +36,11 @@ if( !empty($image) ): ?>
 <!-- 						<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
 						<span class="green font-rr">+12</span>
 						<i class="fa fa-thumbs-o-up" aria-hidden="true"></i> -->
-						<?php if(function_exists('the_ratings')) { the_ratings(); } ?>	
+						<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
 					</td>
 					<td class="null">&nbsp;</td>
 					<td class="null">&nbsp;</td>
-					<td class="brd w70">Телефон:</td>
+					<td class="brd w70"><?php echo get_post_custom_values(nazvanie)[0]; //вывод произвольного поля?>:</td>
 					<td class="brd w330"><?php echo get_post_custom_values(company_telefon)[0]; //вывод произвольного поля?></td>
 
 				</tr>
@@ -75,15 +75,15 @@ if( !empty($image) ): ?>
 		<p class="podzagolovok akcii-p-foto"><span class="line">Фотографии</span></p>
 		<!-- контейнер с фото -->
 		<div class="akcii-div-img">
-<?php //Вывод картинок поста
-$str= get_the_content();
-preg_match_all('/src="([^"]+)"/i', $str, $matches);
-$img_urls = $matches[1]; ?>
-<?php if($img_urls) { ?>
-<? foreach ($img_urls as $img_url) {?>
-<img class="post-img" src="<?php echo $img_url; ?>" />
-<?php }}
-?>
+<?php
+// вывод картинок из произвольного поля
+$images = get_field('foto');//массив картинок
+
+if( $images ): //если картинка есть?>
+        <?php foreach( $images as $image ): //перебор массива?>
+       	<img class="post-img" src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
+        <?php endforeach; //конец перебора?>
+<?php endif; //конец условия?>
  		</div>
 	</div>
 </div>
