@@ -32,6 +32,10 @@ body .dn {
     display: none;
 }
 
+/*перенос текста по буквам*/
+table{
+	word-break: break-all;
+}
 
 /*текст по центру*/
 
