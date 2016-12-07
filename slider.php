@@ -10,9 +10,15 @@
 <!-- блок для слайдера -->
 <div class="slider-block">
 	<div id="owl-example" class="owl-carousel">
-		<div><img src="<?php echo get_template_directory_uri(); //путь до темы; ?>/img/png/slider/slide1.png" alt="описание картинки"></div>
-		<div><img src="<?php echo get_template_directory_uri(); //путь до темы; ?>/img/png/slider/slide1.png" alt="описание картинки"></div>
-		<div><img src="<?php echo get_template_directory_uri(); //путь до темы; ?>/img/png/slider/slide1.png" alt="описание картинки"></div>
+		<?php
+				// вывод картинок из произвольного поля
+				$images = get_field('slider', 955);//массив картинок
+
+			if( $images ): //если картинка есть?>
+			        <?php foreach( $images as $image ): //перебор массива?>
+			        	<div><img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" /></div>
+			        <?php endforeach; //конец перебора?>
+			<?php endif; //конец условия?>
 	</div>
 </div>
 
