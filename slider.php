@@ -16,7 +16,7 @@
 
 			if( $images ): //если картинка есть?>
 			        <?php foreach( $images as $image ): //перебор массива?>
-			        	<div><img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" /></div>
+			        	<div><a href="<?php echo $image[caption]; ?>"><img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" /></div></a>
 			        <?php endforeach; //конец перебора?>
 			<?php endif; //конец условия?>
 	</div>
