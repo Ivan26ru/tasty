@@ -34,8 +34,6 @@ jQuery(document).ready(function($) {
             event.preventDefault(); //отмена обычного поведения
             window.location.href = "http://mail.ru/";
         });
-
-
     };
 
 
@@ -44,8 +42,15 @@ jQuery(document).ready(function($) {
     var e_number = 1; //счетчик
     n_click = 0; //количество кликов от нуля счет
     e_arr = []; //массив данных
-    e_name= []; //имя элемента
+
+// переменные добавляемых элементов
+    e_name = []; //имя элемента
     e_value = []; //количество
+    e_pg = []; //%PG
+    e_vg = []; //%VG
+    e_uv = []; //%удельные вес
+
+    e_full = []; //полные данные элемента
 
     $('#add-element').click(function(e) { //нажатие на кнопку отправить
         e.preventDefault(); //убрать стандартное поведение ссылки
@@ -55,7 +60,20 @@ jQuery(document).ready(function($) {
         e_number_2 = e_number - 1;
 
         e_name[n_click] = $('#e_name').val(); //имя элемента в массив
-        e_value[n_click] = $('#e_value').val(); //количество элемента в массив
+        e_value[n_click] = parseFloat($('#e_value').val()); //количество элемента в массив, преобразуем в число
+
+        e_pg[n_click] = 1; //%PG
+        e_vg[n_click] = 1; //%VG
+        e_uv[n_click] = 1; //%удельные вес
+
+        // инфа добавляемого элемента
+        e_full[n_click] = [ //в одном массиве все данные об элементе
+            e_name[n_click],
+            e_value[n_click],
+            e_pg[n_click],
+            e_vg[n_click],
+            e_uv[n_click]
+        ]
 
         $('.elements-input').removeClass('this_element'); //убираем класс по которому выбираем только что добавленный элемнет
 
@@ -84,24 +102,24 @@ jQuery(document).ready(function($) {
 
 
         // расчет 2 ячейки
-        cell_2_dlinnoe = total_2_start / 100 * e_value[n_click];//значение 2 ячейки с десячитными знаками
-        cell_2 = cell_2_dlinnoe.toFixed(2);//округление до двух знаков после запятой ячейка 2
+        cell_2_dlinnoe = total_2_start / 100 * e_value[n_click]; //значение 2 ячейки с десячитными знаками
+        cell_2 = cell_2_dlinnoe.toFixed(2); //округление до двух знаков после запятой ячейка 2
 
         // удельный вес
         udVes = 1;
 
         //расчет 3 ячейки
         cell_3_dlinnoe = cell_2 * udVes; //счет
-        cell_3 = cell_3_dlinnoe.toFixed(2);//установка 2 чисел после запятой
+        cell_3 = cell_3_dlinnoe.toFixed(2); //установка 2 чисел после запятой
 
         $('#tr' + n_click).children('.cell-1').text(e_name[n_click]); //присвоить имя ячейке
         $('#tr' + n_click).children('.cell-2').text(cell_2); //присвоить значение ячейке
-        $('#tr' + n_click).children('.cell-3').text(cell_3);//присвоить значение ячейке
+        $('#tr' + n_click).children('.cell-3').text(cell_3); //присвоить значение ячейке
         $('#tr' + n_click).children('.cell-4').text(e_value[n_click]); //присвоить значение ячейке
 
         n_click = n_click + 1; //счетчик нажатий от  начало 0
 
-        return(e_name)
+        return (e_name, e_full);
     }); //.нажатие на кнопку отправить
 
     //---------------- .добавление рецепта
@@ -152,6 +170,47 @@ jQuery(document).ready(function($) {
     summ100('#pgc', '#vgc');
 
 
+    // -----------НОВАЯ----------
+        // Удельный вес общий
+        mass_nj = 1.038;
+        mass_pg = 1.038;
+        mass_vg = 1.038;
+
+    // отслеживние всех элементов
+    $('.input-ml').change(function() {
+
+        // обычные данные
+        atm = $('#atm').val();
+        ds = $('#ds').val();
+        dpg = $('#dpg').val();
+        dvg = $('#dvg').val();
+        ns = $('#ns').val();
+        pgc = $('#pgc').val();
+        vgc = $('#vgc').val();
+
+
+        // console.log(vgc);
+
+        // корректность ввода
+        if (e_full.length > 0) { //если массив существует
+            var indexN; //счетчик массива
+            for (indexN = 0; indexN < e_full.length; ++indexN) { //перевоб массива
+                this_input_name = 'value_element_' + indexN; //имя input элемента
+                this_input = $('input[name=' + this_input_name + ']').val(); //значение элемента
+
+                // ограничения от 0 до 100
+                if (this_input < 0) { //если меньше нуля
+                    e_full[indexN][1] = 0; //присвоить 0
+                } else if (this_input > 100) {
+                    e_full[indexN][1] = 100;
+                } else {
+                    e_full[indexN][1] = parseFloat(this_input); //обновить массив значений элементов
+                }
+            } //коней перебора
+        } //конец проверки на существование массива
+        console.log(e_full);
+    }); //конец проверки изменений в input
+
     // ограничение в 100%
     $('.max-val').change(function() { //отслеживания изменений
         maxValue = $(this).val(); //текущее значение поля
@@ -171,9 +230,7 @@ jQuery(document).ready(function($) {
 
     // --------------------- .пропррции рецептов
     // ---------------------- информация о рецепты на странице добавления
-    mass_nj = 1.038;
-    mass_pg = 1.038;
-    mass_vg = 1.038;
+
 
     // ячейка 1-3
     c1_3_start = $('#ds').val();
