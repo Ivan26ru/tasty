@@ -90,7 +90,7 @@ jQuery(document).ready(function($) {
             .attr('name', 'value_element_' + n_click); //присвоим новой строке значение
 
         $("#e_name").val('').attr('placeholder', 'Ингридиент ' + e_number); //выводит номер игртидиента и сбрасывает состояние
-        $("#e_value").val(''); //сбрасывает состояние
+        $("#e_value").val('0'); //сбрасывает состояние
         // --------------------
 
         //добавление строк в таблицу
@@ -119,8 +119,8 @@ jQuery(document).ready(function($) {
         $('#tr' + n_click).children('.cell-4').text(e_value[n_click]); //присвоить значение ячейке
 
         n_click = n_click + 1; //счетчик нажатий от  начало 0
-
-        return (e_name, e_full);
+        e_summ_f();
+        return (e_name, e_full, e_summ);
     }); //.нажатие на кнопку отправить
 
     //---------------- .добавление элемента
@@ -167,8 +167,8 @@ jQuery(document).ready(function($) {
     } //конец функции
     // отслеживание изменений
 
-    summ100('#dpg', '#dvg');
-    summ100('#pgc', '#vgc');
+    summ100('#dpg', '#dvg'); //в сумме 100
+    summ100('#pgc', '#vgc'); //в сумме 100
 
 
     // -----------НОВАЯ----------
@@ -192,32 +192,54 @@ jQuery(document).ready(function($) {
 
         // console.log(vgc);
 
+
+
         // корректность ввода
+
+
+        e_summ_f();
+
+
+        // console.log(e_full);//добавляемые элементы
+
+
+        // ФОРМИРОВАНИЕ ТАБЛИЦЫ
+        // console.log('Значение поменялось ');
+
+        // строка totals
+        $('#total-2').text(atm); //присваиваем значение 2 ячейке тотал
+
+
+        // .ФОРМИРОВАНИЕ ТАБЛИЦЫ
+
+    }); //конец проверки изменений в input
+
+
+    // перебор массива значений элемента
+    function e_summ_f() {
+        var e_summ = 0;
         if (e_full.length > 0) { //если массив существует
             var indexN; //счетчик массива
             for (indexN = 0; indexN < e_full.length; ++indexN) { //перевоб массива
                 this_input_name = 'value_element_' + indexN; //имя input элемента
                 this_input = $('input[name=' + this_input_name + ']').val(); //значение элемента
 
-                // ограничения от 0 до 100
+                // смена значения с ограничением от 0 до 100
                 if (this_input < 0) { //если меньше нуля
                     e_full[indexN][1] = 0; //присвоить 0
                 } else if (this_input > 100) { //если больше 100
                     e_full[indexN][1] = 100; //присвоить 100
                 } else { //если больше 0 и меньше 100
                     e_full[indexN][1] = parseFloat(this_input); //обновить массив значений элементов
-                }
-            } //коней перебора
+                } // .смена значения с ограничением от 0 до 100
+
+                e_summ = e_summ + parseFloat(e_full[indexN][1]);
+                console.log(e_summ);
+                return (e_summ);
+
+            } //конец перебора
         } //конец проверки на существование массива
-
-        // console.log(e_full);//добавляемые элементы
-
-
-        // ФОРМИРОВАНИЕ ТАБЛИЦЫ
-
-        // .ФОРМИРОВАНИЕ ТАБЛИЦЫ
-
-    }); //конец проверки изменений в input
+    } //конец функции суммирования элементов
 
     // ограничение в 100%
     $('.max-val').change(function() { //отслеживания изменений
@@ -253,7 +275,7 @@ jQuery(document).ready(function($) {
     // // .ячейка 1-3
 
     // total
-    // $('#total-2').text(atm); //присваиваем значение 2 ячейке тотал
+
 
 
     // $('#atm').change(function() { //отслеживаем изменение atm

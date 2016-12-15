@@ -311,6 +311,7 @@ a {
 
 section {
     width: 850px;
+    overflow: hidden;
     display: inline-block;
 }
 

@@ -20,7 +20,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 			<span class="name-element">Amount to make</span>
 			<span class="span-input-ml">
 				<input type="text" name="e_i_name" id="e_i_name" class="dn">
-				<input class="input-ml max-val" type="number" name="русское слово"><span class="ml">%</span>
+				<input class="input-ml max-val" type="number" name="русское слово" value="0"><span class="ml">%</span>
 			</span>
 		</label>
 		</p>
@@ -124,7 +124,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 		<!-- новый элемент -->
 		<p class="elements-input-new">
 			<input id="e_name" class="input-name-el" type="search" placeholder="Ингридиент 1">
-			<input id="e_value" class="input-ml max-val" type="number"><span class="ml">%</span>
+			<input id="e_value" class="input-ml max-val" type="number" value="0"><span class="ml">%</span>
 		</p>
 
 		<a href="#" id="add-element" class="btn-green">добавить ингридиент</a>
@@ -179,7 +179,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 
 		<tr class="tatal-base" id="total">
 			<td id="total-1">Totals</td>
-			<td id="total-2">1.67</td>
+			<td id="total-2">30</td>
 			<td id="total-3">1.73</td>
 			<td id="total-4">5.57</td>
 		</tr>
