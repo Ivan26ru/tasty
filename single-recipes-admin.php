@@ -148,28 +148,28 @@ if ( is_user_logged_in() ) {//условие если залогинен
 			<th class="table-info-proc"><span class="line">%</span></th>
 		</tr>
 		<tr>
-			<td>Nicotine juice 100 mg (100% PG)</td>
-			<td id="c1-1">0</td>
+			<td id="c1-1">Nicotine juice 100 mg (100% PG)</td>
 			<td id="c1-2">0</td>
 			<td id="c1-3">0</td>
+			<td id="c1-4">0</td>
 		</tr>
 		<tr>
-			<td>PG dilutant</td>
-			<td>1.67</td>
-			<td>1.73</td>
-			<td>5.57</td>
+			<td id="c2-1">PG dilutant</td>
+			<td id="c2-2">1.67</td>
+			<td id="c2-3">1.73</td>
+			<td id="c2-4">5.57</td>
 		</tr>
 		<tr>
-			<td>VG dilutant</td>
-			<td>1.67</td>
-			<td>1.73</td>
-			<td>5.57</td>
+			<td id="c3-1">VG dilutant</td>
+			<td id="c3-2">1.67</td>
+			<td id="c3-3">1.73</td>
+			<td id="c3-4">5.57</td>
 		</tr>
 		<tr class="tatal-base" id="total-base">
-			<td>Total base</td>
-			<td>1.67</td>
-			<td>1.73</td>
-			<td>5.57</td>
+			<td id="c4-1">Total base</td>
+			<td id="c4-2">1.67</td>
+			<td id="c4-3">1.73</td>
+			<td id="c4-4">5.57</td>
 		</tr>
 
 		<!-- ингридиенты -->

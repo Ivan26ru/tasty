@@ -1,11 +1,9 @@
 jQuery(document).ready(function($) {
-    //---------------добавление элемента
-
-    var e_number = 1; //счетчик
-    n_click = 0; //количество кликов от нуля счет
+    // ПЕРЕМЕННЫЕ
+    var n_click = 0; //количество кликов от нуля счет
     e_arr = []; //массив данных
 
-    // переменные добавляемых элементов
+    // переменные добавляемых ЭЛЕМЕНТОВ
     e_name = []; //имя элемента
     e_value = []; //количество
     e_pg = []; //%PG
@@ -14,12 +12,9 @@ jQuery(document).ready(function($) {
 
     e_full = []; //полные данные элемента
 
+    //--------------- КЛИК НА ДОБАВИТЬ ЭЛЕМЕНТ
     $('#add-element').click(function(e) { //нажатие на кнопку отправить
         e.preventDefault(); //убрать стандартное поведение ссылки
-
-        ++e_number; //счетчик элементов
-
-        e_number_2 = e_number - 1;
 
         e_name[n_click] = $('#e_name').val(); //имя элемента в массив
         e_value[n_click] = parseFloat($('#e_value').val()); //количество элемента в массив, преобразуем в число
@@ -49,9 +44,10 @@ jQuery(document).ready(function($) {
         $('.this_element .name-element').text(e_name[n_click]); //добавляем содержимое элемента
 
         $('.this_element .input-ml').val(e_value[n_click]) //добавляем содержимое элемента
-            .attr('name', 'value_element_' + n_click); //присвоим новой строке значение
+            .attr('name', 'value_element_' + n_click) //присвоим новой строке значение name
+            .attr('id', 'value_element_' + n_click); //присвоим новой строке значение ID
 
-        $("#e_name").val('').attr('placeholder', 'Ингридиент ' + e_number); //выводит номер игртидиента и сбрасывает состояние
+        $("#e_name").val('').attr('placeholder', 'Ингридиент ' + n_click); //выводит номер игртидиента и сбрасывает состояние
         $("#e_value").val('0'); //сбрасывает состояние
         // --------------------
 
@@ -63,22 +59,7 @@ jQuery(document).ready(function($) {
             .insertBefore('#total'); // добавление перед total
 
 
-        // расчет 2 ячейки
-        cell_2_dlinnoe = atm / 100 * e_value[n_click]; //значение 2 ячейки с десячитными знаками
-        cell_2 = cell_2_dlinnoe.toFixed(2); //округление до двух знаков после запятой ячейка 2
 
-        // удельный вес
-        udVes = 1;
-
-        //расчет 3 ячейки
-        cell_3_dlinnoe = cell_2 * udVes; //счет
-        cell_3 = cell_3_dlinnoe.toFixed(2); //установка 2 чисел после запятой
-
-        // вставка данных элемента в таблицу
-        $('#tr' + n_click).children('.cell-1').text(e_name[n_click]); //присвоить имя ячейке
-        $('#tr' + n_click).children('.cell-2').text(cell_2); //присвоить значение ячейке
-        $('#tr' + n_click).children('.cell-3').text(cell_3); //присвоить значение ячейке
-        $('#tr' + n_click).children('.cell-4').text(e_value[n_click]); //присвоить значение ячейке
 
         n_click = n_click + 1; //счетчик нажатий от  начало 0
         e_summ_f();
@@ -87,9 +68,117 @@ jQuery(document).ready(function($) {
 
     //---------------- .добавление элемента
 
+    // калькулятор
+    function e_summ_f() {
+        // обычные данные преобразованные в число
+        atm = parseFloat($('#atm').val());
+        ds = parseFloat($('#ds').val());
+        dpg = parseFloat($('#dpg').val());
+        dvg = parseFloat($('#dvg').val());
+        ns = parseFloat($('#ns').val());
+        pgc = parseFloat($('#pgc').val());
+        vgc = parseFloat($('#vgc').val());
+
+        // Удельный вес общий
+        mass_nj = 1.038;
+        mass_pg = 1.038;
+        mass_vg = 1.038;
+
+        // Удельный вес ингридиентов
+        mass_e_pg = 1;
+        mass_e_vg = 1;
+        mass_e_nj = 1; //удельный вес
 
 
-    // --------------------- пропорции рецептов
+        var sum = 0; //переменная суммы ЭЛЕМЕНТОВ
+
+
+
+
+        //обновление значения ДОБАВЛЯЕМЫХ ЭЛЕМЕНТОВ
+        for (var i = 0; e_full.length > i; i++) {
+
+            e_full[i][1] = $('#value_element_' + i).val(); //обновляем значение элемента
+            e_full[i][1] = parseInt(e_full[i][1]); //преобразуем в число
+
+            sum = sum + parseInt(e_full[i][1]); //сумма значений ЭЛЕМЕНТОВ
+
+            // значения строк ЭЛЕМЕНТОВ в таблице 
+
+            var cell1 = e_full[i][0],
+                cell2 = atm / 100 * e_full[i][1],
+                cell3 = cell2 * mass_e_nj,
+                cell4 = e_full[i][1];
+
+            var sum_cell2 = 0,
+                sum_cell3 = 0,
+                sum_cell4 = 0;
+
+                sum_cell2 = sum_cell2 + cell2;
+                sum_cell3 = sum_cell3 + cell3;
+                sum_cell4 = sum_cell4 + cell4;
+
+            // добавление данных ЭЛЕМЕНТОВ в таблицу
+            $('#tr' + i + ' .cell-1').html(cell1); //Имя в таблице(1 столб)
+            $('#tr' + i + ' .cell-2').html(cell2); //Имя в таблице(1 столб)
+            $('#tr' + i + ' .cell-3').html(cell3); //Имя в таблице(1 столб)
+            $('#tr' + i + ' .cell-4').html(cell4); //значение в таблице(4 столб)
+        };
+        // console.log('сумма ЭЛЕМЕНТОВ: ' + sum);
+        // переменные таблицы
+
+        var
+            c1_2 = 0,
+            c1_3 = 0,
+            c1_4 = ds,
+
+            c2_2 = 0,
+            c2_3 = 0,
+            c2_4 = 0,
+
+            c3_2 = total_2 - sum_cell2,
+            c3_3 = 0,
+            c3_4 = 0,
+
+            c4_2 = 0,
+            c4_3 = 0,
+            c4_4 = 0,
+
+            total_2 = atm,
+            total_3 = 0;
+        total_4 = 0;
+
+
+        // добавление данных СТАТИКИ в таблицу
+        //  строки
+        // $('#c1-1').html(c1_1);
+        // $('#c1-2').html(c1_1);
+        // $('#c1-3').html(c1_3);
+        $('#c1-4').html(c1_4);
+
+        // $('#c2-1').html(c2_1);
+        // $('#c2-2').html(c2_2);
+        // $('#c2-3').html(c2_3);
+        // $('#c2-4').html(c2_4);
+
+        // $('#c3-1').html(c3_1);
+        $('#c3-2').html(c3_2);
+        // $('#c3-3').html(c3_3);
+        // $('#c3-4').html(c3_4);
+
+        // $('#c4-1').html(c4_1);
+        // $('#c4-2').html(c4_2);
+        // $('#c4-3').html(c4_3);
+        // $('#c4-4').html(c4_4);
+
+        // $('#total-1').html(total_1);
+        $('#total-2').html(total_2);
+        // $('#total-3').html(total_3);
+        // $('#total-4').html(total_3);
+    } // .калькулятор
+
+
+    // --------------------- КОРРЕКТНОСТЬ ВВОДА
 
     // сумма двух строк равняется 100
     function summ100(input1, input2) {
@@ -132,72 +221,12 @@ jQuery(document).ready(function($) {
     summ100('#dpg', '#dvg'); //в сумме 100
     summ100('#pgc', '#vgc'); //в сумме 100
 
-
-    // -----------НОВАЯ----------
-    // Удельный вес общий
-    mass_nj = 1.038;
-    mass_pg = 1.038;
-    mass_vg = 1.038;
-
-    // отслеживние всех элементов
+    // отслеживние всех ЭЛЕМЕНТОВ
     $('.input-ml').change(function() {
-
-        // обычные данные преобразованные в число
-        atm = parseFloat($('#atm').val());
-        ds = parseFloat($('#ds').val());
-        dpg = parseFloat($('#dpg').val());
-        dvg = parseFloat($('#dvg').val());
-        ns = parseFloat($('#ns').val());
-        pgc = parseFloat($('#pgc').val());
-        vgc = parseFloat($('#vgc').val());
-
-
-        // console.log(vgc);
-
-
-
-        // корректность ввода
-
-
         e_summ_f();
-
-
-        // console.log(e_full);//добавляемые элементы
-
-
-        // ФОРМИРОВАНИЕ ТАБЛИЦЫ
-        // console.log('Значение поменялось ');
-
-        // строка totals
-        $('#total-2').text(atm); //присваиваем значение 2 ячейке тотал
-
-
-        // .ФОРМИРОВАНИЕ ТАБЛИЦЫ
-
+        console.log('Значение поменялось ');
     }); //конец проверки изменений в input
 
-
-    // перебор массива значений элемента
-    function e_summ_f() {
-        var e_summ = 0;
-        if (e_full.length > 0) { //если массив существует
-            var indexN; //счетчик массива
-            for (indexN = 0; indexN < n_click; ++indexN) { //перебор добавляемых элементов
-
-                var newElementVal[]=0;
-                newElementVal[indexN] = $('#div-elements .new-element[name=value_element_' + indexN + ']').val();
-                newElementVal[indexN]=parseFloat(newElementVal[indexN]);
-
-                for (indexArr = 0; indexArr < newElementVal.length; ++indexArr) { //перебор добавляемых элементов
-                    console.log(newElementVal[indexArr]);
-                }
-
-                // console.log(newElementVal);
-                // console.log('сумма элементов: ' + newElementValSumm);
-
-            } //конец перебора
-        } //конец проверки на существование массива
-    } //конец функции суммирования элементов
 
     // ограничение в 100%
     $('.max-val').change(function() { //отслеживания изменений
@@ -216,18 +245,5 @@ jQuery(document).ready(function($) {
             $(this).val('0'); //присваиваем значение 0
         }; //конец условия
     }); //конец отслеживания изменений
-
-    // --------------------- .пропррции рецептов
-    // ---------------------- информация о рецепты на странице добавления
-
-
-
-    // добавление элемента в таблицу
-    $('#add-element').click(function(e) { //нажатие на кнопку отправить
-        e.preventDefault(); //убрать стандартное поведение ссылки
-
-    }); // .нажатие на кнопку отправить
-
-    // .добавление элемента в таблицу
 
 }); //конец ready
