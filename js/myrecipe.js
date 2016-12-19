@@ -149,24 +149,27 @@ jQuery(document).ready(function($) {
             c3_4 = dvg - cell3_4_data,
 
             c4_2 = atm - sum_cell2,
-            c4_3 = parseFloat($('#c1-3').html()) + parseFloat($('#c2-3').html()) + parseFloat($('#c3-3').html()),
-            c4_4 = parseFloat($('#c1-4').html()) + parseFloat($('#c2-4').html()) + parseFloat($('#c3-4').html()),
+            c4_3 = (((atm - sum_cell2) / 100 * ds) * mass_nj) + (((atm - sum_cell2) / 100 * (dpg - ds - cell2_4_data)) * mass_vg) + (((atm - sum_cell2) / 100 * (dvg - cell3_4_data)) * mass_vg),
+            c4_4 = (ds) + (dpg - ds - cell2_4_data) + (dvg - cell3_4_data),
 
             total_2 = atm,
-            total_3 = sum_cell3+parseFloat($('#c1-3').html()) + parseFloat($('#c2-3').html()) + parseFloat($('#c3-3').html()),
-            total_4 = sum_cell4+parseFloat($('#c1-4').html()) + parseFloat($('#c2-4').html()) + parseFloat($('#c3-4').html());
+            total_3 = sum_cell3 + (((atm - sum_cell2) / 100 * ds) * mass_nj)+(((atm - sum_cell2) / 100 * (dpg - ds - cell2_4_data)) * mass_vg)+(((atm - sum_cell2) / 100 * (dvg - cell3_4_data)) * mass_vg),
+            total_4 = sum_cell4 +(ds)+(dpg - ds - cell2_4_data)+(dvg - cell3_4_data);
+
+            // total_3 = sum_cell3 + parseFloat($('#c1-3').html()) + parseFloat($('#c2-3').html()) + parseFloat($('#c3-3').html()),
+            // total_4 = sum_cell4 + parseFloat($('#c1-4').html()) + parseFloat($('#c2-4').html()) + parseFloat($('#c3-4').html());
 
 
         // добавление данных СТАТИКИ в таблицу
         //  строки
         // $('#c1-1').html(c1_1);
-        $('#c1-2').html(c1_2);
-        $('#c1-3').html(c1_3);
+        $('#c1-2').html(c1_2.toFixed(3));
+        $('#c1-3').html(c1_3.toFixed(3));
         $('#c1-4').html(c1_4);
 
         // $('#c2-1').html(c2_1);
-        $('#c2-2').html(c2_2);
-        $('#c2-3').html(c2_3);
+        $('#c2-2').html(c2_2.toFixed(3));
+        $('#c2-3').html(c2_3.toFixed(3));
         $('#c2-4').html(c2_4);
 
         // $('#c3-1').html(c3_1);
@@ -175,14 +178,14 @@ jQuery(document).ready(function($) {
         $('#c3-4').html(c3_4);
 
         // $('#c4-1').html(c4_1);
-        $('#c4-2').html(c4_2);
-        $('#c4-3').html(c4_3);
+        $('#c4-2').html(c4_2.toFixed(3));
+        $('#c4-3').html(c4_3.toFixed(3));
         $('#c4-4').html(c4_4);
 
         // $('#total-1').html(total_1);
-        $('#total-2').html(total_2);
-        $('#total-3').html(total_3);
-        $('#total-4').html(total_4);
+        $('#total-2').html(total_2.toFixed(3));
+        $('#total-3').html(total_3.toFixed(3));
+        $('#total-4').html(total_4.toFixed(3));
 
     } // .калькулятор
 
