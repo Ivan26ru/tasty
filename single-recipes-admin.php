@@ -20,7 +20,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 			<span class="name-element">Amount to make</span>
 			<span class="span-input-ml">
 				<input type="text" name="e_i_name" id="e_i_name" class="dn">
-				<input class="input-ml max-val" type="number" name="русское слово" value="0"><span class="ml">%</span>
+				<input class="input-ml max-val new-element" type="number" name="русское слово" value="0"><span class="ml">%</span>
 			</span>
 		</label>
 		</p>
