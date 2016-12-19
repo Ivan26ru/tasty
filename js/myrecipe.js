@@ -85,13 +85,19 @@ jQuery(document).ready(function($) {
         mass_vg = 1.038;
 
         // Удельный вес ингридиентов
-        mass_e_pg = 1;
-        mass_e_vg = 1;
+        mass_e_pg = 100;
+        mass_e_vg = 0;
         mass_e_nj = 1; //удельный вес
 
 
         var sum = 0; //переменная суммы ЭЛЕМЕНТОВ
 
+        var sum_cell2 = 0,
+            sum_cell3 = 0,
+            sum_cell4 = 0;
+
+        var cell2_4_data = 0,
+            cell3_4_data = 0;
 
 
 
@@ -103,20 +109,22 @@ jQuery(document).ready(function($) {
 
             sum = sum + parseInt(e_full[i][1]); //сумма значений ЭЛЕМЕНТОВ
 
-            // значения строк ЭЛЕМЕНТОВ в таблице 
+            // значения строк ЭЛЕМЕНТОВ в таблице
 
             var cell1 = e_full[i][0],
                 cell2 = atm / 100 * e_full[i][1],
                 cell3 = cell2 * mass_e_nj,
                 cell4 = e_full[i][1];
 
-            var sum_cell2 = 0,
-                sum_cell3 = 0,
-                sum_cell4 = 0;
 
-                sum_cell2 = sum_cell2 + cell2;
-                sum_cell3 = sum_cell3 + cell3;
-                sum_cell4 = sum_cell4 + cell4;
+
+
+            sum_cell2 = sum_cell2 + cell2;
+            sum_cell3 = sum_cell3 + cell3;
+            sum_cell4 = sum_cell4 + cell4;
+
+            cell2_4_data = cell2_4_data + (e_full[i][1] / 100 * mass_e_pg);
+            cell3_4_data = cell3_4_data + (e_full[i][1] / 100 * mass_e_vg);
 
             // добавление данных ЭЛЕМЕНТОВ в таблицу
             $('#tr' + i + ' .cell-1').html(cell1); //Имя в таблице(1 столб)
@@ -128,53 +136,54 @@ jQuery(document).ready(function($) {
         // переменные таблицы
 
         var
-            c1_2 = 0,
-            c1_3 = 0,
+            c1_2 = (atm - sum_cell2) / 100 * ds,
+            c1_3 = ((atm - sum_cell2) / 100 * ds) * mass_nj,
             c1_4 = ds,
 
-            c2_2 = 0,
-            c2_3 = 0,
-            c2_4 = 0,
+            c2_2 = (atm - sum_cell2) / 100 * (dpg - ds - cell2_4_data),
+            c2_3 = ((atm - sum_cell2) / 100 * (dpg - ds - cell2_4_data)) * mass_vg,
+            c2_4 = dpg - ds - cell2_4_data,
 
-            c3_2 = total_2 - sum_cell2,
-            c3_3 = 0,
-            c3_4 = 0,
+            c3_2 = (atm - sum_cell2) / 100 * (dvg - cell3_4_data),
+            c3_3 = ((atm - sum_cell2) / 100 * (dvg - cell3_4_data)) * mass_vg,
+            c3_4 = dvg - cell3_4_data,
 
-            c4_2 = 0,
-            c4_3 = 0,
-            c4_4 = 0,
+            c4_2 = atm - sum_cell2,
+            c4_3 = parseFloat($('#c1-3').html()) + parseFloat($('#c2-3').html()) + parseFloat($('#c3-3').html()),
+            c4_4 = parseFloat($('#c1-4').html()) + parseFloat($('#c2-4').html()) + parseFloat($('#c3-4').html()),
 
             total_2 = atm,
-            total_3 = 0;
-        total_4 = 0;
+            total_3 = sum_cell3+parseFloat($('#c1-3').html()) + parseFloat($('#c2-3').html()) + parseFloat($('#c3-3').html()),
+            total_4 = sum_cell4+parseFloat($('#c1-4').html()) + parseFloat($('#c2-4').html()) + parseFloat($('#c3-4').html());
 
 
         // добавление данных СТАТИКИ в таблицу
         //  строки
         // $('#c1-1').html(c1_1);
-        // $('#c1-2').html(c1_1);
-        // $('#c1-3').html(c1_3);
+        $('#c1-2').html(c1_2);
+        $('#c1-3').html(c1_3);
         $('#c1-4').html(c1_4);
 
         // $('#c2-1').html(c2_1);
-        // $('#c2-2').html(c2_2);
-        // $('#c2-3').html(c2_3);
-        // $('#c2-4').html(c2_4);
+        $('#c2-2').html(c2_2);
+        $('#c2-3').html(c2_3);
+        $('#c2-4').html(c2_4);
 
         // $('#c3-1').html(c3_1);
         $('#c3-2').html(c3_2);
-        // $('#c3-3').html(c3_3);
-        // $('#c3-4').html(c3_4);
+        $('#c3-3').html(c3_3);
+        $('#c3-4').html(c3_4);
 
         // $('#c4-1').html(c4_1);
-        // $('#c4-2').html(c4_2);
-        // $('#c4-3').html(c4_3);
-        // $('#c4-4').html(c4_4);
+        $('#c4-2').html(c4_2);
+        $('#c4-3').html(c4_3);
+        $('#c4-4').html(c4_4);
 
         // $('#total-1').html(total_1);
         $('#total-2').html(total_2);
-        // $('#total-3').html(total_3);
-        // $('#total-4').html(total_3);
+        $('#total-3').html(total_3);
+        $('#total-4').html(total_4);
+
     } // .калькулятор
 
 
