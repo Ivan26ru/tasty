@@ -96,34 +96,41 @@ jQuery(document).ready(function() {
 
 <?php if (get_the_ID()=='98')://срипт для автозаполнения рецептов ?>
 <script>
+    var availableTags = new Array(),
+    	availableList = new Array();
+
   jQuery( function() {
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    jQuery( "#e_name" ).autocomplete({
-      source: availableTags
-    });
+
+<?php
+
+$other_page = 961;
+
+// повторитель: обратите внимение, что для the_sub_field и get_sub_field не нужен параметр post_id
+if( have_rows('ingredients', $other_page) ): ?>//если есть произвольные поля условие
+  
+    <?php while( have_rows('ingredients', $other_page) ): the_row(); ?>//перебор произвольных полей
+            
+        <?php 
+        
+        // присваиваем данные из произвольных полей
+        $i_name = get_sub_field('i_name'); 
+        $i_pg = get_sub_field('i_pg'); 
+        $i_vg = get_sub_field('i_vg'); 
+        $i_uv = get_sub_field('i_uv'); 
+
+        echo 'availableTags.push("' . $i_name . '");';//присваиваем массиву имена ингридиентов
+
+        echo 'availableList["' . $i_name . '"]=["' . $i_pg .'", "' . $i_vg .'", "' . $i_uv .'"];';//создаем многомерный массив, ключ - имя ингридиента
+
+        ?>
+
+    <?php endwhile; ?>//конец перебора
+
+<?php unset($other_page); endif; ?>//очищаем переменную и конец условия
+
+    jQuery( "#e_name" ).autocomplete({//условия для автонаполнения
+      source: availableTags//передаем массив имен
+    });//.условия для автонаполнения
   } );
   </script>
 <?php endif ?>
