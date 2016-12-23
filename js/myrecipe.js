@@ -111,10 +111,10 @@ jQuery(document).ready(function($) {
 
             // значения строк ЭЛЕМЕНТОВ в таблице
 
-            var cell1 = e_full[i][0],
-                cell2 = atm / 100 * e_full[i][1],
-                cell3 = cell2 * mass_e_nj,
-                cell4 = e_full[i][1];
+            var cell1 = f2(e_full[i][0]),
+                cell2 = f2(atm / 100 * e_full[i][1]),
+                cell3 = f2(cell2 * mass_e_nj),
+                cell4 = f2(e_full[i][1]);
 
 
 
@@ -153,39 +153,39 @@ jQuery(document).ready(function($) {
             c4_4 = (ds) + (dpg - ds - cell2_4_data) + (dvg - cell3_4_data),
 
             total_2 = atm,
-            total_3 = sum_cell3 + (((atm - sum_cell2) / 100 * ds) * mass_nj)+(((atm - sum_cell2) / 100 * (dpg - ds - cell2_4_data)) * mass_vg)+(((atm - sum_cell2) / 100 * (dvg - cell3_4_data)) * mass_vg),
-            total_4 = sum_cell4 +(ds)+(dpg - ds - cell2_4_data)+(dvg - cell3_4_data);
+            total_3 = sum_cell3 + (((atm - sum_cell2) / 100 * ds) * mass_nj) + (((atm - sum_cell2) / 100 * (dpg - ds - cell2_4_data)) * mass_vg) + (((atm - sum_cell2) / 100 * (dvg - cell3_4_data)) * mass_vg),
+            total_4 = sum_cell4 + (ds) + (dpg - ds - cell2_4_data) + (dvg - cell3_4_data);
 
-            // total_3 = sum_cell3 + parseFloat($('#c1-3').html()) + parseFloat($('#c2-3').html()) + parseFloat($('#c3-3').html()),
-            // total_4 = sum_cell4 + parseFloat($('#c1-4').html()) + parseFloat($('#c2-4').html()) + parseFloat($('#c3-4').html());
+        // total_3 = sum_cell3 + parseFloat($('#c1-3').html()) + parseFloat($('#c2-3').html()) + parseFloat($('#c3-3').html()),
+        // total_4 = sum_cell4 + parseFloat($('#c1-4').html()) + parseFloat($('#c2-4').html()) + parseFloat($('#c3-4').html());
 
 
         // добавление данных СТАТИКИ в таблицу
         //  строки
         // $('#c1-1').html(c1_1);
-        $('#c1-2').html(c1_2.toFixed(3));
-        $('#c1-3').html(c1_3.toFixed(3));
-        $('#c1-4').html(c1_4);
+        $('#c1-2').html(f2(c1_2));
+        $('#c1-3').html(f2(c1_3));
+        $('#c1-4').html(f2(c1_4));
 
         // $('#c2-1').html(c2_1);
-        $('#c2-2').html(c2_2.toFixed(3));
-        $('#c2-3').html(c2_3.toFixed(3));
-        $('#c2-4').html(c2_4);
+        $('#c2-2').html(f2(c2_2));
+        $('#c2-3').html(f2(c2_3));
+        $('#c2-4').html(f2(c2_4));
 
         // $('#c3-1').html(c3_1);
-        $('#c3-2').html(c3_2);
-        $('#c3-3').html(c3_3);
-        $('#c3-4').html(c3_4);
+        $('#c3-2').html(f2(c3_2));
+        $('#c3-3').html(f2(c3_3));
+        $('#c3-4').html(f2(c3_4));
 
         // $('#c4-1').html(c4_1);
-        $('#c4-2').html(c4_2.toFixed(3));
-        $('#c4-3').html(c4_3.toFixed(3));
-        $('#c4-4').html(c4_4);
+        $('#c4-2').html(f2(c4_2));
+        $('#c4-3').html(f2(c4_3));
+        $('#c4-4').html(f2(c4_4));
 
         // $('#total-1').html(total_1);
-        $('#total-2').html(total_2.toFixed(3));
-        $('#total-3').html(total_3.toFixed(3));
-        $('#total-4').html(total_4.toFixed(3));
+        $('#total-2').html(f2(total_2));
+        $('#total-3').html(f2(total_3));
+        $('#total-4').html(f2(total_4));
 
     } // .калькулятор
 
@@ -257,5 +257,15 @@ jQuery(document).ready(function($) {
             $(this).val('0'); //присваиваем значение 0
         }; //конец условия
     }); //конец отслеживания изменений
+
+    // округление числа пример: 2.45 и 3
+    function f2(n) {
+        if (Math.ceil(n) - n > 0) {
+            n = (+n.toFixed(2))
+            return n;
+        } else {
+            return n;
+        }
+    };
 
 }); //конец ready
