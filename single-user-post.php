@@ -1,6 +1,6 @@
 <?php get_header(); // подключаем header.php ?>
 
-<?php 
+<?php
 
 if ( is_user_logged_in() ) {//условие если залогинен
 	?>
@@ -14,8 +14,8 @@ if ( is_user_logged_in() ) {//условие если залогинен
 // echo $_POST["title-recipes"];
 $cur_user_id = get_current_user_id();//ID текущего пользователя
 
-$title_post = $_POST['title-recipes'];
-$opisanie = $_POST['opisanie'];
+$title_post = $_POST['title-recipes'];//заголовок
+$opisanie = $_POST['opisanie'];//содержимое поста
 
 // ДОБАВЛЕНИЕ ЗАПИСИ ЧЕРЕЗ PHP
 // Создаем массив
@@ -25,7 +25,7 @@ $opisanie = $_POST['opisanie'];
 	 'post_status'   => 'pending',//на утверждении
 	 'post_type'     => 'post',//тип поста (запись)
 	 'post_author'   => $cur_user_id,//id от чьего имени публикуется пост
-	 'post_category' => array(20)//в какие рубриках состоит
+	 'post_category' => array(20)//в каких рубриках состоит
   );
 
 // Вставляем данные в БД
