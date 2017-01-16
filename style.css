@@ -2610,7 +2610,7 @@ a.politika {
     line-height: 28px;
     font-size: 10px;
     font-family: "Verdana";
-    color: rgb(204, 204, 204);
+    color: #999;
     font-style: italic;
     line-height: 1.2;
     text-align: left;
@@ -2709,7 +2709,7 @@ a.politika {
     line-height: 28px;
     font-size: 10px;
     font-family: "Verdana";
-    color: rgb(204, 204, 204);
+    color: #999;
     font-style: italic;
     line-height: 1.2;
     text-align: left;
@@ -2736,7 +2736,7 @@ a.politika {
     padding-left: 14px;
     font-size: 10px;
     font-family: "Verdana";
-    color: rgb(204, 204, 204);
+    color: #999;
     font-style: italic;
     line-height: 1.2;
     text-align: left;
@@ -2810,7 +2810,7 @@ margin-top: 75px;
 }
 
 .tatal-base{
-    color: #cccccc;
+    color: #999;
 }
 
 /*---------страница статей----------*/

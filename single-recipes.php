@@ -1,6 +1,6 @@
 <?php
 /**
- * Шаблон страницы рецептов (single-recipes.php)
+ * Шаблон страницы рецепта (single-recipes.php)
  * @package WordPress
  * @subpackage your-clean-template
  */
@@ -17,7 +17,7 @@ get_header(); // подключаем header.php ?>
 		<p>Дата:<span><?php the_time('j F H:i'); ?></span></p>
 		<div class="rejt-div"><div class="rejt-name">Рейтинг:</div>
 			<div class="rejt-vol">
-			<?php if(function_exists('the_ratings')) { the_ratings(); } ?>	
+			<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
  			</div>
 		</div>
 	</div>
@@ -32,33 +32,34 @@ get_header(); // подключаем header.php ?>
 		<!-- содержимое таблицы -->
 
 	<!-- <?php the_meta(); ?> -->
-	<?php 
+	<?php
 	/**
  * Проверит, что первая строка начинается со второй
- * 
+ *
  * @param string $str      основная строка
  * @param string $substr   та, которая может содержаться внутри основной
  */
 function isStart($str, $substr)
 {
+	// strpos проверяет, что первая строка начинается со второй, $a='abcd', $b='ab' строка ИСТИНА
     $result = strpos($str, $substr);
     if ($result === 0) { // если содержится, начиная с первого символа
     	return true;
     } else {
-    	return false; 
+    	return false;
     }
 }//конец функции строк
 
 	$meta_values = get_post_meta($post->ID);
 	// print_r($meta_values);
-	foreach ($meta_values as $key => $value) {
-		if (isStart($key,'n:')) {
+	foreach ($meta_values as $key => $value) {//перебор массива произвольных полей
+		if (isStart($key,'n:')) {//если произвольное поле начинается на n:
 			    // echo 'символ найден';
 			    ?>
 	  	<!-- строка -->
 		<tr>
-			<td><?php echo substr($key,2) ?></td>
-			<td><?php echo $value[0] ?></td>
+			<td><?php echo substr($key,2) //убираем первые 2 символа строки, имя элемента?></td>
+			<td><?php echo $value[0] //значение элемента?></td>
 			<td>1.73</td>
 			<td>5.57</td>
 		</tr>
