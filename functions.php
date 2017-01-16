@@ -316,6 +316,23 @@ function kama_get_most_viewed($args=''){
 		return $out;
 }
 
+//убираем просмотр у следующих категорий постов
+function nonView(){
+	// id категорий посты которые не надо считать
+	// $thisPost = get_the_ID();
+	// $nonCat = array(21,22);
+
+	// if( in_category($nonCat) ){
+	// 	update_post_meta($thisPost, 'views', '-1');//убираем популярность ссылки
+
+	// }
+		// echo "test text nonView<br><br> post->" . $thisPost . "<br><br> nonCat->" . print_r($nonCat);
+	update_post_meta(get_the_ID(), 'views', '-1');//убираем популярность ссылки
+
+};
+
+
+
 /* Отключаем админ панель для подписчиков */
 if (current_user_can('subscriber')):
   show_admin_bar(false);
