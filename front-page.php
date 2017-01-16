@@ -19,8 +19,6 @@ get_header(); // подключаем header.php ?>
 				<!-- посты из цикла -->
 <?php $args = array( 	'cat' => 7,
 						'posts_per_page' =>5
-
-
 						 );
 
 $query = new WP_Query( $args );
@@ -36,7 +34,6 @@ while ( $query->have_posts() ) {
 					<a href="<?php the_permalink() ?>" class="read-all read-all-block">читать полностью...</a>
 				</div>
 
-
 	<?php } ?>
 
 		<!-- конец пагинаци -->
@@ -49,20 +46,10 @@ while ( $query->have_posts() ) {
 				<a href="<?php echo get_category_link(4); //вывод url категории,рубрики по id ?>" class="zagolovok"><span class="line">vape новости</span></a>
 				<div class="img-colomn vipe-news"></div>
 
-
-
-
-
-
-
-
-
 	<!-- посты из цикла -->
 
 <?php $args = array( 	'cat' => 4,
 						'posts_per_page' =>5
-
-
 						 );
 
 $query = new WP_Query( $args );
@@ -91,7 +78,7 @@ while ( $query->have_posts() ) {
 <?php include('slider.php'); ?>
 
 <!-- подключение остальных постов нижние -->
-<?php //include('front_other_post.php'); ?>
+<?php //include('front_other_post.php'); //изначальное подключение постов в одну колонку?>
 
 	<!-- разделение на 2 колонки -->
 		<article class="clearfix">
@@ -105,8 +92,6 @@ while ( $query->have_posts() ) {
 				<!-- посты из цикла -->
 <?php $args = array( 	'cat' => 5,
 						'posts_per_page' =>5
-
-
 						 );
 
 $query = new WP_Query( $args );
@@ -121,8 +106,6 @@ while ( $query->have_posts() ) {
 					<p class="text text-block"><?php the_truncated_post( 255 ); ?></p>
 					<a href="<?php the_permalink() ?>" class="read-all read-all-block">читать полностью...</a>
 				</div>
-
-
 	<?php } ?>
 
 		<!-- конец пагинаци -->
@@ -135,20 +118,10 @@ while ( $query->have_posts() ) {
 				<a href="<?php echo get_category_link(6); //вывод url категории,рубрики по id ?>" class="zagolovok"><span class="line"><?php echo get_cat_name(6); //название категории, рубрики по id ?></span></a>
 				<div class="img-colomn vipe-news"></div>
 
-
-
-
-
-
-
-
-
 	<!-- посты из цикла -->
 
 <?php $args = array( 	'cat' => 6,
 						'posts_per_page' =>5
-
-
 						 );
 
 $query = new WP_Query( $args );
@@ -163,7 +136,6 @@ while ( $query->have_posts() ) {
 					<a href="<?php the_permalink() ?>" class="read-all read-all-block">читать полностью...</a>
 				</div>
 
-
 	<?php } ?>
 
 		<!-- конец пагинаци -->
@@ -172,7 +144,6 @@ while ( $query->have_posts() ) {
 
 			</div>
 		</article>
-
 
 <?php get_sidebar(); // подключаем footer.php ?>
 <?php get_footer(); // подключаем footer.php ?>
