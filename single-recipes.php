@@ -86,6 +86,8 @@ function isStart($str, $substr)
 	</div>
 </div>
 
+<?php nonView(); ?>
+
 <?php endwhile; // конец цикла ?>
 
 
