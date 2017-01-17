@@ -10,7 +10,7 @@ get_header(); // подключаем header.php ?>
 <h1 class="recipes-h1"><?php single_cat_title();//вывод имени текущей категории ?></h1>
 <div class="video-category">
 
-<?php 
+<?php
 	$thisID = get_query_var('cat');//id текущей категории
  ?>
 	<!-- основное содержание -->
@@ -31,17 +31,31 @@ $the_query = new WP_Query( array(
 while( $the_query->have_posts() ){
 	$the_query->the_post();
 	?>
-	
-	
+
+
 	<!-- начало поста -->
 	<div class="video-div">
 	<a href="<?php the_permalink() ?>" class="video-read green">
 		<!-- контейнер картинки -->
 		<div class="video-div-img">
 
-		<?php 	the_post_thumbnail(array(265,145)); // выводим миниатюру поста, если есть ?>
+		<?php 	//the_post_thumbnail(array(265,145)); // выводим миниатюру поста, если есть ?>
 
-			
+			<?php
+
+			$YoutubeCode= get_post_custom_values('video')[0];
+
+				preg_match('#(\.be/|/embed/|/v/|/watch\?v=)([A-Za-z0-9_-]{5,11})#', $YoutubeCode, $matches);
+				if(isset($matches[2]) && $matches[2] != ''){
+				     $YoutubeCode = $matches[2];
+				}
+
+?>
+     		<img width="265" height="139" src="https://i.ytimg.com/vi/<?php echo $YoutubeCode; ?>/hqdefault.jpg" class="attachment-265x145 size-265x145 wp-post-image">
+<?php
+     		unset($YoutubeCode);
+			?>
+
 		</div>
 	</a>
 		<!-- Заголовок поста -->
@@ -51,15 +65,15 @@ while( $the_query->have_posts() ){
 	</div>
 	<!-- конец поста -->
 
-	
-	<?php 
-} 
+
+	<?php
+}
 wp_reset_postdata();//сброс значенйи поста
 ?>
 
 </div>
 
-<?php 
+<?php
 // пагинация для произвольного запроса
 	$big = 999999999; // число для замены
 	echo paginate_links(array( // вывод пагинации с опциями ниже
