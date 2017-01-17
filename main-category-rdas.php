@@ -8,19 +8,10 @@ get_header(); // подключаем header.php ?>
 
 <!-- Начало рубрики-->
 <!-- заголовок -->
-	<h1 class="zagolovok"><span class="line">Best Box Mods, Vape Mods and E-Cig Mods 2016</span></h1>
+	<h1 class="zagolovok"><span class="line"><?php single_cat_title() ?></span></h1>
 	<!-- описание -->
-	<p class="text-other mt35">In this “best of list” we take a look at the best box mods & vape mods on the market. Our top box mod list comprises beginner box mods,
-high powered box mods, compact box mods and all-in-one vape mods. Our “best box mod” list is based on the box mods we have tested so
-far and those highly recommended to us by close friends and fellow experts. Not everyone will agree with our list, but we hope it will provide
- readers with a clear overview of some of the best vape mods on the market. We will be updating the top box mods article as we review
-more devices going forward. Please take into consideration that there are many new mods coming out on a daily basis, therefore it might
-take a while for the best ones to make it onto our list. Do bear in mind that this list is based on our personal opinions here at Vaping360 and
-on those of some fellow vaping experts</p>
+	<p class="text-other mt35"><?php echo category_description(); ?></p>
 
-<!-- Начало рубрики -->
-<!-- название рубрики -->
-<h2 class="zagolovok mt50"><span class="line"><?php single_cat_title() ?></span></h2>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); // если посты есть - запускаем цикл wp ?>
 	<!-- начало поста -->
