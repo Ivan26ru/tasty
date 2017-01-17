@@ -316,9 +316,9 @@ section {
 }
 
 
-/*Когтейнер для левого и правого блока*/
+/*Контейнер для левого и правого блока*/
 
-article {
+article:first-child {
     border-bottom: 1px solid rgb(221, 221, 221);
 }
 
