@@ -81,7 +81,7 @@ while ( $query->have_posts() ) {
 <?php //include('front_other_post.php'); //изначальное подключение постов в одну колонку?>
 
 	<!-- разделение на 2 колонки -->
-		<article class="clearfix">
+		<article class="clearfix article-front-2">
 			<!-- левая колонка -->
 			<div class="block block-left">
 				<a href="<?php echo get_category_link(5); //вывод url категории,рубрики по id ?>" class="zagolovok"><span class="line"><?php echo get_cat_name(5); //название категории, рубрики по id ?></span></a>

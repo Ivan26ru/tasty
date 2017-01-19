@@ -322,6 +322,10 @@ article:first-child {
     border-bottom: 1px solid rgb(221, 221, 221);
 }
 
+.article-front-2{
+    margin-top: 20px;
+    border: none;
+}
 
 /*блоки левый и правый*/
 
