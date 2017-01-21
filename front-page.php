@@ -31,7 +31,7 @@ while ( $query->have_posts() ) {
 
 	if($raz){//условия срабатывания только раз
 		?>
-<?php echo '<div class="img-colomn mixologiya" style="background-image: url('.get_the_post_thumbnail_url().')"></div>';//вывод миниатюры?>
+<?php echo '<div class="img-colomn mixologiya" style="background-image: url('.get_the_post_thumbnail_url(get_the_ID(),'full').');background-size: cover;"></div>';//вывод миниатюры?>
 
 		<?php
 		$raz=false;//что б не срабатывало больше условие
@@ -56,7 +56,6 @@ while ( $query->have_posts() ) {
 			<!-- правая колонка -->
 			<div class="block block-right">
 				<a href="<?php echo get_category_link(4); //вывод url категории,рубрики по id ?>" class="zagolovok"><span class="line">vape новости</span></a>
-				<div class="img-colomn vipe-news"></div>
 
 	<!-- посты из цикла -->
 
@@ -65,9 +64,21 @@ while ( $query->have_posts() ) {
 						 );
 
 $query = new WP_Query( $args );
+$raz = true;
 while ( $query->have_posts() ) {
 	$query->the_post();
 	?>
+
+<?php
+	if($raz){//условия срабатывания только раз
+		?>
+<?php echo '<div class="img-colomn vipe-news" style="background-image: url('.get_the_post_thumbnail_url(get_the_ID(),'full').');background-size: cover;"></div>';//вывод миниатюры?>
+
+		<?php
+		$raz=false;//что б не срабатывало больше условие
+	}//.условия срабатывания только раз
+ ?>
+
 <?php $post_front_top[]=get_the_ID();//сбор id выводимых постов ?>
 				<div class="news clearfix">
 					<span class="data data-block"><?php the_time('d.m.Y'); ?></span>
@@ -97,7 +108,6 @@ while ( $query->have_posts() ) {
 			<!-- левая колонка -->
 			<div class="block block-left">
 				<a href="<?php echo get_category_link(5); //вывод url категории,рубрики по id ?>" class="zagolovok"><span class="line"><?php echo get_cat_name(5); //название категории, рубрики по id ?></span></a>
-				<div class="img-colomn mixologiya"></div>
 				<!-- краткое описание новости -->
 
 
@@ -107,9 +117,21 @@ while ( $query->have_posts() ) {
 						 );
 
 $query = new WP_Query( $args );
+$raz = true;
 while ( $query->have_posts() ) {
 	$query->the_post();
 	?>
+
+
+	<?php
+	if($raz){//условия срабатывания только раз
+		?>
+<?php echo '<div class="img-colomn mixologiya" style="background-image: url('.get_the_post_thumbnail_url(get_the_ID(),'full').');background-size: cover;"></div>';//вывод миниатюры?>
+
+		<?php
+		$raz=false;//что б не срабатывало больше условие
+	}//.условия срабатывания только раз
+ ?>
 
 <?php $post_front_top[]=get_the_ID();//сбор id выводимых постов ?>
 				<div class="news clearfix">
@@ -128,18 +150,31 @@ while ( $query->have_posts() ) {
 			<!-- правая колонка -->
 			<div class="block block-right">
 				<a href="<?php echo get_category_link(6); //вывод url категории,рубрики по id ?>" class="zagolovok"><span class="line"><?php echo get_cat_name(6); //название категории, рубрики по id ?></span></a>
-				<div class="img-colomn vipe-news"></div>
 
 	<!-- посты из цикла -->
 
-<?php $args = array( 	'cat' => 6,
+<?php
+unset($args);
+ $args = array( 	'cat' => 6,
 						'posts_per_page' =>5
 						 );
 
 $query = new WP_Query( $args );
+$raz = true;
 while ( $query->have_posts() ) {
 	$query->the_post();
 	?>
+
+	<?php
+	if($raz){//условия срабатывания только раз
+		?>
+<?php echo '<div class="img-colomn vipe-news" style="background-image: url('.get_the_post_thumbnail_url(get_the_ID(),'full').');background-size: cover;"></div>';//вывод миниатюры?>
+
+		<?php
+		$raz=false;//что б не срабатывало больше условие
+	}//.условия срабатывания только раз
+ ?>
+
 <?php $post_front_top[]=get_the_ID();//сбор id выводимых постов ?>
 				<div class="news clearfix">
 					<span class="data data-block"><?php the_time('d.m.Y'); ?></span>
