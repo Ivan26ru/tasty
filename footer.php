@@ -101,33 +101,33 @@ jQuery(document).ready(function() {
 
   jQuery( function() {
 
+
+
+<?php $args = array(
+						'post_type'=>'ingredients',
+						'posts_per_page' =>999
+					);
+
+$query = new WP_Query( $args );
+while ( $query->have_posts() ) {
+	$query->the_post();
+	?>
 <?php
-
-$other_page = 961;
-
-// повторитель: обратите внимение, что для the_sub_field и get_sub_field не нужен параметр post_id
-if( have_rows('ingredients', $other_page) ): ?>//если есть произвольные поля условие
-  
-    <?php while( have_rows('ingredients', $other_page) ): the_row(); ?>//перебор произвольных полей
-            
-        <?php 
-        
+	// echo the_title();
+ ?>
+        <?php
         // присваиваем данные из произвольных полей
-        $i_name = get_sub_field('i_name'); 
-        $i_pg = get_sub_field('i_pg'); 
-        $i_vg = get_sub_field('i_vg'); 
-        $i_uv = get_sub_field('i_uv'); 
+        $i_name = get_the_title();
+        $i_pg = get_post_custom_values('i_pg')[0];
+        $i_vg = get_post_custom_values('i_vg')[0];
+        $i_uv = get_post_custom_values('i_uv')[0];
 
         echo 'availableTags.push("' . $i_name . '");';//присваиваем массиву имена ингридиентов
-
         echo 'availableList["' . $i_name . '"]=["' . $i_pg .'", "' . $i_vg .'", "' . $i_uv .'"];';//создаем многомерный массив, ключ - имя ингридиента
-
         ?>
-
-    <?php endwhile; ?>//конец перебора
-
-<?php unset($other_page); endif; ?>//очищаем переменную и конец условия
-
+	<?php } ?>
+    	<?php wp_reset_postdata(); ?>
+<!-- конец постов -->
     jQuery( "#e_name" ).autocomplete({//условия для автонаполнения
       source: availableTags//передаем массив имен
     });//.условия для автонаполнения
