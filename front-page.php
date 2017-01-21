@@ -12,7 +12,7 @@ get_header(); // подключаем header.php ?>
 			<!-- левая колонка -->
 			<div class="block block-left">
 				<a href="<?php echo get_category_link(7); //вывод url категории,рубрики по id ?>" class="zagolovok"><span class="line"><?php echo get_cat_name(7); //название категории, рубрики по id ?></span></a>
-				<div class="img-colomn mixologiya"></div>
+
 				<!-- краткое описание новости -->
 
 
@@ -22,9 +22,21 @@ get_header(); // подключаем header.php ?>
 						 );
 
 $query = new WP_Query( $args );
+	$raz = true;//для разового срабатывания
+
 while ( $query->have_posts() ) {
 	$query->the_post();
 	?>
+<?php
+
+	if($raz){//условия срабатывания только раз
+		?>
+<?php echo '<div class="img-colomn mixologiya" style="background-image: url('.get_the_post_thumbnail_url().')"></div>';//вывод миниатюры?>
+
+		<?php
+		$raz=false;//что б не срабатывало больше условие
+	}//.условия срабатывания только раз
+ ?>
 
 <?php $post_front_top[]=get_the_ID();//сбор id выводимых постов ?>
 				<div class="news clearfix">
