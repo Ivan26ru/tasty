@@ -133,7 +133,7 @@ while ( $query->have_posts() ) {
 	}//.условия срабатывания только раз
  ?>
 
-<?php $post_front_top[]=get_the_ID();//сбор id выводимых постов ?>
+<?php $post_5[]=get_the_ID();//сбор id выводимых постов ?>
 				<div class="news clearfix">
 					<span class="data data-block"><?php the_time('d.m.Y'); ?></span>
 					<p class="title title-block"><?php the_title(); ?></p>
@@ -155,8 +155,9 @@ while ( $query->have_posts() ) {
 
 <?php
 unset($args);
- $args = array( 	'cat' => 6,
-						'posts_per_page' =>5
+ $args = array( 	'cat' => array(6,-5),//исключил посты из предыдущей категории
+					'posts_per_page' =>5,//количество выводимых постов
+
 						 );
 
 $query = new WP_Query( $args );
