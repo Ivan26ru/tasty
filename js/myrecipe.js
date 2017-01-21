@@ -16,54 +16,71 @@ jQuery(document).ready(function($) {
     $('#add-element').click(function(e) { //нажатие на кнопку отправить
         e.preventDefault(); //убрать стандартное поведение ссылки
 
-        e_name[n_click] = $('#e_name').val(); //имя элемента в массив
-        e_value[n_click] = parseFloat($('#e_value').val()); //количество элемента в массив, преобразуем в число
 
-        e_pg[n_click] = 1; //%PG
-        e_vg[n_click] = 1; //%VG
-        e_uv[n_click] = 1; //%удельные вес
 
-        // инфа добавляемого элемента
-        e_full[n_click] = [ //в одном массиве все данные об элементе
-            e_name[n_click], //имя элемента
-            e_value[n_click], //значение элемента
-            e_pg[n_click],
-            e_vg[n_click],
-            e_uv[n_click]
-        ];
+        var str = $('#e_name').val(); //значение строки с элементом
+        // console.log(str);
 
-        $('.elements-input').removeClass('this_element'); //убираем класс по которому выбираем только что добавленный элемнет
-
-        $('#element-id').clone(true) // сделаем копию элемента
-            .removeClass('dn') // убираем класс этой копии newElement
-            .addClass('this_element') //добавим класс, для добавления данных
-            .appendTo("#div-elements"); // вставим измененный элемент в конец элемента container
-
-        $('.this_element #e_i_name').val(e_name[n_click]) //добавляем содержимое элемента
-            .attr('name', 'name_element_' + n_click); //присвоим новой строке имя элемента
-        $('.this_element .name-element').text(e_name[n_click]); //добавляем содержимое элемента
-
-        $('.this_element .input-ml').val(e_value[n_click]) //добавляем содержимое элемента
-            .attr('name', 'value_element_' + n_click) //присвоим новой строке значение name
-            .attr('id', 'value_element_' + n_click); //присвоим новой строке значение ID
-
-        $("#e_name").val('').attr('placeholder', 'Ингридиент ' + n_click); //выводит номер игртидиента и сбрасывает состояние
-        $("#e_value").val('0'); //сбрасывает состояние
-        // --------------------
-
-        //добавление строк в таблицу
-        $('#td-etalon').clone() //клонировать элемент
-            .removeAttr('id') //убираем id
-            .removeClass('dn') //элемент видимый
-            .attr('id', 'tr' + n_click) //присваиваем порядковый id
-            .insertBefore('#total'); // добавление перед total
+        if (availableTags.indexOf(str) !== -1) { //проверка на совпадение с массивом элементов
+            // alert("Да, есть такой элемент с именем " + str);
+            // console.log('есть такой')
 
 
 
+            e_name[n_click] = $('#e_name').val(); //имя элемента в массив
+            e_value[n_click] = parseFloat($('#e_value').val()); //количество элемента в массив, преобразуем в число
 
-        n_click = n_click + 1; //счетчик нажатий от  начало 0
-        e_summ_f();
-        return (e_name, e_full, n_click);
+            e_pg[n_click] = 1; //%PG
+            e_vg[n_click] = 1; //%VG
+            e_uv[n_click] = 1; //%удельные вес
+
+            // инфа добавляемого элемента
+            e_full[n_click] = [ //в одном массиве все данные об элементе
+                e_name[n_click], //имя элемента
+                e_value[n_click], //значение элемента
+                e_pg[n_click],
+                e_vg[n_click],
+                e_uv[n_click]
+            ];
+
+            $('.elements-input').removeClass('this_element'); //убираем класс по которому выбираем только что добавленный элемнет
+
+            $('#element-id').clone(true) // сделаем копию элемента
+                .removeClass('dn') // убираем класс этой копии newElement
+                .addClass('this_element') //добавим класс, для добавления данных
+                .appendTo("#div-elements"); // вставим измененный элемент в конец элемента container
+
+            $('.this_element #e_i_name').val(e_name[n_click]) //добавляем содержимое элемента
+                .attr('name', 'name_element_' + n_click); //присвоим новой строке имя элемента
+            $('.this_element .name-element').text(e_name[n_click]); //добавляем содержимое элемента
+
+            $('.this_element .input-ml').val(e_value[n_click]) //добавляем содержимое элемента
+                .attr('name', 'value_element_' + n_click) //присвоим новой строке значение name
+                .attr('id', 'value_element_' + n_click); //присвоим новой строке значение ID
+
+            $("#e_name").val('').attr('placeholder', 'Ингридиент ' + n_click); //выводит номер игртидиента и сбрасывает состояние
+            $("#e_value").val('0'); //сбрасывает состояние
+            // --------------------
+
+            //добавление строк в таблицу
+            $('#td-etalon').clone() //клонировать элемент
+                .removeAttr('id') //убираем id
+                .removeClass('dn') //элемент видимый
+                .attr('id', 'tr' + n_click) //присваиваем порядковый id
+                .insertBefore('#total'); // добавление перед total
+
+
+
+
+            n_click = n_click + 1; //счетчик нажатий от  начало 0
+            e_summ_f();
+            return (e_name, e_full, n_click);
+
+        } else { //если элемента нету в списке элементов
+            // console.log('нет такого')
+            // "Пожалуйста выберите элемент из списка"
+            alert("Увы, нет такого элемента с именем " + str);
+        } //конец проверки на совпадение
     }); //.нажатие на кнопку отправить
 
     //---------------- .добавление элемента
