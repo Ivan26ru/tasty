@@ -84,6 +84,66 @@ function isStart($str, $substr)
 		</div>
 
 	</div>
+
+
+
+<!-- инфа о рецепте -->
+<div class="recipes-table">
+	<table class="table-info-r">
+		<tr>
+			<th class="table-info-INGREDIENT"><span class="line">INGREDIENT</span></th>
+			<th class="table-info-ml"><span class="line">ml</span></th>
+			<th class="table-info-GRAMS"><span class="line">GRAMS</span></th>
+			<th class="table-info-proc"><span class="line">%</span></th>
+		</tr>
+		<tr>
+			<td id="c1-1">Nicotine juice 100 mg (100% PG)</td>
+			<td id="c1-2">0</td>
+			<td id="c1-3">0</td>
+			<td id="c1-4">0</td>
+		</tr>
+		<tr>
+			<td id="c2-1">PG dilutant</td>
+			<td id="c2-2">1.67</td>
+			<td id="c2-3">1.73</td>
+			<td id="c2-4">5.57</td>
+		</tr>
+		<tr>
+			<td id="c3-1">VG dilutant</td>
+			<td id="c3-2">1.67</td>
+			<td id="c3-3">1.73</td>
+			<td id="c3-4">5.57</td>
+		</tr>
+		<tr class="tatal-base" id="total-base">
+			<td id="c4-1">Total base</td>
+			<td id="c4-2">1.67</td>
+			<td id="c4-3">1.73</td>
+			<td id="c4-4">5.57</td>
+		</tr>
+
+		<!-- ингридиенты -->
+
+
+
+
+		<tr class="tatal-base" id="total">
+			<td id="total-1">Totals</td>
+			<td id="total-2">30</td>
+			<td id="total-3">1.73</td>
+			<td id="total-4">5.57</td>
+		</tr>
+		<tr class="dn" id="td-etalon">
+			<td class="cell-1">0</td>
+			<td class="cell-2">0</td>
+			<td class="cell-3">0</td>
+			<td class="cell-4">0</td>
+		</tr>
+	</table>
+</div>
+<!-- .инфа о рецепте -->
+
+
+	
 </div>
 
 <?php nonView(); ?>
