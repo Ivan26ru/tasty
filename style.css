@@ -615,6 +615,7 @@ section img {
 .page-numbers {
     font-size: 18px;
     color: rgb(51, 51, 51);
+    margin-bottom: 0;
 }
 
 
