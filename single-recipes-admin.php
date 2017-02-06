@@ -131,6 +131,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 		<br>
 		<!-- описание -->
 		<textarea name="opisanie" class="opisanie" name="opisanie" id="" cols="30" rows="10" placeholder="Добавить описание"></textarea>
+		<input type="text" id="i_post_id" name="i_post_id" style="display: none">
 		<!-- <a href="#" class="btn-green">сохранить</a> -->
 		<input class="btn-green" type="submit" value="сохранить">
 		</div>
