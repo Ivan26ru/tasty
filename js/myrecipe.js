@@ -13,6 +13,10 @@ jQuery(document).ready(function($) {
 
     e_full = []; //полные данные элемента
 
+    recept = []; //данные рецепта
+
+    send_all = []; //ПЕРЕДАВАЕМЫЕ ДАННЫЕ ВСЕГО РЕЦЕПТА
+
     //--------------- КЛИК НА ДОБАВИТЬ ЭЛЕМЕНТ
     $('#add-element').click(function(e) { //нажатие на кнопку отправить
         e.preventDefault(); //убрать стандартное поведение ссылки
@@ -34,17 +38,21 @@ jQuery(document).ready(function($) {
             e_pg[n_click] = 1; //%PG
             e_vg[n_click] = 1; //%VG
             e_uv[n_click] = 1; //%удельные вес
+            e_id[n_click] = availableList[str][3]; //ID поста ингредиента
 
-            // инфа добавляемого элемента
-            e_full[n_click] = [ //в одном массиве все данные об элементе
-                e_name[n_click], //имя элемента
-                e_value[n_click], //значение элемента
-                e_pg[n_click],
-                e_vg[n_click],
-                e_uv[n_click]
+
+            // инфа добавляемого элемента,в одном массиве все данные об элементе
+            e_full[n_click] = [ //Добавляю массивы данных в один массив
+                e_name[n_click], //имя элемента//0
+                e_value[n_click], //значение элемента//1
+                e_pg[n_click], //2
+                e_vg[n_click], //3
+                e_uv[n_click], //4
+                e_id[n_click] //5
             ];
 
-            e_id.push(availableList[str][3]);
+
+            // e_id.push(availableList[str][3]);
 
 
             $('.elements-input').removeClass('this_element'); //убираем класс по которому выбираем только что добавленный элемнет
@@ -74,10 +82,14 @@ jQuery(document).ready(function($) {
                 .insertBefore('#total'); // добавление перед total
 
 
-            $('#i_post_id').val(JSON.stringify(e_id));
+            // $('#i_post_id').val(JSON.stringify(e_id));
 
             n_click = n_click + 1; //счетчик нажатий от  начало 0
             e_summ_f();
+            console.log(e_full);
+
+            send_json(e_full, recept);
+
             return (e_name, e_full, n_click, e_id);
 
         } else { //если элемента нету в списке элементов
@@ -99,6 +111,15 @@ jQuery(document).ready(function($) {
         ns = parseFloat($('#ns').val());
         pgc = parseFloat($('#pgc').val());
         vgc = parseFloat($('#vgc').val());
+
+        //Данные рецепта в массив данных ингридиента
+        recept[0] = atm;
+        recept[1] = ds;
+        recept[2] = dpg;
+        recept[3] = dvg;
+        recept[4] = ns;
+        recept[5] = pgc;
+        recept[6] = vgc;
 
         // Удельный вес общий
         mass_nj = 1.038;
@@ -208,7 +229,17 @@ jQuery(document).ready(function($) {
         $('#total-3').html(f2(total_3));
         $('#total-4').html(f2(total_4));
 
+        return (recept);
+
     } // .калькулятор
+
+    // отправка в json всех данных
+    function send_json(e_full, recept) {
+        send_all[0] = e_full;
+        send_all[1] = recept;
+
+        $('#i_post_id').val(JSON.stringify(send_all));
+    } //.отправка в json всех данных
 
 
     // --------------------- КОРРЕКТНОСТЬ ВВОДА
@@ -257,6 +288,7 @@ jQuery(document).ready(function($) {
     // отслеживние всех ЭЛЕМЕНТОВ
     $('.input-ml').change(function() {
         e_summ_f();
+        send_json(e_full, recept);
         console.log('Значение поменялось ');
     }); //конец проверки изменений в input
 
