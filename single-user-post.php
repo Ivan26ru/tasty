@@ -8,10 +8,19 @@ if ( is_user_logged_in() ) {//условие если залогинен
 
 <h1>Ваш рецепт отобразиться на сайте, после проверки его администратором сайта</h1>
 
+
+
 <?php
 // echo('Отправил на утверждение');
 // print_r($_POST);
-// echo $_POST["title-recipes"];
+// echo $_POST["i_post_id"];
+
+$i_post_id=$_POST["i_post_id"];//данные рецепта json + экранированные кавычки
+$i_post_id=stripslashes($i_post_id);//убрал экранирование кавычек
+
+$i_post_id=json_decode($i_post_id);//декодировал json преобразовал в массив
+print_r($i_post_id[0]);//проверка массива
+
 $cur_user_id = get_current_user_id();//ID текущего пользователя
 
 $title_post = $_POST['title-recipes'];//заголовок
@@ -28,7 +37,8 @@ $opisanie = $_POST['opisanie'];//содержимое поста
 	 'post_category' => array(20)//в каких рубриках состоит
   );
 
-// Вставляем данные в БД
+
+// Вставляем данные произвольны полей в БД
 $post_id = wp_insert_post( wp_slash($post_data) );//создаем запись
 
 
