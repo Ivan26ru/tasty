@@ -35,9 +35,10 @@ jQuery(document).ready(function($) {
             e_name[n_click] = $('#e_name').val(); //имя элемента в массив
             e_value[n_click] = parseFloat($('#e_value').val()); //количество элемента в массив, преобразуем в число
 
-            e_pg[n_click] = 1; //%PG
-            e_vg[n_click] = 1; //%VG
-            e_uv[n_click] = 1; //%удельные вес
+            // характеристики элемента
+            e_pg[n_click] = availableList[str][0]; //%PG
+            e_vg[n_click] = availableList[str][1]; //%VG
+            e_uv[n_click] = availableList[str][2]; //%удельные вес
             e_id[n_click] = availableList[str][3]; //ID поста ингредиента
 
 
@@ -54,7 +55,7 @@ jQuery(document).ready(function($) {
 
             // e_id.push(availableList[str][3]);
 
-
+            // ОФОРМЛЕНИЕ HTML
             $('.elements-input').removeClass('this_element'); //убираем класс по которому выбираем только что добавленный элемнет
 
             $('#element-id').clone(true) // сделаем копию элемента
@@ -85,12 +86,12 @@ jQuery(document).ready(function($) {
             // $('#i_post_id').val(JSON.stringify(e_id));
 
             n_click = n_click + 1; //счетчик нажатий от  начало 0
-            e_summ_f();
-            console.log(e_full);
+            e_summ_f();//функция пересчета
+            // console.log(e_full);
 
-            send_json(e_full, recept);
+            send_json(e_full, recept);//функция сбора json для отправки
 
-            return (e_name, e_full, n_click, e_id);
+            return (e_name, e_full, n_click, e_id);//возвращаемые значения
 
         } else { //если элемента нету в списке элементов
             // console.log('нет такого')
