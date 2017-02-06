@@ -117,13 +117,15 @@ while ( $query->have_posts() ) {
  ?>
         <?php
         // присваиваем данные из произвольных полей
+		$post_id = get_the_ID();
         $i_name = get_the_title();
         $i_pg = get_post_custom_values('i_pg')[0];
         $i_vg = get_post_custom_values('i_vg')[0];
         $i_uv = get_post_custom_values('i_uv')[0];
 
+
         echo 'availableTags.push("' . $i_name . '");';//присваиваем массиву имена ингридиентов
-        echo 'availableList["' . $i_name . '"]=["' . $i_pg .'", "' . $i_vg .'", "' . $i_uv .'"];';//создаем многомерный массив, ключ - имя ингридиента
+        echo 'availableList["' . $i_name . '"]=["' . $i_pg .'", "' . $i_vg .'", "' . $i_uv .'", "' . $post_id .'"];';//создаем многомерный массив, ключ - имя ингридиента
         ?>
 	<?php } ?>
     	<?php wp_reset_postdata(); ?>
