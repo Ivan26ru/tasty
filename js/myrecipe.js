@@ -9,6 +9,7 @@ jQuery(document).ready(function($) {
     e_pg = []; //%PG
     e_vg = []; //%VG
     e_uv = []; //%удельные вес
+    e_id = []; //id поста ингредиента
 
     e_full = []; //полные данные элемента
 
@@ -43,6 +44,9 @@ jQuery(document).ready(function($) {
                 e_uv[n_click]
             ];
 
+            e_id.push(availableList[str][3]);
+
+
             $('.elements-input').removeClass('this_element'); //убираем класс по которому выбираем только что добавленный элемнет
 
             $('#element-id').clone(true) // сделаем копию элемента
@@ -70,11 +74,11 @@ jQuery(document).ready(function($) {
                 .insertBefore('#total'); // добавление перед total
 
 
-
+            $('#i_post_id').val(JSON.stringify(e_id));
 
             n_click = n_click + 1; //счетчик нажатий от  начало 0
             e_summ_f();
-            return (e_name, e_full, n_click);
+            return (e_name, e_full, n_click, e_id);
 
         } else { //если элемента нету в списке элементов
             // console.log('нет такого')
