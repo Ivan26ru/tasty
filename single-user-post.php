@@ -15,11 +15,11 @@ if ( is_user_logged_in() ) {//условие если залогинен
 // print_r($_POST);
 // echo $_POST["i_post_id"];
 
-$i_post_id=$_POST["i_post_id"];//данные рецепта json + экранированные кавычки
-$i_post_id=stripslashes($i_post_id);//убрал экранирование кавычек
+$recept=$_POST["i_post_id"];//данные рецепта json + экранированные кавычки
+$recept=stripslashes($recept);//убрал экранирование кавычек
 
-$i_post_id=json_decode($i_post_id);//декодировал json преобразовал в массив
-print_r($i_post_id[0]);//проверка массива
+$recept=json_decode($recept);//декодировал json преобразовал в массив
+print_r($recept[0]);//проверка массива
 
 $cur_user_id = get_current_user_id();//ID текущего пользователя
 
@@ -41,31 +41,40 @@ $opisanie = $_POST['opisanie'];//содержимое поста
 // Вставляем данные произвольны полей в БД
 $post_id = wp_insert_post( wp_slash($post_data) );//создаем запись
 
+// произвольные поля
 
-$key_name='name_element_';//шаблон ключа имени элемента
-$key_value='value_element_';//шаблон ключа значения элемента
-$num=1;
-
-$key_n_n = $key_value . (string)$num;
-
-// echo "<hr>" . $key_n_n;
-
-while ($_POST[$key_n_n]){//цикл перебора ингридиентов
-
-	$num++;//счетчик для нормального прогона массива
-	$schet++;//количество элеменов, счетчик
+$ingredients_kolvo=count($recept[0]);//количество ингредиентов
+$atm	=	$recept[1][0];
+$ds		=	$recept[1][1];
+$dpg	=	$recept[1][2];
+$dvg	=	$recept[1][3];
+$ns		=	$recept[1][4];
+$pgc	=	$recept[1][5];
+$vgc	=	$recept[1][6];
 
 
-$key_n_n = $key_name . (string)$schet;//Имя элемента
-$key_v_n = $key_value . (string)$schet;//значение элемента
 
 
-if ($_POST[$key_v_n]) {//если строка наименования пустая, то не считать
-	add_post_meta($post_id,'n:'.$_POST[$key_n_n], $_POST[$key_v_n]);//добавляем значение произвольным полям
-}//конец условия
+add_post_meta($post_id,'atm',$atm);
+add_post_meta($post_id,'ds',$ds);
+add_post_meta($post_id,'dpg',$dpg);
+add_post_meta($post_id,'dvg',$dvg);
+add_post_meta($post_id,'ns',$ns);
+add_post_meta($post_id,'pgc',$pgc);
+add_post_meta($post_id,'vgc',$vgc);
+
+add_post_meta($post_id,'ingredients',$ingredients_kolvo);//добавляем значение произвольным полям
 
 
-};//конец цикла
+foreach ($recept[0] as $key => $value) {//перевор массива данные ингредиента
+
+	add_post_meta($post_id,'ingredients_' .$key. '_i_name',addslashes($value[0]));//имя
+	add_post_meta($post_id,'ingredients_' .$key. '_i_pg',$value[1]);//pg
+	add_post_meta($post_id,'ingredients_' .$key. '_i_vg',$value[2]);//vg
+	add_post_meta($post_id,'ingredients_' .$key. '_i_uv',$value[3]);//uv удельный вес
+};
+
+
 
 update_post_meta(246, 'views', '0');//обнуляем популярность ссылки
 
