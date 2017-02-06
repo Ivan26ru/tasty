@@ -36,10 +36,10 @@ jQuery(document).ready(function($) {
             e_value[n_click] = parseFloat($('#e_value').val()); //количество элемента в массив, преобразуем в число
 
             // характеристики элемента
-            e_pg[n_click] = availableList[str][0]; //%PG
-            e_vg[n_click] = availableList[str][1]; //%VG
-            e_uv[n_click] = availableList[str][2]; //%удельные вес
-            e_id[n_click] = availableList[str][3]; //ID поста ингредиента
+            e_pg[n_click] = parseFloat(availableList[str][0]); //%PG
+            e_vg[n_click] = parseFloat(availableList[str][1]); //%VG
+            e_uv[n_click] = parseFloat(availableList[str][2]); //%удельные вес
+            e_id[n_click] = parseFloat(availableList[str][3]); //ID поста ингредиента
 
 
             // инфа добавляемого элемента,в одном массиве все данные об элементе
