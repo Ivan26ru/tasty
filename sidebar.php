@@ -56,7 +56,8 @@ wp_reset_postdata();?>
 <!-- the best -->
 <div class="sb-r best">
 	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/email-sb.png" class="sidebar-img">
-	<?php $widgetNL = new WYSIJA_NL_Widget(true);
+	<?php
+$widgetNL = new WYSIJA_NL_Widget(true);
 echo $widgetNL->widget(array('form' => 2, 'form_type' => 'php')); ?>
 	<!-- <?php echo do_shortcode('[subscribe2]'); ?></div> -->
 </div>
