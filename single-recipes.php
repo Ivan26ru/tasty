@@ -39,38 +39,81 @@ get_header(); // подключаем header.php ?>
  * @param string $str      основная строка
  * @param string $substr   та, которая может содержаться внутри основной
  */
-function isStart($str, $substr)
-{
-	// strpos проверяет, что первая строка начинается со второй, $a='abcd', $b='ab' строка ИСТИНА
-    $result = strpos($str, $substr);
-    if ($result === 0) { // если содержится, начиная с первого символа
-    	return true;
-    } else {
-    	return false;
-    }
-}//конец функции строк
+	?>
 
-	$meta_values = get_post_meta($post->ID);
-	// print_r($meta_values);
-	foreach ($meta_values as $key => $value) {//перебор массива произвольных полей
-		if (isStart($key,'n:')) {//если произвольное поле начинается на n:
-			    // echo 'символ найден';
-			    ?>
+	<?php
+//данные рецепта
+$atm	=	get_post_custom_values('atm')[0];
+$ds		=	get_post_custom_values('ds')[0];
+$dpg	=	get_post_custom_values('dpg')[0];
+$dvg	=	get_post_custom_values('dvg')[0];
+$ns		=	get_post_custom_values('ns')[0];
+$pgc	=	get_post_custom_values('pgc')[0];
+$vgc	=	get_post_custom_values('vgc')[0];
+
+$e_pg_raznost=$dpg-$ds;
+$e_vg_raznost=$dvg;
+
+if( have_rows('ingredients') ):
+
+ 	// loop through the rows of data
+    while ( have_rows('ingredients') ) : the_row();
+
+        // display a sub field value
+      $i_name=  get_sub_field('i_name');
+      $i_vol=  get_sub_field('i_vol');
+      $i_pg=  get_sub_field('i_pg');
+      $i_vg=  get_sub_field('i_vg');
+      $i_uv=  get_sub_field('i_uv');
+      // echo '<hr>'.$test;
+      $e_ml = $atm/100*$i_vol;
+      $e_grams = $e_ml*$i_uv;
+
+      $e_ml_summ +=$e_ml;
+
+      $e_pg_raznost -= $i_vol/100*$i_pg;
+      $e_vg_raznost -= $i_vol/100*$i_vg;
+
+      $total_g +=$e_grams;
+      $total_proc +=$i_vol;
+      ?>
 	  	<!-- строка -->
 		<tr>
-			<td><?php echo substr($key,2) //убираем первые 2 символа строки, имя элемента?></td>
-			<td><?php echo $value[0] //значение элемента?></td>
-			<td>1.73</td>
-			<td>5.57</td>
+			<td><?php echo $i_name; ?></td>
+			<td><?php echo $e_ml; ?></td>
+			<td><?php echo $e_grams; ?></td>
+			<td><?php echo $i_vol; //значение элемента?></td>
 		</tr>
 		<!-- .строка -->
 
 <?php
-			}//конец условия отбора нужного
-	}//конец перебора
+    endwhile;
+else :
+    // no rows found
+endif;
 
-	?>
+?>
 
+<?php 
+//переменные таблицы
+
+$tb_ml = $atm-$e_ml_summ;//total base (ml)
+$nj_ml = $tb_ml/100*$ds; //Nicotine juice 100 mg (100% PG) (ml)
+$nj_g = round($nj_ml*1.038,2); //Nicotine juice 100 mg (100% PG) (grams)
+
+$tb_proc = $ds+$e_pg_raznost+$e_vg_raznost;
+$pgd_ml = round($tb_ml/100*$e_pg_raznost,2);
+$pgd_g = round($pgd_ml*1.038);
+
+$vgd_ml = round($tb_ml/100*$e_vg_raznost,2);
+$vgd_g = round($vgd_ml*1.038);
+
+$tb_g = $nj_g+$pgd_g+$vgd_g;
+
+$total_g += $tb_g;
+$total_proc += $tb_proc;
+
+?>
 	</table>
 
 
@@ -98,27 +141,27 @@ function isStart($str, $substr)
 		</tr>
 		<tr>
 			<td id="c1-1">Nicotine juice 100 mg (100% PG)</td>
-			<td id="c1-2">0</td>
-			<td id="c1-3">0</td>
-			<td id="c1-4">0</td>
+			<td id="c1-2"><?php echo $nj_ml; ?></td>
+			<td id="c1-3"><?php echo $nj_g; ?></td>
+			<td id="c1-4"><?php echo $ds; ?></td>
 		</tr>
 		<tr>
 			<td id="c2-1">PG dilutant</td>
-			<td id="c2-2">1.67</td>
-			<td id="c2-3">1.73</td>
-			<td id="c2-4">5.57</td>
+			<td id="c2-2"><?php echo $pgd_ml; ?></td>
+			<td id="c2-3"><?php echo $pgd_g; ?></td>
+			<td id="c2-4"><?php echo $e_pg_raznost; ?></td>
 		</tr>
 		<tr>
 			<td id="c3-1">VG dilutant</td>
-			<td id="c3-2">1.67</td>
-			<td id="c3-3">1.73</td>
-			<td id="c3-4">5.57</td>
+			<td id="c3-2"><?php echo $vgd_ml; ?></td>
+			<td id="c3-3"><?php echo $vgd_g; ?></td>
+			<td id="c3-4"><?php echo $e_vg_raznost; ?></td>
 		</tr>
 		<tr class="tatal-base" id="total-base">
 			<td id="c4-1">Total base</td>
-			<td id="c4-2">1.67</td>
-			<td id="c4-3">1.73</td>
-			<td id="c4-4">5.57</td>
+			<td id="c4-2"><?php echo $tb_ml; ?></td>
+			<td id="c4-3"><?php echo $tb_g; ?></td>
+			<td id="c4-4"><?php echo $tb_proc; ?></td>
 		</tr>
 
 		<!-- ингридиенты -->
@@ -128,9 +171,9 @@ function isStart($str, $substr)
 
 		<tr class="tatal-base" id="total">
 			<td id="total-1">Totals</td>
-			<td id="total-2">30</td>
-			<td id="total-3">1.73</td>
-			<td id="total-4">5.57</td>
+			<td id="total-2"><?php echo $atm; ?></td>
+			<td id="total-3"><?php echo $total_g; ?></td>
+			<td id="total-4"><?php echo $total_proc; ?></td>
 		</tr>
 		<tr class="dn" id="td-etalon">
 			<td class="cell-1">0</td>
