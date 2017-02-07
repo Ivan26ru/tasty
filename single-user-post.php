@@ -8,8 +8,6 @@ if ( is_user_logged_in() ) {//условие если залогинен
 
 <h1>Ваш рецепт отобразиться на сайте, после проверки его администратором сайта</h1>
 
-
-
 <?php
 // echo('Отправил на утверждение');
 // print_r($_POST);
@@ -19,7 +17,7 @@ $recept=$_POST["i_post_id"];//данные рецепта json + экранир�
 $recept=stripslashes($recept);//убрал экранирование кавычек
 
 $recept=json_decode($recept);//декодировал json преобразовал в массив
-print_r($recept[0]);//проверка массива
+// print_r($recept);//проверка массива
 
 $cur_user_id = get_current_user_id();//ID текущего пользователя
 
@@ -37,13 +35,12 @@ $opisanie = $_POST['opisanie'];//содержимое поста
 	 'post_category' => array(20)//в каких рубриках состоит
   );
 
-
 // Вставляем данные произвольны полей в БД
 $post_id = wp_insert_post( wp_slash($post_data) );//создаем запись
 
 // произвольные поля
 
-$ingredients_kolvo=count($recept[0]);//количество ингредиентов
+// данные самого рецепта
 $atm	=	$recept[1][0];
 $ds		=	$recept[1][1];
 $dpg	=	$recept[1][2];
@@ -51,10 +48,9 @@ $dvg	=	$recept[1][3];
 $ns		=	$recept[1][4];
 $pgc	=	$recept[1][5];
 $vgc	=	$recept[1][6];
+$ingredients_kolvo=count($recept[0]);//количество ингредиентов
 
-
-
-
+// добавляю данные рецепта в произвольные поля
 add_post_meta($post_id,'atm',$atm);
 add_post_meta($post_id,'ds',$ds);
 add_post_meta($post_id,'dpg',$dpg);
@@ -63,18 +59,17 @@ add_post_meta($post_id,'ns',$ns);
 add_post_meta($post_id,'pgc',$pgc);
 add_post_meta($post_id,'vgc',$vgc);
 
+// довляют количество ингридиентов в произвольные поля
 add_post_meta($post_id,'ingredients',$ingredients_kolvo);//добавляем значение произвольным полям
 
-
+// добавляю ингридиенты с их свойствами в произвольные поля
 foreach ($recept[0] as $key => $value) {//перевор массива данные ингредиента
-
 	add_post_meta($post_id,'ingredients_' .$key. '_i_name',addslashes($value[0]));//имя
-	add_post_meta($post_id,'ingredients_' .$key. '_i_pg',$value[1]);//pg
-	add_post_meta($post_id,'ingredients_' .$key. '_i_vg',$value[2]);//vg
-	add_post_meta($post_id,'ingredients_' .$key. '_i_uv',$value[3]);//uv удельный вес
+	add_post_meta($post_id,'ingredients_' .$key. '_i_vol',$value[1]);//количество
+	add_post_meta($post_id,'ingredients_' .$key. '_i_pg',$value[2]);//pg
+	add_post_meta($post_id,'ingredients_' .$key. '_i_vg',$value[3]);//vg
+	add_post_meta($post_id,'ingredients_' .$key. '_i_uv',$value[4]);//uv удельный вес
 };
-
-
 
 update_post_meta(246, 'views', '0');//обнуляем популярность ссылки
 
