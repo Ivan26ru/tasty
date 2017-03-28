@@ -59,13 +59,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- футер 2(нижний) -->
-			<div class="footer footer-2">
-				<div class="w1200">
-					<a href="#" class="politika">Политика конфиденциальности</a>
-					<a href="http://expert-convertion.ru/?utm_sourse=tastyvape.ru" class="design"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/design.png"></a>
-				</div>
-			</div>
+
 
 	</footer>
 <div class="loader"></div>
