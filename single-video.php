@@ -10,7 +10,7 @@ get_header(); // подключаем header.php ?>
 
 <!-- начало поста -->
 <!-- зоголовок -->
-<h1 class="pv-h1">Sigelei 213 VS Fuchai 213 сравнение изнутри - Vaporplace</h1>
+<h1 class="pv-h1"><?php the_title(); ?></h1>
 
 <div class="video-info">
 <!-- видео -->
@@ -22,7 +22,7 @@ get_header(); // подключаем header.php ?>
 	<div class="video-rejting">
 <div class="rejt-name">Рейтинг:</div>
 			<div class="rejt-vol">
-			<?php if(function_exists('the_ratings')) { the_ratings(); } ?>	
+			<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
  			</div>
 	</div>
 	<!-- автор -->
