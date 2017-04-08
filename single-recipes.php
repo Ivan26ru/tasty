@@ -10,7 +10,31 @@ get_header(); // подключаем header.php ?>
 
 <!-- начало поста -->
 <div class="post-recipes-container clearfix">
-<h1 class="recipes-h1">Рецепты</h1>
+<h1 class="recipes-h1"><?php the_title(); // заголовок поста ?></h1>
+
+	<!-- таблица ингридиенты -->
+<!-- 	<table class="post-recipes-ingredient">
+		<tr>
+			<th><span>INGREDIENT</span></th>
+			<th><span>ml</span></th>
+			<th><span>GRAMS</span></th>
+			<th><span>%</span></th>
+		</tr> -->
+		<!-- содержимое таблицы -->
+
+	<!-- </table> -->
+
+	<!-- <?php //the_meta(); ?> -->
+	<?php
+	/**
+ * Проверит, что первая строка начинается со второй
+ *
+ * @param string $str      основная строка
+ * @param string $substr   та, которая может содержаться внутри основной
+ */
+	?>
+
+
 	<!-- контакты-->
 	<div class="p-recipes-div-kont">
 		<p>Автор:<span><?php the_author(); ?></span></p>
@@ -21,25 +45,7 @@ get_header(); // подключаем header.php ?>
  			</div>
 		</div>
 	</div>
-	<!-- таблица ингридиенты -->
-	<table class="post-recipes-ingredient">
-		<tr>
-			<th><span>INGREDIENT</span></th>
-			<th><span>ml</span></th>
-			<th><span>GRAMS</span></th>
-			<th><span>%</span></th>
-		</tr>
-		<!-- содержимое таблицы -->
-
-	<!-- <?php the_meta(); ?> -->
-	<?php
-	/**
- * Проверит, что первая строка начинается со второй
- *
- * @param string $str      основная строка
- * @param string $substr   та, которая может содержаться внутри основной
- */
-	?>
+	<!-- .контакты -->
 
 	<?php
 //данные рецепта
@@ -53,6 +59,63 @@ $vgc	=	get_post_custom_values('vgc')[0];
 
 $e_pg_raznost=$dpg-$ds;
 $e_vg_raznost=$dvg;
+?>
+
+
+<?php 
+//переменные таблицы
+
+$tb_ml = $atm-$e_ml_summ;//total base (ml)
+$nj_ml = $tb_ml/100*$ds; //Nicotine juice 100 mg (100% PG) (ml)
+$nj_g = round($nj_ml*1.038,2); //Nicotine juice 100 mg (100% PG) (grams)
+
+$tb_proc = $ds+$e_pg_raznost+$e_vg_raznost;
+$pgd_ml = round($tb_ml/100*$e_pg_raznost,2);
+$pgd_g = round($pgd_ml*1.038);
+
+$vgd_ml = round($tb_ml/100*$e_vg_raznost,2);
+$vgd_g = round($vgd_ml*1.038);
+
+$tb_g = $nj_g+$pgd_g+$vgd_g;
+
+$total_g += $tb_g;
+$total_proc += $tb_proc;
+
+?>
+
+
+
+<!-- инфа о рецепте -->
+<div class="recipes-table">
+	<table class="table-info-r">
+		<tr>
+			<th class="table-info-INGREDIENT"><span class="line">INGREDIENT</span></th>
+			<th class="table-info-ml"><span class="line">ml</span></th>
+			<th class="table-info-GRAMS"><span class="line">GRAMS</span></th>
+			<th class="table-info-proc"><span class="line">%</span></th>
+		</tr>
+		<tr>
+			<td id="c1-1">Nicotine juice 100 mg (100% PG)</td>
+			<td id="c1-2"><?php echo $nj_ml; ?></td>
+			<td id="c1-3"><?php echo $nj_g; ?></td>
+			<td id="c1-4"><?php echo $ds; ?></td>
+		</tr>
+		<tr>
+			<td id="c2-1">PG dilutant</td>
+			<td id="c2-2"><?php echo $pgd_ml; ?></td>
+			<td id="c2-3"><?php echo $pgd_g; ?></td>
+			<td id="c2-4"><?php echo $e_pg_raznost; ?></td>
+		</tr>
+		<tr>
+			<td id="c3-1">VG dilutant</td>
+			<td id="c3-2"><?php echo $vgd_ml; ?></td>
+			<td id="c3-3"><?php echo $vgd_g; ?></td>
+			<td id="c3-4"><?php echo $e_vg_raznost; ?></td>
+		</tr>
+
+
+		<!-- ингридиенты -->
+<?php 
 
 if( have_rows('ingredients') ):
 
@@ -93,80 +156,12 @@ else :
 endif;
 
 ?>
-
-<?php 
-//переменные таблицы
-
-$tb_ml = $atm-$e_ml_summ;//total base (ml)
-$nj_ml = $tb_ml/100*$ds; //Nicotine juice 100 mg (100% PG) (ml)
-$nj_g = round($nj_ml*1.038,2); //Nicotine juice 100 mg (100% PG) (grams)
-
-$tb_proc = $ds+$e_pg_raznost+$e_vg_raznost;
-$pgd_ml = round($tb_ml/100*$e_pg_raznost,2);
-$pgd_g = round($pgd_ml*1.038);
-
-$vgd_ml = round($tb_ml/100*$e_vg_raznost,2);
-$vgd_g = round($vgd_ml*1.038);
-
-$tb_g = $nj_g+$pgd_g+$vgd_g;
-
-$total_g += $tb_g;
-$total_proc += $tb_proc;
-
-?>
-	</table>
-
-
-
-	<div class="o-post-recipes mt33">
-		<!-- описание поста -->
-		<p class="podzagolovok"><span class="line">Описание</span></p>
-		<div class="text-other">
-			<?php add_filter('the_content','htm_image_content_filter',11); ?>
-<?php the_content(); // контент без картинок?>
-		</div>
-
-	</div>
-
-
-
-<!-- инфа о рецепте -->
-<div class="recipes-table">
-	<table class="table-info-r">
-		<tr>
-			<th class="table-info-INGREDIENT"><span class="line">INGREDIENT</span></th>
-			<th class="table-info-ml"><span class="line">ml</span></th>
-			<th class="table-info-GRAMS"><span class="line">GRAMS</span></th>
-			<th class="table-info-proc"><span class="line">%</span></th>
-		</tr>
-		<tr>
-			<td id="c1-1">Nicotine juice 100 mg (100% PG)</td>
-			<td id="c1-2"><?php echo $nj_ml; ?></td>
-			<td id="c1-3"><?php echo $nj_g; ?></td>
-			<td id="c1-4"><?php echo $ds; ?></td>
-		</tr>
-		<tr>
-			<td id="c2-1">PG dilutant</td>
-			<td id="c2-2"><?php echo $pgd_ml; ?></td>
-			<td id="c2-3"><?php echo $pgd_g; ?></td>
-			<td id="c2-4"><?php echo $e_pg_raznost; ?></td>
-		</tr>
-		<tr>
-			<td id="c3-1">VG dilutant</td>
-			<td id="c3-2"><?php echo $vgd_ml; ?></td>
-			<td id="c3-3"><?php echo $vgd_g; ?></td>
-			<td id="c3-4"><?php echo $e_vg_raznost; ?></td>
-		</tr>
 		<tr class="tatal-base" id="total-base">
 			<td id="c4-1">Total base</td>
 			<td id="c4-2"><?php echo $tb_ml; ?></td>
 			<td id="c4-3"><?php echo $tb_g; ?></td>
 			<td id="c4-4"><?php echo $tb_proc; ?></td>
 		</tr>
-
-		<!-- ингридиенты -->
-
-
 
 
 		<tr class="tatal-base" id="total">
@@ -185,6 +180,19 @@ $total_proc += $tb_proc;
 </div>
 <!-- .инфа о рецепте -->
 
+
+
+
+	<div class="o-post-recipes mt33">
+		<!-- описание поста -->
+		<p class="podzagolovok"><span class="line">Описание</span></p>
+		<div class="text-other">
+			<?php add_filter('the_content','htm_image_content_filter',11); ?>
+<?php the_content(); // контент без картинок?>
+		</div>
+	<!-- описание поста -->
+
+	</div>
 
 	
 </div>
