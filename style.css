@@ -2637,11 +2637,14 @@ a.politika {
     margin: 0 auto;
 }
 
+#div-elements{
+    margin-top: 40px;
+}
 
 /*элементы*/
 
 .elements-input:first-child {
-    margin-top: 40px;
+
 }
 
 .elements-input {
@@ -3045,3 +3048,6 @@ z-index:;
     width: 750px;
     margin: 0 50px;
 }
+
+
+/*раскрашивание страниц рецептов*/
