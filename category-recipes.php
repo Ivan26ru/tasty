@@ -61,7 +61,7 @@ get_header(); // подключаем header.php ?>
 				<i class="fa fa-thumbs-o-up" aria-hidden="true"></i> -->
 						<div class="rejt-div">
 			<div class="rejt-vol">
-			<?php if(function_exists('the_ratings')) { the_ratings(); } ?>	
+			<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
  			</div>
 		</div>
 			</td>
