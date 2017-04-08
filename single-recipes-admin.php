@@ -27,7 +27,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 		<!-- .элемент -->
 
 	<!-- форма элементов -->
-	<form action="http://tastyvape.ru/user-post" method="post" class="text-center form-elements">
+	<form action="<?php echo site_url(); ?>/user-post" method="post" class="text-center form-elements">
 		<!-- Название рецепта -->
 		<input type="text" name="title-recipes" class="input-name" placeholder="Введите имя" required>
 		<!-- контейнер элементов -->
