@@ -5,7 +5,7 @@
  * @subpackage your-clean-template
  */
 get_header(); // подключаем header.php ?>
-
+<div class="w750">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); // старт цикла ?>
 <h1 class="akciya-h1"><?php the_title(); ?></h1>
 <!-- Начало поста -->
@@ -42,7 +42,8 @@ if( !empty($image) ): ?>
 
 </div>
 <?php endwhile; // конец цикла ?>
-
+</div>
+<!-- w750 -->
 <?php if (comments_open() || get_comments_number()) comments_template('', true); // если комментирование открыто - мы покажем список комментариев и форму, если закрыто, но кол-во комментов > 0 - покажем только список комментариев ?>
 
 
