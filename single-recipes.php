@@ -62,7 +62,7 @@ $e_vg_raznost=$dvg;
 ?>
 
 
-<?php 
+<?php
 //переменные таблицы
 
 $tb_ml = $atm-$e_ml_summ;//total base (ml)
@@ -94,19 +94,19 @@ $total_proc += $tb_proc;
 			<th class="table-info-GRAMS"><span class="line">GRAMS</span></th>
 			<th class="table-info-proc"><span class="line">%</span></th>
 		</tr>
-		<tr>
+		<tr class="c-green">
 			<td id="c1-1">Nicotine juice 100 mg (100% PG)</td>
 			<td id="c1-2"><?php echo $nj_ml; ?></td>
 			<td id="c1-3"><?php echo $nj_g; ?></td>
 			<td id="c1-4"><?php echo $ds; ?></td>
 		</tr>
-		<tr>
+		<tr class="c-green">
 			<td id="c2-1">PG dilutant</td>
 			<td id="c2-2"><?php echo $pgd_ml; ?></td>
 			<td id="c2-3"><?php echo $pgd_g; ?></td>
 			<td id="c2-4"><?php echo $e_pg_raznost; ?></td>
 		</tr>
-		<tr>
+		<tr class="c-green">
 			<td id="c3-1">VG dilutant</td>
 			<td id="c3-2"><?php echo $vgd_ml; ?></td>
 			<td id="c3-3"><?php echo $vgd_g; ?></td>
@@ -115,7 +115,7 @@ $total_proc += $tb_proc;
 
 
 		<!-- ингридиенты -->
-<?php 
+<?php
 
 if( have_rows('ingredients') ):
 
@@ -141,7 +141,7 @@ if( have_rows('ingredients') ):
       $total_proc +=$i_vol;
       ?>
 	  	<!-- строка -->
-		<tr>
+		<tr class="c-orange">
 			<td><?php echo $i_name; ?></td>
 			<td><?php echo $e_ml; ?></td>
 			<td><?php echo $e_grams; ?></td>
@@ -156,7 +156,7 @@ else :
 endif;
 
 ?>
-		<tr class="tatal-base" id="total-base">
+		<tr class="tatal-base c-orange" id="total-base">
 			<td id="c4-1">Total base</td>
 			<td id="c4-2"><?php echo $tb_ml; ?></td>
 			<td id="c4-3"><?php echo $tb_g; ?></td>
@@ -164,13 +164,13 @@ endif;
 		</tr>
 
 
-		<tr class="tatal-base" id="total">
+		<tr class="tatal-base c-green" id="total">
 			<td id="total-1">Totals</td>
 			<td id="total-2"><?php echo $atm; ?></td>
 			<td id="total-3"><?php echo $total_g; ?></td>
 			<td id="total-4"><?php echo $total_proc; ?></td>
 		</tr>
-		<tr class="dn" id="td-etalon">
+		<tr class="dn c-green" id="td-etalon">
 			<td class="cell-1">0</td>
 			<td class="cell-2">0</td>
 			<td class="cell-3">0</td>
@@ -194,7 +194,7 @@ endif;
 
 	</div>
 
-	
+
 </div>
 
 <?php nonView(); ?>
