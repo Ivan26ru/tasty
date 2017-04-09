@@ -2632,14 +2632,29 @@ a.politika {
     border-radius: 3px;
 }
 
-.w263 {
-    width: 263px;
+.w283 {
+    width: 283px;
     margin: 0 auto;
 }
 
 #div-elements{
     margin-top: 40px;
 }
+
+/*раскраска*/
+.c-orange, .c-green{
+    padding: 10px;
+}
+
+.c-orange{
+    background-color:#FFE9D2;
+}
+
+.c-green{
+    margin-top:10px;
+    background-color:#D7FFFF;
+}
+
 
 /*элементы*/
 
