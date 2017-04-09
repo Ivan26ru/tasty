@@ -15,7 +15,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 <div class="recipes-admin-div">
 
 		<!-- элемент -->
-		<p id="element-id" class="elements-input dn">
+		<p id="element-id" class="elements-input dn c-orange">
 		<label class="clearfix" class="clearfix">
 			<span class="name-element">Amount to make</span>
 			<span class="span-input-ml">
@@ -32,9 +32,13 @@ if ( is_user_logged_in() ) {//условие если залогинен
 		<input type="text" name="title-recipes" class="input-name" placeholder="Введите имя" required>
 		<!-- контейнер элементов -->
 
-		<div class="w263 clearfix">
+		<div class="w283 clearfix">
 		<div id="div-elements">
 			<!-- элементы по умолчанию -->
+
+			<!-- оранжевый фон -->
+			<div class="c-green">
+
 
 			<!-- Amount to make -->
 			<p id="element-id" class="elements-input">
@@ -93,6 +97,13 @@ if ( is_user_logged_in() ) {//условие если залогинен
 			</label>
 			</p>
 			<!-- .Nicotine strength -->
+
+			</div>
+			<!-- .оранжевый фон -->
+
+			<!-- оранжевый фон -->
+			<div class="c-orange">
+
 			<!-- PG-content of nicotine -->
 			<p id="element-id" class="elements-input">
 			<label class="clearfix" class="clearfix">
@@ -115,6 +126,8 @@ if ( is_user_logged_in() ) {//условие если залогинен
 			</label>
 			</p>
 			<!-- .VG-content of nicotine -->
+			</div>
+			<!-- .оранжевый фон -->
 
 		<!-- .элементы по умолчанию -->
 
@@ -148,25 +161,25 @@ if ( is_user_logged_in() ) {//условие если залогинен
 			<th class="table-info-GRAMS"><span class="line">GRAMS</span></th>
 			<th class="table-info-proc"><span class="line">%</span></th>
 		</tr>
-		<tr>
+		<tr class="c-green">
 			<td id="c1-1">Nicotine juice 100 mg (100% PG)</td>
 			<td id="c1-2">0</td>
 			<td id="c1-3">0</td>
 			<td id="c1-4">0</td>
 		</tr>
-		<tr>
+		<tr class="c-green">
 			<td id="c2-1">PG dilutant</td>
 			<td id="c2-2">1.67</td>
 			<td id="c2-3">1.73</td>
 			<td id="c2-4">5.57</td>
 		</tr>
-		<tr>
+		<tr class="c-green">
 			<td id="c3-1">VG dilutant</td>
 			<td id="c3-2">1.67</td>
 			<td id="c3-3">1.73</td>
 			<td id="c3-4">5.57</td>
 		</tr>
-		<tr class="tatal-base" id="total-base">
+		<tr class="tatal-base c-green" id="total-base">
 			<td id="c4-1">Total base</td>
 			<td id="c4-2">1.67</td>
 			<td id="c4-3">1.73</td>
@@ -178,13 +191,13 @@ if ( is_user_logged_in() ) {//условие если залогинен
 
 
 
-		<tr class="tatal-base" id="total">
+		<tr class="tatal-base c-orange" id="total">
 			<td id="total-1">Totals</td>
 			<td id="total-2">30</td>
 			<td id="total-3">1.73</td>
 			<td id="total-4">5.57</td>
 		</tr>
-		<tr class="dn" id="td-etalon">
+		<tr class="dn c-orange" id="td-etalon">
 			<td class="cell-1">0</td>
 			<td class="cell-2">0</td>
 			<td class="cell-3">0</td>
