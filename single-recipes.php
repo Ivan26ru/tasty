@@ -37,13 +37,7 @@ get_header(); // подключаем header.php ?>
 
 	<!-- контакты-->
 	<div class="p-recipes-div-kont">
-		<p>Автор:<span><?php the_author(); ?></span></p>
-		<p>Дата:<span><?php the_time('j F H:i'); ?></span></p>
-		<div class="rejt-div"><div class="rejt-name">Рейтинг:</div>
-			<div class="rejt-vol">
-			<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
- 			</div>
-		</div>
+		<span><?php the_author(); ?>, <?php the_time('j F H:i'); ?>, <?php if(function_exists('the_ratings')) { the_ratings(); } ?> </span>
 	</div>
 	<!-- .контакты -->
 
@@ -113,6 +107,15 @@ $total_proc += $tb_proc;
 			<td id="c3-4"><?php echo $e_vg_raznost; ?></td>
 		</tr>
 
+				<tr class="tatal-base c-green" id="total-base">
+			<td id="c4-1">Total base</td>
+			<td id="c4-2"><?php echo $tb_ml; ?></td>
+			<td id="c4-3"><?php echo $tb_g; ?></td>
+			<td id="c4-4"><?php echo $tb_proc; ?></td>
+		</tr>
+
+
+
 
 		<!-- ингридиенты -->
 <?php
@@ -156,21 +159,14 @@ else :
 endif;
 
 ?>
-		<tr class="tatal-base c-orange" id="total-base">
-			<td id="c4-1">Total base</td>
-			<td id="c4-2"><?php echo $tb_ml; ?></td>
-			<td id="c4-3"><?php echo $tb_g; ?></td>
-			<td id="c4-4"><?php echo $tb_proc; ?></td>
-		</tr>
 
-
-		<tr class="tatal-base c-green" id="total">
+		<tr class="tatal-base c-orange" id="total">
 			<td id="total-1">Totals</td>
 			<td id="total-2"><?php echo $atm; ?></td>
 			<td id="total-3"><?php echo $total_g; ?></td>
 			<td id="total-4"><?php echo $total_proc; ?></td>
 		</tr>
-		<tr class="dn c-green" id="td-etalon">
+		<tr class="dn c-orange" id="td-etalon">
 			<td class="cell-1">0</td>
 			<td class="cell-2">0</td>
 			<td class="cell-3">0</td>

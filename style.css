@@ -2511,12 +2511,21 @@ a.politika {
 /*название*/
 
 .p-recipes-div-kont {
-    width: 470px;
+    width: 850px;
+}
+
+.p-recipes-div-kont .post-ratings,
+.p-recipes-div-kont .post-ratings-loading{
+/*     display:block; */
+    width:inherit;
+/*     margin-left:10px; */
 }
 
 .p-recipes-div-kont span:first-child {
     color: rgb(51, 51, 51);
-    margin-left: 20px;
+/*     margin-left: 20px; */
+    display:flex;
+    justify-content:center;
 }
 
 
