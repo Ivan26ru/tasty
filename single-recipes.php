@@ -145,7 +145,7 @@ if( have_rows('ingredients') ):
       ?>
 	  	<!-- строка -->
 		<tr class="c-orange">
-			<td><?php echo $i_name; ?></td>
+			<td><a href="<?php echo site_url(). '/tag/' .name_url($i_name); ?>"><?php echo $i_name; ?></a></td>
 			<td><?php echo $e_ml; ?></td>
 			<td><?php echo $e_grams; ?></td>
 			<td><?php echo $i_vol; //значение элемента?></td>
@@ -196,7 +196,6 @@ endif;
 <?php nonView(); ?>
 
 <?php endwhile; // конец цикла ?>
-
 
 <div class="o-post-recipes-comment">
 <!-- конец поста -->
