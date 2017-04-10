@@ -14,7 +14,7 @@ get_header(); // подключаем header.php ?>
 <div class="search clearfix">
 		<div class="fl search-div">
 			<!-- сама форма поиска -->
-			<form class="clearfix" id="search_string" method="get" role="search" action="<?php echo home_url( '/' ) ?>/category/recipes/" >
+			<form class="clearfix" id="search_string" method="get" role="search" action="<?php echo home_url( '/' ) ?>category/recipes/" >
 				<!-- строка поиска -->
 				<input class="search-text" type="text" placeholder="поиск" name="s" id="s">
 				<!-- кнопка поиска -->
