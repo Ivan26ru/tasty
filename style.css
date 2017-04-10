@@ -2854,6 +2854,10 @@ margin-top: 75px;
     color: #999;
 }
 
+.table-info-r a{
+    border-bottom: 1px dashed; /* Добавляем свою линию */
+}
+
 /*---------страница статей----------*/
 
 
@@ -3075,3 +3079,22 @@ z-index:;
 
 
 /*раскрашивание страниц рецептов*/
+
+
+/*цвета шрифтов в рецептах*/
+.color-1{
+    color:red;
+}
+
+.color-2{
+    color:#0f00ff;
+}
+/*total base*/
+.color-3{
+    color:#ffa400;
+}
+
+/*totals*/
+.color-4{
+    color:#00cd98;
+}
