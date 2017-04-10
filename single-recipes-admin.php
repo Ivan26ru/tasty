@@ -16,7 +16,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 
 		<!-- элемент -->
 		<p id="element-id" class="elements-input dn c-orange">
-		<label class="clearfix" class="clearfix">
+		<label class="clearfix">
 			<span class="name-element">Amount to make</span>
 			<span class="span-input-ml">
 				<input type="text" name="e_i_name" id="e_i_name" class="dn">
@@ -42,7 +42,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 
 			<!-- Amount to make -->
 			<p id="element-id" class="elements-input">
-			<label class="clearfix" class="clearfix">
+			<label class="clearfix">
 				<span class="name-element">Amount to make</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
@@ -54,7 +54,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 
 			<!-- Desired strength -->
 			<p id="element-id" class="elements-input">
-			<label class="clearfix" class="clearfix">
+			<label class="clearfix">
 				<span class="name-element">Desired strength</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
@@ -66,7 +66,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 
 			<!-- Desired PG -->
 			<p id="element-id" class="elements-input">
-			<label class="clearfix" class="clearfix">
+			<label class="clearfix">
 				<span class="name-element">Desired PG</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
@@ -77,7 +77,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 			<!-- .Desired PG -->
 			<!-- Desired VG -->
 			<p id="element-id" class="elements-input">
-			<label class="clearfix" class="clearfix">
+			<label class="clearfix">
 				<span class="name-element">Desired VG</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
@@ -88,7 +88,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 			<!-- .Desired VG -->
 			<!-- Nicotine strength -->
 			<p id="element-id" class="elements-input">
-			<label class="clearfix" class="clearfix">
+			<label class="clearfix">
 				<span class="name-element">Nicotine strength</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
@@ -106,7 +106,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 
 			<!-- PG-content of nicotine -->
 			<p id="element-id" class="elements-input">
-			<label class="clearfix" class="clearfix">
+			<label class="clearfix">
 				<span class="name-element">PG-content of nicotine</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
@@ -117,7 +117,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 			<!-- .PG-content of nicotine -->
 			<!-- VG-content of nicotine -->
 			<p id="element-id" class="elements-input">
-			<label class="clearfix" class="clearfix">
+			<label class="clearfix">
 				<span class="name-element">VG-content of nicotine</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
