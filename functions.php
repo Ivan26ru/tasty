@@ -338,4 +338,17 @@ if (current_user_can('subscriber')):
   show_admin_bar(false);
 endif;
 
+// создание URL из названия
+
+function name_url($name_title){
+
+	$name_title=strtolower("$name_title");//cменили регистр, все буквы маленькие
+	$pattern = '/\W+/';//все символы и пробелы
+	$replacement = '-';//на какой знак меняем
+	$name_title = preg_replace($pattern, $replacement, $name_title);//обрабатываем строку
+	$name_title = preg_replace('/(^\W+)|(\W+$)/', "", $name_title);//убираем лишние первый и последний символ, если таковой имеется
+	return $name_title;//возвращаем значение
+
+}
+
 ?>
