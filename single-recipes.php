@@ -111,7 +111,7 @@ $total_proc += $tb_proc;
 <div class="recipes-table">
 	<table class="table-info-r">
 		<tr class="color-1">
-			<th class="table-info-INGREDIENT"><span class="line">INGREDIENT</span></th>
+			<th class="table-info-INGREDIENT"><span class="line">ИНГРЕДИЕНТ</span></th>
 			<th class="table-info-ml"><span class="line">ml</span></th>
 			<th class="table-info-GRAMS"><span class="line">GRAMS</span></th>
 			<th class="table-info-proc"><span class="line">%</span></th>
@@ -195,7 +195,7 @@ endif;
 ?>
 
 		<tr class="tatal-base c-orange color-5" id="total">
-			<td id="total-1">Totals</td>
+			<td id="total-1">Всего: </td>
 			<td id="total-2"><?php echo $atm; ?></td>
 			<td id="total-3"><?php echo $total_g; ?></td>
 			<td id="total-4"><?php echo $total_proc; ?></td>
@@ -208,9 +208,9 @@ endif;
 		</tr>
 	</table>
 	<div class="info-small">
-		<p>Strength: <span><?php echo $ds . " mg"; ?></span></p>
-		<p>PG/VG-ratio: <span><?php echo $dpg . ' / ' . $dvg; ?></span></p>
-		<p>Flavor total: <span><?php echo $total_i_pg . " ml / " .  $total_i_vg . " g (" . $total_i_uv . "%)" ?></span></p>
+		<p>Крепость: <span><?php echo $ds . " mg"; ?></span></p>
+		<p>PG/VG: <span><?php echo $dpg . ' / ' . $dvg; ?></span></p>
+		<p>Всего аром.: <span><?php echo $total_i_pg . " ml / " .  $total_i_vg . " g (" . $total_i_uv . "%)" ?></span></p>
 	</div>
 </div>
 <!-- .инфа о рецепте -->
