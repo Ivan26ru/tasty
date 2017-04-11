@@ -2661,19 +2661,6 @@ a.politika {
     margin-top: 40px;
 }
 
-/*раскраска*/
-.c-orange, .c-green{
-    padding: 10px;
-}
-
-.c-orange{
-    background-color:#FFE9D2;
-}
-
-.c-green{
-    margin-top:10px;
-    background-color:#D7FFFF;
-}
 
 
 /*элементы*/
@@ -3093,6 +3080,22 @@ z-index:;
 /*раскрашивание страниц рецептов*/
 
 
+
+/*три строчки внизу рецепта*/
+
+.info-small{
+    margin-top:20px;
+}
+
+.info-small p{
+margin-bottom:0;
+margin-top:5px;
+}
+
+.info-small span{
+    font-weight:bold;
+}
+
 /*цвета шрифтов в рецептах*/
 .color-1{
     color:red;
@@ -3120,17 +3123,16 @@ z-index:;
     color:#00cd98;
 }
 
-/*три строчки внизу рецепта*/
-
-.info-small{
-    margin-top:20px;
+/*раскраска*/
+.c-orange, .c-green{
+    padding: 10px;
 }
 
-.info-small p{
-margin-bottom:0;
-margin-top:5px;
+.c-orange{
+    background-color:#FFE9D2;
 }
 
-.info-small span{
-    font-weight:bold;
+.c-green{
+    margin-top:10px;
+    background-color:#D7FFFF;
 }
