@@ -199,6 +199,11 @@ endif;
 			<td class="cell-4">0</td>
 		</tr>
 	</table>
+	<div class="info-small">
+		<p>Strength: <span>3mg</span></p>
+		<p>PG/VG-ratio: <span>30/70</span></p>
+		<p>Flavor total: <span>6.34 ml / 6.61 g(21.14%)</span></p>
+	</div>
 </div>
 <!-- .инфа о рецепте -->
 
