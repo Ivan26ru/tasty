@@ -230,6 +230,20 @@ jQuery(document).ready(function($) {
         $('#total-3').html(f2(total_3));
         $('#total-4').html(f2(total_4));
 
+        // три строки внизу
+        $('#small-s').text(ds);
+        $('#small-pg').text(dpg);
+        $('#small-vg').text(dvg);
+        $('#small-f1').text(sum_cell2);
+        $('#small-f2').text(sum_cell3);
+        $('#small-f3').text(sum_cell4);
+
+        // никотин
+        $('#nic-1').text(ns);
+        $('#nic-2').text(pgc);
+        $('#nic-3').text(vgc);
+
+
         return (recept);
 
     } // .калькулятор

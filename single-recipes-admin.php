@@ -136,11 +136,11 @@ if ( is_user_logged_in() ) {//условие если залогинен
 		</div>
 		<!-- новый элемент -->
 		<p class="elements-input-new">
-			<input id="e_name" class="input-name-el" type="search" placeholder="Ингридиент 1">
+			<input id="e_name" class="input-name-el" type="search" placeholder="Ингредиент 1">
 			<input id="e_value" class="input-ml max-val" type="number" value="0"><span class="ml">%</span>
 		</p>
 
-		<a href="#" id="add-element" class="btn-green">добавить ингридиент</a>
+		<a href="#" id="add-element" class="btn-green">добавить ингредиент</a>
 		<br>
 		<!-- описание -->
 		<textarea name="opisanie" class="opisanie" name="opisanie" id="" cols="30" rows="10" placeholder="Добавить описание"></textarea>
@@ -156,13 +156,13 @@ if ( is_user_logged_in() ) {//условие если залогинен
 <div class="recipes-table">
 	<table class="table-info-r">
 		<tr class="color-1">
-			<th class="table-info-INGREDIENT"><span class="line">INGREDIENT</span></th>
+			<th class="table-info-INGREDIENT"><span class="line">ИНГРЕДИЕНТ</span></th>
 			<th class="table-info-ml"><span class="line">ml</span></th>
 			<th class="table-info-GRAMS"><span class="line">GRAMS</span></th>
 			<th class="table-info-proc"><span class="line">%</span></th>
 		</tr>
 		<tr class="c-green color-2">
-			<td id="c1-1">Nicotine juice 100 mg (100% PG)</td>
+			<td id="c1-1">Никотин <span id="nic-1">100</span> mg (<span id="nic-2">100</span>/<span id="nic-3">0</span> PG/VG)</td>
 			<td id="c1-2">0</td>
 			<td id="c1-3">0</td>
 			<td id="c1-4">0</td>
@@ -192,7 +192,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 
 
 		<tr class="tatal-base c-orange color-5" id="total">
-			<td id="total-1">Totals</td>
+			<td id="total-1">Всего: </td>
 			<td id="total-2">30</td>
 			<td id="total-3">1.73</td>
 			<td id="total-4">5.57</td>
@@ -206,6 +206,13 @@ if ( is_user_logged_in() ) {//условие если залогинен
 	</table>
 </div>
 <!-- .инфа о рецепте -->
+
+	<div class="info-small post-recipes-container">
+		<p>Крепость: <span id="small-s">5</span></p>
+		<p>PG/VG: <span id="small-pg">30</span> / <span id="small-vg">70</span></p>
+		<p>Всего аром.: <span id="small-f1">0</span> ml / <span id="small-f2">0</span> g (<span id="small-f3">0</span>%)</p>
+	</div>
+
 
 <?php
 // ДОБАВЛЕНИЕ ЗАПИСИ ЧЕРЕЗ PHP
