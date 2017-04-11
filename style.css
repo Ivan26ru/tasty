@@ -2823,6 +2823,11 @@ margin: auto;
 /*margin-top: 75px;*/
 }
 
+/*отступ первого столба*/
+.table-info-r tr td:first-child{
+    padding-left:10px;
+}
+
 .table-info-r th{
     font-size:12px;
     text-align:left;
