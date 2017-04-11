@@ -13,17 +13,6 @@ get_header(); // подключаем header.php ?>
 <h1 class="recipes-h1"><?php the_title(); // заголовок поста ?></h1>
 
 	<!-- таблица ингридиенты -->
-<!-- 	<table class="post-recipes-ingredient">
-		<tr>
-			<th><span>INGREDIENT</span></th>
-			<th><span>ml</span></th>
-			<th><span>GRAMS</span></th>
-			<th><span>%</span></th>
-		</tr> -->
-		<!-- содержимое таблицы -->
-
-	<!-- </table> -->
-
 	<!-- <?php //the_meta(); ?> -->
 	<?php
 	/**
@@ -41,6 +30,10 @@ get_header(); // подключаем header.php ?>
 	</div>
 	<!-- .контакты -->
 
+
+
+
+
 	<?php
 //данные рецепта
 $atm	=	get_post_custom_values('atm')[0];
@@ -55,6 +48,38 @@ $e_pg_raznost=$dpg-$ds;
 $e_vg_raznost=$dvg;
 ?>
 
+		<!-- ингридиенты -->
+<?php
+
+if( have_rows('ingredients') ):
+
+ 	// loop through the rows of data
+    while ( have_rows('ingredients') ) : the_row();
+
+        // данные из произвольных полей поста. Данные ингридиента
+      $i_name=  get_sub_field('i_name');
+      $i_vol=  get_sub_field('i_vol');
+      $i_pg=  get_sub_field('i_pg');
+      $i_vg=  get_sub_field('i_vg');
+      $i_uv=  get_sub_field('i_uv');
+
+      $e_ml = $atm/100*$i_vol;
+      $e_grams = $e_ml*$i_uv;
+
+      $e_ml_summ +=$e_ml;
+
+      $e_pg_raznost -= $i_vol/100*$i_pg;
+      $e_vg_raznost -= $i_vol/100*$i_vg;
+
+      $total_g +=$e_grams;
+      $total_proc +=$i_vol;
+
+    endwhile;
+else :
+    // no rows found
+endif;
+
+?>
 
 <?php
 //переменные таблицы
@@ -125,25 +150,26 @@ if( have_rows('ingredients') ):
  	// loop through the rows of data
     while ( have_rows('ingredients') ) : the_row();
 
-        // display a sub field value
+
+        // данные из произвольных полей поста. Данные ингридиента
       $i_name=  get_sub_field('i_name');
       $i_vol=  get_sub_field('i_vol');
       $i_pg=  get_sub_field('i_pg');
       $i_vg=  get_sub_field('i_vg');
       $i_uv=  get_sub_field('i_uv');
-      // echo '<hr>'.$test;
+
       $e_ml = $atm/100*$i_vol;
       $e_grams = $e_ml*$i_uv;
 
-      $e_ml_summ +=$e_ml;
+      // $e_ml_summ +=$e_ml;
 
-      $e_pg_raznost -= $i_vol/100*$i_pg;
-      $e_vg_raznost -= $i_vol/100*$i_vg;
+      // $e_pg_raznost -= $i_vol/100*$i_pg;
+      // $e_vg_raznost -= $i_vol/100*$i_vg;
 
-      $total_g +=$e_grams;
-      $total_proc +=$i_vol;
-      ?>
-	  	<!-- строка -->
+      // $total_g +=$e_grams;
+      // $total_proc +=$i_vol;
+
+?>
 		<tr class="c-orange">
 			<td><a href="<?php echo site_url(). '/tag/' .name_url($i_name); ?>"><?php echo $i_name; ?></a></td>
 			<td><?php echo $e_ml; ?></td>

@@ -2467,7 +2467,16 @@ a.politika {
 
 /*-----------------страница рецепты------------------------*/
 
+.post-recipes-container{
+	width: 477px;
+	margin: auto;
+}
 
+/*заголовок рецепта*/
+.post-recipes-container h1{
+	font-size: 30px;
+    text-align: left;
+}
 /*контейнер рейтинга*/
 
 .p-recipes-div-kont .rejt-div {
@@ -2496,7 +2505,8 @@ a.politika {
     font-family: "Roboto";
     color: rgb(153, 153, 153);
     line-height: 1.2;
-    margin: auto;
+    /*margin: auto;*/
+    text-align: left;
 }
 
 
@@ -2511,14 +2521,14 @@ a.politika {
 /*название*/
 
 .p-recipes-div-kont {
-    width: 850px;
+    /*width: 850px;*/
 }
 
 .p-recipes-div-kont .post-ratings,
 .p-recipes-div-kont .post-ratings-loading{
 /*     display:block; */
     width:inherit;
-/*     margin-left:10px; */
+     margin-left:10px;
 }
 
 .p-recipes-div-kont span:first-child {
@@ -2816,12 +2826,13 @@ a.politika {
 
 /*данные рецепта*/
 .recipes-table{
+	margin-top: 30px;
     width: 100%;
 }
 .table-info-r{
 border-collapse: collapse;
 margin: auto;
-margin-top: 75px;
+/*margin-top: 75px;*/
 }
 
 .table-info-r th{
