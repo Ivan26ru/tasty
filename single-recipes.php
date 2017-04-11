@@ -26,7 +26,8 @@ get_header(); // подключаем header.php ?>
 
 	<!-- контакты-->
 	<div class="p-recipes-div-kont">
-		<span><?php the_author(); ?>, <?php the_time('j F H:i'); ?> <?php if(function_exists('the_ratings')) { the_ratings(); } ?> </span>
+		<span><?php the_author(); ?>, <?php the_time('j F H:i'); ?></span>
+		<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
 	</div>
 	<!-- .контакты -->
 
@@ -73,6 +74,8 @@ if( have_rows('ingredients') ):
 
       $total_g +=$e_grams;
       $total_proc +=$i_vol;
+
+
 
     endwhile;
 else :
@@ -169,6 +172,11 @@ if( have_rows('ingredients') ):
       // $total_g +=$e_grams;
       // $total_proc +=$i_vol;
 
+            //сумма элементов
+      $total_i_pg+=$e_ml;
+      $total_i_vg+=$e_grams;
+      $total_i_uv+=$i_vol;
+
 ?>
 		<tr class="c-orange color-6">
 			<td><a href="<?php echo site_url(). '/tag/' .name_url($i_name); ?>"><?php echo $i_name; ?></a></td>
@@ -200,9 +208,9 @@ endif;
 		</tr>
 	</table>
 	<div class="info-small">
-		<p>Strength: <span>3mg</span></p>
-		<p>PG/VG-ratio: <span>30/70</span></p>
-		<p>Flavor total: <span>6.34 ml / 6.61 g(21.14%)</span></p>
+		<p>Strength: <span><?php echo $ds . " mg"; ?></span></p>
+		<p>PG/VG-ratio: <span><?php echo $dpg . ' / ' . $dvg; ?></span></p>
+		<p>Flavor total: <span><?php echo $total_i_pg . " ml / " .  $total_i_vg . " g (" . $total_i_uv . "%)" ?></span></p>
 	</div>
 </div>
 <!-- .инфа о рецепте -->
