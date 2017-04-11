@@ -3119,3 +3119,18 @@ z-index:;
 .color-6 a{
     color:#00cd98;
 }
+
+/*три строчки внизу рецепта*/
+
+.info-small{
+    margin-top:20px;
+}
+
+.info-small p{
+margin-bottom:0;
+margin-top:5px;
+}
+
+.info-small span{
+    font-weight:bold;
+}
