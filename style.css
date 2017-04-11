@@ -3107,5 +3107,14 @@ z-index:;
 
 /*totals*/
 .color-4{
+    color:yellow;
+}
+
+.color-5{
+    color:#aaa;
+}
+
+.color-6,
+.color-6 a{
     color:#00cd98;
 }
