@@ -107,32 +107,32 @@ $total_proc += $tb_proc;
 <!-- инфа о рецепте -->
 <div class="recipes-table">
 	<table class="table-info-r">
-		<tr>
+		<tr class="color-1">
 			<th class="table-info-INGREDIENT"><span class="line">INGREDIENT</span></th>
 			<th class="table-info-ml"><span class="line">ml</span></th>
 			<th class="table-info-GRAMS"><span class="line">GRAMS</span></th>
 			<th class="table-info-proc"><span class="line">%</span></th>
 		</tr>
-		<tr class="c-green">
+		<tr class="c-green color-2">
 			<td id="c1-1">Nicotine juice 100 mg (100% PG)</td>
 			<td id="c1-2"><?php echo $nj_ml; ?></td>
 			<td id="c1-3"><?php echo $nj_g; ?></td>
 			<td id="c1-4"><?php echo $ds; ?></td>
 		</tr>
-		<tr class="c-green">
+		<tr class="c-green color-3">
 			<td id="c2-1">PG dilutant</td>
 			<td id="c2-2"><?php echo $pgd_ml; ?></td>
 			<td id="c2-3"><?php echo $pgd_g; ?></td>
 			<td id="c2-4"><?php echo $e_pg_raznost; ?></td>
 		</tr>
-		<tr class="c-green">
+		<tr class="c-green color-4">
 			<td id="c3-1">VG dilutant</td>
 			<td id="c3-2"><?php echo $vgd_ml; ?></td>
 			<td id="c3-3"><?php echo $vgd_g; ?></td>
 			<td id="c3-4"><?php echo $e_vg_raznost; ?></td>
 		</tr>
 
-				<tr class="tatal-base c-green" id="total-base">
+				<tr class="tatal-base c-green color-5" id="total-base">
 			<td id="c4-1">Total base</td>
 			<td id="c4-2"><?php echo $tb_ml; ?></td>
 			<td id="c4-3"><?php echo $tb_g; ?></td>
@@ -170,7 +170,7 @@ if( have_rows('ingredients') ):
       // $total_proc +=$i_vol;
 
 ?>
-		<tr class="c-orange">
+		<tr class="c-orange color-6">
 			<td><a href="<?php echo site_url(). '/tag/' .name_url($i_name); ?>"><?php echo $i_name; ?></a></td>
 			<td><?php echo $e_ml; ?></td>
 			<td><?php echo $e_grams; ?></td>
@@ -186,7 +186,7 @@ endif;
 
 ?>
 
-		<tr class="tatal-base c-orange" id="total">
+		<tr class="tatal-base c-orange color-5" id="total">
 			<td id="total-1">Totals</td>
 			<td id="total-2"><?php echo $atm; ?></td>
 			<td id="total-3"><?php echo $total_g; ?></td>

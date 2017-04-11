@@ -16,7 +16,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 
 		<!-- элемент -->
 		<p id="element-id" class="elements-input dn c-orange">
-		<label class="clearfix color-2">
+		<label class="clearfix color-6">
 			<span class="name-element">Amount to make</span>
 			<span class="span-input-ml">
 				<input type="text" name="e_i_name" id="e_i_name" class="dn">
@@ -155,31 +155,31 @@ if ( is_user_logged_in() ) {//условие если залогинен
 <!-- инфа о рецепте -->
 <div class="recipes-table">
 	<table class="table-info-r">
-		<tr>
+		<tr class="color-1">
 			<th class="table-info-INGREDIENT"><span class="line">INGREDIENT</span></th>
 			<th class="table-info-ml"><span class="line">ml</span></th>
 			<th class="table-info-GRAMS"><span class="line">GRAMS</span></th>
 			<th class="table-info-proc"><span class="line">%</span></th>
 		</tr>
-		<tr class="c-green color-1">
+		<tr class="c-green color-2">
 			<td id="c1-1">Nicotine juice 100 mg (100% PG)</td>
 			<td id="c1-2">0</td>
 			<td id="c1-3">0</td>
 			<td id="c1-4">0</td>
 		</tr>
-		<tr class="c-green color-1">
+		<tr class="c-green color-3">
 			<td id="c2-1">PG dilutant</td>
 			<td id="c2-2">1.67</td>
 			<td id="c2-3">1.73</td>
 			<td id="c2-4">5.57</td>
 		</tr>
-		<tr class="c-green color-1">
+		<tr class="c-green color-4">
 			<td id="c3-1">VG dilutant</td>
 			<td id="c3-2">1.67</td>
 			<td id="c3-3">1.73</td>
 			<td id="c3-4">5.57</td>
 		</tr>
-		<tr class="tatal-base c-green color-3" id="total-base">
+		<tr class="tatal-base c-green color-5" id="total-base">
 			<td id="c4-1">Total base</td>
 			<td id="c4-2">1.67</td>
 			<td id="c4-3">1.73</td>
@@ -191,13 +191,13 @@ if ( is_user_logged_in() ) {//условие если залогинен
 
 
 
-		<tr class="tatal-base c-orange color-4" id="total">
+		<tr class="tatal-base c-orange color-5" id="total">
 			<td id="total-1">Totals</td>
 			<td id="total-2">30</td>
 			<td id="total-3">1.73</td>
 			<td id="total-4">5.57</td>
 		</tr>
-		<tr class="dn c-orange color-2" id="td-etalon">
+		<tr class="dn c-orange color-6" id="td-etalon">
 			<td class="cell-1">0</td>
 			<td class="cell-2">0</td>
 			<td class="cell-3">0</td>
