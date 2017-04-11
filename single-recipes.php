@@ -26,7 +26,7 @@ get_header(); // подключаем header.php ?>
 
 	<!-- контакты-->
 	<div class="p-recipes-div-kont">
-		<span><?php the_author(); ?>, <?php the_time('j F H:i'); ?>, <?php if(function_exists('the_ratings')) { the_ratings(); } ?> </span>
+		<span><?php the_author(); ?>, <?php the_time('j F H:i'); ?> <?php if(function_exists('the_ratings')) { the_ratings(); } ?> </span>
 	</div>
 	<!-- .контакты -->
 
