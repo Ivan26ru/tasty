@@ -2560,7 +2560,7 @@ a.politika {
 }
 
 
-/*заголовок ингридиентов*/
+/*заголовок ингредиентов*/
 
 .post-recipes-ingredient th {
     width: 70px;
@@ -2607,7 +2607,7 @@ a.politika {
 .o-post-recipes {
     width: 470px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 
@@ -2682,7 +2682,7 @@ a.politika {
 /*label метка элемента*/
 
 .elements-input label {
-    line-height: 28px;
+    line-height: 27.5px;
 }
 
 
@@ -2726,7 +2726,7 @@ a.politika {
     height: 28px;
     display: inline-block;
     vertical-align: bottom;
-    line-height: 28px
+    line-height: 27.5px;
 }
 
 
@@ -2814,7 +2814,7 @@ a.politika {
 
 /*данные рецепта*/
 .recipes-table{
-	margin-top: 30px;
+	margin-top: 20px;
     width: 100%;
 }
 .table-info-r{
@@ -2825,11 +2825,11 @@ margin: auto;
 
 /*отступ первого столба*/
 .table-info-r tr td:first-child{
-    padding-left:8px;
+    padding-left:10px;
 }
 
 .table-info-r th{
-    font-size:12px;
+    font-size:15px;
     text-align:left;
     height: 34px;
     text-align: center;
@@ -2839,14 +2839,14 @@ margin: auto;
 
 .table-info-r th:first-child{
     text-align: left;
-    width: 280px;
+    width: 350px;
 }
 
 .table-info-r td{
-    padding-left:8px;
+    padding-left:18px;
     font-size:16px;
     height: 31px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #2b2b2b;
     vertical-align: middle;
     text-align: left;
 }
@@ -3090,7 +3090,7 @@ z-index:;
 margin-top:12px;
 font-weight:bold;
 color:#757575;
-font-size: 12px;
+font-size: 16px;
 }
 
 .info-small p{
@@ -3100,7 +3100,7 @@ margin-top:4px;
 
 .info-small span{
 font-weight:bold;
-font-size: 12px;
+font-size: 16px;
 }
 
 /*цвета шрифтов в рецептах*/
@@ -3109,25 +3109,25 @@ color:#757575;
 }
 
 .color-2{
-color:#ea8f8f;
+color:#ff7575;
 }
 /*total base*/
 .color-3{
-color:#7bb8cc;
+color:#94e5ff;
 }
 
 /*totals*/
 .color-4{
-color:#14a5fd;
+color:rgb(228, 228, 228);
 }
 
 .color-5{
-color:#aaa;
+color:rgb(136, 136, 136);
 }
 
 .color-6,
 .color-6 a{
-color:#61b59f;
+color: rgb(0, 205, 152);
 }
 
 /*раскраска*/
@@ -3136,10 +3136,23 @@ padding: 10px;
 }
 
 .c-orange{
-background-color:#ececec;
+background-color:rgb( 51, 51, 51);
 }
 
 .c-green{
 margin-top:10px;
-background-color:#efefef;
+background-color:rgb(33, 33, 33);
+}
+
+/*Раскраска фона на странице создания рецепта*/
+.c-bg1{
+
+}
+
+.c-bg2{
+
+}
+
+.c-bg3{
+
 }
