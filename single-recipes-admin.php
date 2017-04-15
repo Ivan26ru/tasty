@@ -15,9 +15,9 @@ if ( is_user_logged_in() ) {//условие если залогинен
 <div class="recipes-admin-div">
 
 		<!-- элемент -->
-		<p id="element-id" class="elements-input dn c-orange">
+		<p id="element-id" class="elements-input dn c-bg3">
 		<label class="clearfix ">
-			<span class="name-element">Amount to make</span>
+			<span class="name-element">Объем</span>
 			<span class="span-input-ml">
 				<input type="text" name="e_i_name" id="e_i_name" class="dn">
 				<input class="input-ml max-val new-element" type="number" name="русское слово" value="0"><span class="ml">%</span>
@@ -36,98 +36,100 @@ if ( is_user_logged_in() ) {//условие если залогинен
 		<div id="div-elements">
 			<!-- элементы по умолчанию -->
 
-			<!-- оранжевый фон -->
-			<div class="c-green">
+			<!-- первый фон -->
+			<div class="c-bg1">
 
 
-			<!-- Amount to make -->
+			<!-- Объем -->
 			<p id="element-id" class="elements-input">
 			<label class="clearfix ">
-				<span class="name-element">Amount to make</span>
+				<span class="name-element">Объем</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
 					<input class="input-ml" id="atm" type="number" name="atm" value="30"><span class="ml">ml</span>
 				</span>
 			</label>
 			</p>
-			<!-- .Amount to make -->
+			<!-- .Объем -->
 
-			<!-- Desired strength -->
+			<!-- Крепость -->
 			<p id="element-id" class="elements-input">
 			<label class="clearfix ">
-				<span class="name-element">Desired strength</span>
+				<span class="name-element">Крепость</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" id="ds" type="number" name="ds" value="5"><span class="ml">ml</span>
+					<input class="input-ml" id="ds" type="number" name="ds" value="3"><span class="ml">mg</span>
 				</span>
 			</label>
 			</p>
-			<!-- .Desired strength -->
+			<!-- .Крепость -->
 
-			<!-- Desired PG -->
+			<!-- PG -->
 			<p id="element-id" class="elements-input">
 			<label class="clearfix ">
-				<span class="name-element">Desired PG</span>
+				<span class="name-element">PG</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
 					<input class="input-ml" id="dpg" type="number" name="dpg" value="30"><span class="ml">%</span>
 				</span>
 			</label>
 			</p>
-			<!-- .Desired PG -->
-			<!-- Desired VG -->
+			<!-- .PG -->
+			<!-- VG -->
 			<p id="element-id" class="elements-input">
 			<label class="clearfix ">
-				<span class="name-element">Desired VG</span>
+				<span class="name-element">VG</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
 					<input class="input-ml" id="dvg" type="number" name="dvg" value="70"><span class="ml">%</span>
 				</span>
 			</label>
 			</p>
-			<!-- .Desired VG -->
-			<!-- Nicotine strength -->
+			<!-- .VG -->
+
+						</div>
+			<!-- .первый фон -->
+
+			<!-- второй фон -->
+			<div class="c-bg2">
+			<!-- Никотиновая база -->
 			<p id="element-id" class="elements-input">
 			<label class="clearfix ">
-				<span class="name-element">Nicotine strength</span>
+				<span class="name-element">Никотиновая база</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" id="ns" type="number" name="ns" value="100"><span class="ml">ml</span>
+					<input class="input-ml" id="ns" type="number" name="ns" value="100"><span class="ml">mg</span>
 				</span>
 			</label>
 			</p>
-			<!-- .Nicotine strength -->
+			<!-- .Никотиновая база -->
 
-			</div>
-			<!-- .оранжевый фон -->
 
-			<!-- оранжевый фон -->
-			<div class="c-orange">
 
-			<!-- PG-content of nicotine -->
+			<!-- VG в никотине -->
 			<p id="element-id" class="elements-input">
 			<label class="clearfix ">
-				<span class="name-element">PG-content of nicotine</span>
+				<span class="name-element">VG в никотине</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
 					<input class="input-ml" id="pgc" type="number" name="pgc" value="100"><span class="ml">%</span>
 				</span>
 			</label>
 			</p>
-			<!-- .PG-content of nicotine -->
-			<!-- VG-content of nicotine -->
+			<!-- .VG в никотине -->
+			<!-- PG в никотине -->
 			<p id="element-id" class="elements-input">
 			<label class="clearfix ">
-				<span class="name-element">VG-content of nicotine</span>
+				<span class="name-element">PG в никотине</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
 					<input class="input-ml" id="vgc" type="number" name="vgc" value="0"><span class="ml">%</span>
 				</span>
 			</label>
 			</p>
-			<!-- .VG-content of nicotine -->
+			<!-- .PG в никотине -->
 			</div>
-			<!-- .оранжевый фон -->
+			<!-- .второй фон -->
 
 		<!-- .элементы по умолчанию -->
 
@@ -208,7 +210,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 <!-- .инфа о рецепте -->
 
 	<div class="info-small post-recipes-container">
-		<p>Крепость: <span id="small-s">5</span></p>
+		<p>Крепость: <span id="small-s">3</span> mg</p>
 		<p>PG/VG: <span id="small-pg">30</span> / <span id="small-vg">70</span></p>
 		<p>Всего аром.: <span id="small-f1">0</span> ml / <span id="small-f2">0</span> g (<span id="small-f3">0</span>%)</p>
 	</div>
