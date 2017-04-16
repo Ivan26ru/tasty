@@ -88,15 +88,16 @@ endif;
 //переменные таблицы
 
 $tb_ml = $atm-$e_ml_summ;//total base (ml)
-$nj_ml = $tb_ml/100*$ds; //Nicotine juice 100 mg (100% PG) (ml)
-$nj_g = round($nj_ml*1.038,2); //Nicotine juice 100 mg (100% PG) (grams)
+
+$nj_ml = round($atm/100*$ds,2); //Nicotine juice 100 mg (100% PG) (ml)
+$nj_g = round($nj_ml*1.036,2); //Nicotine juice 100 mg (100% PG) (grams)
 
 $tb_proc = $ds+$e_pg_raznost+$e_vg_raznost;
-$pgd_ml = round($tb_ml/100*$e_pg_raznost,2);
-$pgd_g = round($pgd_ml*1.038);
+$pgd_ml = round($atm/100*$e_pg_raznost,2);
+$pgd_g = round($pgd_ml*1.036,2);
 
-$vgd_ml = round($tb_ml/100*$e_vg_raznost,2);
-$vgd_g = round($vgd_ml*1.038);
+$vgd_ml = round($atm/100*$e_vg_raznost,2);
+$vgd_g = round($vgd_ml*1.261,2);
 
 $tb_g = $nj_g+$pgd_g+$vgd_g;
 
@@ -197,7 +198,7 @@ endif;
 		<tr class="tatal-base c-orange color-5" id="total">
 			<td id="total-1">Всего: </td>
 			<td id="total-2"><?php echo $atm; ?></td>
-			<td id="total-3"><?php echo $total_g; ?></td>
+			<td id="total-3"><?php echo round($total_g,2); ?></td>
 			<td id="total-4"><?php echo $total_proc; ?></td>
 		</tr>
 		<tr class="dn c-orange" id="td-etalon">

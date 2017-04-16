@@ -123,9 +123,9 @@ jQuery(document).ready(function($) {
         recept[6] = vgc;
 
         // Удельный вес общий
-        mass_nj = 1.038;
-        mass_pg = 1.038;
-        mass_vg = 1.038;
+        mass_nj = 1.036;
+        mass_pg = 1.036;
+        mass_vg = 1.261;
 
         // Удельный вес ингридиентов
         mass_e_pg = 100;
@@ -179,24 +179,32 @@ jQuery(document).ready(function($) {
         // переменные таблицы
 
         var
-            c1_2 = (atm - sum_cell2) / 100 * ds,
-            c1_3 = ((atm - sum_cell2) / 100 * ds) * mass_nj,
+            // c1_2 = (atm - sum_cell2) / 100 * ds,
+            c1_2 = atm/100*ds
+            // c1_3 = ((atm - sum_cell2) / 100 * ds) * mass_nj,
+            c1_3 = (atm/100*ds) * mass_nj,
             c1_4 = ds,
 
-            c2_2 = (atm - sum_cell2) / 100 * (dpg - ds - cell2_4_data),
-            c2_3 = ((atm - sum_cell2) / 100 * (dpg - ds - cell2_4_data)) * mass_vg,
+            // c2_2 = (atm - sum_cell2) / 100 * (dpg - ds - cell2_4_data),
+            c2_2 = atm/100*(dpg - ds - cell2_4_data),
+            // c2_3 = ((atm - sum_cell2) / 100 * (dpg - ds - cell2_4_data)) * mass_vg,
+            c2_3 = (atm/100*(dpg - ds - cell2_4_data)) * mass_pg,
             c2_4 = dpg - ds - cell2_4_data,
 
-            c3_2 = (atm - sum_cell2) / 100 * (dvg - cell3_4_data),
-            c3_3 = ((atm - sum_cell2) / 100 * (dvg - cell3_4_data)) * mass_vg,
+            // c3_2 = (atm - sum_cell2) / 100 * (dvg - cell3_4_data),
+            c3_2 = atm/100*(dvg - cell3_4_data),
+            // c3_3 = ((atm - sum_cell2) / 100 * (dvg - cell3_4_data)) * mass_vg,
+            c3_3 = (atm/100*(dvg - cell3_4_data)) * mass_vg,
             c3_4 = dvg - cell3_4_data,
 
             c4_2 = atm - sum_cell2,
-            c4_3 = (((atm - sum_cell2) / 100 * ds) * mass_nj) + (((atm - sum_cell2) / 100 * (dpg - ds - cell2_4_data)) * mass_vg) + (((atm - sum_cell2) / 100 * (dvg - cell3_4_data)) * mass_vg),
+            // c4_3 = (((atm - sum_cell2) / 100 * ds) * mass_nj) + (((atm - sum_cell2) / 100 * (dpg - ds - cell2_4_data)) * mass_vg) + (((atm - sum_cell2) / 100 * (dvg - cell3_4_data)) * mass_vg),
+            c4_3 = ((atm/100*ds) * mass_nj)+((atm/100*(dpg - ds - cell2_4_data)) * mass_pg)+((atm/100*(dvg - cell3_4_data)) * mass_vg),
             c4_4 = (ds) + (dpg - ds - cell2_4_data) + (dvg - cell3_4_data),
 
             total_2 = atm,
-            total_3 = sum_cell3 + (((atm - sum_cell2) / 100 * ds) * mass_nj) + (((atm - sum_cell2) / 100 * (dpg - ds - cell2_4_data)) * mass_vg) + (((atm - sum_cell2) / 100 * (dvg - cell3_4_data)) * mass_vg),
+            total_3 = sum_cell3 + ((atm/100*ds) * mass_nj)+((atm/100*(dpg - ds - cell2_4_data)) * mass_pg)+((atm/100*(dvg - cell3_4_data)) * mass_vg),
+            console.log(sum_cell3);
             total_4 = sum_cell4 + (ds) + (dpg - ds - cell2_4_data) + (dvg - cell3_4_data);
 
         // total_3 = sum_cell3 + parseFloat($('#c1-3').html()) + parseFloat($('#c2-3').html()) + parseFloat($('#c3-3').html()),
