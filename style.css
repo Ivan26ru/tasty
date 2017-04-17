@@ -2838,21 +2838,22 @@ margin: auto;
     height: 34px;
     text-align: center;
     vertical-align: top;
-    width: 63px;
+    /*width: 63px;*/
 }
 
 .table-info-r th:first-child{
     text-align: left;
-    width: 350px;
+    width: 300px;
 }
 
 .table-info-r td{
-    padding-left:18px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size:16px;
     height: 31px;
     border-bottom: 1px solid #2b2b2b;
     vertical-align: middle;
-    text-align: left;
+    text-align: center;
 }
 .table-info-r td:first-child{
     text-align: left;
