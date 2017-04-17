@@ -209,6 +209,7 @@ endif;
 		</tr>
 	</table>
 	<div class="info-small">
+		<a href="http://xaoc-lab.ru/" class="btn-green buy-arom">купить ароматизаторы</a>
 		<p>Крепость: <span><?php echo $ds . " mg"; ?></span></p>
 		<p>PG/VG: <span><?php echo $dpg . ' / ' . $dvg; ?></span></p>
 		<p>Всего аром.: <span><?php echo $total_i_pg . " ml / " .  $total_i_vg . " g (" . $total_i_uv . "%)" ?></span></p>
