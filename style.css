@@ -2847,13 +2847,14 @@ margin: auto;
 }
 
 .table-info-r td{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     font-size:16px;
     height: 31px;
     border-bottom: 1px solid #2b2b2b;
     vertical-align: middle;
     text-align: center;
+    width: 73px;
 }
 .table-info-r td:first-child{
     text-align: left;
