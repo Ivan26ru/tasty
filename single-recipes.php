@@ -118,26 +118,26 @@ $total_proc += $tb_proc;
 			<th class="table-info-proc"><span class="line">%</span></th>
 		</tr>
 		<tr class="c-green color-2">
-			<td id="c1-1">Nicotine juice 100 mg (100% PG)</td>
+			<td id="c1-1">Никотин <span id="nic-1">100</span> mg (<span id="nic-2">100</span>/<span id="nic-3">0</span> PG/VG)</td>
 			<td id="c1-2"><?php echo $nj_ml; ?></td>
 			<td id="c1-3"><?php echo $nj_g; ?></td>
 			<td id="c1-4"><?php echo $ds; ?></td>
 		</tr>
 		<tr class="c-green color-3">
-			<td id="c2-1">PG dilutant</td>
+			<td id="c2-1">PG в базе</td>
 			<td id="c2-2"><?php echo $pgd_ml; ?></td>
 			<td id="c2-3"><?php echo $pgd_g; ?></td>
 			<td id="c2-4"><?php echo $e_pg_raznost; ?></td>
 		</tr>
 		<tr class="c-green color-4">
-			<td id="c3-1">VG dilutant</td>
+			<td id="c3-1">VG в базе</td>
 			<td id="c3-2"><?php echo $vgd_ml; ?></td>
 			<td id="c3-3"><?php echo $vgd_g; ?></td>
 			<td id="c3-4"><?php echo $e_vg_raznost; ?></td>
 		</tr>
 
 				<tr class="tatal-base c-green color-5" id="total-base">
-			<td id="c4-1">Total base</td>
+			<td id="c4-1">Всего в базе</td>
 			<td id="c4-2"><?php echo $tb_ml; ?></td>
 			<td id="c4-3"><?php echo $tb_g; ?></td>
 			<td id="c4-4"><?php echo $tb_proc; ?></td>

@@ -91,7 +91,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 			<!-- .первый фон -->
 
 			<!-- второй фон -->
-			<div class="c-bg2">
+			<div class="c-bg2 dn">
 			<!-- Никотиновая база -->
 			<p id="element-id" class="elements-input">
 			<label class="clearfix ">
@@ -170,19 +170,19 @@ if ( is_user_logged_in() ) {//условие если залогинен
 			<td id="c1-4">0</td>
 		</tr>
 		<tr class="c-green color-3">
-			<td id="c2-1">PG dilutant</td>
+			<td id="c2-1">PG в базе</td>
 			<td id="c2-2">1.67</td>
 			<td id="c2-3">1.73</td>
 			<td id="c2-4">5.57</td>
 		</tr>
 		<tr class="c-green color-4">
-			<td id="c3-1">VG dilutant</td>
+			<td id="c3-1">VG в базе</td>
 			<td id="c3-2">1.67</td>
 			<td id="c3-3">1.73</td>
 			<td id="c3-4">5.57</td>
 		</tr>
 		<tr class="tatal-base c-green color-5" id="total-base">
-			<td id="c4-1">Total base</td>
+			<td id="c4-1">Всего в базе</td>
 			<td id="c4-2">1.67</td>
 			<td id="c4-3">1.73</td>
 			<td id="c4-4">5.57</td>
