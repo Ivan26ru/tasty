@@ -164,6 +164,7 @@ if( have_rows('ingredients') ):
 
       $e_ml = $atm/100*$i_vol;
       $e_grams = $e_ml*$i_uv;
+      // $e_grams = $i_uv;
 
       // $e_ml_summ +=$e_ml;
 
@@ -224,7 +225,7 @@ endif;
 		<!-- описание поста -->
 		<p class="podzagolovok"><span class="line">Описание</span></p>
 		<div class="text-other">
-			<?php add_filter('the_content','htm_image_content_filter',11); ?>
+			<?php //add_filter('the_content','htm_image_content_filter',11); ?>
 <?php the_content(); // контент без картинок?>
 		</div>
 	<!-- описание поста -->
