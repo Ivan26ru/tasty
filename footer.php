@@ -66,8 +66,11 @@
 
 <?php wp_footer(); // необходимо для работы плагинов и функционала  ?>
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/jquery.placeholder.min.js'></script>
+
 <!-- автонаполнение jq ui -->
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+<script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/jquery-ui.js'></script>
+
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/main.js?<?php $date_css=date('YmdHis'); echo $date_css; // мои стили шаблона ВСЕГДА ОБНОВЛЯЮТСЯ?>'></script>
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/myrecipe.js?<?php $date_css=date('YmdHis'); echo $date_css; // мои стили шаблона ВСЕГДА ОБНОВЛЯЮТСЯ?>'></script>
 
@@ -85,6 +88,7 @@ jQuery(document).ready(function() {
 	    autoHeight : true,
 	    transitionStyle:"fade"
 	});
+
 });
 </script>
 
@@ -98,8 +102,10 @@ jQuery(document).ready(function() {
 
 
 <?php $args = array(
-						'post_type'=>'ingredients',
-						'posts_per_page' =>999
+						'post_type'=>'ingredients',//какие посты выбирать
+						'orderby'=> 'title',//сотрировка по дате
+						'order' => 'ASC',//обратный порядок
+						'posts_per_page' =>-1//количество выводимых постов
 					);
 
 $query = new WP_Query( $args );
@@ -125,8 +131,15 @@ while ( $query->have_posts() ) {
     	<?php wp_reset_postdata(); ?>
 <!-- конец постов -->
     jQuery( "#e_name" ).autocomplete({//условия для автонаполнения
-      source: availableTags//передаем массив имен
+      source: availableTags,//передаем массив имен
+      minLength: 2,// минимальное количество символов
+      //disabled: true,//автонаполнение
+      delay: 1000,//задержка
+      width:500,
+      autoFill: true
     });//.условия для автонаполнения
+
+	jQuery('#ui-id-1').width(200);
   } );
   </script>
 <?php endif ?>
