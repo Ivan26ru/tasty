@@ -21,8 +21,8 @@ $recept=json_decode($recept);//декодировал json преобразов�
 
 $cur_user_id = get_current_user_id();//ID текущего пользователя
 
-$title_post = $_POST['title-recipes'];//заголовок
-$opisanie = $_POST['opisanie'];//содержимое поста
+$title_post = stripslashes($_POST['title-recipes']);//заголовок
+$opisanie = stripslashes($_POST['opisanie']);//содержимое поста
 
 unset($post_tags);
 foreach ($recept[0] as $key => $value) {//присваивание имени
