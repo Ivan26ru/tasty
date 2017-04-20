@@ -182,9 +182,9 @@ if( have_rows('ingredients') ):
 ?>
 		<tr class="c-orange color-6">
 			<td><a href="<?php echo site_url(). '/tag/' .name_url($i_name); ?>"><?php echo $i_name; ?></a></td>
-			<td><?php echo $e_ml; ?></td>
-			<td><?php echo $e_grams; ?></td>
-			<td><?php echo $i_vol; //значение элемента?></td>
+			<td><?php echo round($e_ml,2); ?></td>
+			<td><?php echo round($e_grams,2); ?></td>
+			<td><?php echo round($i_vol,2); //значение элемента?></td>
 		</tr>
 		<!-- .строка -->
 
@@ -193,6 +193,10 @@ if( have_rows('ingredients') ):
 else :
     // no rows found
 endif;
+
+$total_i_pg=round($total_i_pg,2);
+$total_i_vg=round($total_i_vg,2);
+$total_i_uv=round($total_i_uv,2);
 
 ?>
 
