@@ -130,7 +130,7 @@ jQuery(document).ready(function($) {
         // Удельный вес ингридиентов
         mass_e_pg = 100;
         mass_e_vg = 0;
-        mass_e_nj = 1; //удельный вес
+        mass_e_nj = 1.04; //удельный вес
 
 
         var sum = 0; //переменная суммы ЭЛЕМЕНТОВ
@@ -159,7 +159,9 @@ jQuery(document).ready(function($) {
                 cell3 = f2(cell2 * mass_e_nj),
                 cell4 = f2(e_full[i][1]);
 
-
+// mass_e_pg = e_full[i][2];
+// mass_e_vg = e_full[i][3];
+// mass_e_nj = e_full[i][4];
 
 
             sum_cell2 = sum_cell2 + cell2;
@@ -204,7 +206,7 @@ jQuery(document).ready(function($) {
 
             total_2 = atm,
             total_3 = sum_cell3 + ((atm/100*ds) * mass_nj)+((atm/100*(dpg - ds - cell2_4_data)) * mass_pg)+((atm/100*(dvg - cell3_4_data)) * mass_vg),
-            console.log(sum_cell3);
+            // console.log(sum_cell3);
             total_4 = sum_cell4 + (ds) + (dpg - ds - cell2_4_data) + (dvg - cell3_4_data);
 
         // total_3 = sum_cell3 + parseFloat($('#c1-3').html()) + parseFloat($('#c2-3').html()) + parseFloat($('#c3-3').html()),
