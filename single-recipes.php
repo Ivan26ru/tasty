@@ -225,8 +225,7 @@ endif;
 		<!-- описание поста -->
 		<p class="podzagolovok"><span class="line">Описание</span></p>
 		<div class="text-other">
-			<?php //add_filter('the_content','htm_image_content_filter',11); ?>
-<?php the_content(); // контент без картинок?>
+<?php the_content(); // контент?>
 		</div>
 	<!-- описание поста -->
 
