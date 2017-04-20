@@ -572,7 +572,7 @@ section img {
 /*выравнивение по центру по вертикали текст*/
 
 .va-c {
-    margin: auto 0;
+    /*margin: auto 0;*/
 }
 
 
