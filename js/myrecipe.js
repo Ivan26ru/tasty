@@ -71,7 +71,7 @@ jQuery(document).ready(function($) {
                 .attr('name', 'value_element_' + n_click) //присвоим новой строке значение name
                 .attr('id', 'value_element_' + n_click); //присвоим новой строке значение ID
 
-            $("#e_name").val('').attr('placeholder', 'Ингридиент ' + n_click); //выводит номер игртидиента и сбрасывает состояние
+            $("#e_name").val('').attr('placeholder', 'ингредиент ' + n_click); //выводит номер игртидиента и сбрасывает состояние
             $("#e_value").val('0'); //сбрасывает состояние
             // --------------------
 
@@ -113,7 +113,7 @@ jQuery(document).ready(function($) {
         pgc = parseFloat($('#pgc').val());
         vgc = parseFloat($('#vgc').val());
 
-        //Данные рецепта в массив данных ингридиента
+        //Данные рецепта в массив данных ингредиента
         recept[0] = atm;
         recept[1] = ds;
         recept[2] = dpg;
@@ -127,7 +127,7 @@ jQuery(document).ready(function($) {
         mass_pg = 1.036;
         mass_vg = 1.261;
 
-        // Удельный вес ингридиентов
+        // Удельный вес ингредиентов
         mass_e_pg = 100;
         mass_e_vg = 0;
         mass_e_nj = 1.04; //удельный вес
