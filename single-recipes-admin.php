@@ -20,7 +20,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 			<span class="name-element">Объем</span>
 			<span class="span-input-ml">
 				<input type="text" name="e_i_name" id="e_i_name" class="dn">
-				<input class="input-ml max-val new-element" type="number" name="русское слово" value="0"><span class="ml">%</span>
+				<input class="input-ml max-val new-element" type="number" name="русское слово" value="0" step="any"><span class="ml">%</span>
 			</span>
 		</label>
 		</p>
@@ -46,7 +46,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 				<span class="name-element">Объем</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" id="atm" type="number" name="atm" value="30"><span class="ml">ml</span>
+					<input class="input-ml" id="atm" type="number" name="atm" value="30" step="any"><span class="ml">ml</span>
 				</span>
 			</label>
 			</p>
@@ -58,7 +58,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 				<span class="name-element">Крепость</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" id="ds" type="number" name="ds" value="3"><span class="ml">mg</span>
+					<input class="input-ml" id="ds" type="number" name="ds" value="3" step="any"><span class="ml">mg</span>
 				</span>
 			</label>
 			</p>
@@ -70,7 +70,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 				<span class="name-element">PG</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" id="dpg" type="number" name="dpg" value="30"><span class="ml">%</span>
+					<input class="input-ml" id="dpg" type="number" name="dpg" value="30" step="any"><span class="ml">%</span>
 				</span>
 			</label>
 			</p>
@@ -81,7 +81,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 				<span class="name-element">VG</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" id="dvg" type="number" name="dvg" value="70"><span class="ml">%</span>
+					<input class="input-ml" id="dvg" type="number" name="dvg" value="70" step="any"><span class="ml">%</span>
 				</span>
 			</label>
 			</p>
@@ -98,7 +98,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 				<span class="name-element">Никотиновая база</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" id="ns" type="number" name="ns" value="100"><span class="ml">mg</span>
+					<input class="input-ml" id="ns" type="number" name="ns" value="100" step="any"><span class="ml">mg</span>
 				</span>
 			</label>
 			</p>
@@ -112,7 +112,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 				<span class="name-element">VG в никотине</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" id="pgc" type="number" name="pgc" value="100"><span class="ml">%</span>
+					<input class="input-ml" id="pgc" type="number" name="pgc" value="100" step="any"><span class="ml">%</span>
 				</span>
 			</label>
 			</p>
@@ -123,7 +123,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 				<span class="name-element">PG в никотине</span>
 				<span class="span-input-ml">
 					<input type="text" name="e_i_name" id="" class="dn">
-					<input class="input-ml" id="vgc" type="number" name="vgc" value="0"><span class="ml">%</span>
+					<input class="input-ml" id="vgc" type="number" name="vgc" value="0" step="any"><span class="ml">%</span>
 				</span>
 			</label>
 			</p>
@@ -138,8 +138,8 @@ if ( is_user_logged_in() ) {//условие если залогинен
 		</div>
 		<!-- новый элемент -->
 		<p class="elements-input-new">
-			<input id="e_name" class="input-name-el" type="search" placeholder="Ингредиент 1">
-			<input id="e_value" class="input-ml max-val" type="number" value="0"><span class="ml">%</span>
+			<input id="e_name" class="input-name-el" type="search" placeholder="Ингредиент">
+			<input id="e_value" class="input-ml max-val" type="number" value="0" step="any"><span class="ml">%</span>
 		</p>
 
 		<a href="#" id="add-element" class="btn-green">добавить ингредиент</a>

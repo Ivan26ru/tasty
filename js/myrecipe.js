@@ -35,6 +35,7 @@ jQuery(document).ready(function($) {
             e_name[n_click] = $('#e_name').val(); //имя элемента в массив
             e_value[n_click] = parseFloat($('#e_value').val()); //количество элемента в массив, преобразуем в число
 
+            console.log('массив количества элемента: ' + e_value);
             // характеристики элемента
             e_pg[n_click] = parseFloat(availableList[str][0]); //%PG
             e_vg[n_click] = parseFloat(availableList[str][1]); //%VG
@@ -52,6 +53,7 @@ jQuery(document).ready(function($) {
                 e_id[n_click] //5
             ];
 
+            console.log('массив первоночальный e_full: ' + e_full);
 
             // e_id.push(availableList[str][3]);
 
@@ -71,7 +73,7 @@ jQuery(document).ready(function($) {
                 .attr('name', 'value_element_' + n_click) //присвоим новой строке значение name
                 .attr('id', 'value_element_' + n_click); //присвоим новой строке значение ID
 
-            $("#e_name").val('').attr('placeholder', 'ингредиент ' + n_click); //выводит номер игртидиента и сбрасывает состояние
+            $("#e_name").val('').attr('placeholder', 'ингредиент '); //выводит номер игртидиента и сбрасывает состояние
             $("#e_value").val('0'); //сбрасывает состояние
             // --------------------
 
@@ -148,9 +150,9 @@ jQuery(document).ready(function($) {
         for (var i = 0; e_full.length > i; i++) {
 
             e_full[i][1] = $('#value_element_' + i).val(); //обновляем значение элемента
-            e_full[i][1] = parseInt(e_full[i][1]); //преобразуем в число
+            e_full[i][1] = parseFloat(e_full[i][1]); //преобразуем в число
 
-            sum = sum + parseInt(e_full[i][1]); //сумма значений ЭЛЕМЕНТОВ
+            sum = sum + parseFloat(e_full[i][1]); //сумма значений ЭЛЕМЕНТОВ
 
             // значения строк ЭЛЕМЕНТОВ в таблице
 
