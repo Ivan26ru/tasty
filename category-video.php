@@ -5,7 +5,10 @@
  * @subpackage your-clean-template
  */
 get_header(); // подключаем header.php ?>
-
+<?php // переменная в сессии будет находиться пока файл 
+// сессии не будет уничтожен, или переменная из сессии не будет удалена
+@session_start();
+echo '<!-- test sesion a='.$_SESSION['a'] . '-->'; ?>
 <!-- Начало рубрики-->
 <h1 class="recipes-h1"><?php single_cat_title();//вывод имени текущей категории ?></h1>
 <div class="video-category">

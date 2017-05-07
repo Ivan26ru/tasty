@@ -31,9 +31,9 @@ get_header(); // подключаем header.php ?>
 			<th class="rec-th-data"><p class="podzagolovok"><span class="line">Дата</span></p></th>
 			<th class="rec-th-rejting">
 				<p class="podzagolovok">
-				<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-up.png"></a>
+				<!-- <a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-up.png"></a> -->
 					<span class="line">Рейтинг</span>
-				<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-down.png"></a>
+				<!-- <a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-down.png"></a> -->
 				</p>
 			</th>
 		</tr>

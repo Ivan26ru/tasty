@@ -51,7 +51,20 @@
 	  			);
 				wp_nav_menu($args); // выводим верхнее меню
 			?>
+		<!-- .верхнее меню 1 -->
+
+<!-- поиск -->
+			<!-- сама форма поиска -->
+			<form class="header-form" id="search_string" method="get" role="search" action="<?php echo home_url( '/' ) ?>" >
+				<!-- строка поиска -->
+				<input class="search-text" type="text" placeholder="поиск" name="s" id="s">
+				<!-- кнопка поиска -->
+				<button class="search-button" type="submit" id="searchsubmit" ><i class="fa fa-search" aria-hidden="true"></i></button>
+			</form>
+<!-- .поиск -->
+
 			<div class="vhod btn-top-1">
+
 			<?php if ( is_user_logged_in() ) {//условие залогиненности |-> Если пользователь залогинен
 	?>
 	<span>Добро пожаловать <?php
@@ -68,6 +81,9 @@ else { //если ни залогинен?>
 <?php
 }//.условие залогиненности ?>
 			</div>
+			<!-- .vhod -->
+
+
 		</div>
 	</div>
 </div>

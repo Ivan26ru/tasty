@@ -8,6 +8,21 @@ get_header(); // подключаем header.php ?>
 
 <!-- Начало рубрики-->
 
+<?php
+@session_start();
+$_SESSION['a'] = 5;
+@session_write_close();
+
+// переменная в сессии будет находиться пока файл
+// сессии не будет уничтожен, или переменная из сессии не будет удалена
+echo '<!-- test sesion a='.$_SESSION['a'] . '-->';
+
+if(isset($_GET['sort'])) $sort = $_GET['sort'];
+
+// echo $sort;
+?>
+
+
 <h1 class="recipes-h1"><?php single_cat_title();//вывод имени текущей категории ?></h1>
 
 <!-- строка поиска и добавить рецепт -->
@@ -37,17 +52,77 @@ get_header(); // подключаем header.php ?>
 	<table class="list-recipes">
 		<!-- шапка таблицы -->
 		<tr>
-			<th class="rec-th-name"><p class="podzagolovok"><span class="line">Название</span></p></th>
-			<th class="rec-th-avtor"><p class="podzagolovok"><span class="line">Автор</span></p></th>
-			<th class="rec-th-data"><p class="podzagolovok"><span class="line">Дата</span></p></th>
+			<th class="rec-th-name"><p class="podzagolovok">
+				<a href="<?php echo get_category_link(20);  ?>?sort=up-name"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-up.png"></a>
+			<span class="line">Название</span>
+				<a href="<?php echo get_category_link(20);  ?>?sort=down-name"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-down.png"></a>
+			</p></th>
+
+			<th class="rec-th-avtor"><p class="podzagolovok">
+				<a href="<?php echo get_category_link(20);  ?>?sort=up-author"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-up.png"></a>
+			<span class="line">Автор</span>
+				<a href="<?php echo get_category_link(20);  ?>?sort=down-author"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-down.png"></a>
+			</p></th>
+
+			<th class="rec-th-data"><p class="podzagolovok">
+				<a href="<?php echo get_category_link(20);  ?>?sort=up-data"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-up.png"></a>
+			<span class="line">Дата</span>
+				<a href="<?php echo get_category_link(20);  ?>?sort=down-data"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-down.png"></a>
+			</p></th>
+
+
 			<th class="rec-th-rejting">
 				<p class="podzagolovok">
-				<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-up.png"></a>
+				<a href="<?php echo get_category_link(20);  ?>?sort=up-rejt"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-up.png"></a>
 					<span class="line">Рейтинг</span>
-				<a href="#"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-down.png"></a>
+				<a href="<?php echo get_category_link(20);  ?>?sort=down-rejt"><img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/strelka-down.png"></a>
 				</p>
 			</th>
 		</tr>
+<?php global $query_string; // параметры базового запроса
+
+switch ($sort) {
+
+
+    case "up-name":
+        query_posts( $query_string.'&order=ASC&posts_per_page=20&orderby=title'); // базовый запрос + свои параметры
+        break;
+    case "down-name":
+        query_posts( $query_string.'&order=DESC&posts_per_page=20&orderby=title'); // базовый запрос + свои параметры
+        break;
+
+    case "up-author":
+        query_posts( $query_string.'&order=ASC&posts_per_page=20&orderby=author'); // базовый запрос + свои параметры
+        break;
+    case "down-author":
+        query_posts( $query_string.'&order=DESC&posts_per_page=20&orderby=author'); // базовый запрос + свои параметры
+        break;
+
+    case "up-data":
+        query_posts( $query_string.'&order=DESC&posts_per_page=20&orderby=date'); // базовый запрос + свои параметры
+        break;
+    case "down-data":
+        query_posts( $query_string.'&order=ASC&posts_per_page=20&orderby=date'); // базовый запрос + свои параметры
+        break;
+
+    case "up-rejt":
+        query_posts( $query_string.'&order=DESC&posts_per_page=20&orderby=meta_value_num&meta_key=ratings_score'); // базовый запрос + свои параметры
+        break;
+    case "down-rejt":
+        query_posts( $query_string.'&order=ASC&posts_per_page=20&orderby=meta_value_num&meta_key=ratings_score'); // базовый запрос + свои параметры
+        break;
+    default:
+        query_posts( $query_string.'&posts_per_page=40'); // базовый запрос + свои параметры
+// endswitch;
+}
+
+
+
+
+ ?>
+<?php //echo $query_string ?>
+
+
 		<?php if (have_posts()) : while (have_posts()) : the_post(); // если посты есть - запускаем цикл wp ?>
 
 		<!-- пост -->
@@ -61,16 +136,19 @@ get_header(); // подключаем header.php ?>
 				</div>
 			</td>
 		</tr>
+		<!-- .пост -->
 
-		<?php endwhile; // конец цикла
+	<?php endwhile; // конец цикла
 	else: echo '<h2>Нет записей.</h2>'; endif; // если записей нет, напишим "простите" ?>
-	<?php pagination(); // пагинация, функция нах-ся в function.php ?>
-
 	</table>
 </div>
 
+<?php //the_posts_pagination(); ?>
+
+<?php //echo do_shortcode('[ajax_load_more container_type="div" post_type="post" button_label="читать дальше ..."]'); //вывод аякс подгрузки постов ?>
 
 <?php pagination(); // пагинация, функция нах-ся в function.php ?>
+<?php wp_reset_query(); // сброс запроса ?>
 
 
 <?php get_sidebar(); // подключаем footer.php ?>

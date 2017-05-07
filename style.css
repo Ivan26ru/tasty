@@ -1,4 +1,4 @@
-/*основной зеленый цвет #00cd98*/
+основной зеленый цвет #00cd98*/
 
 
 /*пользовательские шрифты*/
@@ -18,6 +18,37 @@
 }
 
 
+/*NotoSans/*/
+
+@font-face {
+    font-family: NotoSansRegular;
+    /* Гарнитура шрифта */
+    src: url(fonts/NotoSans/NotoSansRegular/NotoSansRegular.ttf);
+    /* Путь к файлу со шрифтом */
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: NotoSansItalic;
+    /* Гарнитура шрифта */
+    src: url(fonts/NotoSans/NotoSansBoldItalic/NotoSansBoldItalic.ttf);
+    /* Путь к файлу со шрифтом */
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: NotoSansBold;
+    /* Гарнитура шрифта */
+    src: url(fonts/NotoSans/NotoSansBold/NotoSansBold.ttf);
+    /* Путь к файлу со шрифтом */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
 /*убрал обводку со всех элементов в фокусе*/
 
 body *:focus {
@@ -25,7 +56,14 @@ body *:focus {
 }
 
 body * {
-    font-family: "Roboto";
+    font-family: "NotoSansRegular";
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1.5em;
+    letter-spacing: 0em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
 }
 
 body .dn {
@@ -47,14 +85,14 @@ table{
 /*зеленый цвет шрифта*/
 
 .green {
-    color: #00cd98;
+    color: #00cd98!important;
 }
 
 
 /*жирный шрифт font-family: Roboto-Regular;*/
 
 .font-rr {
-    font-family: Roboto-Regular;
+    font-family: "Noto Sans", sans-serif;
 }
 
 
@@ -169,8 +207,10 @@ a {
     display: inline-block;
     padding-left: 37px;
     padding-right: 37px;
-    font-family: "Roboto", 'Arial';
+    font-family: "Noto Sans", sans-serif;
     font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
     text-transform: uppercase;
     background-color: #fff;
     color: #000;
@@ -198,10 +238,10 @@ a {
 
 .btn-top-1 a {
     display: inline-block;
-    font-family: "Roboto", 'Arial';
+    font-family: "NotoSansBold";
     text-transform: uppercase;
-    font-size: 10px;
-    color: rgb(51, 51, 51);
+    font-size: 11px;
+    color: rgb(70, 70, 70);
     line-height: 39px;
     padding-left: 46px;
     padding-right: 46px
@@ -240,8 +280,10 @@ a {
     margin: 0;
     padding-left: 22px;
     padding-right: 22px;
-    font-family: Roboto-Regular, 'Arial';
+    font-family: "Noto Sans", sans-serif;
     font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
     text-transform: uppercase;
     color: #fff;
     line-height: 70px;
@@ -385,7 +427,7 @@ article:first-child {
 }
 
 
-/*кратное описание новости*/
+/*краткое описание новости*/
 
 
 /*максимальная ширина картинки, что б не выходила за блок*/
@@ -396,6 +438,7 @@ section img {
 }
 
 .news {
+
     position: relative;
     margin-top: 20px;
     padding-left: 10px;
@@ -405,6 +448,7 @@ section img {
 
 .news:last-child {
     border-bottom: none;
+
 }
 
 
@@ -412,7 +456,7 @@ section img {
 
 .data {
     font-size: 12px;
-    font-family: "Roboto", 'Arial';
+    font-family: "NotoSansRegular";
     color: rgb(66, 213, 173);
 }
 
@@ -427,11 +471,13 @@ section img {
 /*заголовок общий*/
 
 .title {
-    font-size: 16px;
-    font-family: "Roboto", 'Arial';
-    color: rgb(0, 0, 0);
+    font-family: "NotoSansBold";
+    font-size: 17px;
+    font-style: normal;
+    line-height: 1.5em;
+    letter-spacing: 0em;
+    color: rgb(35, 35, 35);
     margin: 0;
-    line-height: 1.2;
 }
 
 
@@ -440,29 +486,30 @@ section img {
 .title-block {
     height: 35px;
     width: 300px;
-    margin-left: 95px;
+    margin-left: 65px;
     text-align: right;
+    letter-spacing: -0.05em;
     line-height: 1.2;
 }
 
 
-/*кратное описание общее*/
+/*краткое описание общее*/
 
 .text {
-    font-size: 12px;
-    font-family: "Roboto", 'Arial';
-    color: rgb(102, 102, 102);
-    text-align: left;
-    margin: 0;
-    margin-top: 10px;
-    line-height: 1.2;
+    font-family: "NotoSansRegular";
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.5em;
+    letter-spacing: 0em;
+    color: rgb(35, 35, 35);
+    margin: 10px;
 }
 
 
-/*кратное описание для блока*/
+/*краткое описание для блока*/
 
 .text-block {
-    height: 40px;
+    height: 50px;
     line-height: 1.2;
 }
 
@@ -470,8 +517,8 @@ section img {
 /*кнопка читаль полностью общая*/
 
 .read-all {
-    font-size: 10px;
-    font-family: "Roboto", 'Arial';
+    font-size: 12px;
+    font-family: "NotoSansRegular";
     color: #00cd98;
     border: 1px solid #00cd98;
     padding: 5px 20px;
@@ -510,7 +557,7 @@ section img {
 
 .post-other-img {
     display: inline-block;
-    width: 419px;
+    width: 420px;
     height: 167px;
     position: relative;
 }
@@ -519,7 +566,7 @@ section img {
 /*миниатюра поста*/
 
 .post-other-img img {
-    width: 419px;
+    width: 420px;
     height: 167px;
 }
 
@@ -530,7 +577,7 @@ section img {
     position: absolute;
     bottom: 31px;
     width: 379px;
-    height: 31px;
+    height: 36px;
     margin-bottom: -31px;
     padding: 0 20px;
     background-color: rgb(0, 0, 0);
@@ -580,21 +627,28 @@ section img {
 /*заголовок поста*/
 
 .title-other {
-    font-size: 20px;
+    font-family: "NotoSansRegular";
+    font-size: 22px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.08em;
+    letter-spacing: -0.05em;
     color: rgb(0, 0, 0);
     text-align: left;
-    line-height: 1.2;
+
 }
 
 
 /*анонс поста, описание рубрики*/
 
 .text-other {
-    font-size: 14px;
-    text-align: left;
-    line-height: 1.2;
-    font-family: "Roboto";
-    color: rgb(102, 102, 102);
+    font-family: "NotoSansRegular";
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2em;
+    letter-spacing: 0em;
+    color: rgb(45, 45, 45);
 }
 
 
@@ -693,12 +747,12 @@ sidebar {
 .top5 a {
     display: block;
     font-size: 12px;
-    font-family: Roboto-Regular;
-    color: #666;
+    font-family: "Noto Sans", sans-serif;
+    color: #232323;
     text-align: left;
     padding-top: 10px;
     padding-bottom: 8px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #cacaca;
     line-height: 1.2;
 }
 
@@ -1217,7 +1271,7 @@ a.politika {
     color: rgb(51, 51, 51);
     text-transform: uppercase;
     line-height: 1.2;
-    text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
+    text-shadow: 0px 1px 1px rgba(51, 51, 51, 0.28);
     font-family: "Roboto";
     margin-left: 12px;
 }
@@ -2126,6 +2180,11 @@ a.politika {
     margin-top: 0;
 }
 
+/*каждый третий*/
+.video-div:nth-child(3n){
+    margin-right:0;
+}
+
 
 /*контейнер картинки*/
 
@@ -2308,7 +2367,6 @@ a.politika {
 
 .recipes-h1 {
     font-size: 20px;
-    font-family: "Roboto";
     color: rgb(51, 51, 51);
     text-transform: uppercase;
     line-height: 1.2;
@@ -2339,12 +2397,11 @@ a.politika {
 
 .search-text {
     width: 340px;
-    height: 20px;
+    height: 24px;
     line-height: 20px;
-    font-size: 10px;
+    font-size: 14px;
     font-family: "Verdana";
     color: rgb( 204, 204, 204);
-    font-style: italic;
     text-align: left;
     padding-left: 13px;
     line-height: 27px;
@@ -2417,13 +2474,17 @@ a.politika {
     height: 50px;
     border-bottom: 1px solid #e8e8e8;
     font-size: 12px;
-    font-family: "Roboto";
-    color: rgb(51, 51, 51);
-    text-transform: uppercase;
+    font-family: "NotoSansRegular";
+    color: rgb(107, 107, 107);
     line-height: 1.2;
 }
 
-
+.list-recipes .rejt-vol *{
+    font-size: 12px;
+    font-family: "NotoSansRegular";
+    color: rgb(107, 107, 107);
+    line-height: 1.2;
+}
 /*отзыв и рейтинг*/
 
 .rec-th-avtor,
@@ -2456,6 +2517,7 @@ a.politika {
 .rec-td-rejting {
     text-align: center;
     vertical-align: middle;
+
 }
 
 
@@ -2610,9 +2672,10 @@ a.politika {
 /*контейнер описания*/
 
 .o-post-recipes {
-    width: 470px;
+    width: 515px;
     margin: auto;
     margin-top: 40px;
+    margin-left: 10px;
 }
 
 
@@ -3025,6 +3088,7 @@ body {
   color: rgb(0, 0, 0);
   padding: 0 30px;
   font-family: "Roboto";
+  width:initial;
 }
 
 /*кнопка меньше 18*/
@@ -3165,3 +3229,29 @@ background-color:rgb(33, 33, 33);
 .c-bg3{
 
 }
+
+.wbn{
+    -ms-word-break: normal;
+    word-break: normal;
+}
+
+
+/*форма поиска в шапке*/
+.header-form{
+    position: absolute;
+    height: 28px;
+    top: 4px;
+    display:inline-block;
+    border: 2px solid #000;
+    border-radius: 3px;
+}
+
+
+.header-form .search-button{
+    position:inherit;
+}
+
+.header-form .search-text{
+    width:295px;
+}
+/*.форма поиска в шапке
