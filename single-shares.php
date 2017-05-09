@@ -15,7 +15,7 @@ get_header(); // подключаем header.php ?>
 	<div class="container-akciya-kontakt clearfix">
 		<!-- блок с основной картинкой -->
 		<div class="akciya-div-logo">
-		<?php if ( has_post_thumbnail() ) the_post_thumbnail('504x304'); // выводим миниатюру поста, если есть 
+		<?php if ( has_post_thumbnail() ) the_post_thumbnail('504x304'); // выводим миниатюру поста, если есть
 else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/ecf0f1">';?>
 <!-- <img class="" src="http://placehold.it/540x304/2ecc71/ecf0f1"> -->
 		</div>
@@ -33,7 +33,7 @@ else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/
 					<td>Рейтинг:</td>
 					<td>
 						<div class="rejt-vol">
-						<?php if(function_exists('the_ratings')) { the_ratings(); } ?>	
+						<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
 			 			</div>
 					</td>
 				</tr>
@@ -57,7 +57,7 @@ else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/
 	</div>
 	<!-- коонец блок с картинкой и контактами -->
 	<div class="o-akcii mt33">
-		<p class="podzagolovok"><span class="line">О акции</span></p>
+		<p class="podzagolovok"><span class="line">Об акции</span></p>
 		<div class="text-other">
 			<?php add_filter('the_content','htm_image_content_filter',11); ?>
 <?php the_content(); // контент без картинок?>
@@ -67,7 +67,7 @@ else echo '<img class="post-shares-img" src="http://placehold.it/540x304/2ecc71/
 		<!-- контейнер с фото -->
 		<div class="akcii-div-img">
 
-<?php 
+<?php
 // вывод картинок из произвольного поля
 $images = get_field('foto');//массив картинок
 
