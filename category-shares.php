@@ -20,10 +20,10 @@ get_header(); // подключаем header.php ?>
 <!-- начало поста -->
 <div class="post-shares clearfix">
 	<!-- миниатюра -->
-	<div class="post-shares-div-img">
+	<div class="post-shares-div-img"><a href="<?php the_permalink() ?>">
 <?php if ( has_post_thumbnail() ) the_post_thumbnail(thumbnail,'class=post-shares-img'); // выводим миниатюру поста, если есть
 else echo '<img class="post-shares-img" src="http://placehold.it/220x120/2ecc71/ecf0f1">';?>
-
+</a>
 	</div>
 	<!-- содежрание поста -->
 	<div class="post-shares-content">
