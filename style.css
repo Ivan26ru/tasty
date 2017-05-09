@@ -56,11 +56,7 @@ body *:focus {
 }
 
 body * {
-    font-family: "NotoSansRegular";
-    font-size: 16px;
-    font-style: normal;
-    line-height: 1.5em;
-    letter-spacing: 0em;
+   /*font-family: "NotoSansRegular";*/
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -207,9 +203,9 @@ a {
     display: inline-block;
     padding-left: 37px;
     padding-right: 37px;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "NotoSansRegular";
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     text-transform: uppercase;
     background-color: #fff;
@@ -273,6 +269,7 @@ a {
 
 .ul-top-2 li {
     display: inline-block;
+
 }
 
 .ul-top-2 li a {
@@ -280,9 +277,9 @@ a {
     margin: 0;
     padding-left: 22px;
     padding-right: 22px;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "NotoSansRegular";
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     text-transform: uppercase;
     color: #fff;
@@ -348,6 +345,7 @@ a {
     padding-right: 25px;
     padding-left: 25px;
     position: relative;
+
 }
 
 
@@ -364,6 +362,13 @@ section {
 
 article:first-child {
     border-bottom: 1px solid rgb(221, 221, 221);
+    font-family: "NotoSansRegular";
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5em;
+    letter-spacing: 0em;
+
 }
 
 .article-front-2{
@@ -393,11 +398,13 @@ article:first-child {
     text-transform: uppercase;
     text-align: center;
     display: block;
+
+    font-family: "NotoSansBold";
     font-size: 22px;
-    font-family: "Roboto", 'Arial';
+    letter-spacing: -0.05em;
+
     color: rgb(51, 51, 51);
     text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
-    line-height: 1.2;
     font-weight: normal;
 }
 
@@ -407,6 +414,9 @@ article:first-child {
 .line {
     border-bottom: 1px solid #00cd98;
     padding-bottom: 7px;
+    font-family: "NotoSansBold";
+    font-size: 16px;
+
 }
 
 
@@ -517,11 +527,12 @@ section img {
 /*кнопка читаль полностью общая*/
 
 .read-all {
-    font-size: 12px;
+    font-size: 13px;
     font-family: "NotoSansRegular";
+    font-weight: 600;
     color: #00cd98;
     border: 1px solid #00cd98;
-    padding: 5px 20px;
+    padding: 2px 20px;
 }
 
 
@@ -591,15 +602,19 @@ section img {
 .data-other {
     line-height: 31px;
     font-size: 14px;
+    font-family: "NotoSansRegular";
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0em;
 }
 
 
 /*читать полностью на черной полоске*/
 
 .read-all-other {
-    font-size: 12px;
+    font-size: 14px;
     float: right;
-    margin-top: 3px;
+    margin-top: 7px;
 }
 
 
@@ -643,12 +658,15 @@ section img {
 
 .text-other {
     font-family: "NotoSansRegular";
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     font-style: normal;
     line-height: 1.2em;
     letter-spacing: 0em;
     color: rgb(45, 45, 45);
+
+
+
 }
 
 
@@ -746,9 +764,10 @@ sidebar {
 
 .top5 a {
     display: block;
-    font-size: 12px;
-    font-family: "Noto Sans", sans-serif;
-    color: #232323;
+    font-size: 14px;
+    font-family: "NotoSansRegular";
+    font-weight: 400;
+    color: #505050;
     text-align: left;
     padding-top: 10px;
     padding-bottom: 8px;
@@ -824,7 +843,7 @@ sidebar {
     width: 181px;
     height: 30px;
     line-height: 30px;
-    font-family: Roboto-Regular;
+    font-family: "NotoSansBold";
     text-transform: uppercase;
     background-color: #00cd98;
     font-size: 12px;
@@ -845,6 +864,7 @@ sidebar {
     border: 0;
     outline: 0;
     background-color: #02a379;
+
 }
 
 
@@ -923,7 +943,9 @@ input[type="radio"] {
 /*Заголовок*/
 
 .best-device p {
-    font-size: 18px;
+    font-family: "NotoSansBold";
+    font-size: 22px;
+    letter-spacing: -0.05em;
     color: rgb(51, 51, 51);
     text-transform: uppercase;
     text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
@@ -940,7 +962,7 @@ input[type="radio"] {
     display: block;
     display: table;
     font-size: 16px;
-    font-family: Roboto-Regular;
+    font-family: "NotoSansRegular";
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     padding-left: 110px;
@@ -1097,6 +1119,8 @@ footer {
 .footer,
 .footer a {
     color: #fff;
+    font-family: "NotoSansRegular";
+    font-weight: 600;
     font-size: 12px;
     color: rgb(102, 102, 102);
     text-transform: uppercase;
@@ -1446,7 +1470,7 @@ a.politika {
 
 .akciya-h1 {
     font-size: 20px;
-    font-family: "Roboto";
+    font-family: "NotoSansRegular";
     color: rgb(51, 51, 51);
     text-transform: uppercase;
     line-height: 1.2;
@@ -1538,7 +1562,7 @@ a.politika {
 }
 
 
-/*========О акции========*/
+/*========Об акции========*/
 
 
 /*контейнер о акции*/
@@ -1659,6 +1683,8 @@ a.politika {
     resize: none;
     bottom: 65px;
     right: 34px;
+    font-family: "NotoSansRegular";
+    font-size: 14px;
 }
 
 .ta {
@@ -1672,8 +1698,8 @@ a.politika {
     margin: 0;
     left: 28px;
     bottom: 29px;
-    font-size: 10px;
-    font-family: "Verdana";
+    font-size: 14px;
+    font-family: "NotoSansRegular";
     color: #00cd98;
     font-style: italic;
     line-height: 1.8;
@@ -1734,7 +1760,7 @@ a.politika {
 /*сам комментарий пользователя*/
 
 .comment-list p {
-    font-size: 12px;
+    font-size: 16px;
     font-family: "Verdana";
     color: rgb(102, 102, 102);
     font-style: italic;
@@ -1746,7 +1772,7 @@ a.politika {
 /*дата коммента*/
 
 .comment-list .comment-user-data {
-    font-size: 10px;
+    font-size: 14px;
     font-family: "Verdana";
     color: rgb(153, 153, 153);
     font-style: italic;
@@ -1772,7 +1798,13 @@ a.politika {
 /*------------------рубрика акции-----------------*/
 
 .fs12 {
-    font-size: 12px!important;
+    font-family: "NotoSansRegular";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2em;
+    letter-spacing: 0em;
+    font-size: 14px !important;
+
 }
 
 .fs16 {
@@ -1785,6 +1817,8 @@ a.politika {
 .header-category {
     position: relative;
     height: 32px;
+    
+
 }
 
 .nazvanie {
@@ -1802,6 +1836,7 @@ a.politika {
 
 .post-shares-all {
     margin-top: 15px;
+
 }
 
 
@@ -1814,6 +1849,7 @@ a.politika {
     border-bottom: 1px solid rgb(153, 153, 153);
     margin-top: 15px;
     position: relative;
+
 }
 
 
@@ -1823,6 +1859,7 @@ a.politika {
     border-top: none;
     padding-top: 0;
     margin-top: 0;
+
 }
 
 
@@ -1858,6 +1895,9 @@ a.politika {
     margin-top: 0;
     margin-bottom: 12px;
     margin-left: 0;
+    font-family: "NotoSansBold";
+    font-size: 16px;
+    letter-spacing: -0.05em;
 }
 
 
@@ -1875,7 +1915,8 @@ a.politika {
 .shares-name-company,
 .shares-name-company a {
     font-size: 12px;
-    font-family: "Roboto";
+    font-family: "NotoSansRegular";
+    font-weight: 600;
     color: rgb(153, 153, 153);
     text-transform: uppercase;
     line-height: 1.2;
@@ -1888,7 +1929,7 @@ a.politika {
 
 .post-shares-data {
     font-size: 10px;
-    font-family: "Roboto";
+    font-family: "NotoSansRegular";
     color: #00cd98;
     position: absolute;
     right: 10px;
@@ -1969,7 +2010,7 @@ a.politika {
 
 .company-kontakt td:nth-child(even) {
     color: rgb(51, 51, 51);
-    font-family: Roboto-Regular;
+    font-family: "NotoSansRegular";
 }
 
 
@@ -1977,6 +2018,7 @@ a.politika {
 
 .company-kontakt td:nth-child(odd) {
     vertical-align: top;
+    font-family: "NotoSansRegular";
 }
 
 
@@ -2198,24 +2240,27 @@ a.politika {
 /*заголовок поста*/
 
 .video-title {
+
+    font-family: "NotoSansRegular";
     font-size: 14px;
-    font-family: Roboto-Regular;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.2em;
+    letter-spacing: 0em;
     color: rgb(51, 51, 51);
     /*text-transform: uppercase;*/
-    line-height: 1.2;
     text-align: left;
-    margin: 15px 8px 0 8px;
-    height: 32px;
+    margin: 10px 8px 0 8px;
+    height: 39px;
 }
 
 
 /*ссылка смотрет*/
 
 .video-read {
-    font-size: 10px;
-    font-family: "Verdana";
-    font-style: italic;
-    line-height: 1.2;
+    font-size: 12px;
+    font-family: "NotoSansRegular";
+    line-height: 1.2em;
     text-align: right;
     margin-right: 8px;
     margin-bottom: 8px;
@@ -2250,7 +2295,6 @@ a.politika {
 .rejting-avtor {
     margin-top: 18px;
     font-size: 16px;
-    font-family: "Roboto";
     color: rgb(153, 153, 153);
     line-height: 1.2;
 }
@@ -2353,7 +2397,7 @@ a.politika {
 
 .page-div h2 {
     font-size: 18px;
-    font-family: "Roboto";
+    font-family: "NotoSansRegular";
     color: rgb( 51, 51, 51);
     border-bottom: 1px solid #00cd98;
     padding-bottom: 7px;
@@ -2366,7 +2410,9 @@ a.politika {
 /*-------------рубрика рецепты-----------*/
 
 .recipes-h1 {
-    font-size: 20px;
+    font-family: "NotoSansBold";
+    font-size: 22px;
+    letter-spacing: -0.05em;
     color: rgb(51, 51, 51);
     text-transform: uppercase;
     line-height: 1.2;
@@ -2424,6 +2470,7 @@ a.politika {
     position: absolute;
     right: 0;
     top: 0;
+
 }
 
 
@@ -2431,6 +2478,7 @@ a.politika {
 
 .fl {
     float: left;
+
 }
 
 
@@ -2438,6 +2486,7 @@ a.politika {
 
 .fr {
     float: right;
+
 }
 
 
@@ -2447,43 +2496,51 @@ a.politika {
     margin-top: 20px;
     width: 850px;
     border-collapse: collapse;
+
 }
 
 
 /*стиль заголовка таблицы*/
 
 .list-recipes .podzagolovok {
-    font-weight: normal;
-    font-size: 12px;
+    font-family: "NotoSansRegular";
+    font-weight: 400;
+    font-size: 16px;
     display: inline-block;
     margin-left: 0;
+
 }
 
 
 /*название компании*/
 
 .rec-th-name {
+
     text-align: left;
+
 }
 
 
 /*положение текста общее для описания постов*/
 
 .list-recipes .tr td {
-    vertical-align: middle;
-    height: 50px;
-    border-bottom: 1px solid #e8e8e8;
-    font-size: 12px;
     font-family: "NotoSansRegular";
+    font-weight: 400;
+    vertical-align: middle;
+    height: 40px;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 16px;
     color: rgb(107, 107, 107);
     line-height: 1.2;
+
 }
 
 .list-recipes .rejt-vol *{
+    font-family: "NotoSansRegular" !important;
     font-size: 12px;
-    font-family: "NotoSansRegular";
     color: rgb(107, 107, 107);
     line-height: 1.2;
+
 }
 /*отзыв и рейтинг*/
 
@@ -2493,6 +2550,8 @@ a.politika {
     width: 140px;
     text-align: center;
     vertical-align: middle;
+
+
 }
 
 
@@ -2500,6 +2559,7 @@ a.politika {
 
 .th-rejting img {
     display: inline-block;
+
 }
 
 
@@ -2507,6 +2567,7 @@ a.politika {
 
 .td-name .podzagolovok {
     margin: 0;
+    font-family: "NotoSansRegular";
 }
 
 
@@ -2517,7 +2578,7 @@ a.politika {
 .rec-td-rejting {
     text-align: center;
     vertical-align: middle;
-
+    font-family: "NotoSansRegular" !important;
 }
 
 
@@ -2525,6 +2586,8 @@ a.politika {
 
 .rec-td-name a:hover {
     color: #00cd98;
+
+
 }
 
 
@@ -2533,12 +2596,14 @@ a.politika {
 .post-recipes-container{
 	width: 551px;
 	margin: auto;
+
 }
 
 /*заголовок рецепта*/
 .post-recipes-container h1{
 	font-size: 30px;
     text-align: left;
+    line-height: 1.2;
 }
 /*контейнер рейтинга*/
 
@@ -2585,17 +2650,20 @@ a.politika {
 
 .p-recipes-div-kont {
     /*width: 850px;*/
+
 }
 
 .p-recipes-div-kont .post-ratings,
 .p-recipes-div-kont .post-ratings-loading{
 /*     display:block; */
+    font-family: "NotoSansRegular";
     width:inherit;
     /*margin-left:10px;*/
     margin-top: 10px;
 }
 
 .p-recipes-div-kont span:first-child {
+    font-family: "NotoSansRegular";
     color: rgb(51, 51, 51);
 /*     margin-left: 20px; */
     /*display:flex;*/
@@ -2610,6 +2678,7 @@ a.politika {
 
 .post-recipes-ingredient {
     border-collapse: collapse;
+
 }
 
 
@@ -2617,6 +2686,7 @@ a.politika {
 
 .post-recipes-ingredient tr th,
 .post-recipes-ingredient tr td {
+
     height: 33px;
     vertical-align: middle;
     border-bottom: 1px solid #e8e8e8;
@@ -2955,7 +3025,7 @@ margin: auto;
 .soc-f-vk span {
     margin-left: 25px;
     font-size: 11px;
-    font-family: "Roboto";
+    font-family: "NotoSansRegular";
     line-height: 1.2;
     text-align: left;
     -moz-transform: matrix( 0.92489803567102, 0, 0, 0.92489803567102, 0, 0);
@@ -3158,21 +3228,25 @@ z-index:;
 /*три строчки внизу рецепта*/
 
 .info-small{
+font-family: "NotoSansRegular";
+text-transform: uppercase;
+
 margin-top:12px;
 margin-left:10px;
-font-weight:bold;
 color:#757575;
-font-size: 15px;
+font-size: 14px;
 }
 
 .info-small p{
 margin-bottom:0;
-margin-top:2px;
+font-size: 14px;
+margin-top: 0px;
+
 }
 
 .info-small span{
-font-weight:bold;
-font-size: 15px;
+font-size: 14px;
+
 }
 
 
@@ -3255,3 +3329,8 @@ background-color:rgb(33, 33, 33);
     width:295px;
 }
 /*.форма поиска в шапке
+
+/*надо зарегистрироваться для рейтинга*/
+.post-ratings:hover .dn{
+ display:inline;
+}
