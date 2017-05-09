@@ -7,7 +7,7 @@
 get_header(); // подключаем header.php ?>
 <h1 class="recipes-h1"><?php single_cat_title();//вывод имени текущей категории ?></h1>
 
-<?php 
+<?php
 	$thisID = get_query_var('cat');//id текущей категории
  ?>
 	<!-- основное содержание -->
@@ -28,15 +28,16 @@ $the_query = new WP_Query( array(
 while( $the_query->have_posts() ){
 	$the_query->the_post();
 	?>
-	
+
 
 <!-- пост -->
 			<div class="post-other">
 			<!-- миниатюра поста -->
 				<div class="post-other-img">
+					<a href="<?php the_permalink() ?>">
 				<?php 	if ( has_post_thumbnail() ) the_post_thumbnail(full,'class=post-shares-img'); // выводим миниатюру поста, если есть
 						else echo '<img class="post-shares-img" src="http://placehold.it/420x167/2ecc71/ecf0f1">';?>
-
+					</a>
 					<div class="post-other-black-info">
 						<span class="data data-other"><?php the_time('d.m.Y'); ?></span>
 						<a href="<?php the_permalink() ?>" class="read-all read-all-other">Читать полностью...</a>
@@ -45,7 +46,7 @@ while( $the_query->have_posts() ){
 				<!-- анонс поста -->
 				<div class="post-other-info">
 					<div class="va-c">
-						<p class="title title-other"><?php the_title(); ?></p>
+						<a href="<?php the_permalink() ?>"><p class="title title-other"><?php the_title(); ?></p></a>
 						<p class="text text-other"><?php the_truncated_post( 400 ); ?></p>
 					</div>
 				</div>
@@ -53,8 +54,8 @@ while( $the_query->have_posts() ){
 			<!-- конец поста -->
 
 
-	<?php 
-} 
+	<?php
+}
 wp_reset_postdata();//сброс значенйи поста
 
 // пагинация для произвольного запроса

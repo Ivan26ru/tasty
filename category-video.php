@@ -5,7 +5,7 @@
  * @subpackage your-clean-template
  */
 get_header(); // подключаем header.php ?>
-<?php // переменная в сессии будет находиться пока файл 
+<?php // переменная в сессии будет находиться пока файл
 // сессии не будет уничтожен, или переменная из сессии не будет удалена
 @session_start();
 echo '<!-- test sesion a='.$_SESSION['a'] . '-->'; ?>
@@ -61,8 +61,9 @@ while( $the_query->have_posts() ){
 
 		</div>
 	</a>
-		<!-- Заголовок поста -->
+		<!-- Заголовок поста --><a href="<?php the_permalink() ?>">
 			<p class="video-title"><?php the_title(); ?></p>
+			</a>
 		<!-- ссылка смотреть -->
 		<a href="<?php the_permalink() ?>" class="video-read green">Смотреть</a>
 	</div>

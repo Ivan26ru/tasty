@@ -31,7 +31,9 @@ while ( $query->have_posts() ) {
 
 	if($raz){//условия срабатывания только раз
 		?>
+		<a href="<?php the_permalink() ?>">
 <?php echo '<div class="img-colomn mixologiya" style="background-image: url('.get_the_post_thumbnail_url(get_the_ID(),'full').');background-size: cover;"></div>';//вывод миниатюры?>
+</a>
 
 		<?php
 		$raz=false;//что б не срабатывало больше условие
@@ -41,7 +43,9 @@ while ( $query->have_posts() ) {
 <?php $post_front_top[]=get_the_ID();//сбор id выводимых постов ?>
 				<div class="news clearfix">
 					<span class="data data-block"><?php the_time('d.m.Y'); ?></span>
+					<a href="<?php the_permalink() ?>">
 					<p class="title title-block"><?php the_title(); ?></p>
+					</a>
 					<p class="text text-block"><?php the_truncated_post( 255 ); ?></p>
 					<a href="<?php the_permalink() ?>" class="read-all read-all-block">читать полностью...</a>
 				</div>
@@ -72,8 +76,9 @@ while ( $query->have_posts() ) {
 <?php
 	if($raz){//условия срабатывания только раз
 		?>
+		<a href="<?php the_permalink() ?>">
 <?php echo '<div class="img-colomn vipe-news" style="background-image: url('.get_the_post_thumbnail_url(get_the_ID(),'full').');background-size: cover;"></div>';//вывод миниатюры?>
-
+</a>
 		<?php
 		$raz=false;//что б не срабатывало больше условие
 	}//.условия срабатывания только раз
@@ -82,7 +87,9 @@ while ( $query->have_posts() ) {
 <?php $post_front_top[]=get_the_ID();//сбор id выводимых постов ?>
 				<div class="news clearfix">
 					<span class="data data-block"><?php the_time('d.m.Y'); ?></span>
+					<a href="<?php the_permalink() ?>">
 					<p class="title title-block"><?php the_title(); ?></p>
+					</a>
 					<p class="text text-block"><?php the_truncated_post( 255 ); ?></p>
 					<a href="<?php the_permalink() ?>" class="read-all read-all-block">читать полностью...</a>
 				</div>
@@ -126,8 +133,9 @@ while ( $query->have_posts() ) {
 	<?php
 	if($raz){//условия срабатывания только раз
 		?>
+		<a href="<?php the_permalink() ?>">
 <?php echo '<div class="img-colomn mixologiya" style="background-image: url('.get_the_post_thumbnail_url(get_the_ID(),'full').');background-size: cover;"></div>';//вывод миниатюры?>
-
+</a>
 		<?php
 		$raz=false;//что б не срабатывало больше условие
 	}//.условия срабатывания только раз
@@ -136,7 +144,9 @@ while ( $query->have_posts() ) {
 <?php $post_5[]=get_the_ID();//сбор id выводимых постов ?>
 				<div class="news clearfix">
 					<span class="data data-block"><?php the_time('d.m.Y'); ?></span>
+					<a href="<?php the_permalink() ?>">
 					<p class="title title-block"><?php the_title(); ?></p>
+					</a>
 					<p class="text text-block"><?php the_truncated_post( 255 ); ?></p>
 					<a href="<?php the_permalink() ?>" class="read-all read-all-block">читать полностью...</a>
 				</div>
@@ -169,7 +179,9 @@ while ( $query->have_posts() ) {
 	<?php
 	if($raz){//условия срабатывания только раз
 		?>
+		<a href="<?php the_permalink() ?>">
 <?php echo '<div class="img-colomn vipe-news" style="background-image: url('.get_the_post_thumbnail_url(get_the_ID(),'full').');background-size: cover;"></div>';//вывод миниатюры?>
+</a>
 
 		<?php
 		$raz=false;//что б не срабатывало больше условие
@@ -179,7 +191,9 @@ while ( $query->have_posts() ) {
 <?php $post_front_top[]=get_the_ID();//сбор id выводимых постов ?>
 				<div class="news clearfix">
 					<span class="data data-block"><?php the_time('d.m.Y'); ?></span>
+					<a href="<?php the_permalink() ?>">
 					<p class="title title-block"><?php the_title(); ?></p>
+					</a>
 					<p class="text text-block"><?php the_truncated_post( 255 ); ?></p>
 					<a href="<?php the_permalink() ?>" class="read-all read-all-block">читать полностью...</a>
 				</div>
