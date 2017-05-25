@@ -72,6 +72,9 @@ if( !empty($image) ): ?>
 <?php the_content(); // контент без картинок?>
 		</div>
 
+<?php if (get_field('foto')): ?>
+
+
 		<p class="podzagolovok akcii-p-foto"><span class="line">Фотографии</span></p>
 		<!-- контейнер с фото -->
 		<div class="akcii-div-img">
@@ -85,7 +88,11 @@ if( $images ): //если картинка есть?>
         <?php endforeach; //конец перебора?>
 <?php endif; //конец условия?>
  		</div>
+ 		<!-- .akcii-div-img -->
+ 		<?php endif //если есть фото?>
 	</div>
+	<!-- .o-akcii -->
+
 </div>
 
 <?php endwhile; // конец цикла ?>

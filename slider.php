@@ -4,12 +4,15 @@
  * @package WordPress
  * @subpackage your-clean-template
  */
+
+if(!empty($mobile)) $classes = '-mobile';
+else $classes = '';
 ?>
 <!-- слайдер -->
 
 <!-- блок для слайдера -->
 <div class="slider-block">
-	<div id="owl-example" class="owl-carousel">
+	<div id="owl-example<?php echo $classes; ?>" class="owl-carousel">
 		<?php
 				// вывод картинок из произвольного поля
 				$images = get_field('slider', 955);//массив картинок

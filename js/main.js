@@ -36,7 +36,14 @@ jQuery(document).ready(function($) {
         });
     };
 
+    $('.get-menu').click(function (){
+        $(this).next('.mobile-menu').slideToggle(200);
+    });
 
-    
+    $('.get-device').click(function (){
+        $(this).next('.mobile-device').slideToggle(200);
+
+        return false;
+    });
 
 }); //конец ready

@@ -6,7 +6,7 @@
  */
 get_header(); // подключаем header.php ?>
 
-	<h1><?php printf('Рецепты с ингридиентом: %s', single_tag_title('', false)); // заголовок тэга ?></h1>
+	<h1><?php printf('Рецепты с ингредиентом: %s', single_tag_title('', false)); // заголовок тэга ?></h1>
 
 <!-- строка поиска и добавить рецепт -->
 <div class="search clearfix">

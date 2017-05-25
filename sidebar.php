@@ -20,11 +20,6 @@ $slider_post = 955;
 <!-- top5 -->
 <div class="sb-r top5">
 	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/top5.png" class="sidebar-img">
-<!-- 	<a href="<?php echo site_url(); ?>/vipe-fest/">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
-	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
-	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
-	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a>
-	<a href="#">Обзор жидкости ZE-PAR – Креатив и фантазия и все такое</a> -->
 
 	 <?php kama_get_most_viewed("num=5&format={a}{title}{/a}"); ?>
 
@@ -52,22 +47,6 @@ foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 </div>
 	<?php endforeach;
 wp_reset_postdata();?>
-
-<!-- the best -->
-<div class="sb-r best">
-	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/email-sb.png" class="sidebar-img">
-	<?php
-$widgetNL = new WYSIJA_NL_Widget(true);
-echo $widgetNL->widget(array('form' => 2, 'form_type' => 'php')); ?>
-	<!-- <?php echo do_shortcode('[subscribe2]'); ?></div> -->
-</div>
-<!-- опрос -->
-<div class="sb-r what">
-	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/what.png" class="sidebar-img">
-	<?php dynamic_sidebar('left-sidebar'); // выводим сайдбар, имя определено в function.php ?>
-	<?php //echo do_shortcode('[democracy id="1"]'); //вывод шорткода ?>
-</div>
-
 
 
 <!-- рекламный блок -->
@@ -104,5 +83,27 @@ if (cus(link)): ?>
 
 	<?php endforeach;
 wp_reset_postdata();?>
+
+
+<!-- опрос -->
+<div class="sb-r what">
+	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/what.png" class="sidebar-img">
+	<?php dynamic_sidebar('left-sidebar'); // выводим сайдбар, имя определено в function.php ?>
+	<?php //echo do_shortcode('[democracy id="1"]'); //вывод шорткода ?>
+</div>
+
+
+
+
+
+
+<!-- the best -->
+<div class="sb-r best">
+	<img src="<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/img/png/email-sb.png" class="sidebar-img">
+	<?php
+$widgetNL = new WYSIJA_NL_Widget(true);
+echo $widgetNL->widget(array('form' => 2, 'form_type' => 'php')); ?>
+	<!-- <?php echo do_shortcode('[subscribe2]'); ?></div> -->
+</div>
 
 </sidebar>

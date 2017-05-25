@@ -5,7 +5,7 @@
  * @subpackage your-clean-template
  */
 get_header(); // подключаем header.php ?>
-<h1><?php printf('Поиск рецепта: %s', get_search_query()); // заголовок тэга ?></h1>
+<h1><?php printf('Поиск: %s', get_search_query()); // заголовок тэга ?></h1>
 
 <!-- строка поиска и добавить рецепт -->
 <div class="search clearfix">
@@ -41,7 +41,18 @@ get_header(); // подключаем header.php ?>
 
 		<!-- пост -->
 		<tr class="tr">
-			<td class="rec-td-name"><a href="<?php the_permalink() ?>" class=""><?php the_title(); ?></a></td>
+			<td class="rec-td-name">
+
+<?php $post_type = get_post_type( $post_id ) ?> 
+ <? if ($post_type == 'ingredients') { ?>
+
+			<a href="<?php echo get_site_url() . '/tag/' . name_url(get_the_title());?>" class=""><?php the_title(); ?></a>
+
+ 	<?php } else { ?>
+
+			<a href="<?php the_permalink() ?>" class=""><?php the_title(); ?></a>
+ 		<?php } ?>
+			</td>
 			<td class="rec-td-avtor"><?php the_author(); ?></td>
 			<td class="rec-td-data"><?php the_time('j F H:i'); ?></td>
 			<td class="rec-td-rejting">

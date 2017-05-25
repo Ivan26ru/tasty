@@ -32,7 +32,7 @@ while ( $query->have_posts() ) {
 	if($raz){//условия срабатывания только раз
 		?>
 		<a href="<?php the_permalink() ?>">
-<?php echo '<div class="img-colomn mixologiya" style="background-image: url('.get_the_post_thumbnail_url(get_the_ID(),'full').');background-size: cover;"></div>';//вывод миниатюры?>
+<?php echo '<img class="img-colomn mixologiya" src="'.get_the_post_thumbnail_url(get_the_ID(),'full').'">';//вывод миниатюры?>
 </a>
 
 		<?php
@@ -77,7 +77,7 @@ while ( $query->have_posts() ) {
 	if($raz){//условия срабатывания только раз
 		?>
 		<a href="<?php the_permalink() ?>">
-<?php echo '<div class="img-colomn vipe-news" style="background-image: url('.get_the_post_thumbnail_url(get_the_ID(),'full').');background-size: cover;"></div>';//вывод миниатюры?>
+<?php echo '<img class="img-colomn vipe-news" src="'.get_the_post_thumbnail_url(get_the_ID(),'full').'">';//вывод миниатюры?>
 </a>
 		<?php
 		$raz=false;//что б не срабатывало больше условие
@@ -105,7 +105,9 @@ while ( $query->have_posts() ) {
 		</article>
 
 		<!-- подключение слайдера -->
-<?php include('slider.php'); ?>
+		<div class="not-mobile">
+			<?php include('slider.php'); ?>
+		</div>
 
 <!-- подключение остальных постов нижние -->
 <?php //include('front_other_post.php'); //изначальное подключение постов в одну колонку?>
@@ -134,7 +136,7 @@ while ( $query->have_posts() ) {
 	if($raz){//условия срабатывания только раз
 		?>
 		<a href="<?php the_permalink() ?>">
-<?php echo '<div class="img-colomn mixologiya" style="background-image: url('.get_the_post_thumbnail_url(get_the_ID(),'full').');background-size: cover;"></div>';//вывод миниатюры?>
+<?php echo '<img class="img-colomn mixologiya" src="'.get_the_post_thumbnail_url(get_the_ID(),'full').'">';//вывод миниатюры?>
 </a>
 		<?php
 		$raz=false;//что б не срабатывало больше условие
@@ -180,7 +182,7 @@ while ( $query->have_posts() ) {
 	if($raz){//условия срабатывания только раз
 		?>
 		<a href="<?php the_permalink() ?>">
-<?php echo '<div class="img-colomn vipe-news" style="background-image: url('.get_the_post_thumbnail_url(get_the_ID(),'full').');background-size: cover;"></div>';//вывод миниатюры?>
+<?php echo '<img class="img-colomn vipe-news" src="'.get_the_post_thumbnail_url(get_the_ID(),'full').'">';//вывод миниатюры?>
 </a>
 
 		<?php

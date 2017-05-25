@@ -1,150 +1,94 @@
-основной зеленый цвет #00cd98*/
-
-
-/*пользовательские шрифты*/
-
+/*основной зеленый цвет #00cd98*/
 @font-face {
-    font-family: "Roboto";
-    /* Гарнитура шрифта */
-    src: url(fonts/Roboto-Light.ttf);
-    /* Путь к файлу со шрифтом */
+    font-family: roboto;
+    src: url(fonts/Roboto-Light.ttf)
 }
 
 @font-face {
-    font-family: Roboto-Regular;
-    /* Гарнитура шрифта */
-    src: url(fonts/Roboto-Regular.ttf);
-    /* Путь к файлу со шрифтом */
+    font-family: roboto-regular;
+    src: url(fonts/Roboto-Regular.ttf)
 }
 
-
-/*NotoSans/*/
-
 @font-face {
-    font-family: NotoSansRegular;
-    /* Гарнитура шрифта */
+    font-family: notosansregular;
     src: url(fonts/NotoSans/NotoSansRegular/NotoSansRegular.ttf);
-    /* Путь к файлу со шрифтом */
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400
 }
 
 @font-face {
-    font-family: NotoSansItalic;
-    /* Гарнитура шрифта */
+    font-family: notosansitalic;
     src: url(fonts/NotoSans/NotoSansBoldItalic/NotoSansBoldItalic.ttf);
-    /* Путь к файлу со шрифтом */
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400
 }
 
 @font-face {
-    font-family: NotoSansBold;
-    /* Гарнитура шрифта */
+    font-family: notosansbold;
     src: url(fonts/NotoSans/NotoSansBold/NotoSansBold.ttf);
-    /* Путь к файлу со шрифтом */
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400
 }
-
-
-
-/*убрал обводку со всех элементов в фокусе*/
 
 body *:focus {
-    outline: 0;
+    outline: 0
 }
 
 body * {
-   /*font-family: "NotoSansRegular";*/
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    -moz-osx-font-smoothing: grayscale
 }
 
 body .dn {
-    display: none;
+    display: none
 }
 
-/*перенос текста по буквам*/
-table{
-	word-break: break-all;
+table {
+    word-break: break-all
 }
-
-/*текст по центру*/
 
 .text-center {
-    text-align: center;
+    text-align: center
 }
-
-
-/*зеленый цвет шрифта*/
 
 .green {
-    color: #00cd98!important;
+    color: #00cd98!important
 }
-
-
-/*жирный шрифт font-family: Roboto-Regular;*/
 
 .font-rr {
-    font-family: "Noto Sans", sans-serif;
+    font-family: noto sans, sans-serif
 }
-
-
-/*хак для float*/
 
 .clearfix:before,
 .clearfix:after {
     content: " ";
-    display: table;
+    display: table
 }
 
 .clearfix:after {
-    clear: both;
+    clear: both
 }
-
-
-/*Убрал маркеры всех списков*/
 
 li {
-    list-style: none;
+    list-style: none
 }
-
-
-/*ширина 1200 по центру*/
 
 .w1200 {
     width: 1180px;
     margin: 0 auto;
-    position: relative;
+    position: relative
 }
-
-
-/*убрал подчеркивание всех ссылок, черный цвет всем ссылкам*/
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #000
 }
-
-
-/*=========================*/
-
-
-/*---------------ШАПКА САЙТА-------------------*/
-
-
-/*верхняя черная линия*/
 
 .line-top-white {
     height: 39px;
     margin-bottom: 1px;
-    position: relative;
+    position: relative
 }
-
-
-/*блок логотипа*/
 
 .div-logo {
     background: url(img/logo.svg) center no-repeat;
@@ -152,50 +96,37 @@ a {
     background-size: 85%;
     background-color: #00cd98;
     position: absolute;
-    top: 0px;
+    top: 0;
     width: 186px;
     height: 110px;
-    z-index: 2;
+    z-index: 2
 }
-
-
-/*ссылка в лого*/
 
 .div-logo a {
     display: block;
-    height: 100%;
+    height: 100%
 }
-
-
-/*верхняя черная линия*/
 
 .line-top-black {
-    background-color: rgb(0, 0, 0);
-    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.35);
-    left: 0px;
+    background-color: #000;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .35);
+    left: 0;
     width: 100%;
-    min-width: 1180px;
-    height: 70px;
+    height: 70px
 }
-
-
-/*верхняя строка с меню и формой входа*/
 
 .menu-user {
-    margin-left: 186px;
+    margin-left: 186px
 }
-
-
-/*=============верхнее меню 1====================*/
 
 .ul-top-1 {
     margin: 0;
     padding: 0;
-    display: inline-block;
+    display: inline-block
 }
 
 .ul-top-1 li {
-    display: inline-block;
+    display: inline-block
 }
 
 .ul-top-1 li a {
@@ -203,386 +134,278 @@ a {
     display: inline-block;
     padding-left: 37px;
     padding-right: 37px;
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     font-size: 12px;
     font-weight: 600;
     font-style: normal;
     text-transform: uppercase;
     background-color: #fff;
     color: #000;
-    line-height: 39px;
+    line-height: 39px
 }
-
-
-/*при наведении верхнее меню 1*/
 
 .ul-top-1 li a:hover,
 .ul-top-1 li.current-menu-item a {
     background-color: #000;
-    color: #fff;
+    color: #fff
 }
-
-
-/* ===========стиль кнопок верхних вход регистрация===========*/
 
 .vhod {
-    float: right;
+    float: right
 }
-
-
-/* вход и регистрация */
 
 .btn-top-1 a {
     display: inline-block;
-    font-family: "NotoSansBold";
+    font-family: notosansbold;
     text-transform: uppercase;
     font-size: 11px;
-    color: rgb(70, 70, 70);
+    color: #464646;
     line-height: 39px;
     padding-left: 46px;
     padding-right: 46px
 }
 
-
-/*кнопка входа при наведении*/
-
 .btn-top-1 a:hover {
-    background-color: #00cd98;
+    background-color: #00cd98
 }
 
 .vhod img {
-    margin-right: 10px;
+    margin-right: 10px
 }
-
-
-/*==================================*/
-
-
-/*=============верхнее меню 2====================*/
 
 .ul-top-2 {
     margin: 0;
     padding: 0;
     margin-left: 186px;
-    text-align: center;
+    text-align: center
 }
 
 .ul-top-2 li {
-    display: inline-block;
-
+    display: inline-block
 }
 
 .ul-top-2 li a {
     display: block;
     margin: 0;
-    padding-left: 22px;
-    padding-right: 22px;
-    font-family: "NotoSansRegular";
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: notosansregular;
     font-size: 14px;
     font-weight: 600;
     font-style: normal;
     text-transform: uppercase;
     color: #fff;
     line-height: 70px;
-    width: 100%;
+    width: 100%
 }
-
-
-/*при наведении верхнее меню 2*/
 
 .ul-top-2 li a:hover,
 .ul-top-2 li.current-menu-item a {
-    color: #00cd98;
+    color: #00cd98
 }
 
 .ul-top-2 li:first-child a {
-    padding-left: 0;
+    padding-left: 0
 }
 
 .ul-top-2 li:last-child a {
-    padding-right: 0;
+    padding-right: 0
 }
-
-
-/* подчеркивание элементов меню 2*/
 
 .ul-top-2 li a:active .line-menu,
 .ul-top-2 li.current-menu-item .line-menu {
     border-bottom: 2px solid #00cd98;
-    padding-bottom: 7px;
+    padding-bottom: 7px
 }
-
-
-/*путь к странице*/
 
 .put {
     font-size: 10px;
-    font-family: "Roboto";
-    color: rgb(51, 204, 153);
+    font-family: roboto;
+    color: #3c9;
     line-height: 1.2;
     position: absolute;
     left: 41px;
-    top: 120px;
+    top: 120px
 }
 
 .put a {
-    color: rgb(51, 204, 153);
+    color: #3c9
 }
 
-
-/*==================================*/
-
-
-/*============ОСНОВНАЯ ЧАСТЬ===================*/
-
-
-/*Контейнер для основной части*/
-
 .container {
-    width: 1130px;
     margin: 0 auto;
     margin-top: 40px;
     padding-right: 25px;
     padding-left: 25px;
-    position: relative;
-
+    position: relative
 }
-
-
-/*контейнер для основного содержимого*/
 
 section {
     width: 850px;
     overflow: hidden;
-    display: inline-block;
+    display: inline-block
 }
 
-
-/*Контейнер для левого и правого блока*/
-
 article:first-child {
-    border-bottom: 1px solid rgb(221, 221, 221);
-    font-family: "NotoSansRegular";
+    border-bottom: 1px solid #ddd;
+    font-family: notosansregular;
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
     line-height: 1.5em;
-    letter-spacing: 0em;
-
+    letter-spacing: 0
 }
 
-.article-front-2{
+.article-front-2 {
     margin-top: 20px;
-    border: none;
+    border: 0
 }
-
-/*блоки левый и правый*/
 
 .block {
-    width: 405px;
-    /*background-color: #ddd;*/
+    width: 405px
 }
 
 .block-left {
-    float: left;
+    float: left
 }
 
 .block-right {
-    float: right;
+    float: right
 }
-
-
-/*Заголовок левого и правого контейнера*/
 
 .zagolovok {
     text-transform: uppercase;
     text-align: center;
     display: block;
-
-    font-family: "NotoSansBold";
+    font-family: notosansbold;
     font-size: 22px;
-    letter-spacing: -0.05em;
-
-    color: rgb(51, 51, 51);
-    text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
-    font-weight: normal;
+    letter-spacing: -.05em;
+    color: #333;
+    text-shadow: 0 1px 3px rgba(51, 51, 51, .28);
+    font-weight: 400
 }
-
-
-/*подчеркивающаяся зеленая линия*/
 
 .line {
     border-bottom: 1px solid #00cd98;
     padding-bottom: 7px;
-    font-family: "NotoSansBold";
-    font-size: 16px;
-
+    font-family: notosansbold;
+    font-size: 16px
 }
 
-
-/*картинка левого блока*/
-
 .img-colomn {
-    width: 405px;
-    height: 149px;
+    width: 100%;
+    height: auto;
     margin-top: 27px;
 }
 
 .mixologiya {
-    background: url(img/png/mixologiya.png)center no-repeat;
+    background: url(img/png/mixologiya.png)center no-repeat
 }
 
 .vipe-news {
-    background: url(img/png/vipe-news.png)center no-repeat;
+    background: url(img/png/vipe-news.png)center no-repeat
 }
-
-
-/*краткое описание новости*/
-
-
-/*максимальная ширина картинки, что б не выходила за блок*/
 
 section img {
     max-width: 100%;
-    height: auto;
+    height: auto
 }
 
 .news {
-
     position: relative;
     margin-top: 20px;
     padding-left: 10px;
     padding-bottom: 14px;
-    border-bottom: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid #ddd
 }
 
 .news:last-child {
-    border-bottom: none;
-
+    border-bottom: 0
 }
-
-
-/*общий стиль даты*/
 
 .data {
     font-size: 12px;
-    font-family: "NotoSansRegular";
-    color: rgb(66, 213, 173);
+    font-family: notosansregular;
+    color: #42d5ad
 }
-
-
-/*для левого и правого блоков*/
 
 .data-block {
-    position: absolute;
+    position: absolute
 }
 
-
-/*заголовок общий*/
-
 .title {
-    font-family: "NotoSansBold";
+    font-family: notosansbold;
     font-size: 17px;
     font-style: normal;
     line-height: 1.5em;
-    letter-spacing: 0em;
-    color: rgb(35, 35, 35);
-    margin: 0;
+    letter-spacing: 0;
+    color: #232323;
+    margin: 0
 }
 
-
-/*заголовок для блока*/
-
 .title-block {
-    height: 35px;
+    height: 40px;
     width: 300px;
     margin-left: 65px;
     text-align: right;
-    letter-spacing: -0.05em;
+    letter-spacing: -.05em;
     line-height: 1.2;
+    overflow: hidden
 }
 
-
-/*краткое описание общее*/
-
 .text {
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     font-size: 14px;
     font-style: normal;
     line-height: 1.5em;
-    letter-spacing: 0em;
-    color: rgb(35, 35, 35);
-    margin: 10px;
+    letter-spacing: 0;
+    color: #232323;
+    margin: 10px
 }
-
-
-/*краткое описание для блока*/
 
 .text-block {
     height: 50px;
     line-height: 1.2;
+    overflow: hidden
 }
-
-
-/*кнопка читаль полностью общая*/
 
 .read-all {
     font-size: 13px;
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     font-weight: 600;
     color: #00cd98;
     border: 1px solid #00cd98;
     padding: 2px 20px;
+    line-height:1.6em;
 }
 
-
-/*кнопка читаль полностью для блока*/
-
 .read-all-block {
-    float: right;
+    float: right
 }
 
 .read-all-block:hover {
     color: #000;
-    border-color: #000;
+    border-color: #000
 }
-
-
-/*============ПРОЧИЕ ПОСТЫ==============*/
-
-
-/*Блок для постов*/
 
 .div-post-other {}
 
-
-/*пост*/
-
 .post-other {
     margin-top: 37px;
-    height: 167px;
+    height: 167px
 }
-
-
-/*блок для картинки*/
 
 .post-other-img {
     display: inline-block;
     width: 420px;
     height: 167px;
-    position: relative;
+    position: relative
 }
-
-
-/*миниатюра поста*/
 
 .post-other-img img {
     width: 420px;
-    height: 167px;
+    height: 167px
 }
-
-
-/*темная полоска внизу миниатюры поста*/
 
 .post-other-black-info {
     position: absolute;
@@ -591,34 +414,24 @@ section img {
     height: 36px;
     margin-bottom: -31px;
     padding: 0 20px;
-    background-color: rgb(0, 0, 0);
-    opacity: 0.502;
-    /*line-height: 28px;*/
+    background-color: #000;
+    opacity: .502
 }
-
-
-/*дата на черной полоске*/
 
 .data-other {
     line-height: 31px;
     font-size: 14px;
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     font-weight: 400;
     font-style: normal;
-    letter-spacing: 0em;
+    letter-spacing: 0
 }
-
-
-/*читать полностью на черной полоске*/
 
 .read-all-other {
     font-size: 14px;
     float: right;
-    margin-top: 7px;
+    margin-top: 7px
 }
-
-
-/*блок заголовока и анонса поста*/
 
 .post-other-info {
     display: -webkit-flex;
@@ -628,331 +441,205 @@ section img {
     display: flex;
     width: 405px;
     height: 167px;
-    float: right;
+    float: right
 }
 
-
-/*выравнивение по центру по вертикали текст*/
-
-.va-c {
-    /*margin: auto 0;*/
-}
-
-
-/*заголовок поста*/
+.va-c {}
 
 .title-other {
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     font-size: 22px;
     font-weight: 700;
     font-style: normal;
     line-height: 1.08em;
-    letter-spacing: -0.05em;
-    color: rgb(0, 0, 0);
-    text-align: left;
-
+    letter-spacing: -.05em;
+    color: #000;
+    text-align: left
 }
 
-
-/*анонс поста, описание рубрики*/
-
 .text-other {
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
     line-height: 1.2em;
-    letter-spacing: 0em;
-    color: rgb(45, 45, 45);
-
-
-
+    letter-spacing: 0;
+    color: #2d2d2d
 }
-
-
-/*=====================================*/
-
-
-/*=================ПАГИНАЦИЯ====================*/
-
-
-/*контейнер для пагинации*/
 
 .pagination-index {
     margin-top: 70px;
     text-align: center;
-    font-family: Roboto-Regular, 'Arial';
+    font-family: roboto-regular, arial
 }
-
-
-/*ul пагинации*/
 
 .page-numbers {
     font-size: 18px;
-    color: rgb(51, 51, 51);
-    margin-bottom: 0;
+    color: #333;
+    margin-bottom: 0
 }
-
-
-/*li пагинации*/
 
 .page-numbers li {
-    display: inline-block;
+    display: inline-block
 }
-
-
-/*активная страница*/
 
 .page-numbers li span {
-    color: #00cd98;
+    color: #00cd98
 }
-
-
-/*стрелка назад*/
 
 .prev {
-    margin-right: 30px;
+    margin-right: 30px
 }
-
-
-/*стрелка вперед*/
 
 .next {
-    margin-left: 30px;
+    margin-left: 30px
 }
-
-
-/*---------------САЙДБАР------------------*/
 
 sidebar {
     width: 240px;
     float: right;
-    position: relative;
+    position: relative
 }
-
-
-/*sb-r блок с ярлыком общий*/
 
 .sb-r {
     margin-top: 77px;
     border: 3px solid #000;
     width: 181px;
-    /*height: 262px;*/
-    /*height: 216px;*/
     position: relative;
-    padding: 35px 27px 20px;
+    padding: 35px 27px 20px
 }
-
-
-/*=======top5=======*/
 
 .top5 {
-    margin-top: 52px;
+    margin-top: 52px
 }
-
-
-/*значек сайдбара*/
 
 .sidebar-img {
     position: absolute;
     right: 27px;
-    top: -47px;
+    top: -47px
 }
-
-
-/*ссылки TOP5*/
 
 .top5 a {
     display: block;
     font-size: 14px;
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     font-weight: 400;
     color: #505050;
     text-align: left;
     padding-top: 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid #cacaca;
-    line-height: 1.2;
+    line-height: 1.2
 }
-
-
-/*первая ссылка*/
 
 .top5 a:first-child {}
 
-
-/*крайняя ссылка*/
-
 .top5 a:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0
 }
-
-
-/*=======best======*/
-
-
-/*the best*/
 
 .best {
-    margin-top: 105px;
+    margin-top: 105px
 }
-
-
-/*=========ПОДПИСКА========*/
-
-
-/*ввод email*/
 
 .input-email {
     width: 161px;
     padding: 5px;
     padding-left: 15px;
-    font-family: Roboto-Regular;
+    font-family: roboto-regular;
     color: #666;
     font-size: 12px;
     margin: 0;
     margin-bottom: 20px;
-    border: none;
+    border: 0;
     background-color: #ddd;
-    height: 20px;
+    height: 20px
 }
-
-
-/*ширина строки ввода*/
 
 .wysija-input {
-    width: 178px;
+    width: 178px
 }
-
-
-/*ввод email при фокусе*/
 
 .input-email:focus {
-    border: none;
-    outline: none;
+    border: 0;
+    outline: 0
 }
 
-
-/*зеленая кнопка в сайд баре*/
-
-#loginform input[type="submit"],
+#loginform input[type=submit],
 .btn-green,
 .wysija-submit {
-    /*padding: 5px;*/
     width: 181px;
     height: 30px;
     line-height: 30px;
-    font-family: "NotoSansBold";
+    font-family: notosansbold;
     text-transform: uppercase;
     background-color: #00cd98;
+    color: #d9fff5;
     font-size: 12px;
-    border: none;
+    border: 0;
     text-align: center;
     cursor: pointer;
-    display: inline-block;
+    display: inline-block
 }
 
-
-/*зеленая кнопка при наведении*/
-
-#loginform input[type="submit"]:hover,
+#loginform input[type=submit]:hover,
 .btn-green:focus,
 .btn-green:hover,
 .wysija-submit:focus,
 .wysija-submit:hover {
     border: 0;
     outline: 0;
-    background-color: #02a379;
-
+    background-color: #02a379
 }
-
-
-/*==========ОПРОСНИК==========*/
-
-
-/*общий стиль label */
 
 .sb-r label:not(.best label) {
     display: block;
     margin-left: 20px;
     margin-bottom: 15px;
-    cursor: pointer;
+    cursor: pointer
 }
 
-
-/*радио кнопка*/
-
-input[type="radio"] {
-    cursor: pointer;
+input[type=radio] {
+    cursor: pointer
 }
-
-
-/*============РЕКЛАМНЫЙ БАННЕР САЙДБАР========*/
-
-
-/*контейнер для банера*/
 
 .sb-banner {
     margin-top: 20px;
     width: 241px;
-    overflow: hidden;
+    overflow: hidden
 }
-
-
-/* отступ 1 банера*/
 
 .sb-banner.sb-banner-1 {
-    margin-top: 58px;
+    margin-top: 58px
 }
-
-
-/* отступ 2 банера*/
 
 .sb-banner.sb-banner-2 {
-    margin-top: 55px;
+    margin-top: 55px
 }
-
-
-/* отступ 3 банера*/
 
 .sb-banner.sb-banner-3 {
-    margin-top: 25px;
+    margin-top: 25px
 }
-
-
-/*картинка рекламного блока*/
 
 .sb-banner img {
     width: 241px;
-    height: 100%;
+    height: 100%
 }
-
-
-/*==========BEST-DEVICE ЛУЧШИЕ ДЕВАЙСЫ========*/
-
-
-/*контейнер best-device*/
 
 .best-device {
     margin-top: 44px;
-    width: 241px;
+    width: 241px
 }
-
-
-/*Заголовок*/
 
 .best-device p {
-    font-family: "NotoSansBold";
+    font-family: notosansbold;
     font-size: 22px;
-    letter-spacing: -0.05em;
-    color: rgb(51, 51, 51);
+    letter-spacing: -.05em;
+    color: #333;
     text-transform: uppercase;
-    text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
+    text-shadow: 0 1px 3px rgba(51, 51, 51, .28)
 }
-
-
-/*стиль ссылки девайса общее*/
 
 .best-device-a {
     -webkit-background-size: cover;
@@ -962,115 +649,77 @@ input[type="radio"] {
     display: block;
     display: table;
     font-size: 16px;
-    font-family: "NotoSansRegular";
-    color: rgb(255, 255, 255);
+    font-family: notosansregular;
+    color: #fff;
     text-transform: uppercase;
     padding-left: 110px;
-    margin-bottom: 7px;
+    margin-bottom: 7px
 }
-
-/*@media screen and (-webkit-min-device-pixel-ratio:0){
-  .best-device-a {
-      width: 240px;
-  }
-}*/
-
-/*для выравнивания по центру*/
 
 .best-device-a span {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: middle
 }
-
-
-/*стиль ссылки девайса при наведении общее*/
 
 .best-device-a:hover {
-    color: rgb(0, 0, 0);
+    color: #000
 }
-
-
-/*отступ первого блока от заголовка*/
 
 .best-device-a:nth-child(2) {
-    margin-top: 30px;
+    margin-top: 30px
 }
-
-
-/*отступ крайнего блока отменен*/
 
 .best-device-a:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
-
-/*1 девайс*/
-
 .best-device-a.d1 {
-    background: url(img/png/best-device/1b.png) no-repeat;
+    background: url(img/png/best-device/1b.png) no-repeat
 }
 
 .best-device-a.d1:hover {
-    background: url(img/png/best-device/1g.png) no-repeat;
+    background: url(img/png/best-device/1g.png) no-repeat
 }
 
-
-/*2 девайс*/
-
 .best-device-a.d2 {
-    background: url(img/png/best-device/2b.png) no-repeat;
+    background: url(img/png/best-device/2b.png) no-repeat
 }
 
 .best-device-a.d2:hover {
-    background: url(img/png/best-device/2g.png) no-repeat;
+    background: url(img/png/best-device/2g.png) no-repeat
 }
 
-
-/*3 девайс*/
-
 .best-device-a.d3 {
-    background: url(img/png/best-device/3b.png) no-repeat;
+    background: url(img/png/best-device/3b.png) no-repeat
 }
 
 .best-device-a.d3:hover {
-    background: url(img/png/best-device/3g.png) no-repeat;
+    background: url(img/png/best-device/3g.png) no-repeat
 }
 
-
-/*4 девайс*/
-
 .best-device-a.d4 {
-    background: url(img/png/best-device/4b.png) no-repeat;
+    background: url(img/png/best-device/4b.png) no-repeat
 }
 
 .best-device-a.d4:hover {
-    background: url(img/png/best-device/4g.png) no-repeat;
+    background: url(img/png/best-device/4g.png) no-repeat
 }
 
-
-/*5 девайс*/
-
 .best-device-a.d5 {
-    background: url(img/png/best-device/5b.png) no-repeat;
+    background: url(img/png/best-device/5b.png) no-repeat
 }
 
 .best-device-a.d5:hover {
-    background: url(img/png/best-device/5g.png) no-repeat;
+    background: url(img/png/best-device/5g.png) no-repeat
 }
 
-
-/*6 девайс*/
-
 .best-device-a.d6 {
-    background: url(img/png/best-device/6b.png) no-repeat;
+    background: url(img/png/best-device/6b.png) no-repeat
 }
 
 .best-device-a.d6:hover {
-    background: url(img/png/best-device/6g.png) no-repeat;
+    background: url(img/png/best-device/6g.png) no-repeat
 }
-
-
-/*==========стрелка вверх==============*/
 
 .up {
     width: 37px;
@@ -1081,154 +730,101 @@ input[type="radio"] {
     background: url(img/png/up.png) no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
-    cursor: pointer;
+    cursor: pointer
 }
-
-
-/*--------------------footer-------------*/
-
-
-/*блок футера*/
 
 footer {
     background-color: #000;
-    min-width: 1180px;
     margin-top: 70px;
-    font-family: "Roboto";
+    font-family: roboto
 }
-
-
-/*части футера*/
 
 .footer .w1200 {
-    position: relative;
+    position: relative
 }
-
-
-/*footer-1*/
 
 .footer-1 {
     padding-top: 43px;
-    height: 200px;
-    /*border-bottom: 1px solid #ddd;*/
+    height: 200px
 }
-
-
-/*цвет текста ссылки в футере*/
 
 .footer,
 .footer a {
     color: #fff;
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     font-weight: 600;
     font-size: 12px;
-    color: rgb(102, 102, 102);
+    color: #666;
     text-transform: uppercase;
     line-height: 2;
-    text-align: left;
+    text-align: left
 }
-
-
-/*цвет ссылок в футере при наведении или если на ней находится*/
 
 .footer a:hover,
 .footer li.active a,
 .footer li.current-menu-item a {
-    color: #00cd98;
+    color: #00cd98
 }
-
-
-/*меню общее ul*/
 
 .footer-menu {
     position: absolute;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
-
-
-/*======footer-1==========*/
-
-
-/*меню футер 1 */
 
 .footer-menu-1-ul {
-    left: 112px;
-    width: 172px;
+    left: 0;
+    width: 172px
 }
-
-
-/*меню футер 2 */
 
 .footer-menu-2-ul {
     left: 330px;
-    width: 280px;
+    width: 280px
 }
-
-
-/*блок с соцсетями и входом*/
 
 .footer-soc {
     position: absolute;
-    left: 751px;
     width: 306px;
+    right: 0
 }
 
-
-/*footer регистрация*/
-
 .footer-reg {
-    margin-left: 64px;
+    margin-left: 64px
 }
 
 .footer-socseti {
-    margin-top: 54px;
+    margin-top: 54px
 }
-
-
-/*===========footer-2===========*/
 
 .footer-2,
 .footer-2 .w1200 {
-    height: 67px;
+    height: 67px
 }
-
-
-/*надпись политики конфеденциальности*/
 
 a.politika {
     line-height: 67px;
     text-transform: none;
-    text-decoration: underline;
+    text-decoration: underline
 }
-
-
-/*рекламное агенство в футере*/
 
 .design {
     width: 136px;
     height: 59px;
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 0
 }
-
-
-/*=========Иконки в футере============*/
-
-
-/*вход регистрация*/
 
 .footer-zamok {
     background: url(img/png/zamok-silver.png) no-repeat;
     padding-left: 22px;
     background-size: 9px;
-    height: 70px;
+    height: 70px
 }
 
 .footer-zamok:hover {
     background: url(img/png/zamok-green.png) no-repeat;
-    background-size: 9px;
+    background-size: 9px
 }
 
 .footer-key {
@@ -1236,16 +832,13 @@ a.politika {
     background: url(img/png/key-silver.png) no-repeat;
     padding-left: 22px;
     background-size: 9px;
-    height: 70px;
+    height: 70px
 }
 
 .footer-key:hover {
     background: url(img/png/key-green.png) no-repeat;
-    background-size: 9px;
+    background-size: 9px
 }
-
-
-/*соц сети*/
 
 .footer-socseti a {
     width: 26px;
@@ -1256,426 +849,283 @@ a.politika {
     background-color: #999;
     line-height: 26px;
     font-size: 18px;
-    text-align: center;
+    text-align: center
 }
 
 .footer-socseti a:hover {
     background-color: #00cd98;
-    color: #000;
+    color: #000
 }
-
-
-/*загрузка изображений*/
 
 .loader {
-    margin-left: -1000px;
-    background: url(img/png/logo.png) center no-repeat, url(img/png/mixologiya.png)center no-repeat, url(img/png/vipe-news.png)center no-repeat, url(img/png/best-device/1b.png) no-repeat, url(img/png/best-device/1g.png) no-repeat, url(img/png/best-device/2b.png) no-repeat, url(img/png/best-device/2g.png) no-repeat, url(img/png/best-device/3b.png) no-repeat, url(img/png/best-device/3g.png) no-repeat, url(img/png/best-device/4b.png) no-repeat, url(img/png/best-device/4g.png) no-repeat, url(img/png/best-device/5b.png) no-repeat, url(img/png/best-device/5g.png) no-repeat, url(img/png/best-device/6b.png) no-repeat, url(img/png/best-device/6g.png) no-repeat, url(img/png/up.png) no-repeat, url(img/png/zamok-silver.png) no-repeat, url(img/png/zamok-green.png) no-repeat, url(img/png/key-silver.png) no-repeat, url(img/png/key-green.png) no-repeat;
+    margin-left: -1e3px;
+    background: url(img/png/logo.png) center no-repeat, url(img/png/mixologiya.png)center no-repeat, url(img/png/vipe-news.png)center no-repeat, url(img/png/best-device/1b.png) no-repeat, url(img/png/best-device/1g.png) no-repeat, url(img/png/best-device/2b.png) no-repeat, url(img/png/best-device/2g.png) no-repeat, url(img/png/best-device/3b.png) no-repeat, url(img/png/best-device/3g.png) no-repeat, url(img/png/best-device/4b.png) no-repeat, url(img/png/best-device/4g.png) no-repeat, url(img/png/best-device/5b.png) no-repeat, url(img/png/best-device/5g.png) no-repeat, url(img/png/best-device/6b.png) no-repeat, url(img/png/best-device/6g.png) no-repeat, url(img/png/up.png) no-repeat, url(img/png/zamok-silver.png) no-repeat, url(img/png/zamok-green.png) no-repeat, url(img/png/key-silver.png) no-repeat, url(img/png/key-green.png) no-repeat
 }
 
-
-/*------------------------------ЛУЧШИЕ ДЕВАЙСЫ-------------------------------*/
-
 .mt35 {
-    margin-top: 35px;
+    margin-top: 35px
 }
 
 .mt50 {
-    margin-top: 50px;
+    margin-top: 50px
 }
 
-
-/*отступ постов друг от друга, кроме первого*/
-
 .div-post-best_device:not(:nth-child(4)) {
-    margin-top: 100px;
+    margin-top: 100px
 }
 
 .podzagolovok {
     font-size: 18px;
-    color: rgb(51, 51, 51);
+    color: #333;
     text-transform: uppercase;
     line-height: 1.2;
-    text-shadow: 0px 1px 1px rgba(51, 51, 51, 0.28);
-    font-family: "Roboto";
-    margin-left: 12px;
+    text-shadow: 0 1px 1px rgba(51, 51, 51, .28);
+    font-family: roboto;
+    margin-left: 12px
 }
-
-
-/*содеражание поста, блок с черной рамкой*/
 
 .post-text {
     border: 1px solid #000;
-    padding: 58px 30px 25px 30px;
-    position: relative;
+    padding: 58px 30px 25px;
+    position: relative
 }
-
-
-/*блок для картинки поста*/
 
 .post-div-img {
     height: 292px;
     width: 292px;
-    /*background-image: url(http://placehold.it/292x292);*/
     display: flex;
-    float: left;
+    float: left
 }
-
-
-/*картинка поста*/
 
 .post-img {
     margin: auto;
     max-width: 292px;
-    max-height: 292px;
+    max-height: 292px
 }
-
-
-/*скидка красная*/
 
 .skidka {
     margin: 0;
     margin-left: 16px;
     font-size: 16px;
-    font-family: "Roboto";
-    color: rgb(234, 88, 88);
-    font-weight: bold;
+    font-family: roboto;
+    color: #ea5858;
+    font-weight: 700;
     text-transform: uppercase;
     line-height: 1;
     display: inline-block;
-    float: left;
+    float: left
 }
-
-
-/*блок с кнопками покупки*/
 
 .pokupka {
     margin-left: 30px;
-    display: inline-block;
+    display: inline-block
 }
 
-
-/*стиль кнопки покупка*/
-
 .pokupka a {
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.28);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .28);
     width: 206px;
     height: 30px;
     line-height: 30px;
     display: inline-block;
-    text-align: center;
+    text-align: center
 }
 
-
-/* покупка Китай */
-
 .pokupka-china {
-    background-color: #ea5858;
+    background-color: #ea5858
 }
 
 .pokupka-china:hover {
-    background-color: #e83c3c;
+    background-color: #e83c3c
 }
-
-
-/*покупка Россия*/
 
 .pokupka-russia {
     margin-top: 10px;
-    background-color: #00cd98;
+    background-color: #00cd98
 }
 
 .pokupka-russia:hover {
-    background-color: #02a379;
+    background-color: #02a379
 }
-
-
-/*контейнер плюсы минусы характеристика*/
 
 .plus-minus-har {
     margin-top: 25px;
-    display: block;
+    display: block
 }
-
-
-/*название списка*/
 
 .pmh-title {
     font-size: 18px;
-    font-family: "Roboto";
-    color: rgb(51, 51, 51);
+    font-family: roboto;
+    color: #333;
     text-transform: uppercase;
     line-height: 1.2;
-    text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
+    text-shadow: 0 1px 3px rgba(51, 51, 51, .28)
 }
-
-
-/*контейнеры ul*/
 
 .info-post {
     width: 390px;
-    float: left;
+    float: left
 }
-
-
-/*изменяем маркеры*/
-
-
-/*общие параметры маркеров*/
 
 .plus-minus-har ul li:before {
-    /* Прячем исходные маркеры */
     list-style-type: none;
-    font-family: "Roboto";
+    font-family: roboto;
     line-height: 1.2;
     font-size: 18px;
-    text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
-    padding-right: 20px;
+    text-shadow: 0 1px 3px rgba(51, 51, 51, .28);
+    padding-right: 20px
 }
-
-
-/*плюс*/
 
 .plus ul li:before {
-    /* Сам маркер */
-    /* Расстояние от маркера до текста */
     content: "+";
-    color: rgb(66, 213, 173);
+    color: #42d5ad
 }
-
-
-/*минус*/
 
 .minus ul li:before {
     content: "-";
-    color: rgb(234, 88, 88);
+    color: #ea5858
 }
-
-
-/*Характеристики*/
 
 .harki {
-    clear: both;
+    clear: both
 }
-
-
-/*точка*/
 
 .harki ul li:before {
     content: "•";
-    color: rgb(66, 213, 173);
+    color: #42d5ad
 }
-
-
-/*======================АКЦИИ=====================*/
 
 .akciya-h1 {
     font-size: 20px;
-    font-family: "NotoSansRegular";
-    color: rgb(51, 51, 51);
+    font-family: notosansregular;
+    color: #333;
     text-transform: uppercase;
     line-height: 1.2;
-    text-align: left;
+    text-align: left
 }
 
-
-/*контейнер для акции*/
-
 .akciya-container {}
-
-
-/*блок с основной картинкой*/
 
 .akciya-div-logo {
     width: 540px;
     height: 304px;
-    float: left;
+    float: left
 }
-
-
-/*максимальные размеры картинки*/
 
 .akciya-div-logo img {
     max-width: 540px;
-    max-height: 304px;
+    max-height: 304px
 }
-
-
-/*блок с таблицей*/
 
 .akciya-kontakt {
     width: 280px;
     float: right;
-    margin-top: -10px;
+    margin-top: -10px
 }
 
 .akciya-kontakt table {
-    /*margin-top: 15px;*/
-    border: none;
-    padding: 0;
+    border: 0;
+    padding: 0
 }
-
-
-/*название критерия*/
 
 .akciya-kontakt td {
     font-size: 16px;
-    font-family: "Roboto";
-    color: rgb(153, 153, 153);
-    line-height: 1.2;
+    font-family: roboto;
+    color: #999;
+    line-height: 1.2
 }
-
-
-/*все четные ячейки, значение критерия*/
 
 .akciya-kontakt td:nth-child(even) {
-    color: rgb(51, 51, 51);
-    font-family: Roboto-Regular;
+    color: #333;
+    font-family: roboto-regular
 }
-
-
-/*Все нечетные ячейки*/
 
 .akciya-kontakt td:nth-child(odd) {
     width: 90px;
-    vertical-align: top;
+    vertical-align: top
 }
-
-
-/*таблица с контактами акции*/
 
 .akciya-kontakt-table {
-    border-collapse: collapse;
+    border-collapse: collapse
 }
-
-
-/*стрка таблицы с контактами акции*/
 
 .akciya-kontakt-table tr:not(:last-child) {
-    border-bottom: 1px solid rgb(153, 153, 153);
+    border-bottom: 1px solid #999
 }
-
-
-/*отступы в ячейках*/
 
 .akciya-kontakt-table tr td {
-    padding: 13px 0;
+    padding: 13px 0
 }
-
-
-/*========Об акции========*/
-
-
-/*контейнер о акции*/
 
 .o-akcii {
     clear: both;
-    margin-top: 33px;
+    margin-top: 33px
 }
-
-
-/*отступы*/
 
 .akcii-p-foto {
-    margin-top: 45px;
+    margin-top: 45px
 }
-
-
-/*контейнер с картинками акции*/
 
 .akcii-div-img {
     margin-top: -15px;
-    margin-right: -15px;
+    margin-right: -15px
 }
-
-
-/*первая картинка акций(большая)*/
 
 .akcii-div-img img:first-child {
     height: 250px;
     float: left;
-    margin-right: 12px;
+    margin-right: 12px
 }
-
-
-/*картинки акции*/
 
 .akcii-div-img img {
-    /*max-width:128px;*/
     height: 117px;
     margin-right: 12px;
-    margin-top: 12px;
+    margin-top: 12px
 }
-
-
-/*==============комментарии==============*/
-
-
-/*Контейнер для комментариев*/
 
 .comments {
     clear: both;
-    margin-top: 82px;
+    margin-top: 82px
 }
-
-
-/*контейнер для формы комментариев*/
 
 .comments-div-form {
     width: 619px;
     height: 157px;
-    /*width: 559px;*/
-    /*height: 92px;*/
     border: 3px solid #000;
     margin: 0 auto;
     margin-top: 35px;
-    /*padding: 37px 32px 17px 28px;*/
-    position: relative;
+    position: relative
 }
 
-.comments-form {
-    /*background-color: #444;*/
-}
-
-
-/*общие настройки строк ввода*/
+.comments-form {}
 
 .comments-form-all {
-    border: none;
-    border-bottom: 1px solid rgb(232, 232, 232);
+    border: 0;
+    border-bottom: 1px solid #e8e8e8;
     width: 136px;
     height: 7px;
     font-size: 10px;
-    font-family: "Verdana";
+    font-family: verdana;
     color: #555;
     font-style: italic;
     line-height: 1.2;
     text-align: left;
     position: absolute;
-    padding-bottom: 10px;
+    padding-bottom: 10px
 }
 
 .comments-form-all:focus {
-    border-color: #000;
+    border-color: #000
 }
-
-
-/*автор*/
 
 .comments-form-author {
     top: 37px;
-    left: 28px;
+    left: 28px
 }
-
-
-/*email*/
 
 .comments-form-email {
     bottom: 65px;
-    left: 28px;
+    left: 28px
 }
-
-
-/*text area текст комментария*/
 
 .comments-form-comment {
     width: 346px;
@@ -1683,147 +1133,105 @@ a.politika {
     resize: none;
     bottom: 65px;
     right: 34px;
-    font-family: "NotoSansRegular";
-    font-size: 14px;
+    font-family: notosansregular;
+    font-size: 14px
 }
 
 .ta {
-    width: 556px;
+    width: 556px
 }
-
-
-/*строка email не будет опубликовано*/
 
 .comment-notes {
     margin: 0;
     left: 28px;
     bottom: 29px;
     font-size: 14px;
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     color: #00cd98;
     font-style: italic;
     line-height: 1.8;
     text-align: left;
-    position: absolute;
+    position: absolute
 }
-
-
-/*кнопка отправить*/
 
 .comment-respond .form-submit {
     top: 109px;
     right: 34px;
     margin: 0;
-    position: absolute;
+    position: absolute
 }
-
-
-/*=============комментарии пользователей=============*/
-
-
-/*контейнер с комментами*/
 
 .comments-user {
     margin-left: auto;
     margin-right: auto;
-    width: 619px;
+    width: 619px
 }
 
-
-/*ul комментов*/
-
 .comment-list:first-child {
-    margin-top: 94px;
+    margin-top: 94px
 }
 
 .comment-list {
     margin: 0;
-    padding: 0;
+    padding: 0
 }
-
-
-/*li комментов*/
 
 .comment-list li {
     margin-top: 65px;
-    border-bottom: 1px solid rgb(232, 232, 232);
+    border-bottom: 1px solid #e8e8e8
 }
-
-
-/*убираем отступ первого коммента*/
 
 .comment-list li:first-child {
-    margin-top: 0;
+    margin-top: 0
 }
-
-
-/*сам комментарий пользователя*/
 
 .comment-list p {
     font-size: 16px;
-    font-family: "Verdana";
-    color: rgb(102, 102, 102);
+    font-family: verdana;
+    color: #666;
     font-style: italic;
     line-height: 1.2;
-    text-align: left;
+    text-align: left
 }
-
-
-/*дата коммента*/
 
 .comment-list .comment-user-data {
     font-size: 14px;
-    font-family: "Verdana";
-    color: rgb(153, 153, 153);
+    font-family: verdana;
+    color: #999;
     font-style: italic;
     line-height: 1.2;
-    text-align: right;
+    text-align: right
 }
-
-
-/*цвет имени автора коммента*/
 
 .comment-author {
-    color: #000;
+    color: #000
 }
-
-
-/*размер шрифта*/
 
 .fs18 {
-    font-size: 18px!important;
+    font-size: 18px!important
 }
 
-
-/*------------------рубрика акции-----------------*/
-
 .fs12 {
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     font-weight: 400;
     font-style: normal;
     line-height: 1.2em;
-    letter-spacing: 0em;
-    font-size: 14px !important;
-
+    letter-spacing: 0;
+    font-size: 14px!important
 }
 
 .fs16 {
-    font-size: 16px!important;
+    font-size: 16px!important
 }
-
-
-/*контейнер для названия и компании*/
 
 .header-category {
     position: relative;
-    height: 32px;
-    
-
+    height: 32px
 }
 
 .nazvanie {
     position: absolute;
-    left: 235px;
+    left: 235px
 }
 
 .company {
@@ -1831,332 +1239,225 @@ a.politika {
     right: 65px
 }
 
-
-/*контейнер для всех записей*/
-
 .post-shares-all {
-    margin-top: 15px;
-
+    margin-top: 15px
 }
-
-
-/*посты*/
 
 .post-shares {
-    /*margin-top: 15px;*/
     padding: 15px 0;
-    border-top: 1px solid rgb(153, 153, 153);
-    border-bottom: 1px solid rgb(153, 153, 153);
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
     margin-top: 15px;
-    position: relative;
-
+    position: relative
 }
-
-
-/*первый пост*/
 
 .post-shares-all .post-shares:first-child {
-    border-top: none;
+    border-top: 0;
     padding-top: 0;
-    margin-top: 0;
-
+    margin-top: 0
 }
-
-
-/*контейнер картинки поста*/
 
 .post-shares-div-img {
     float: left;
     width: 220px;
-    height: 120px;
+    height: 120px
 }
-
-
-/*картинка поста*/
 
 .post-shares-img {
     width: 220px;
     height: 120px;
+    margin: auto;
 }
-
-
-/*содежимое статьи*/
 
 .post-shares-content {
     display: inline-block;
     width: 476px;
-    margin: 6px 0 0 15px;
+    margin: 6px 0 0 15px
 }
-
-
-/*название поста*/
 
 .post-shares-content .podzagolovok {
     margin-top: 0;
     margin-bottom: 12px;
     margin-left: 0;
-    font-family: "NotoSansBold";
+    font-family: notosansbold;
     font-size: 16px;
-    letter-spacing: -0.05em;
+    letter-spacing: -.05em
 }
-
-
-/*блок для названия компании*/
 
 .post-shares-name-company {
     margin-top: 6px;
     float: right;
-    width: 138px;
+    width: 138px
 }
-
-
-/*серое название компании*/
 
 .shares-name-company,
 .shares-name-company a {
     font-size: 12px;
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     font-weight: 600;
-    color: rgb(153, 153, 153);
+    color: #999;
     text-transform: uppercase;
     line-height: 1.2;
     text-align: left;
-    margin: 0;
+    margin: 0
 }
-
-
-/*дата поста*/
 
 .post-shares-data {
     font-size: 10px;
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     color: #00cd98;
     position: absolute;
     right: 10px;
-    bottom: 15px;
+    bottom: 15px
 }
-
-
-/*--------------------------страница компании-----------------------*/
 
 .company-h1 {
     font-size: 20px;
-    font-family: "Roboto";
+    font-family: roboto;
     color: rgb( 51, 51, 51);
     text-transform: uppercase;
-    margin-top: 7px;
+    margin-top: 7px
 }
-
-
-/*блок с основной картинкой*/
 
 .company-div-logo {
     width: 130px;
     height: 200px;
     float: left;
+    display: flex;
 }
-
-
-/*максимальные размеры картинки*/
 
 .company-div-logo img {
     max-width: 130px;
-    max-height: 200px;
+    max-height: 200px
 }
-
-
-/*блок с таблицей*/
 
 .company-kontakt {
     width: 715px;
     float: right;
-    margin-top: -10px;
+    margin-top: -10px
 }
 
 .company-kontakt table {
-    /*margin-top: 15px;*/
-    border: none;
-    padding: 0;
+    border: 0;
+    padding: 0
 }
 
 .w100 {
-    width: 100px;
+    width: 100px
 }
 
 .w180 {
-    width: 180px;
+    width: 180px
 }
 
 .w70 {
-    width: 70px;
+    width: 80px
 }
 
 .w330 {
-    width: 330px;
+    width: 320px
 }
-
-
-/*название критерия*/
 
 .company-kontakt td {
     font-size: 16px;
-    font-family: "Roboto";
-    color: rgb(153, 153, 153);
-    line-height: 1.2;
+    font-family: roboto;
+    color: #999;
+    line-height: 1.2
 }
-
-
-/*все четные ячейки, значение критерия*/
 
 .company-kontakt td:nth-child(even) {
-    color: rgb(51, 51, 51);
-    font-family: "NotoSansRegular";
+    color: #333;
+    font-family: notosansregular
 }
-
-
-/*Все нечетные ячейки*/
 
 .company-kontakt td:nth-child(odd) {
     vertical-align: top;
-    font-family: "NotoSansRegular";
+    font-family: notosansregular
 }
 
-
-/*таблица с контактами акции*/
-
 .company-kontakt-table {
-    border-collapse: collapse;
+    border-collapse: collapse
 }
 
 .text-right {
-    text-align: right;
+    text-align: right
 }
-
-
-/*стрка таблицы с контактами акции*/
 
 .brd {
-    border-bottom: 1px solid rgb(153, 153, 153);
+    border-bottom: 1px solid #999
 }
-
-
-/*пустые ячейка для промежутка*/
 
 .company-kontakt .company-kontakt-table tr td.null {
-    border-bottom: none;
-    width: 15px;
+    border-bottom: 0;
+    width: 15px
 }
-
-
-/*отступы в ячейках*/
 
 .company-kontakt-table tr td {
-    padding: 13px 0;
+    padding: 13px 0
 }
-
-
-/*========рубрика компаний========*/
-
-
-/*Таблица компаний*/
 
 .list-company {
-    width: 850px;
+    width: 850px
 }
-
-
-/*стиль заголовка таблицы*/
 
 .list-company .podzagolovok {
-    font-weight: normal;
+    font-weight: 400;
     font-size: 12px;
-    display: inline-block;
+    display: inline-block
 }
-
-
-/*столб миниатюры*/
 
 .th-null {
-    width: 120px;
+    width: 120px
 }
-
-
-/*название компании*/
 
 .th-name {
     width: 470px;
-    text-align: left;
+    text-align: left
 }
 
 .th-name .podzagolovok {
-    margin-left: 0;
+    margin-left: 0
 }
-
-
-/*отзыв и рейтинг*/
 
 .th-otziv,
 .th-rejting {
-    width: 130px;
+    width: 130px
 }
-
-
-/*стрелки*/
 
 .th-rejting img {
-    display: inline-block;
+    display: inline-block
 }
 
-.list-company td {
-    /*outline: 1px solid black;*/
-}
-
-
-/*ячейка миниатюры*/
+.list-company td {}
 
 .td-img {
-    text-align: left;
+    text-align: left
 }
-
-
-/*контейнер миниатюры*/
 
 .company-div-img {
     display: inline-block;
-    max-width: 105px;
+    /*max-width: 105px;*/
     min-height: 110px;
-    overflow: hidden;
+    overflow: hidden
 }
-
-
-/*сама миниатюра*/
 
 .company-div-img img {
-    max-width: 120px;
+    max-width: 120px
 }
 
-
-/*ячейка имя и описания компании*/
-
 .td-name {
-    vertical-align: top;
+    vertical-align: top
 }
 
 .td-name .podzagolovok {
-    margin: 0;
+    margin: 0
 }
-
-
-/*ячейка отзыва и рейтинга*/
 
 .td-otziv,
 .td-rejting {
     text-align: center;
-    vertical-align: middle;
+    vertical-align: middle
 }
-
-
-/*ячейки разделения*/
 
 .tr-null td {
     height: 16px
@@ -2165,299 +1466,205 @@ a.politika {
 .tr-hr td {
     height: 20px;
     border-top: 1px solid #e8e8e8;
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8
 }
 
-
-/*Убрал линию последнего элементы*/
-
 .tr-hr:last-child td {
-    border-bottom: none;
+    border-bottom: 0
 }
 
 .tr-null-2 td {
     height: 20px
 }
 
-
-/*скрыть элементы границы для последнего*/
-
 .list-company table tr:nth-last-child(1),
-.list-company table tr:nth-last-child(2)
-/*table tr:nth-last-child(3)*/
-
-{
-    display: none;
+.list-company table tr:nth-last-child(2) {
+    display: none
 }
-
-
-/*--------------рубрика Видео---------------*/
-
-
-/*все посты в видео рубрике*/
 
 .video-category {
     font-size: 0;
-    margin-right: -29px;
+    margin-right: -29px
 }
-
-
-/*блок одного поста*/
 
 .video-div {
     display: inline-block;
     width: 265px;
     height: 210px;
-    border-bottom: 1px solid rgb(232, 232, 232);
+    border-bottom: 1px solid #e8e8e8;
     margin-right: 28px;
-    margin-top: 35px;
+    margin-top: 35px
 }
-
-
-/*первые три поста*/
 
 .video-div:nth-child(1),
 .video-div:nth-child(2),
 .video-div:nth-child(3) {
-    margin-top: 0;
+    margin-top: 0
 }
 
-/*каждый третий*/
-.video-div:nth-child(3n){
-    margin-right:0;
+.video-div:nth-child(3n) {
+    margin-right: 0
 }
-
-
-/*контейнер картинки*/
 
 .video-div-img,
 .video-div-img img {
     width: 265px;
-    height: 145px;
+    height: 145px
 }
 
-
-/*заголовок поста*/
-
 .video-title {
-
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     font-size: 14px;
     font-weight: 600;
     font-style: normal;
     line-height: 1.2em;
-    letter-spacing: 0em;
-    color: rgb(51, 51, 51);
-    /*text-transform: uppercase;*/
+    letter-spacing: 0;
+    color: #333;
     text-align: left;
-    margin: 10px 8px 0 8px;
-    height: 39px;
+    margin: 10px 8px 0;
+    height: 39px
 }
-
-
-/*ссылка смотрет*/
 
 .video-read {
     font-size: 12px;
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     line-height: 1.2em;
     text-align: right;
     margin-right: 8px;
     margin-bottom: 8px;
-    display: block;
+    display: block
 }
-
-
-/*-----------страница Видео---------------*/
-
-
-/*заголовок*/
 
 .pv-h1 {
     font-size: 20px;
-    font-family: Roboto-Regular;
-    color: rgb(51, 51, 51);
+    font-family: roboto-regular;
+    color: #333;
     line-height: 1.2;
-    text-align: left;
+    text-align: left
 }
-
-
-/*контейнер видео и инфо*/
 
 .video-info {
-    width: 650px;
-    /*height: 360px;*/
+    width: 650px
 }
-
-
-/*контейнер рейтинг и автор*/
 
 .rejting-avtor {
     margin-top: 18px;
     font-size: 16px;
-    color: rgb(153, 153, 153);
-    line-height: 1.2;
+    color: #999;
+    line-height: 1.2
 }
-
-
-/*контейнер рейтинг*/
 
 .video-rejting {
     float: left;
-    margin-left: 18px;
+    margin-left: 18px
 }
 
 .video-rejting .rejt-name {
-    border-bottom: none;
+    border-bottom: 0
 }
-
-
-/*контейнер автор*/
 
 .video-avtor {
     float: right;
-    margin-right: 18px;
+    margin-right: 18px
 }
-
-
-/*имя автора*/
 
 .video-avtor-name {
-    color: #000;
+    color: #000
 }
-
-
-/*контейнер для описания*/
 
 .video-opisanie {
-    margin-top: 50px;
+    margin-top: 50px
 }
-
-
-/*------------страница реклама-----------------*/
-
-
-/*заголовок страницы*/
 
 .page-div h1 {
     font-size: 20px;
-    font-family: Roboto-Regular;
+    font-family: roboto-regular;
     color: rgb( 51, 51, 51);
     text-transform: uppercase;
-    text-align: center;
+    text-align: center
 }
-
-
-/*стиль шрифта*/
 
 .page-div {
     font-size: 14px;
-    font-family: "Roboto";
+    font-family: roboto;
     color: rgb( 51, 51, 51);
-    text-align: left;
+    text-align: left
 }
-
-
-/*стиль шрифта*/
 
 .page-div {
     font-size: 14px;
-    font-family: "Roboto";
+    font-family: roboto;
     color: rgb( 51, 51, 51);
     text-align: left;
-    border-bottom: none;
+    border-bottom: 0
 }
-
-
-/*стиль списка*/
 
 .page-div ul {
-    margin-top: 30px;
+    margin-top: 30px
 }
 
-
-/*стиль элементов списка*/
-
 .page-div ul li {
-    margin-bottom: 9px;
+    margin-bottom: 9px
 }
 
 .page-div ul li:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
-
-/*стиль маркера*/
-
-.page-div:not(.forum) ul li:before {
+.page-div:not(.forum) ul li:before:not(.forum) {
     content: "●";
     color: #00cd98;
-    margin-right: 11px;
+    margin-right: 11px
 }
 
 .page-div h2 {
     font-size: 18px;
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     color: rgb( 51, 51, 51);
     border-bottom: 1px solid #00cd98;
     padding-bottom: 7px;
     display: inline-block;
     margin-bottom: 0;
-    text-transform: uppercase;
+    text-transform: uppercase
 }
-
-
-/*-------------рубрика рецепты-----------*/
 
 .recipes-h1 {
-    font-family: "NotoSansBold";
+    font-family: notosansbold;
     font-size: 22px;
-    letter-spacing: -0.05em;
-    color: rgb(51, 51, 51);
+    letter-spacing: -.05em;
+    color: #333;
     text-transform: uppercase;
     line-height: 1.2;
-    text-align: center;
+    text-align: center
 }
-
-
-/*контейнер для поиска*/
 
 .search-cat {
     height: 31px;
-    width: 850px;
+    width: 850px
 }
-
-
-/*контейнер поиска*/
 
 .search-div {
     width: 393px;
     border: 2px solid #000;
     border-radius: 3px;
     height: 27px;
-    position: relative;
+    position: relative
 }
-
-
-/*строка поиска*/
 
 .search-text {
     width: 340px;
     height: 24px;
     line-height: 20px;
     font-size: 14px;
-    font-family: "Verdana";
+    font-family: verdana;
     color: rgb( 204, 204, 204);
     text-align: left;
     padding-left: 13px;
     line-height: 27px;
-    border: none;
+    border: 0;
     display: block;
-    float: left;
+    float: left
 }
-
-
-/*кнопка поиск*/
 
 .search-button {
     width: 40px;
@@ -2465,582 +1672,417 @@ a.politika {
     background-color: #000;
     color: #00cd98;
     cursor: pointer;
-    border: none;
-    /*line-height: 28px;*/
+    border: 0;
     position: absolute;
     right: 0;
-    top: 0;
-
+    top: 0
 }
-
-
-/*выравнивание по левому краю*/
 
 .fl {
-    float: left;
-
+    float: left
 }
-
-
-/*выравнивание по правому краю*/
 
 .fr {
-    float: right;
-
+    float: right
 }
-
-
-/*Таблица компаний*/
 
 .list-recipes {
     margin-top: 20px;
     width: 850px;
-    border-collapse: collapse;
-
+    border-collapse: collapse
 }
 
-
-/*стиль заголовка таблицы*/
-
 .list-recipes .podzagolovok {
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     font-weight: 400;
     font-size: 16px;
     display: inline-block;
-    margin-left: 0;
-
+    margin-left: 0
 }
-
-
-/*название компании*/
 
 .rec-th-name {
-
     text-align: left;
-
 }
 
-
-/*положение текста общее для описания постов*/
-
 .list-recipes .tr td {
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     font-weight: 400;
     vertical-align: middle;
     height: 40px;
     border-bottom: 1px solid #e8e8e8;
-    font-size: 16px;
-    color: rgb(107, 107, 107);
-    line-height: 1.2;
-
+    font-size: 15px;
+    color: #6b6b6b;
+    line-height: 1.2
 }
 
-.list-recipes .rejt-vol *{
-    font-family: "NotoSansRegular" !important;
+.list-recipes .rejt-vol * {
+    font-family: notosansregular!important;
     font-size: 12px;
-    color: rgb(107, 107, 107);
-    line-height: 1.2;
-
+    color: #6b6b6b;
+    line-height: 1.2
 }
-/*отзыв и рейтинг*/
 
 .rec-th-avtor,
 .rec-th-data,
 .rec-th-rejting {
     width: 140px;
     text-align: center;
-    vertical-align: middle;
-
-
+    vertical-align: middle
 }
-
-
-/*стрелки*/
 
 .th-rejting img {
-    display: inline-block;
-
+    display: inline-block
 }
-
-
-/*ячейка имя и описания компании*/
 
 .td-name .podzagolovok {
     margin: 0;
-    font-family: "NotoSansRegular";
+    font-family: notosansregular
 }
-
-
-/*ячейка автора. даты и рейтинга*/
 
 .rec-td-avtor,
 .rec-td-data,
 .rec-td-rejting {
     text-align: center;
     vertical-align: middle;
-    font-family: "NotoSansRegular" !important;
+    font-family: notosansregular!important
 }
-
-
-/*название рецепта*/
 
 .rec-td-name a:hover {
-    color: #00cd98;
-
-
+    color: #00cd98
 }
 
-
-/*-----------------страница рецепты------------------------*/
-
-.post-recipes-container{
-	width: 551px;
-	margin: auto;
-
+.post-recipes-container {
+    width: 551px;
+    margin: auto
 }
 
-/*заголовок рецепта*/
-.post-recipes-container h1{
-	font-size: 30px;
+.post-recipes-container h1 {
+    font-size: 30px;
+    text-transform: capitalize;
     text-align: left;
-    line-height: 1.2;
+    line-height: 1.2
 }
-/*контейнер рейтинга*/
 
 .p-recipes-div-kont .rejt-div {
     border-bottom: 1px solid #e8e8e8;
-    margin-bottom: 16px;
+    margin-bottom: 16px
 }
 
 .rejt-name {
-    padding: 10px 0;
+    padding: 10px 0
 }
-
-
-/*блок слова рейтинг и самого рейтинга*/
 
 .rejt-name,
 .rejt-vol {
-    display: inline-block;
+    display: inline-block
 }
-
-
-/*блок с контактами*/
 
 .p-recipes-div-kont {
     width: 280px;
     font-size: 16px;
-    font-family: "Roboto";
-    color: rgb(153, 153, 153);
+    font-family: roboto;
+    color: #999;
     line-height: 1.2;
-    /*margin: auto;*/
-    text-align: left;
+    text-align: left
 }
-
-
-/*общий стиль*/
 
 .p-recipes-div-kont p {
     border-bottom: 1px solid #e8e8e8;
-    padding: 10px 0;
+    padding: 10px 0
 }
 
-
-/*название*/
-
-.p-recipes-div-kont {
-    /*width: 850px;*/
-
-}
+.p-recipes-div-kont {}
 
 .p-recipes-div-kont .post-ratings,
-.p-recipes-div-kont .post-ratings-loading{
-/*     display:block; */
-    font-family: "NotoSansRegular";
-    width:inherit;
-    /*margin-left:10px;*/
-    margin-top: 10px;
+.p-recipes-div-kont .post-ratings-loading {
+    font-family: notosansregular;
+    width: inherit;
+    margin-top: 10px
 }
 
 .p-recipes-div-kont span:first-child {
-    font-family: "NotoSansRegular";
-    color: rgb(51, 51, 51);
-/*     margin-left: 20px; */
-    /*display:flex;*/
-    /*justify-content:left;*/
+    font-family: notosansregular;
+    color: #333
 }
-
-
-/*====таблица====*/
-
-
-/*сама таблица*/
 
 .post-recipes-ingredient {
-    border-collapse: collapse;
-
+    border-collapse: collapse
 }
-
-
-/*стиль строк*/
 
 .post-recipes-ingredient tr th,
 .post-recipes-ingredient tr td {
-
     height: 33px;
     vertical-align: middle;
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8
 }
-
-
-/*заголовок ингредиентов*/
 
 .post-recipes-ingredient th {
     width: 70px;
     font-size: 12px;
-    font-family: "Roboto";
-    color: rgb(51, 51, 51);
+    font-family: roboto;
+    color: #333;
     line-height: 1.2;
     text-align: center;
-    text-shadow: 0px 1px 3px rgba(51, 51, 51, 0.28);
-    font-weight: normal;
+    text-shadow: 0 1px 3px rgba(51, 51, 51, .28);
+    font-weight: 400
 }
 
 .post-recipes-ingredient th:first-child {
     text-align: left;
-    width: 270px;
+    width: 270px
 }
 
 .post-recipes-ingredient th span {
     border-bottom: 1px solid #00cd98;
-    padding-bottom: 6px;
+    padding-bottom: 6px
 }
-
-
-/*содержимое таблицы*/
 
 .post-recipes-ingredient td {
     font-size: 16px;
-    font-family: "Roboto";
-    color: rgb(51, 51, 51);
+    font-family: roboto;
+    color: #333;
     line-height: 1.2;
-    text-align: center;
+    text-align: center
 }
 
 .post-recipes-ingredient td:first-child {
-    text-align: left;
+    text-align: left
 }
 
-/*купить ароматизаторы*/
-.buy-arom{
-    float: right;
+.buy-arom {
+    float: right
 }
-
-/*===Описание===*/
-
-
-/*контейнер описания*/
 
 .o-post-recipes {
     width: 515px;
     margin: auto;
     margin-top: 40px;
-    margin-left: 10px;
+    margin-left: 10px
 }
-
-
-/*строка описания*/
 
 .o-post-recipes .podzagolovok {
-    margin-left: 0;
+    margin-left: 0
 }
 
-
-/*span описания*/
-
-.o-post-recipes .podzagolovok span {
-    font-family: Roboto-Regular;
-}
-
-
-/*контейнер комментов*/
+.o-post-recipes .podzagolovok span {}
 
 .o-post-recipes-comment {
-    margin-top: -14px;
+    margin-top: -14px
 }
-
-
-/*----------рецепты админка-----------*/
-
-
-/*строка введите имя*/
 
 .input-name {
     width: 490px;
     height: 28px;
     padding-left: 14px;
     line-height: 28px;
-    font-size: 10px;
-    font-family: "Verdana";
+    font-size: 14px;
     color: #999;
     font-style: italic;
     line-height: 1.2;
     text-align: left;
     border: 1px solid #000;
-    border-radius: 3px;
+    border-radius: 3px
 }
 
 .w283 {
-    width: 283px;
-    margin: 0 auto;
+    width: 383px;
+    margin: 0 auto
 }
 
-#div-elements{
-    margin-top: 40px;
+#div-elements {
+    margin-top: 40px
 }
 
-
-
-/*элементы*/
-
-.elements-input:first-child {
-
-}
+.elements-input:first-child {}
 
 .elements-input {
     font-size: 16px;
-    font-family: "Verdana";
-    color: rgb(51, 51, 51);
+    color: #333;
     line-height: 1.2;
     margin-top: 15px;
-    clear: both;
+    clear: both
 }
-
-
-/*label метка элемента*/
 
 .elements-input label {
-    line-height: 27.5px;
+    line-height: 27.5px
 }
 
-
-/*название элемента*/
-
 .name-element {
-    max-width: 156px;
+    max-width: 256px;
     float: left;
     margin-right: 23px;
     display: inline-block;
-    text-align: left;
+    text-align: left
 }
-
-
-/*контейнер для ввода ml*/
 
 .span-input-ml {
-    float: right;
+    float: right
 }
 
-
-/*строка ввода ml*/
-
 .input-ml {
-    width: 40px;
+    width: 50px;
     height: 26px;
     border: 1px solid #d1d1d1;
     border-radius: 3px 0 0 3px;
-    font-size: 12px;
+    font-size: 16px;
     text-align: center;
-    padding: 0;
+    padding: 0
 }
-
-
-/*ml*/
 
 .ml {
     border-radius: 0 3px 3px 0;
-    background-color: #dddddd;
+    background-color: #ddd;
     width: 40px;
     height: 28px;
     display: inline-block;
     vertical-align: bottom;
-    line-height: 27.5px;
+    line-height: 27.5px
 }
-
-
-/*строка ввода нового элемента*/
 
 .elements-input-new {
     margin-top: 45px;
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
-
-/*строка ввода элемента*/
-
 .input-name-el {
-    /*width: 173px;*/
+    width: 253px;
     float: left;
     height: 28px;
     padding-left: 14px;
     line-height: 28px;
-    font-size: 10px;
-    font-family: "Verdana";
+    font-size: 15px;
     color: #999;
     font-style: italic;
     line-height: 1.2;
     text-align: left;
     border: 1px solid #d1d1d1;
     border-radius: 3px;
-    margin-right: 25px;
+    margin-right: 38px
 }
-
-
-/*отступ для зеленой кнопки*/
 
 .form-elements .btn-green {
-    margin-top: 40px;
+    margin-top: 40px
 }
 
-
-/*описание рецепта*/
-
 .opisanie {
-    width: 246px;
+    width: 366px;
     height: 113px;
     margin-top: 40px;
     border: 1px solid #d1d1d1;
     padding-left: 14px;
-    font-size: 10px;
-    font-family: "Verdana";
+    padding-top: 10px;
+    font-size: 16px;
     color: #999;
     font-style: italic;
     line-height: 1.2;
     text-align: left;
     border: 1px solid #d1d1d1;
-    border-radius: 3px;
+    border-radius: 3px
 }
 
-/*автозаполнение рецептов*/
-
-
-.ui-autocomplete{
-    max-height:150px;
+.ui-autocomplete {
+    max-height: 150px;
     overflow-y: auto;
     overflow-x: hidden;
-    width:100px;
-    background-color:#eee;
-
+    width: 100px;
+    background-color: #eee
 }
 
 .ui-autocomplete,
-.ui-menu-item{
-    margin-left:0;
-    padding-left:0;
-    font-size:14px
-
-}
-.ui-menu-item{
-    margin-top:5px;
-    cursor:pointer;
+.ui-menu-item {
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 14px
 }
 
-.ui-menu-item:hover{
-    background-color:yellow;
-    border-radius:4px;
+.ui-menu-item {
+    margin-top: 5px;
+    cursor: pointer
 }
 
-/*данные рецепта*/
-.recipes-table{
-	margin-top: 20px;
-    width: 100%;
-}
-.table-info-r{
-border-collapse: collapse;
-margin: auto;
-/*margin-top: 75px;*/
+.ui-menu-item:hover {
+    background-color: #ff0;
+    border-radius: 4px
 }
 
-/*отступ первого столба*/
-.table-info-r tr td:first-child{
-    padding-left:10px;
+.recipes-table {
+    margin-top: 20px;
+    width: 100%
 }
 
-.table-info-r th{
-    font-size:15px;
-    text-align:left;
+.table-info-r {
+    border-collapse: collapse;
+    margin: auto
+}
+
+.table-info-r tr td:first-child {
+    padding-left: 10px
+}
+
+.table-info-r th {
+    font-size: 15px;
+    text-align: left;
     height: 34px;
     text-align: center;
-    vertical-align: top;
-    /*width: 63px;*/
+    vertical-align: top
 }
 
-.table-info-r th:first-child{
+.table-info-r th:first-child {
     text-align: left;
-    width: 300px;
+    width: 300px
 }
 
-.table-info-r td{
+.table-info-r td {
     padding-left: 5px;
     padding-right: 5px;
-    font-size:16px;
+    font-size: 16px;
     height: 31px;
     border-bottom: 1px solid #2b2b2b;
     vertical-align: middle;
     text-align: center;
-    width: 73px;
-}
-.table-info-r td:first-child{
-    text-align: left;
+    width: 73px
 }
 
-.tatal-base{
-    color: #999;
+.table-info-r td:first-child {
+    text-align: left
 }
 
-.table-info-r a{
-    border-bottom: 1px dashed; /* Добавляем свою линию */
+.tatal-base {
+    color: #999
 }
 
-/*---------страница статей----------*/
-
-
-/*описание*/
+.table-info-r a {
+    border-bottom: 1px dashed
+}
 
 .text-other-2 {
     font-size: 14px;
-    font-family: "Roboto";
-    color: rgb(51, 51, 51);
+    font-family: roboto;
+    color: #333;
     line-height: 1.2;
-    text-align: left;
+    text-align: left
 }
 
-
-/*Общие стили*/
-
 .soc-f-vk * {
-    color: #fff;
+    color: #fff
 }
 
 .soc-f-vk span {
     margin-left: 25px;
     font-size: 11px;
-    font-family: "NotoSansRegular";
+    font-family: notosansregular;
     line-height: 1.2;
     text-align: left;
-    -moz-transform: matrix( 0.92489803567102, 0, 0, 0.92489803567102, 0, 0);
-    -webkit-transform: matrix( 0.92489803567102, 0, 0, 0.92489803567102, 0, 0);
-    -ms-transform: matrix( 0.92489803567102, 0, 0, 0.92489803567102, 0, 0);
+    -moz-transform: matrix( .92489803567102, 0, 0, .92489803567102, 0, 0);
+    -webkit-transform: matrix( .92489803567102, 0, 0, .92489803567102, 0, 0);
+    -ms-transform: matrix( .92489803567102, 0, 0, .92489803567102, 0, 0)
 }
 
 .soc-f-vk .fa {
     display: inline-block;
     line-height: 30px;
-    float: left;
+    float: left
 }
-
-
-/*стиль F*/
 
 .f-book {
     display: inline-block;
@@ -3048,22 +2090,16 @@ margin: auto;
     margin-right: 30px;
     height: 30px;
     line-height: 30px;
-    background-color: #4663a0;
+    background-color: #4663a0
 }
-
-
-/*стиль иконки F*/
 
 .f-book .fa {
     height: 30px;
     width: 30px;
     text-align: center;
     color: #fff;
-    background-color: #3c5b9b;
+    background-color: #3c5b9b
 }
-
-
-/*стиль VK*/
 
 .vk-blue {
     display: inline-block;
@@ -3071,266 +2107,780 @@ margin: auto;
     margin-right: 30px;
     height: 30px;
     line-height: 30px;
-    background-color: #567699;
+    background-color: #567699
 }
-
-
-/*стиль иконки VK*/
 
 .vk-blue .fa {
     height: 30px;
     width: 30px;
     text-align: center;
     color: #fff;
-    background-color: #43678d;
+    background-color: #43678d
 }
-
-
-/*=-=-=-=-=-мелкие доработки=-=-=-=-=-*/
-
-
-/*картинка стандартной записи в новостях и т.д.*/
 
 .art-img {
     max-width: 850px
 }
 
-
-/*---------------ВХОД--------------------*/
-
 body {
     position: relative;
 }
 
-
-/*ВАМ ЕСТЬ 18 ЛЕТ*/
-
-
-/*затемняющий фон*/
-
 .tabs-dark {
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0);
-    opacity: 0.702;
+    background-color: #000;
+    opacity: .702;
     position: fixed;
-    z-index: 6;
+    z-index: 6
 }
-
-
-/* блок окна  */
 
 .window-18 {
     position: absolute;
-    padding: 35px 40px 40px 40px;
+    padding: 35px 40px 40px;
     z-index: 7;
     background-color: #fff;
     width: 508px;
     height: 161px;
-    /*  выравнивание по центру    */
     margin: 297px auto 0;
     right: 0;
     left: 0;
-    text-align: center;
+    text-align: center
 }
 
-/*заголовок*/
 .window-18-title {
     display: inline-block;
-    margin: 0;
+    margin: 0
 }
 
-/*информационный текст*/
 .window-18-info {
     margin-top: 20px;
     font-size: 15px;
-    color: rgb(0, 0, 0);
-    line-height: 1.429;
+    color: #000;
+    line-height: 1.429
 }
 
-/*кнопки есть 18 и нет*/
 .window-18-yes,
-.window-18-no{
-    height:30px;
-    line-height:30px;
-  font-size: 14px;
-  font-family: "Roboto";
-  color: rgb(0, 0, 0);
-  padding: 0 30px;
-  font-family: "Roboto";
-  width:initial;
+.window-18-no {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-family: roboto;
+    color: #000;
+    padding: 0 30px;
+    font-family: roboto;
+    width: initial
 }
 
-/*кнопка меньше 18*/
-.window-18-no{
+.window-18-no {
     background-color: #a2a2a2;
-    margin-left: 15px;
-
+    margin-left: 15px
 }
 
-/*кнопка меньше 18 при наведении*/
 .window-18-no:hover,
-.window-18-no:focus{
-    background-color:#777
+.window-18-no:focus {
+    background-color: #777
 }
 
-
-/*---------СЛАЙДЕР---------*/
-.slider-block{
-    margin-top: 38px;
+.slider-block {
+    margin-top: 38px
 }
 
-.slider-block img{
-    width: 850px;
+.slider-block img {
+    width: 850px
 }
 
-
-/*контейнер навигационных кнопок*/
-body .owl-theme .owl-controls{margin-top:-31px;
+body .owl-theme .owl-controls {
+    margin-top: -31px;
     z-index: 10;
     position: absolute;
     right: -50%;
-    left: -50%;
+    left: -50%
 }
 
-/*навигационные кнопки(круги)*/
-body .owl-theme .owl-controls .owl-page span{
-     border-width: 1px;
-  border-color: rgb(0, 205, 152);
-  border-style: solid;
-  border-radius: 50%;
-  background:none;
-  z-index:;
+body .owl-theme .owl-controls .owl-page span {
+    border-width: 1px;
+    border-color: #00cd98;
+    border-style: solid;
+    border-radius: 50%;
+    background: 0 0;
+    z-index:
 }
 
-/*навигационные кнопки(круги) активные*/
 body .owl-theme .owl-controls .owl-page.active span,
-body .owl-theme .owl-controls .owl-page.active:hover span{
-  border-style: solid;
-  border-radius: 50%;
-  border-width: 1px;
-  border-color: rgb(0, 205, 152);
-  background-color: rgb(0, 205, 152);
-  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 205, 152, 0.6);
--moz-box-shadow:    0px 0px 7px 0px rgba(0, 205, 152, 0.6);
-box-shadow:         0px 0px 7px 0px rgba(0, 205, 152, 0.6);
-z-index:;
+body .owl-theme .owl-controls .owl-page.active:hover span {
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 1px;
+    border-color: #00cd98;
+    background-color: #00cd98;
+    -webkit-box-shadow: 0 0 7px 0 rgba(0, 205, 152, .6);
+    -moz-box-shadow: 0 0 7px 0 rgba(0, 205, 152, .6);
+    box-shadow: 0 0 7px 0 rgba(0, 205, 152, .6);
+    z-index:
 }
 
-.w750{
+.w750 {
     width: 750px;
-    margin: 0 50px;
+    margin: 0 50px
 }
 
-
-/*раскрашивание страниц рецептов*/
-
-/*три строчки внизу рецепта*/
-
-.info-small{
-font-family: "NotoSansRegular";
-text-transform: uppercase;
-
-margin-top:12px;
-margin-left:10px;
-color:#757575;
-font-size: 14px;
+.info-small {
+    font-family: notosansregular;
+    text-transform: uppercase;
+    margin-top: 12px;
+    margin-left: 10px;
+    color: #757575;
+    font-size: 14px;
+    margin: auto;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
-.info-small p{
-margin-bottom:0;
-font-size: 14px;
-margin-top: 0px;
-
+.info-small p {
+    margin-bottom: 0;
+    font-size: 14px;
+    margin-top: 0
 }
 
-.info-small span{
-font-size: 14px;
-
+.info-small span {
+    font-size: 14px
 }
 
-
-/*цвета шрифтов в рецептах*/
-.color-1{
-color:#757575;
+.color-1 {
+    color: #c3c3c3
 }
 
-.color-2{
-color:#ff7575;
-}
-/*total base*/
-.color-3{
-color:#94e5ff;
+.color-2 {
+    color: #ff7575
 }
 
-/*totals*/
-.color-4{
-color:rgb(228, 228, 228);
+.color-3 {
+    color: #94e5ff
 }
 
-.color-5{
-color:rgb(136, 136, 136);
+.color-4 {
+    color: #e4e4e4
+}
+
+.color-5 {
+    color: #888
 }
 
 .color-6,
-.color-6 a{
-color: rgb(0, 205, 152);
+.color-6 a {
+    color: #00cd98
 }
 
-/*раскраска*/
-.c-orange, .c-green{
-padding: 10px;
+.c-orange,
+.c-green {
+    padding: 10px
 }
 
-.c-orange{
-background-color:rgb( 51, 51, 51);
+.c-orange {
+    background-color: rgb( 51, 51, 51)
 }
 
-.c-green{
-margin-top:10px;
-background-color:rgb(33, 33, 33);
+.c-green {
+    margin-top: 10px;
+    background-color: #212121
 }
 
-/*Раскраска фона на странице создания рецепта*/
-.c-bg1{
+.c-bg1 {}
 
-}
+.c-bg2 {}
 
-.c-bg2{
+.c-bg3 {}
 
-}
-
-.c-bg3{
-
-}
-
-.wbn{
+.wbn {
     -ms-word-break: normal;
-    word-break: normal;
+    word-break: normal
 }
 
-
-/*форма поиска в шапке*/
-.header-form{
+.header-form {
     position: absolute;
     height: 28px;
     top: 4px;
-    display:inline-block;
+    display: inline-block;
     border: 2px solid #000;
     border-radius: 3px;
+    margin-left: 10px
 }
 
-
-.header-form .search-button{
-    position:inherit;
+.header-form .search-button {
+    position: inherit
 }
 
-.header-form .search-text{
-    width:295px;
+.header-form .search-text {
+    width: 295px
 }
-/*.форма поиска в шапке
 
-/*надо зарегистрироваться для рейтинга*/
-.post-ratings:hover .dn{
- display:inline;
+.post-ratings:hover .dn {
+    display: inline
+}
+
+.wrap {
+    width: 1180px;
+    margin: auto
+}
+
+.mobile {
+    display: none
+}
+
+.mobile-menu {
+    display: none
+}
+
+@media all and (max-width:1200px) {
+    .w750 {
+        width: 100%;
+        margin: 0;
+    }
+    .slider-block {
+        overflow: hidden;
+    }
+    .list-company {
+        max-width: 100%;
+        width: 100%;
+    }
+    .slider-block img {
+        width: 100%;
+    }
+    .list-recipes {
+        width: 100%;
+    }
+    .th-otziv,
+    .th-rejting {
+        width: 250px;
+    }
+    .comments-div-form {
+        width: 90%;
+    }
+    .company-kontakt {
+        max-width: 100%;
+    }
+    .comments-div-form input[type="text"],
+    .comments-div-form input[type="email"] {
+        width: 200px!important;
+        margin: 10px 0 10px 30px!important;
+    }
+    .comments-div-form textarea,
+    .comments-div-form input[type="text"],
+    .comments-div-form input[type="email"] {
+        width: 90%;
+        right: 0;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 10px auto;
+        display: block;
+    }
+    .post-shares-data {
+        margin: 5px 5px;
+        position: relative;
+        display: block;
+        right: 0;
+        bottom: 0;
+    }
+    .akciya-div-logo {
+        width: 100%;
+    }
+    .akciya-div-logo img {
+        margin: auto;
+        display: block;
+    }
+    .akciya-kontakt {
+        width: 100%;
+    }
+    .akciya-kontakt table {
+        width: 100%;
+    }
+    .post-shares-name-company {
+        width: auto;
+        margin: 0;
+    }
+    .header-category {
+        display: none;
+    }
+    .post-shares-div-img {
+        margin-right: 10px
+    }
+    .post-shares-content {
+        width: auto;
+        display: block;
+    }
+    .post-other-info,
+    .post-other-img {
+        float: none;
+        margin: 20px auto;
+        display: block;
+    }
+    .post-other {
+        height: auto;
+    }
+    .w750 img {
+        max-width: 100%;
+    }
+    .w1200,
+    .wrap {
+        width: 1080px
+    }
+    section {
+        width: 750px
+    }
+    .block {
+        width: 350px
+    }
+    .img-colomn {
+        width: 100%
+    }
+    .data-block {
+        position: relative
+    }
+    .title-block {
+        width: 100%;
+        margin: 0;
+        text-align: left
+    }
+    .btn-top-1 a {
+        padding: 0 10px
+    }
+    .ul-top-2 li a{
+        padding-right: 0;
+        padding-left: 15px;
+    }
+}
+
+@media all and (max-width:1100px) {
+    .w1200,
+    .wrap {
+        width: 980px
+    }
+    section {
+        width: 650px
+    }
+    .block {
+        width: 300px
+    }
+    .img-colomn {
+        width: 100%
+    }
+    .footer-menu-2-ul {
+        left: 300px
+    }
+    .ul-top-1 li a {
+        padding: 0 20px
+    }
+    .ul-top-2 li a{
+        padding-right: 0;
+        padding-left: 15px;
+    }
+    .header-form .search-text {
+        width: 250px
+    }
+}
+
+@media all and (max-width:1000px) {
+    .w1200,
+    .wrap {
+        width: 880px
+    }
+    section {
+        width: 550px
+    }
+    .block {
+        width: 250px
+    }
+    .ul-top-2 li a {
+        padding: 0 15px
+    }
+    .header-form .search-text {
+        width: 200px
+    }
+    .footer-menu-2-ul {
+        left: 230px
+    }
+}
+
+@media(max-width:900px) {
+    .wrap,
+    .w1200 {
+        width: 100%
+    }
+    section {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+        display: block
+    }
+    .mobile {
+        display: block
+    }
+    .block {
+        width: 49%
+    }
+    .best-device {
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .best-device-a {
+        width: 100%;
+        background: #000 url(img/png/best-device/1b.png) no-repeat!important;
+        padding-left: 0
+    }
+    .best-device-a span {
+        padding-left: 110px
+    }
+    sidebar {
+        width: 100%
+    }
+    sidebar .top5,
+    .best,
+    .what {
+        width: initial
+    }
+    .sb-banner {
+        width: 100%;
+        text-align: center
+    }
+    sidebar .best-device {
+        display: none
+    }
+    .get-menu {
+        color: #fff;
+        font-size: 50px;
+        margin: 6px 20px 0;
+        display: inline-block;
+        float: right
+    }
+    .mobile-menu {
+        display: none
+    }
+    .up {
+        right: 30px
+    }
+    .mobile-menu .menu-user {
+        margin: 10px 0 0;
+        display: inline-block;
+        width: 100%
+    }
+    .vhod {
+        display: inline-block;
+        width: 100%
+    }
+    .mobile-menu ul {
+        margin: 20px 0 0;
+        display: inline-block;
+        width: 100%;
+        padding: 0
+    }
+    .mobile-menu li {
+        display: block;
+        text-align: center
+    }
+    .mobile-menu li a {
+        padding: 0;
+        background: transparent;
+        color: #fff;
+        font-size: 15px
+    }
+    .line-top-black {
+        height: inherit;
+        min-height: 70px
+    }
+    .not-mobile {
+        display: none
+    }
+    footer .footer {
+        height: inherit;
+        padding-bottom: 43px
+    }
+    footer .w1200>ul,
+    footer .w1200>div {
+        position: relative;
+        width: 90%;
+        margin: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin-bottom: 20px
+    }
+    footer .w1200>div {
+        margin-bottom: 0
+    }
+    .mobile-device li {
+        margin-bottom: 10px;
+    }
+    .mobile-device li:last-child {
+        margin-bottom: 0;
+    }
+    .mobile-device {
+        display: none;
+        padding: 0;
+        width: 90%;
+        margin: 20px auto;
+    }
+    .get-device {
+        display: block;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+}
+
+@media(max-width:650px) {
+    .company-kontakt-table td.null {
+        display: none;
+    }
+    .company-kontakt-table td {
+        display: block;
+        width: 100%;
+    }
+    .company-kontakt {
+        width: 100%
+    }
+    .window-18-no {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .window-18 {
+        width: 70%;
+        height: inherit;
+    }
+    .recipes-table th {
+        display: table-cell;
+    }
+    .opisanie {
+        width: 90%;
+    }
+    .input-name-el {
+        width: 100%;
+        display: block;
+        margin: 0 auto 20px;
+    }
+    .w283 {
+        width: 100%;
+    }
+    .input-name {
+        width: inherit;
+    }
+    .bbp-search-form {
+        float: none!important;
+        text-align: center;
+    }
+    .bbp-forum-info,
+    .bbp-forum-reply-count,
+    .bbp-topic-title,
+    .bbp-topic-reply-count {
+        width: 50%!important;
+    }
+    .bbp-forum-topic-count,
+    .bbp-forum-freshness,
+    .bbp-topic-voice-count,
+    .bbp-topic-freshness,
+    .bbp-header {
+        display: none;
+    }
+    .video-div-img,
+    .video-div-img img {
+        width: 100%;
+        height: auto;
+    }
+    .video-category {
+        width: 100%;
+    }
+    .video-div {
+        width: 100%;
+        margin: 0 0 20px!important;
+        height: auto;
+    }
+    .video-info {
+        width: 100%;
+    }
+    .video-info iframe {
+        width: 100%;
+        height: auto;
+    }
+    .list-company {
+        width: 100%;
+    }
+    .td-otziv,
+    .td-rejting {
+        display: none!important;
+    }
+    .list-company td {
+        display: block;
+    }
+    .company-div-img,
+    .company-div-img img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .list-company tr:first-child {
+        display: none;
+    }
+    .akciya-kontakt-table {
+        width: 100%;
+    }
+    .akciya-kontakt {
+        width: 100%;
+    }
+    .akciya-div-logo {
+        width: 100%;
+        height: auto;
+    }
+    .akciya-div-logo img {
+        width: 100%;
+    }
+    .post-shares-name-company {
+        float: none;
+        width: inherit;
+    }
+    .post-shares-content {
+        width: 100%;
+        margin: auto;
+    }
+    .post-shares-div-img {
+        width: 100%;
+        height: auto;
+    }
+    .post-shares-div-img img {
+        width: 100%;
+        height: auto;
+    }
+    .list-recipes {
+        width: 100%;
+    }
+    .rec-td-avtor,
+    .rec-td-data,
+    .rec-td-rejting {
+        display: none;
+    }
+    .pokupka {
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+    .info-post {
+        width: 100%;
+    }
+    .post-div-img {
+        width: 100%;
+        float: none;
+    }
+    .post-div-img img {
+        width: 100%;
+    }
+    .page-numbers {
+        font-size: 30px;
+        padding: 0 20px;
+        margin: 0;
+    }
+    .post-other-img img {
+        width: 100%;
+        height: inherit;
+    }
+    .post-other-img {
+        overflow: hidden;
+    }
+    th {
+        display: initial;
+    }
+    th span {
+        font-size: 14px!important;
+    }
+    .rec-th-avtor {
+        display: none;
+    }
+    .table-recipes {
+        overflow-x: auto;
+    }
+    .search-div {
+        width: 100%;
+    }
+    .o-post-recipes,
+    .info-small {
+        width: 100%;
+        margin-left: 0;
+    }
+    .post-recipes-container {
+        width: 100%;
+    }
+    .comment-notes {
+        position: relative;
+        left: 0;
+    }
+    .podzagolovok {
+        line-height: 2;
+    }
+    .company {
+        display: none;
+    }
+    .nazvanie {
+        display: none;
+    }
+    .comment-respond .form-submit {
+        position: relative;
+        top: inherit;
+        right: inherit;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .comments-form-comment {}
+    .comments-form-all {
+        position: relative;
+        line-height: initial;
+        top: 0;
+        left: 0;
+        max-width: 90%;
+        margin: 10px;
+    }
+    .w750 {
+        width: 100%;
+        margin: 0;
+    }
+    .comments-div-form {
+        width: 95%;
+        height: inherit;
+    }
+    .post-other-black-info {
+        width: 95%;
+        padding: 0 2.5%;
+    }
+    .post-other-img {
+        width: 100%;
+    }
+    .post-other {
+        height: inherit;
+    }
+    .post-other-info {
+        float: none;
+        width: 100%;
+        height: inherit;
+    }
+    article:first-child {
+        border-bottom: 0px;
+    }
+    .block {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .mobile .slider-block {
+        overflow: hidden
+    }
+    .slider-block img {
+        width: 100%
+    }
+}
+
+@media(max-width:450px) {
+    .header-form .search-text {
+        width: 90%
+    }
 }

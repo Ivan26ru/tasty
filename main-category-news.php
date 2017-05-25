@@ -40,7 +40,6 @@ while( $the_query->have_posts() ){
 					</a>
 					<div class="post-other-black-info">
 						<span class="data data-other"><?php the_time('d.m.Y'); ?></span>
-						<a href="<?php the_permalink() ?>" class="read-all read-all-other">Читать полностью...</a>
 					</div>
 				</div>
 				<!-- анонс поста -->

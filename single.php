@@ -4,6 +4,14 @@
  * @package WordPress
  * @subpackage your-clean-template
  */
+if (get_post_type( $post_id ) == 'ingredients') { //рецепты админка
+	echo '<script>location.replace("' 
+	. get_site_url() 
+	. '/tag/' 
+	. name_url(get_the_title()) 
+	. '")</script>'; 
+	exit;
+}
 get_header(); // подключаем header.php ?>
 <?php
 
@@ -24,10 +32,10 @@ if (in_category('shares')) { //акции
 } elseif (in_category('recipes')) { //рецепты
 	include(TEMPLATEPATH.'/single-recipes.php');
 	exit;
-	} elseif (in_category('recipes-admin')) { //рецепты админка
+} elseif (in_category('recipes-admin')) { //рецепты админка
 	include(TEMPLATEPATH.'/single-recipes-admin.php');
 	exit;
-		} elseif (in_category('user-post')) { //рецепты админка
+} elseif (in_category('user-post')) { //рецепты админка
 	include(TEMPLATEPATH.'/single-user-post.php');
 	exit;
 	// } elseif (in_category('article')) { //статья

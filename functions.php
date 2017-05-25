@@ -51,7 +51,25 @@ class clean_comments_constructor extends Walker_Comment { // класс, кот�
     	// echo '<p class="meta">Автор: '.get_comment_author()."\n"; // имя автора коммента
     	//if ( '0' == $comment->comment_approved ) echo '<em class="comment-awaiting-moderation">Ваш комментарий будет опубликован после проверки модератором.</em>'."\n"; // если комментарий должен пройти проверку
         comment_text(); // текст коммента
-    	echo '<p class="comment-user-data">'.get_comment_time('j F Y H:i').' <span class="comment-author">' .get_comment_author()."</span></p>"; // дата и время комментирования
+
+$link = get_comment_reply_link(array(
+	'reply_text' => "ответить",
+	'respond_id' => 'commentform',
+	'depth' => 5,
+	'max_depth' => 10,
+) );
+
+// тут можем обработать ссылку перед выводом на экран
+//$link = str_replace('foo', 'bar', $link );
+
+
+    echo '<p class="comment-user-data">'
+    	. $link
+    	. '   '
+    	. get_comment_time('j F Y H:i')
+    	.' <span class="comment-author">'
+    	.get_comment_author()
+    	.'</span></p>'; // дата и время комментирования
 
         echo '</div>'."\n"; // закрываем див
     }

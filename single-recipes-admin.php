@@ -160,7 +160,7 @@ if ( is_user_logged_in() ) {//условие если залогинен
 		<tr class="color-1">
 			<th class="table-info-INGREDIENT"><span class="line">ИНГРЕДИЕНТ</span></th>
 			<th class="table-info-ml"><span class="line">ml</span></th>
-			<th class="table-info-GRAMS"><span class="line">GRAMS</span></th>
+			<th class="table-info-GRAMS"><span class="line">g</span></th>
 			<th class="table-info-proc"><span class="line">%</span></th>
 		</tr>
 		<tr class="c-green color-2">

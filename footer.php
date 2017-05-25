@@ -8,6 +8,7 @@
 <!-- стрелка вверх -->
 <div class="up" id="back-top"></div>
 </div>
+</div>
 <!-- конец container -->
 	<footer>
 <!-- Yandex.Metrika counter -->
@@ -55,6 +56,9 @@
 							<a href="<?php $link_ok = get_post_meta( '2', 'link_ok', true ); echo $link_ok; ?>" class="inst">
 								<i class="fa fa-instagram" aria-hidden="true"></i>
 							</a>
+							<a href="<?php $link_twitter = get_post_meta( '2', 'link_twitter', true ); echo $link_twitter; ?>" class="inst">
+								<i class="fa fa-twitter" aria-hidden="true"></i>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -78,7 +82,7 @@
 <script>
 jQuery(document).ready(function() {
 	// alert(jQuery.fn.jquery);
-	jQuery("#owl-example").owlCarousel({
+	jQuery("#owl-example, #owl-example-mobile").owlCarousel({
 	    autoPlay : 3000,
 	    stopOnHover : true,
 	    // navigation:true,
