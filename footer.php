@@ -75,21 +75,21 @@
 <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/jquery-ui.js'></script>
 
-<script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/main.js?<?php $date_css=date('YmdHis'); echo $date_css; // мои стили шаблона ВСЕГДА ОБНОВЛЯЮТСЯ?>'></script>
-<script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/myrecipe.js?<?php $date_css=date('YmdHis'); echo $date_css; // мои стили шаблона ВСЕГДА ОБНОВЛЯЮТСЯ?>'></script>
+<script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/main.js'></script>
+<script type='text/javascript' src='<?php echo get_template_directory_uri(); // абсолютный путь до темы ?>/js/myrecipe.js'></script>
 
 <!-- настройки слайдера на главной -->
 <script>
 jQuery(document).ready(function() {
 	// alert(jQuery.fn.jquery);
-	jQuery("#owl-example, #owl-example-mobile").owlCarousel({
+	jQuery("#owl-example, #owl-example-mobile, #owl-example-baner-1, #owl-example-baner-2, #owl-example-baner-3").owlCarousel({
 	    autoPlay : 3000,
 	    stopOnHover : true,
 	    // navigation:true,
-	    paginationSpeed : 1000,
-	    goToFirstSpeed : 2000,
+	    paginationSpeed : 3000,
+	    goToFirstSpeed : 3000,
 	    singleItem : true,
-	    autoHeight : true,
+	    autoHeight : false,
 	    transitionStyle:"fade"
 	});
 

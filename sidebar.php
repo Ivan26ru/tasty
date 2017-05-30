@@ -35,54 +35,65 @@ $slider_post = 955;
 	<a href="<?php echo site_url(); ?>/category/best_device/batteries/" class="best-device-a d6"><span>batteries</span></a>
 </div>
 
+
+
+
 <!-- рекламный блок -->
-<?php
-	$args = array( 'posts_per_page' => 1, 'post__not_in' => array($baner3,$baner2,$slider_post), 'orderby'=> 'date', 'post_type' => 'baners', 'category' => $category2,'order' => 'DESC' );//выбираем посты соответствующие категории
-	$myposts = get_posts( $args );
-foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 <div class="sb-banner sb-banner-1">
-<a href="<?php cus('link'); ?>">
-	<?php the_post_thumbnail('full'); ?>
-</a>
-</div>
-	<?php endforeach;
-wp_reset_postdata();?>
 
+	<div id="owl-example-baner-1" class="owl-carousel">
+		<?php
+				// вывод картинок из произвольного поля
+				$images = get_field('slider', $baner1);//массив картинок
 
-<!-- рекламный блок -->
-<?php
-	$args = array( 'posts_per_page' => 100, 'post__not_in' => array($baner1,$baner3,$slider_post), 'orderby'=> 'date', 'post_type' => 'baners', 'category' => $category2,'order' => 'DESC' );//выбираем посты соответствующие категории
-	$myposts = get_posts( $args );
-foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-<div class="sb-banner sb-banner-2">
-<a href="<?php cus(link); ?>">
-	<?php the_post_thumbnail('full'); ?>
-</a>
+			if( $images ): //если картинка есть?>
+			        <?php foreach( $images as $image ): //перебор массива?>
+			        	<div><a href="<?php echo $image[caption]; ?>"><img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" /></div></a>
+			        <?php endforeach; //конец перебора?>
+			<?php endif; //конец условия?>
 	</div>
-	<?php endforeach;
-wp_reset_postdata();?>
+
+</div>
 
 
 <!-- рекламный блок -->
-<?php
-	//выбираем посты соответствующие категории
-	$args = array( 'posts_per_page' => 100, 'post__not_in' => array($baner1,$baner2,$slider_post),'orderby'=> 'date', 'post_type' => 'baners', 'category' => $category2,'order' => 'DESC' );
-	// отбираем посты, по массиву выше
-	$myposts = get_posts( $args );
-	// перебор массива постов
-foreach ( $myposts as $post ) : setup_postdata( $post );
+<div class="sb-banner sb-banner-2">
 
-if (cus(link)): ?>
-<div class="sb-banner sb-banner-3">
-<a href="<?php cus(link); ?>">
-	<?php the_post_thumbnail('full'); ?>
-</a>
+	<div id="owl-example-baner-2" class="owl-carousel">
+		<?php
+				// вывод картинок из произвольного поля
+				$images = get_field('slider', $baner2);//массив картинок
+
+			if( $images ): //если картинка есть?>
+			        <?php foreach( $images as $image ): //перебор массива?>
+			        	<div><a href="<?php echo $image[caption]; ?>"><img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" /></div></a>
+			        <?php endforeach; //конец перебора?>
+			<?php endif; //конец условия?>
+	</div>
+
 </div>
-<?php endif ?>
 
 
-	<?php endforeach;
-wp_reset_postdata();?>
+
+
+<!-- рекламный блок -->
+<div class="sb-banner sb-banner-3">
+
+	<div id="owl-example-baner-3" class="owl-carousel">
+		<?php
+				// вывод картинок из произвольного поля
+				$images = get_field('slider', $baner3);//массив картинок
+
+			if( $images ): //если картинка есть?>
+			        <?php foreach( $images as $image ): //перебор массива?>
+			        	<div><a href="<?php echo $image[caption]; ?>"><img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" /></div></a>
+			        <?php endforeach; //конец перебора?>
+			<?php endif; //конец условия?>
+	</div>
+
+</div>
+
+
 
 
 <!-- опрос -->
