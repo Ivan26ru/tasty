@@ -85,31 +85,31 @@ switch ($sort) {
 
 
     case "up-name":
-        query_posts( $query_string.'&order=ASC&posts_per_page=20&orderby=title'); // базовый запрос + свои параметры
+        query_posts( $query_string.'&order=ASC&posts_per_page=40&orderby=title'); // базовый запрос + свои параметры
         break;
     case "down-name":
-        query_posts( $query_string.'&order=DESC&posts_per_page=20&orderby=title'); // базовый запрос + свои параметры
+        query_posts( $query_string.'&order=DESC&posts_per_page=40&orderby=title'); // базовый запрос + свои параметры
         break;
 
     case "up-author":
-        query_posts( $query_string.'&order=ASC&posts_per_page=20&orderby=author'); // базовый запрос + свои параметры
+        query_posts( $query_string.'&order=ASC&posts_per_page=40&orderby=author'); // базовый запрос + свои параметры
         break;
     case "down-author":
-        query_posts( $query_string.'&order=DESC&posts_per_page=20&orderby=author'); // базовый запрос + свои параметры
+        query_posts( $query_string.'&order=DESC&posts_per_page=40&orderby=author'); // базовый запрос + свои параметры
         break;
 
     case "up-data":
-        query_posts( $query_string.'&order=DESC&posts_per_page=20&orderby=date'); // базовый запрос + свои параметры
+        query_posts( $query_string.'&order=DESC&posts_per_page=40&orderby=date'); // базовый запрос + свои параметры
         break;
     case "down-data":
-        query_posts( $query_string.'&order=ASC&posts_per_page=20&orderby=date'); // базовый запрос + свои параметры
+        query_posts( $query_string.'&order=ASC&posts_per_page=40&orderby=date'); // базовый запрос + свои параметры
         break;
 
     case "up-rejt":
-        query_posts( $query_string.'&order=DESC&posts_per_page=20&orderby=meta_value_num&meta_key=ratings_score'); // базовый запрос + свои параметры
+        query_posts( $query_string.'&order=DESC&posts_per_page=40&orderby=meta_value_num&meta_key=ratings_score'); // базовый запрос + свои параметры
         break;
     case "down-rejt":
-        query_posts( $query_string.'&order=ASC&posts_per_page=20&orderby=meta_value_num&meta_key=ratings_score'); // базовый запрос + свои параметры
+        query_posts( $query_string.'&order=ASC&posts_per_page=40&orderby=meta_value_num&meta_key=ratings_score'); // базовый запрос + свои параметры
         break;
     default:
         query_posts( $query_string.'&posts_per_page=40'); // базовый запрос + свои параметры

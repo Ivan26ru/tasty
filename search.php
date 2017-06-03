@@ -37,13 +37,14 @@ get_header(); // подключаем header.php ?>
 				</p>
 			</th>
 		</tr>
+		<?php query_posts( $query_string.'&posts_per_page=40'); // базовый запрос + свои параметры ?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); // если посты есть - запускаем цикл wp ?>
 
 		<!-- пост -->
 		<tr class="tr">
 			<td class="rec-td-name">
 
-<?php $post_type = get_post_type( $post_id ) ?> 
+<?php $post_type = get_post_type( $post_id ) ?>
  <? if ($post_type == 'ingredients') { ?>
 
 			<a href="<?php echo get_site_url() . '/tag/' . name_url(get_the_title());?>" class=""><?php the_title(); ?></a>
@@ -71,6 +72,7 @@ get_header(); // подключаем header.php ?>
 
 
 <?php pagination(); // пагинация, функция нах-ся в function.php ?>
+<?php wp_reset_query(); // сброс запроса ?>
 
 <?php get_sidebar(); // подключаем sidebar.php ?>
 <?php get_footer(); // подключаем footer.php ?>
