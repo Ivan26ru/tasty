@@ -480,7 +480,8 @@ section img {
 }
 
 .page-numbers li {
-    display: inline-block
+    display: inline-block;
+    margin: 0 7px;
 }
 
 .page-numbers li span {
