@@ -27,7 +27,7 @@ if( !empty($image) ): ?>
 <?php the_content(); // контент без картинок?></p>
 
 <div class="soc-f-vk">
-<a href="http://facebook.com/share.php?url=<?php echo get_permalink(); ?>" target='_blank'>
+<a href="http://facebook.com/share.php?u=<?php echo get_permalink(); ?>" target='_blank'>
 	<p class="f-book">
 		<i class="fa fa-facebook" aria-hidden="true"></i>
 		<span>Поделиться</span>
@@ -36,6 +36,13 @@ if( !empty($image) ): ?>
 <a href="http://vkontakte.ru/share.php?url=<?php echo get_permalink(); ?>" target='_blank'>
 	<p class="vk-blue">
 		<i class="fa fa-vk" aria-hidden="true"></i>
+		<span>Поделиться</span>
+	</p>
+</a>
+<a href="
+https://twitter.com/intent/tweet?text=<?php the_title(); ?>&url=<?php echo get_permalink(); ?>" target='_blank'>
+	<p class="vk-blue twitter">
+		<i class="fa fa-twitter" aria-hidden="true"></i>
 		<span>Поделиться</span>
 	</p>
 </a>
