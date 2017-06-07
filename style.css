@@ -2119,6 +2119,14 @@ a.politika {
     background-color: #43678d
 }
 
+.twitter{
+    background-color:#1DA1F2;
+}
+
+.twitter .fa{
+    background-color:#1884c5
+}
+
 .art-img {
     max-width: 850px
 }
@@ -2884,4 +2892,15 @@ body .owl-theme .owl-controls .owl-page.active:hover span {
     .header-form .search-text {
         width: 90%
     }
+}
+
+
+.alignleft{
+	float: left;
+	margin-right: 10px;
+}
+
+.alignright{
+	float: right;
+	margin-left: 10px;
 }
