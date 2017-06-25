@@ -2646,6 +2646,9 @@ body .owl-theme .owl-controls .owl-page.active:hover span {
     .company-kontakt-table td.null {
         display: none;
     }
+    .comments-user{
+        width: 100%;
+    }
     .company-kontakt-table td {
         display: block;
         width: 100%;
@@ -2903,4 +2906,13 @@ body .owl-theme .owl-controls .owl-page.active:hover span {
 .alignright{
 	float: right;
 	margin-left: 10px;
+}
+
+.aligncenter{
+	margin: 0 auto;
+}
+
+.aligncenter{
+	margin: 0 auto;
+	display:block;
 }
